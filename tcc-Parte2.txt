@@ -1,0 +1,103 @@
+TCC - 05/04/2016 
+
+---------------------
+*********************
+
+Informações gerais sobre o que devemos entregar esse semestre:
+
+CAP 1 - Introdução (já temos, mas devemos colocar sistemas similares)
+
+CAP 2 - Pesquisa parcial:
+	- Fundamentação teorica - explicação de cada coisa abordada - temos pouca coisa
+
+CAP 3 - Materiais e metodos: o que usaremos
+	- Use Cases
+	- Prototipos 
+
+CAP 4 - Resultados: 
+	- Diagrama de classe de analise e de projeto.
+
+CAP 5 - Implementação
+
+
+Entregar esse doc até o dia 16/04
+
+Pré-Banca: dia 23/04 (Acho que esse dia é feriado, temos que conversar com ela)
+
+---------------------
+*********************
+
+O sistema é divido em 3 partes:
+
+Vou explicar em ordem de importância, creio que devemos terminar pelo menos as partes
+1 e 2 este semestre ainda.
+
+Devemos nos reunir para acertar detalhes de design e User Experience
+
+As partes 1 e 2 devem ter a opção de impressão e deve ficar igual ao documento que nos foi dado
+
+	1 - Grade de horario dos professores semestral
+	2 - Folha de ponto mensal
+	3 - Calendario WEB
+
+---------------------
+*********************
+
+O assistente pode fazer tudo o que o coordenador faz.
+
+Sistema 1: Grade de horario dos professores semestral
+
+	Gerado por: coordenador para cada professor do seu curso.
+
+	Objetivo: gerar a grade horaria do professor que valerá para o semestre inteiro.
+
+	Coisas importantes a saber aqui:
+		- O coordernador não pode alterar ao longo do semestre a grade horaria de nenhum professor, apenas o assistente.
+		- No cabeçalho vem o semestre, o ano e a partir de qual data aquele documento está válido
+		- Entre as Partes B e C há uma tabela com os horarios x dias para marcar os dias de AULA/ HAE/ RJI/ JORNADA
+		- Caso não seja alterado, ele continua o mesmo para o atual semestre
+
+	Esse doc é dividido em 4 partes, essas partes devem ser pensadas depois em sobre como geraremos a pagina:
+
+		Parte A:
+			Nome do professor, Categoria (temos que pegar as do BD), Regime (Hora aula, RJI ou jornada) e Departamento (Curso)
+
+			Essas informações devem ser puxadas do banco, fazer uma reunião para ver os formatos e dados disponiveis!
+
+		Parte B: 
+			Um campo para cada Disciplina de algum Curso
+
+		Parte C:
+			É descrito em horas as HAE, RJI e Jornada
+
+			Isto vai para a folha de ponto.
+
+			A descrição completa está no final do documento, ANEXO 1.
+
+		Parte D:
+			Uma tabela com o resumo de todo o documento e no final tem as horas gerais em semana e em mes
+
+
+Sistema 2: Folha de ponto mensal
+	
+	Gerador por: assistente
+
+	Objetivo: gerar a folha de ponto mensal para um professor
+
+	Coisas importante a saber aqui: 
+		// Estou sem a folha
+
+
+Sistema 3: Calendario WEB
+	
+	Gerador por: sistema a partir da base de dados
+
+	Objetivo: gerar o calendario semestral a partir do banco com a grade horaria
+
+	Coisas importante a saber aqui: 
+		- Deve ser acessível por celular
+		- Deve poder imprimir
+
+	Deve ter opção por turma e por professor 
+
+	É uma tabela de dia x hora
