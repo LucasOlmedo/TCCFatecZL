@@ -3,12 +3,12 @@ TCC - 05/04/2016
 ---------------------
 *********************
 
-InformaÁıes gerais sobre o que devemos entregar esse semestre:
+Informa√ß√µes gerais sobre o que devemos entregar esse semestre:
 
-CAP 1 - IntroduÁ„o (j· temos, mas devemos colocar sistemas similares)
+CAP 1 - Introdu√ß√£o (j√° temos, mas devemos colocar sistemas similares)
 
 CAP 2 - Pesquisa parcial:
-	- FundamentaÁ„o teorica - explicaÁ„o de cada coisa abordada - temos pouca coisa
+	- Fundamenta√ß√£o teorica - explica√ß√£o de cada coisa abordada - temos pouca coisa
 
 CAP 3 - Materiais e metodos: o que usaremos
 	- Use Cases
@@ -17,24 +17,24 @@ CAP 3 - Materiais e metodos: o que usaremos
 CAP 4 - Resultados: 
 	- Diagrama de classe de analise e de projeto.
 
-CAP 5 - ImplementaÁ„o
+CAP 5 - Implementa√ß√£o
 
 
-Entregar esse doc atÈ o dia 16/04
+Entregar esse doc at√© o dia 16/04
 
-PrÈ-Banca: dia 23/04 (Acho que esse dia È feriado, temos que conversar com ela)
+Pr√©-Banca: dia 23/04 (Acho que esse dia √© feriado, temos que conversar com ela)
 
 ---------------------
 *********************
 
-O sistema È divido em 3 partes:
+O sistema √© divido em 3 partes:
 
-Vou explicar em ordem de import‚ncia, creio que devemos terminar pelo menos as partes
+Vou explicar em ordem de import√¢ncia, creio que devemos terminar pelo menos as partes
 1 e 2 este semestre ainda.
 
 Devemos nos reunir para acertar detalhes de design e User Experience
 
-As partes 1 e 2 devem ter a opÁ„o de impress„o e deve ficar igual ao documento que nos foi dado
+As partes 1 e 2 devem ter a op√ß√£o de impress√£o e deve ficar igual ao documento que nos foi dado
 
 	1 - Grade de horario dos professores semestral
 	2 - Folha de ponto mensal
@@ -49,30 +49,30 @@ Sistema 1: Grade de horario dos professores semestral
 
 	Gerado por: coordenador para cada professor do seu curso.
 
-	Objetivo: gerar a grade horaria do professor que valer· para o semestre inteiro.
+	Objetivo: gerar a grade horaria do professor que valer√° para o semestre inteiro.
 
 	Coisas importantes a saber aqui:
-		- O coordernador n„o pode alterar ao longo do semestre a grade horaria de nenhum professor, apenas o assistente.
-		- No cabeÁalho vem o semestre, o ano e a partir de qual data aquele documento est· v·lido
-		- Entre as Partes B e C h· uma tabela com os horarios x dias para marcar os dias de AULA/ HAE/ RJI/ JORNADA
-		- Caso n„o seja alterado, ele continua o mesmo para o atual semestre
+		- O coordernador n√£o pode alterar ao longo do semestre a grade horaria de nenhum professor, apenas o assistente.
+		- No cabe√ßalho vem o semestre, o ano e a partir de qual data aquele documento est√° v√°lido
+		- Entre as Partes B e C h√° uma tabela com os horarios x dias para marcar os dias de AULA/ HAE/ RJI/ JORNADA
+		- Caso n√£o seja alterado, ele continua o mesmo para o atual semestre
 
-	Esse doc È dividido em 4 partes, essas partes devem ser pensadas depois em sobre como geraremos a pagina:
+	Esse doc √© dividido em 4 partes, essas partes devem ser pensadas depois em sobre como geraremos a pagina:
 
 		Parte A:
 			Nome do professor, Categoria (temos que pegar as do BD), Regime (Hora aula, RJI ou jornada) e Departamento (Curso)
 
-			Essas informaÁıes devem ser puxadas do banco, fazer uma reuni„o para ver os formatos e dados disponiveis!
+			Essas informa√ß√µes devem ser puxadas do banco, fazer uma reuni√£o para ver os formatos e dados disponiveis!
 
 		Parte B: 
 			Um campo para cada Disciplina de algum Curso
 
 		Parte C:
-			… descrito em horas as HAE, RJI e Jornada
+			√â descrito em horas as HAE, RJI e Jornada
 
 			Isto vai para a folha de ponto.
 
-			A descriÁ„o completa est· no final do documento, ANEXO 1.
+			A descri√ß√£o completa est√° no final do documento, ANEXO 1.
 
 		Parte D:
 			Uma tabela com o resumo de todo o documento e no final tem as horas gerais em semana e em mes
@@ -85,7 +85,32 @@ Sistema 2: Folha de ponto mensal
 	Objetivo: gerar a folha de ponto mensal para um professor
 
 	Coisas importante a saber aqui: 
-		// Estou sem a folha
+
+	Composto de 3 partes na primeira folha:
+
+		Parte A:
+			Informa√ß√µes do professor: Nome, Regime (clt, pj), componentes curriculares (ser√£o demonstrados na grade)
+			
+			Horas: atividade, HAE (Orienta√ß√£o ou projeto) e HAE (Coordena√ß√£o) -> N√ÉO vai para a grade -> deve puxar do BD e estar de acordo com a lista em ANEXO 1.
+
+			Informa√ß√µes da FATEC: Nome, C√≥digo
+
+		Parte B:
+			Grade horaria com turnos x dias
+
+		Parte C:
+			Folha de frequencia com o m√™s e ano
+
+		Parte D:
+			Um rodape com diversas tabelinhas -> ver DOC
+
+	Na segunda folha tem:
+		2 grades horarias para altera√ß√µes
+		
+		Um campo para assinar a data que come√ßar√° a ficar v√°lida e as Horas da Parte A (apenas o campo)
+
+		E um campo para observa√ß√µes
+
 
 
 Sistema 3: Calendario WEB
@@ -95,9 +120,9 @@ Sistema 3: Calendario WEB
 	Objetivo: gerar o calendario semestral a partir do banco com a grade horaria
 
 	Coisas importante a saber aqui: 
-		- Deve ser acessÌvel por celular
+		- Deve ser acess√≠vel por celular
 		- Deve poder imprimir
 
-	Deve ter opÁ„o por turma e por professor 
+	Deve ter op√ß√£o por turma e por professor 
 
-	… uma tabela de dia x hora
+	√â uma tabela de dia x hora
