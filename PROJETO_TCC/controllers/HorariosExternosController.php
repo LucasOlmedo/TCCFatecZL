@@ -64,7 +64,7 @@ class HorariosExternosController extends Controller
         $model = new HorariosExternos();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_Hae' => $model->id_Hae, 'id_Disciplina' => $model->id_Disciplina]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -84,7 +84,7 @@ class HorariosExternosController extends Controller
         $model = $this->findModel($id_Hae, $id_Disciplina);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_Hae' => $model->id_Hae, 'id_Disciplina' => $model->id_Disciplina]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

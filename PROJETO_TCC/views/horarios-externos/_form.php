@@ -14,7 +14,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_Hae')->textInput() ?>
 
-    <?= $form->field($model, 'id_Disciplina')->textInput() ?>
+    <?= $form->field($model, 'id_Disciplina')->dropDownList(\app\models\DisciplinaSearch::find()->select(
+        ['nome', 'id_Disciplina'])->indexBy('id')->column(),['prompt'=>'Selecione a disciplina...']
+    ) ?>
 
     <?= $form->field($model, 'tipo')->textInput(['maxlength' => true]) ?>
 

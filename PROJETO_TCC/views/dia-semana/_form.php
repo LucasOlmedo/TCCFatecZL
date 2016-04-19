@@ -12,15 +12,21 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id_Professor')->textInput() ?>
+    <?= $form->field($model, 'id_Professor')->dropDownList(\app\models\ProfessorSearch::find()->select(
+        ['nome', 'id_Professor'])->indexBy('id')->column(),['prompt'=>'Selecione o professor...']
+    ) ?>
 
-    <?= $form->field($model, 'id_Curso')->textInput() ?>
+    <?= $form->field($model, 'id_Curso')->dropDownList(\app\models\CursoSearch::find()->select(
+        ['nome', 'id_Curso'])->indexBy('id')->column(),['prompt'=>'Selecione o curso...']
+    ) ?>
 
-    <?= $form->field($model, 'id_Disciplina')->textInput() ?>
+    <?= $form->field($model, 'id_Disciplina')->dropDownList(\app\models\DisciplinaSearch::find()->select(
+        ['nome', 'id_Disciplina'])->indexBy('id')->column(),['prompt'=>'Selecione a disciplina...']
+    ) ?>
 
     <?= $form->field($model, 'semestre')->textInput() ?>
 
-    <?= $form->field($model, 'turno')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'turno')->dropDownList(['Manhã', 'Tarde', 'Noite'], ['prompt'=>'Selecione o turno...']) ?>
 
     <?= $form->field($model, 'horario')->textInput() ?>
 

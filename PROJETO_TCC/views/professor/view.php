@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Professor */
 
-$this->title = $model->id_Professor;
+$this->title = "#". $model->id_Professor;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Professors'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

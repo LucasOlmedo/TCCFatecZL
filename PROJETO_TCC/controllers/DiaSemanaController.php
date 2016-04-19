@@ -68,7 +68,7 @@ class DiaSemanaController extends Controller
         $model = new DiaSemana();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'semestre' => $model->semestre, 'turno' => $model->turno]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -92,7 +92,7 @@ class DiaSemanaController extends Controller
         $model = $this->findModel($id_diaSemana, $id_Professor, $id_Curso, $id_Disciplina, $semestre, $turno);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'semestre' => $model->semestre, 'turno' => $model->turno]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

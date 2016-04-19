@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\DiaSemana */
 
-$this->title = $model->id_diaSemana;
+$this->title ="#". $model->id_diaSemana;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Dia Semanas'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
