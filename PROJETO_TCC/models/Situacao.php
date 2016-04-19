@@ -39,7 +39,7 @@ class Situacao extends ActiveRecord
     {
         return [
             'id_Situacao' => Yii::t('app', 'ID'),
-            'nome' => Yii::t('app', 'SituaÁ„o'),
+            'nome' => Yii::t('app', 'Situa√ß√£o'),
         ];
     }
 }

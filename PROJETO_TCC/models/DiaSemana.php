@@ -53,7 +53,7 @@ class DiaSemana extends ActiveRecord
             'id_Disciplina' => Yii::t('app', 'Id Disciplina'),
             'semestre' => Yii::t('app', 'Semestre'),
             'turno' => Yii::t('app', 'Turno'),
-            'horario' => Yii::t('app', 'Hor·rio'),
+            'horario' => Yii::t('app', 'Hor√°rio'),
         ];
     }
 

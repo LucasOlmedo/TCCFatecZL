@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\HorariosExternosSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Horarios Externos');
+$this->title = Yii::t('app', 'Horários Externos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="horarios-externos-index">
@@ -16,15 +16,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Horarios Externos'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', '+ Novo HAE'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
             'id_Hae',
             'id_Disciplina',
             'tipo',

@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\DiaSemana */
 
-$this->title = Yii::t('app', 'Create Dia Semana');
+$this->title = Yii::t('app', 'Inserir novo Dia Semana');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Dia Semanas'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

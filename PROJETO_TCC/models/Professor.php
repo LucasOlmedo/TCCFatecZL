@@ -54,11 +54,11 @@ class Professor extends ActiveRecord
             'nome' => Yii::t('app', 'Nome'),
             'rg' => Yii::t('app', 'Rg'),
             'categoria' => Yii::t('app', 'Categoria'),
-            'graduacao' => Yii::t('app', 'GraduaÁ„o'),
+            'graduacao' => Yii::t('app', 'Gradua√ß√£o'),
             'contrato' => Yii::t('app', 'Contrato'),
             'sede' => Yii::t('app', 'Sede'),
-            'inicio_cps' => Yii::t('app', 'InÌcio Cps'),
-            'inicio_fateczl' => Yii::t('app', 'InÌcio FatecZL'),
+            'inicio_cps' => Yii::t('app', 'In√≠cio Cps'),
+            'inicio_fateczl' => Yii::t('app', 'In√≠cio FatecZL'),
         ];
     }
 

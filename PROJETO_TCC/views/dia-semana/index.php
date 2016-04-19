@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\DiaSemanaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Dia Semanas');
+$this->title = Yii::t('app', 'Dias da semana');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="dia-semana-index">
@@ -16,22 +16,20 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Dia Semana'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', '+ Novo Dia Semana'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
             'id_diaSemana',
             'id_Professor',
             'id_Curso',
             'id_Disciplina',
             'semestre',
-            // 'turno',
-            // 'horario',
+            'turno',
+            'horario',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
