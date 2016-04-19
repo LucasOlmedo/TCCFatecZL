@@ -52,7 +52,7 @@ class Professor extends ActiveRecord
         return [
             'id_Professor' => Yii::t('app', 'ID'),
             'nome' => Yii::t('app', 'Nome'),
-            'rg' => Yii::t('app', 'Rg'),
+            'rg' => Yii::t('app', 'RG'),
             'categoria' => Yii::t('app', 'Categoria'),
             'graduacao' => Yii::t('app', 'Graduação'),
             'contrato' => Yii::t('app', 'Contrato'),

@@ -42,8 +42,8 @@ class HorariosExternos extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Hae' => Yii::t('app', 'Id  HAE'),
-            'id_Disciplina' => Yii::t('app', 'Id  Disciplina'),
+            'id_Hae' => Yii::t('app', 'ID  HAE'),
+            'id_Disciplina' => Yii::t('app', 'ID  Disciplina'),
             'tipo' => Yii::t('app', 'Tipo'),
         ];
     }

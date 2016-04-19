@@ -48,9 +48,9 @@ class DiaSemana extends ActiveRecord
     {
         return [
             'id_diaSemana' => Yii::t('app', 'ID'),
-            'id_Professor' => Yii::t('app', 'Id Professor'),
-            'id_Curso' => Yii::t('app', 'Id Curso'),
-            'id_Disciplina' => Yii::t('app', 'Id Disciplina'),
+            'id_Professor' => Yii::t('app', 'ID Professor'),
+            'id_Curso' => Yii::t('app', 'ID Curso'),
+            'id_Disciplina' => Yii::t('app', 'ID Disciplina'),
             'semestre' => Yii::t('app', 'Semestre'),
             'turno' => Yii::t('app', 'Turno'),
             'horario' => Yii::t('app', 'Horário'),

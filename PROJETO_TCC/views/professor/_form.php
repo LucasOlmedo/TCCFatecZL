@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'categoria')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'graduacao')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'graduacao')->textarea(['rows' => 5]) ?>
 
     <?= $form->field($model, 'contrato')->textInput(['maxlength' => true]) ?>
 
