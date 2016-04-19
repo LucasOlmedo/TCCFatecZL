@@ -45,9 +45,9 @@ class Disciplina extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Disciplina' => Yii::t('app', 'Id  Disciplina'),
-            'nome' => Yii::t('app', 'Nome'),
-            'descricao' => Yii::t('app', 'Descricao'),
+            'id_Disciplina' => Yii::t('app', 'Id'),
+            'nome' => Yii::t('app', 'Disciplina'),
+            'descricao' => Yii::t('app', 'Descrição'),
         ];
     }
 

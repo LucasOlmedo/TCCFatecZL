@@ -47,13 +47,13 @@ class DiaSemana extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_diaSemana' => Yii::t('app', 'Id Dia Semana'),
-            'id_Professor' => Yii::t('app', 'Id  Professor'),
-            'id_Curso' => Yii::t('app', 'Id  Curso'),
-            'id_Disciplina' => Yii::t('app', 'Id  Disciplina'),
+            'id_diaSemana' => Yii::t('app', 'ID'),
+            'id_Professor' => Yii::t('app', 'Id Professor'),
+            'id_Curso' => Yii::t('app', 'Id Curso'),
+            'id_Disciplina' => Yii::t('app', 'Id Disciplina'),
             'semestre' => Yii::t('app', 'Semestre'),
             'turno' => Yii::t('app', 'Turno'),
-            'horario' => Yii::t('app', 'Horario'),
+            'horario' => Yii::t('app', 'Horário'),
         ];
     }
 

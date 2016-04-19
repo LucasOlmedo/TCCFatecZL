@@ -50,15 +50,15 @@ class Professor extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Professor' => Yii::t('app', 'Id  Professor'),
+            'id_Professor' => Yii::t('app', 'ID'),
             'nome' => Yii::t('app', 'Nome'),
             'rg' => Yii::t('app', 'Rg'),
             'categoria' => Yii::t('app', 'Categoria'),
-            'graduacao' => Yii::t('app', 'Graduacao'),
+            'graduacao' => Yii::t('app', 'Graduação'),
             'contrato' => Yii::t('app', 'Contrato'),
             'sede' => Yii::t('app', 'Sede'),
-            'inicio_cps' => Yii::t('app', 'Inicio Cps'),
-            'inicio_fateczl' => Yii::t('app', 'Inicio Fateczl'),
+            'inicio_cps' => Yii::t('app', 'Início Cps'),
+            'inicio_fateczl' => Yii::t('app', 'Início FatecZL'),
         ];
     }
 
