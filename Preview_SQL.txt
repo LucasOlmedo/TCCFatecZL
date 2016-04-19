@@ -2,7 +2,7 @@ CREATE TABLE `tcc`.`curso`(
   `id_Curso` INT(10) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(40) NOT NULL,
   `abreviacao` VARCHAR(7) NOT NULL,
-  `cargaHoraria` INT(6) NOT NULL,
+  `carga_horaria` INT(6) NOT NULL,
   PRIMARY KEY (`id_Curso`)
 ) CHARSET=utf8 COLLATE=utf8_general_ci;
 
