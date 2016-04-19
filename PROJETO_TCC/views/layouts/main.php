@@ -52,24 +52,6 @@ AppAsset::register($this);
                 ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index'],
             ]
             ],
-            /*
-             *
-             * echo Nav::widget([
-                                'label' => 'Dropdown',
-                                    'items' => [
-                                        ['label' => 'Level 1 - Dropdown A', 'url' => '#'],
-                                        '<li class="divider"></li>',
-                                        '<li class="dropdown-header">Dropdown Header</li>',
-                                        ['label' => 'Level 1 - Dropdown B', 'url' => '#'],
-                                     ],
-                                 ],
-             *
-             *
-             *
-             *
-             */
-
-
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'url' => ['/site/login']]

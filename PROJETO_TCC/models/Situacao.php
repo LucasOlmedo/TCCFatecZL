@@ -38,8 +38,8 @@ class Situacao extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Situacao' => Yii::t('app', 'Id  Situacao'),
-            'nome' => Yii::t('app', 'Nome'),
+            'id_Situacao' => Yii::t('app', 'ID'),
+            'nome' => Yii::t('app', 'Situação'),
         ];
     }
 }
