@@ -1,0 +1,121 @@
+table, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+}
+
+.img-header{
+  width: 43%;
+}
+
+.font-arial{
+  font-family: 'Arial', sans-serif;
+}
+
+.font-times{
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.doc-txt-header{
+  float: right;
+  margin-top: 4%;
+  width: 56%;
+}
+
+.doc-txt-header--titulo{
+  margin-bottom: 2.5%;
+}
+
+.doc-txt-header--box{
+  border: 1px solid black;
+  padding: 0% 1% 1%;
+}
+
+.doc-txt-header--box, .doc-txt-header .doc-txt-header--strong{
+  font-size: 0.8em;
+}
+
+.doc-txt-header--box__padding{
+  padding: 0% 3% 1%;
+}
+
+.parte-titulo{
+  padding: 0% 1%;
+  font-weight: bold;
+}
+
+.parte-curso{
+  padding: 0.2% 0% 0%;
+}
+
+.parte-no-show-right{
+  border-right: 0.1px solid white;
+}
+
+.parte-strong{
+  font-weight: bold;
+}
+
+.parte-italic{
+  font-style: italic;
+}
+
+.parte-txt-left{
+  text-align: left;
+  padding: 0% 0.5%;
+}
+
+.parte-medium-font{
+  font-size: 0.8em;
+}
+
+.parte-less-font{
+  font-size: 0.75em;
+}
+
+.parte-nome{
+  padding: 0% 2%;
+}
+
+.parte-nome-value{
+  padding-right: 5%;
+}
+
+.parte-externo{
+  text-align: left;
+}
+
+.parte-externo__hora{
+  margin-right: 7%;
+  margin-left: 7%;
+}
+
+.parte-externo__jornada{
+  margin-left: 8%;
+}
+
+.parte-disciplina{
+  padding: 0.2% 1% 0%;
+}
+
+.parte-b-titulo{
+  padding: 0% 14px;
+}
+
+.parte-bottom-none{
+  border-bottom: 1px solid white;
+}
+
+.parte-c{
+  float: left;
+  width: 39%;
+}
+
+.parte-d-header, .parte-d{
+  float: right;
+  width: 60%;
+}

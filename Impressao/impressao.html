@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Impressão</title>
+    <link rel="stylesheet" href="impressao.css">
+  </head>
+  <body>
+
+    <img src="image.jpg" alt="Imagem CPS" class="img-header" />
+
+    <div class="doc-txt-header">
+      <p class="font-arial doc-txt-header--titulo">FATEC ZL - GRADE HORARIA</p>
+
+      <span class="doc-txt-header--box doc-txt-header--box__padding">Xº</span> <strong class="doc-txt-header--strong">SEMESTRE DE</strong> <span class="doc-txt-header--box doc-txt-header--box__padding" >XXXX</span>
+      <span class="doc-txt-header--box">Válida a partir de xx/xx/xxxx</span>
+    </div>
+
+
+    <table class="parte-a">
+      <tr>
+        <td class="parte-titulo">A</td>
+        <td class="font-arial parte-medium-font parte-nome">NOME</td>
+        <td class="parte-strong parte-italic parte-txt-left parte-nome-value parte-medium-font">XXXXXXXXXXXXXXXXX</td>
+        <td class="parte-less-font">CATEGORIA</td>
+        <td class="parte-strong parte-italic parte-medium-font">XXXXXXXXXXXXXX</td>
+      </tr>
+
+      <tr>
+        <td class="parte-no-show-right">     </td>
+        <td class="font-arial parte-medium-font">REGIME</td>
+        <td class="parte-less-font parte-externo"><span class="parte-externo__hora">[X]HORA-AULA</span>   [ ]RJI   <span class="parte-externo__jornada">[ ]JORNADA</span></td>
+        <td class="parte-less-font">DEPTO/C. IMPL.</td>
+        <td class="parte-less-font">XXXXX</td>
+      </tr>
+
+    </table>
+
+    <table class="parte-b" id="pt-b">
+      <tr>
+        <td class="parte-titulo parte-b-titulo">B</td>
+        <td class="parte-less-font parte-disciplina">DISCIPLINA</td>
+        <td class="parte-less-font parte-curso">CURSO</td>
+
+        <td class="parte-less-font parte-disciplina">DISCIPLINA</td>
+        <td class="parte-less-font parte-curso">CURSO</td>
+
+        <td class="parte-less-font parte-disciplina">DISCIPLINA</td>
+        <td class="parte-less-font parte-curso">CURSO</td>
+
+        <td class="parte-less-font parte-disciplina">DISCIPLINA</td>
+        <td class="parte-less-font parte-curso">CURSO</td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none">     </td>
+        <td class="parte-less-font">XXX</td>
+
+        <td class="parte-less-font">XXX</td>
+
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td>     </td>
+
+        <td class="parte-less-font">XXX</td>
+
+        <td class="parte-less-font">XXX</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <table>
+      <tr>
+        <td class="parte-less-font">Período</td>
+        <td class="parte-less-font">HAE-RJI-JORNADA</td>
+        <td class="parte-less-font">HORA-AULA</td>
+        <td class="parte-less-font">SEGUNDA</td>
+        <td class="parte-less-font">TERÇA</td>
+        <td class="parte-less-font">QUARTA</td>
+        <td class="parte-less-font">QUINTA</td>
+        <td class="parte-less-font">SEXTA</td>
+        <td class="parte-less-font">SÁBADO</td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">M</td>
+        <td class="parte-less-font">08h-09h</td>
+        <td class="parte-less-font">07h30min - 08h20min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">A</td>
+        <td class="parte-less-font">09h-10h</td>
+        <td class="parte-less-font">08h20min  - 09h10min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">N</td>
+        <td class="parte-less-font">10h-11h</td>
+        <td class="parte-less-font">09h20min  - 10h10min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">H</td>
+        <td class="parte-less-font">11h-12h</td>
+        <td class="parte-less-font">10h10min  - 11h00min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">Ã</td>
+        <td class="parte-less-font">12h-13h</td>
+        <td class="parte-less-font">11h10min - 12h00min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-less-font">   </td>
+        <td class="parte-less-font">13h-14h</td>
+        <td class="parte-less-font">12h00min - 12h50min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr class="linha-vazia">
+        <td>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">T</td>
+        <td class="parte-less-font">13h-14h</td>
+        <td class="parte-less-font">13h00min - 13h50min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">A</td>
+        <td class="parte-less-font">14h-15h</td>
+        <td class="parte-less-font">13h50min - 14h40min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">R</td>
+        <td class="parte-less-font">15h-16h</td>
+        <td class="parte-less-font">14h50min - 15h40min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font" class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">D</td>
+        <td class="parte-less-font">16h-17h</td>
+        <td class="parte-less-font">15h40min - 16h30min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">E</td>
+        <td class="parte-less-font">17h-18h</td>
+        <td class="parte-less-font">16h40min - 17h30min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td>   </td>
+        <td class="parte-less-font">18h-19h</td>
+        <td class="parte-less-font">17h30min - 18h20min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr class="linha-vazia">
+        <td>
+
+        </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">N</td>
+        <td class="parte-less-font">18h-19h</td>
+        <td class="parte-less-font">19h20min - 20h10min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">O</td>
+        <td class="parte-less-font">19h-20h</td>
+        <td class="parte-less-font">20h10min - 21h00min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">I</td>
+        <td class="parte-less-font">20h-21h</td>
+        <td class="parte-less-font">21h10min - 22h00min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="parte-bottom-none font-arial">T</td>
+        <td class="parte-less-font">21h-22h</td>
+        <td class="parte-less-font">22h00min - 22h50min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+
+      <tr>
+        <td class="font-arial">E</td>
+        <td class="parte-less-font">21h-23h</td>
+        <td class="parte-less-font">22h50min - 23h40min</td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+        <td class="parte-less-font">    </td>
+      </tr>
+    </table>
+
+    <br>
+
+    <table class="parte-c">
+      <tr>
+        <td>C</td>
+        <td>HAE - RJI - JORNADA</td>
+        <td>NÚMERO Horas Semanais</td>
+      </tr>
+
+      <tr>
+        <td>1.</td>
+        <td>Diretor e Vice-Diretor da Faculdade</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>2.</td>
+        <td>Assessoria  ao CEETEPS</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>3.</td>
+        <td>HAE de Apoio a Direção da FATEC</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>4.</td>
+        <td>Chefia  de DEPARTAMENTO</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>5.</td>
+        <td>Responsab. por  Curso em Implantaçio</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>6.</td>
+        <td>Responsab. por  disciplina (2º a 6º feira)</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>7.</td>
+        <td>Coord. de oficinas e laboratórios</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>8.</td>
+        <td>HAE de Coordenação de Estágio</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>9.</td>
+        <td>HAE de Orientaçao de TCC</td>
+        <td>   -    </td>
+      </tr>
+
+      <tr>
+        <td>10.</td>
+        <td>Outros (2º a 6º feira)</td>
+        <td>   -    </td>
+      </tr>
+    </table>
+
+    <table class="parte-d-header">
+      <tr>
+        <td>D</td>
+        <td>QUADRO RESUMO</td>
+      </tr>
+    </table>
+
+    <table class="parte-d">
+      <tr>
+        <td>Atividades</td>
+        <td>Qtd Semanal</td>
+        <td>Qtd Mensal</td>
+      </tr>
+
+      <tr>
+        <td>Hora Aula</td>
+        <td>D</td>
+        <td>D</td>
+      </tr>
+
+      <tr>
+        <td>Hora Atividade</td>
+        <td>D</td>
+        <td>D</td>
+      </tr>
+
+      <tr>
+        <td>H.A.E</td>
+        <td>D</td>
+        <td>D</td>
+      </tr>
+
+      <tr>
+        <td>R.J.I.</td>
+        <td>D</td>
+        <td>D</td>
+      </tr>
+
+      <tr>
+        <td>Jornada</td>
+        <td>D</td>
+        <td>D</td>
+      </tr>
+
+      <tr>
+        <td>Total Geral</td>
+        <td>D</td>
+        <td>D</td>
+      </tr>
+
+    </table>
+  </body>
+</html>
