@@ -53,7 +53,7 @@ table{
 }
 
 .parte-no-show-right{
-  border-right: 0.1px solid white;
+  border-right: 0.1px solid transparent;
 }
 
 .parte-strong{
@@ -107,15 +107,88 @@ table{
 }
 
 .parte-bottom-none{
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid transparent;
 }
 
 .parte-c{
   float: left;
-  width: 39%;
+  width: 44%;
 }
 
 .parte-d-header, .parte-d{
   float: right;
-  width: 60%;
+  width: 55%;
+}
+
+.linha-vazia{
+  background-color: gray;
+}
+
+.pula-linha{
+  margin-top: 7px;
+}
+
+.parte-small-font{
+  font-size: .6em;
+}
+
+.parte-medium-tit-font{
+  font-size: .95em;
+}
+
+.parte-c .parte-margin-bottom{
+  padding-bottom: 4px;
+}
+
+.parte-c #parte-c-titulo{
+  margin: 0% 10px;
+}
+
+.clear-fix{
+  clear: both;
+}
+
+.div-bordered{
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-bottom: 1px solid transparent;
+}
+
+.no-margin{
+  margin: 2px 0% 0% 5px;
+}
+
+.no-margin-tit{
+  margin: 0% 0px 0% 3px;
+}
+
+.div-bordered-no-top{
+  margin-top: -1px;
+}
+
+#pt-b{
+  margin-top: -1px;
+}
+
+.no-show-bottom {
+  border-bottom: 1px solid transparent;
+}
+
+.date-table{
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 3px;
+}
+
+.no-show-right{
+  border-right: 1px solid transparent;
+  padding-left: 10px;
+}
+
+.down-margin{
+  padding-top: 3px;
+}
+
+.up-margin{
+  padding-bottom: 1px;
 }
