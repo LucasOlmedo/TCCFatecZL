@@ -111,4 +111,9 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionCursoDisciplina()
+    {
+        return $this->render('curso-disciplina');
+    }
 }

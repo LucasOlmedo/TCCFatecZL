@@ -36,8 +36,8 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
+//            ['label' => 'Home', 'url' => ['/site/index']],
+//            ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Cadastros', 'items' => [
                 ['label' => 'Cursos', 'url' => 'index.php?r=curso/index'],
                     '<li class="divider"></li>',
@@ -50,21 +50,23 @@ AppAsset::register($this);
                 ['label' => 'HAE', 'url' => 'index.php?r=horarios-externos/index'],
                     '<li class="divider"></li>',
                 ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index'],
+                    '<li class="divider"></li>',
+                ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index']
             ]
             ],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-            ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
+//            ['label' => 'Contact', 'url' => ['/site/contact']],
+//            Yii::$app->user->isGuest ? (
+//            ['label' => 'Login', 'url' => ['/site/login']]
+//            ) : (
+//                '<li>'
+//                . Html::beginForm(['/site/logout'], 'post')
+//                . Html::submitButton(
+//                    'Logout (' . Yii::$app->user->identity->username . ')',
+//                    ['class' => 'btn btn-link']
+//                )
+//                . Html::endForm()
+//                . '</li>'
+//            )
         ],
     ]);
     NavBar::end();

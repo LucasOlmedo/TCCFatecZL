@@ -2,19 +2,17 @@
 
 namespace app\controllers;
 
-use app\models\Disciplina;
-use app\models\DisciplinaSearch;
 use Yii;
-use app\models\Curso;
-use app\models\CursoSearch;
+use app\models\CursoDisciplina;
+use app\models\CursoDisciplinaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * CursoController implements the CRUD actions for Curso model.
+ * CursoDisciplinaController implements the CRUD actions for CursoDisciplina model.
  */
-class CursoController extends Controller
+class CursoDisciplinaController extends Controller
 {
     public function behaviors()
     {
@@ -29,12 +27,12 @@ class CursoController extends Controller
     }
 
     /**
-     * Lists all Curso models.
+     * Lists all CursoDisciplina models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new CursoSearch();
+        $searchModel = new CursoDisciplinaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -44,28 +42,29 @@ class CursoController extends Controller
     }
 
     /**
-     * Displays a single Curso model.
-     * @param integer $id
+     * Displays a single CursoDisciplina model.
+     * @param integer $id_Curso
+     * @param integer $id_Disciplina
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($id_Curso, $id_Disciplina)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($id_Curso, $id_Disciplina),
         ]);
     }
 
     /**
-     * Creates a new Curso model.
+     * Creates a new CursoDisciplina model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Curso();
+        $model = new CursoDisciplina();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['add-disc', 'id_curso' => $model->id_Curso]);
+            return $this->redirect(['view', 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -74,17 +73,18 @@ class CursoController extends Controller
     }
 
     /**
-     * Updates an existing Curso model.
+     * Updates an existing CursoDisciplina model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param integer $id_Curso
+     * @param integer $id_Disciplina
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id_Curso, $id_Disciplina)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($id_Curso, $id_Disciplina);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect(['view', 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -93,41 +93,33 @@ class CursoController extends Controller
     }
 
     /**
-     * Deletes an existing Curso model.
+     * Deletes an existing CursoDisciplina model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param integer $id_Curso
+     * @param integer $id_Disciplina
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($id_Curso, $id_Disciplina)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($id_Curso, $id_Disciplina)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Curso model based on its primary key value.
+     * Finds the CursoDisciplina model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Curso the loaded model
+     * @param integer $id_Curso
+     * @param integer $id_Disciplina
+     * @return CursoDisciplina the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($id_Curso, $id_Disciplina)
     {
-        if (($model = Curso::findOne($id)) !== null) {
+        if (($model = CursoDisciplina::findOne(['id_Curso' => $id_Curso, 'id_Disciplina' => $id_Disciplina])) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('A página solicitada não existe.');
+            throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }
-
-    public function actionAddDisc($id_curso)
-    {
-        $model = $this->findModel($id_curso);
-        $model_disc = Disciplina::find()->all();
-        return $this->render('add_disc',
-            ['model' => $model , 'model_disc' => $model_disc]
-        );
-
     }
 }
