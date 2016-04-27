@@ -72,7 +72,7 @@ class Curso extends ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCursoDisciplinaProfessors()
+    public function getCursoDisciplinaProfessor()
     {
         return $this->hasMany(CursoDisciplinaProfessor::className(), ['id_Curso' => 'id_Curso']);
     }

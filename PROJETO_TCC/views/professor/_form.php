@@ -28,14 +28,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'inicio_fateczl')->textInput() ?>
 
-    <div class="form-group">
-        <label for="select_disc">Situação</label>
-        <select class="form-control" id="select_disc">
-            <option value='selecione'>Selecione a situação...</option>";
-        </select>
-        <br>
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Salvar') : Yii::t('app', 'Atualizar'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
+    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Finalizar cadastro >>') : Yii::t('app', 'Alterar situação >>'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 
     <?php ActiveForm::end(); ?>
 

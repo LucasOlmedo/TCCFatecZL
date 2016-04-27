@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Situacao;
 use Yii;
 use app\models\Professor;
 use app\models\ProfessorSearch;
@@ -62,8 +63,10 @@ class ProfessorController extends Controller
     {
         $model = new Professor();
 
+//        $situacao = Situacao::find()->all();
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect(['add-situacao', 'id_prof' => $model->id_Professor]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -117,5 +120,14 @@ class ProfessorController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionAddSituacao($id_prof)
+    {
+        $model = $this->findModel($id_prof);
+        $model_sit = Situacao::find()->all();
+        return $this->render('add_situacao',
+            ['model' => $model , 'model_sit' => $model_sit]
+        );
     }
 }
