@@ -2,8 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\CursoDisciplina;
 use app\models\Disciplina;
-use app\models\DisciplinaSearch;
 use Yii;
 use app\models\Curso;
 use app\models\CursoSearch;
@@ -28,6 +28,12 @@ class CursoController extends Controller
         ];
     }
 
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
+
     /**
      * Lists all Curso models.
      * @return mixed
@@ -50,8 +56,9 @@ class CursoController extends Controller
      */
     public function actionView($id)
     {
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($id)
         ]);
     }
 
@@ -100,8 +107,8 @@ class CursoController extends Controller
      */
     public function actionDelete($id)
     {
+        //CursoDisciplina::deleteAll(['id_Curso' => $this->id]);
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 
@@ -126,8 +133,31 @@ class CursoController extends Controller
         $model = $this->findModel($id_curso);
         $model_disc = Disciplina::find()->all();
         return $this->render('add_disc',
-            ['model' => $model , 'model_disc' => $model_disc]
+            ['model' => $model, 'model_disc' => $model_disc, 'id_curso' => $model->id_Curso]
         );
 
+    }
+
+    public function actionGravaDisciplinas()
+    {
+        $disciplinas = $_POST['disciplinas'];
+        $id_curso = $_POST['id_curso'];
+
+        foreach($disciplinas as $id => $aula){
+            $model = new CursoDisciplina();
+            $model->id_Curso = $id_curso;
+            $model->id_Disciplina = $id;
+            $model->qtde_aulas = $aula;
+            $model->save();
+
+//            echo $id_curso;
+//            echo " - ";
+//            echo $id;
+//            echo " - ";
+//            echo $aula;
+//            echo "<br>";
+        }
+
+        return $this->redirect(['index']);
     }
 }
