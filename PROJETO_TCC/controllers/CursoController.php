@@ -107,7 +107,7 @@ class CursoController extends Controller
      */
     public function actionDelete($id)
     {
-        //CursoDisciplina::deleteAll(['id_Curso' => $this->id]);
+        CursoDisciplina::deleteAll("id_Curso = ".$id);
         $this->findModel($id)->delete();
         return $this->redirect(['index']);
     }
@@ -149,15 +149,7 @@ class CursoController extends Controller
             $model->id_Disciplina = $id;
             $model->qtde_aulas = $aula;
             $model->save();
-
-//            echo $id_curso;
-//            echo " - ";
-//            echo $id;
-//            echo " - ";
-//            echo $aula;
-//            echo "<br>";
         }
-
         return $this->redirect(['index']);
     }
 }
