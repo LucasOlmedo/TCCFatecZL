@@ -107,7 +107,9 @@ class CursoController extends Controller
      */
     public function actionDelete($id)
     {
-        CursoDisciplina::deleteAll("id_Curso = ".$id);
+        if(!CursoDisciplina::find()->indexBy($id) == null){
+            CursoDisciplina::deleteAll("id_Curso = ".$id);
+        }
         $this->findModel($id)->delete();
         return $this->redirect(['index']);
     }
@@ -140,7 +142,11 @@ class CursoController extends Controller
 
     public function actionGravaDisciplinas()
     {
-        $disciplinas = $_POST['disciplinas'];
+        $disciplinas = Yii::$app->request->post('disciplinas');
+        if(empty($disciplinas)){
+            return $this->redirect(['index']);
+        }
+
         $id_curso = $_POST['id_curso'];
 
         foreach($disciplinas as $id => $aula){

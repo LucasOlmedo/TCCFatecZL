@@ -27,8 +27,26 @@ $this->params['breadcrumbs'][] = $this->title;
             'nome',
             'abreviacao',
             'carga_horaria',
-
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => 'yii\grid\ActionColumn',
+//              'template'=>'{view}{create}{trash}',
+//                'buttons'=>[
+//                    'view' => function ($url, $model) {
+//                        return Html::a('<span class="glyphicon glyphicon-view"></span>', $url, [
+//                            'title' => Yii::t('yii', 'view'),
+//                        ]);
+//                    },
+//                    'search' => function ($url, $model) {
+//                        return Html::a('<span class="glyphicon glyphicon-search"></span>', $url, [
+//                            'title' => Yii::t('yii', 'Create'),
+//                        ]);
+//                    },
+//                    'trash' => function ($url, $model) {
+//                        return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
+//                            'title' => Yii::t('yii', 'Create'),
+//                        ]);
+//                    }
+//                ]
+            ],
         ],
     ]); ?>
 
