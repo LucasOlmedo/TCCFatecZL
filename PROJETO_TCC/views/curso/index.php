@@ -28,24 +28,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'abreviacao',
             'carga_horaria',
             ['class' => 'yii\grid\ActionColumn',
-//              'template'=>'{view}{create}{trash}',
-//                'buttons'=>[
-//                    'view' => function ($url, $model) {
-//                        return Html::a('<span class="glyphicon glyphicon-view"></span>', $url, [
-//                            'title' => Yii::t('yii', 'view'),
-//                        ]);
-//                    },
-//                    'search' => function ($url, $model) {
-//                        return Html::a('<span class="glyphicon glyphicon-search"></span>', $url, [
-//                            'title' => Yii::t('yii', 'Create'),
-//                        ]);
-//                    },
-//                    'trash' => function ($url, $model) {
-//                        return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
-//                            'title' => Yii::t('yii', 'Create'),
-//                        ]);
-//                    }
-//                ]
+              'template'=> '{view} {update} {delete} {edit-disc}',
+                'buttons' => [
+                    'edit-disc' => function () {
+                        $url = '#';
+                        return Html::a(
+                            '<span class="glyphicon glyphicon-edit"></span>',
+                            $url
+                        );
+                    },
+                ],
             ],
         ],
     ]); ?>
