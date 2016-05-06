@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'FATEC Zona Leste - Sistema Gerenciador';
 ?>
 <div class="site-index">
 

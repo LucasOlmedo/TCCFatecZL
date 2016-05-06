@@ -19,7 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Alterar'), ['update', 'id' => $model->id_Curso], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Alterar Curso'), ['update', 'id' => $model->id_Curso], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', 'Alterar Disciplinas'), ['edit-disc', 'id' => $model->id_Curso], ['class' => 'btn btn-warning']) ?>
         <?= Html::a(Yii::t('app', 'Excluir'), ['delete', 'id' => $model->id_Curso], [
             'class' => 'btn btn-danger',
             'data' => [

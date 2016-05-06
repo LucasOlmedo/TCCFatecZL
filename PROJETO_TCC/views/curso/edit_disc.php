@@ -6,7 +6,7 @@
  * Time: 10:53
  */
 
-$this->title = Yii::t('app', 'Incluir disciplina');
+$this->title = Yii::t('app', 'Alterar disciplina');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Cursos'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -14,15 +14,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="curso-disciplina-form">
     <div class="form-group">
-        <h2>Incluir disciplinas</h2>
+        <h2>Alterar disciplinas do curso #<?= $id_curso ?></h2>
 
-         <form method='post' id='form' action="index.php?r=curso/grava-disciplinas">
+        <form method='post' id='form' action="index.php?r=curso/altera-disciplinas">
 
             <label for="select_disc">Disciplina </label>
 
             <div id="array-disc"></div>
+            <div id="array-exc"></div>
 
-             <input type="hidden" name="id_curso" value="<?= $id_curso ?>" />
+            <input type="hidden" name="id_curso" value="<?= $id_curso ?>"/>
 
             <select class="form-control" id="select_disc">
                 <?php
@@ -32,13 +33,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 ?>
             </select>
 
-             <div id="div-curso"></div>
+            <div id="div-curso"></div>
 
             <br>
             <label for="input_qtdeaulas">Quantidade de aulas</label>
             <input type="text" class="form-control" id="input_qtdeaulas">
             <br>
-            <button class="btn btn-default" type="button" id="btn-add-disc">+ Adicionar disciplina</button>
+            <button class="btn btn-success" type="button" id="btn-add-disc">+ Adicionar disciplina</button>
             <br>
             <br>
             <br>
@@ -49,11 +50,19 @@ $this->params['breadcrumbs'][] = $this->title;
                 <th>Opções</th>
                 </thead>
                 <tbody>
-
+                <?php
+                foreach ($disciplinas as $row):
+                    echo "<tr id='linha-" . $row['id_Disciplina'] . "'>";
+                    echo "<td>" . $row['nome'] . "</td>";
+                    echo "<td>" . $row['qtde_aulas'] . "</td>";
+                    echo "<td><a href='#' onclick='excluir(". $row['id_Disciplina'] . ")'><span class='glyphicon glyphicon-trash'></span></a></td>";
+                    echo "</tr>";
+                endforeach;
+                ?>
                 </tbody>
             </table>
             <br>
-            <button class="btn btn-primary" type="submit" id="btnSalvarArray">Salvar</button>
+            <button class="btn btn-primary" type="submit" id="btnSalvarArray">Salvar alteração</button>
         </form>
     </div>
 </div>
@@ -100,6 +109,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     function excluir(id) {
         if (confirm("Deseja realmente excluir?")) {
+            $("#array-exc").append("<input type='hidden' name='excluir[" + id + "]' value='" + id + "' id='exc-" + id + "' />");
             $("#txt-" + id).fadeOut(0);
             $("#txt-" + id).remove();
             $("#linha-" + id).fadeOut(0);

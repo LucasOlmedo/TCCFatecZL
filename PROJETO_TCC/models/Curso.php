@@ -64,7 +64,7 @@ class Curso extends ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdDisciplinas()
+    public function getDisciplinas()
     {
         return $this->hasMany(Disciplina::className(), ['id_Disciplina' => 'id_Disciplina'])->viaTable('curso_disciplina', ['id_Curso' => 'id_Curso']);
     }

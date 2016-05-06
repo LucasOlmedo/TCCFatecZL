@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', '+ Novo Curso'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', '+ Novo Curso'), ['create'], ['class' => 'btn btn-primary'], ['span' => 'glyphicon glyphicon-align-left']) ?>
     </p>
 
     <?= GridView::widget([
@@ -30,12 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn',
               'template'=> '{view} {update} {delete} {edit-disc}',
                 'buttons' => [
-                    'edit-disc' => function () {
-                        $url = '#';
-                        return Html::a(
-                            '<span class="glyphicon glyphicon-edit"></span>',
-                            $url
-                        );
+                    'edit-disc' => function ($url) {
+                        return Html::a('<span class="glyphicon glyphicon-edit"></span>',$url);
                     },
                 ],
             ],
