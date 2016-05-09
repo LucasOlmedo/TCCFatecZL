@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Disciplina */
 
-$this->title = "#". $model->id_Disciplina;
+$this->title = "Visualização de #". $model->id_Disciplina;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Disciplinas'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id_Disciplina], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id_Disciplina], [
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Alterar Disciplina'), ['update', 'id' => $model->id_Disciplina], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir Disciplina'), ['delete', 'id' => $model->id_Disciplina], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),

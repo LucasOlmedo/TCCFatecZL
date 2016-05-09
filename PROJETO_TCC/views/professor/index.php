@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\ProfessorSearch */
+/* @var $searchModel app\models\CursoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', 'Professores');
@@ -16,24 +16,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', '+ Novo Professor'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-plus-sign"></span> Novo Professor'), ['create'], ['class' => 'btn btn-primary'], ['span' => 'glyphicon glyphicon-align-left']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-
             'id_Professor',
             'nome',
             'rg',
             'categoria',
-            'graduacao',
-            'contrato',
-            'sede',
-            'inicio_cps',
-            'inicio_fateczl',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

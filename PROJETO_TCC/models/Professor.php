@@ -3,7 +3,6 @@
 namespace app\models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "professor".
@@ -19,8 +18,9 @@ use yii\db\ActiveRecord;
  * @property string $inicio_fateczl
  *
  * @property CursoDisciplinaProfessor[] $cursoDisciplinaProfessors
+ * @property SituacaoProfessor[] $situacaoProfessors
  */
-class Professor extends ActiveRecord
+class Professor extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -50,15 +50,15 @@ class Professor extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Professor' => Yii::t('app', 'ID'),
+            'id_Professor' => Yii::t('app', 'Id  Professor'),
             'nome' => Yii::t('app', 'Nome'),
-            'rg' => Yii::t('app', 'RG'),
+            'rg' => Yii::t('app', 'Rg'),
             'categoria' => Yii::t('app', 'Categoria'),
-            'graduacao' => Yii::t('app', 'Graduação'),
+            'graduacao' => Yii::t('app', 'Graduacao'),
             'contrato' => Yii::t('app', 'Contrato'),
             'sede' => Yii::t('app', 'Sede'),
-            'inicio_cps' => Yii::t('app', 'Início Cps'),
-            'inicio_fateczl' => Yii::t('app', 'Início FatecZL'),
+            'inicio_cps' => Yii::t('app', 'Inicio Cps'),
+            'inicio_fateczl' => Yii::t('app', 'Inicio Fateczl'),
         ];
     }
 
@@ -68,5 +68,18 @@ class Professor extends ActiveRecord
     public function getCursoDisciplinaProfessors()
     {
         return $this->hasMany(CursoDisciplinaProfessor::className(), ['id_Professor' => 'id_Professor']);
+    }
+
+    public function getSituacao()
+    {
+        return $this->hasMany(Situacao::className(), ['id_Situacao' => 'id_Situacao'])->viaTable('situacao_professor', ['id_Professor' => 'id_`Professor']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSituacaoProfessors()
+    {
+        return $this->hasMany(SituacaoProfessor::className(), ['id_Professor' => 'id_Professor']);
     }
 }

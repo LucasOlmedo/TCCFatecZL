@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <label for="input_qtdeaulas">Quantidade de aulas</label>
             <input type="text" class="form-control" id="input_qtdeaulas">
             <br>
-            <button class="btn btn-success" type="button" id="btn-add-disc">+ Adicionar disciplina</button>
+            <button class="btn btn-success" type="button" id="btn-add-disc"><span class="glyphicon glyphicon-plus"></span> Adicionar disciplina</button>
             <br>
             <br>
             <br>
@@ -62,7 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </tbody>
             </table>
             <br>
-            <button class="btn btn-primary" type="submit" id="btnSalvarArray">Salvar alteração</button>
+            <button class="btn btn-primary" type="submit" id="btnSalvarArray"><span class="glyphicon glyphicon-ok"></span> Salvar alteração</button>
         </form>
     </div>
 </div>

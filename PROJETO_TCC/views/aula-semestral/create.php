@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\AulaSemestral */
 
 $this->title = Yii::t('app', 'Create Aula Semestral');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Aula Semestrals'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Aula Semestral'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="aula-semestral-create">

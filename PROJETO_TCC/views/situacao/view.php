@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Situacao */
 
-$this->title = "#". $model->id_Situacao;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Situacaos'), 'url' => ['index']];
+$this->title = "Visualização de #". $model->id_Situacao;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Situação'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="situacao-view">
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id_Situacao], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id_Situacao], [
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Alterar Situação'), ['update', 'id' => $model->id_Situacao], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir Situação'), ['delete', 'id' => $model->id_Situacao], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),

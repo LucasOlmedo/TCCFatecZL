@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Atualizar') : Yii::t('app', 'Atualizar'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'])  ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Atualizar') : Yii::t('app', '<span class="glyphicon glyphicon-ok"></span> Atualizar'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'])  ?>
     </div>
 
     <?php ActiveForm::end(); ?>

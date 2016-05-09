@@ -24,11 +24,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'sede')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'inicio_cps')->textInput() ?>
+    <?= $form->field($model, 'inicio_cps')->input('date') ?>
 
-    <?= $form->field($model, 'inicio_fateczl')->textInput() ?>
+    <?= $form->field($model, 'inicio_fateczl')->input('date') ?>
 
-    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Finalizar cadastro >>') : Yii::t('app', 'Alterar situação >>'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Situação do professor <span class="glyphicon glyphicon-chevron-right"></span>') : Yii::t('app', 'Alterar situação <span class="glyphicon glyphicon-chevron-right"></span>'), ['class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary']) ?>
 
     <?php ActiveForm::end(); ?>
 

@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Situacao;
+use app\models\SituacaoProfessor;
 use Yii;
 use app\models\Professor;
 use app\models\ProfessorSearch;
@@ -26,6 +27,13 @@ class ProfessorController extends Controller
             ],
         ];
     }
+
+    public function beforeAction($action)
+    {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
+
 
     /**
      * Lists all Professor models.
@@ -63,10 +71,8 @@ class ProfessorController extends Controller
     {
         $model = new Professor();
 
-//        $situacao = Situacao::find()->all();
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['add-situacao', 'id_prof' => $model->id_Professor]);
+            return $this->redirect(['add-situacao', 'id' => $model->id_Professor]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -101,8 +107,10 @@ class ProfessorController extends Controller
      */
     public function actionDelete($id)
     {
+        if (!SituacaoProfessor::find()->indexBy($id) == null) {
+            SituacaoProfessor::deleteAll("id_Professor = " . $id);
+        }
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 
@@ -118,16 +126,37 @@ class ProfessorController extends Controller
         if (($model = Professor::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException('A página solicitada não existe.');
         }
     }
 
-    public function actionAddSituacao($id_prof)
+    public function actionAddSituacao($id)
     {
-        $model = $this->findModel($id_prof);
+        $model = $this->findModel($id);
         $model_sit = Situacao::find()->all();
         return $this->render('add_situacao',
-            ['model' => $model , 'model_sit' => $model_sit]
+            ['model' => $model , 'model_sit' => $model_sit, 'id_prof' => $model->id_Professor]
         );
     }
+
+    public function actionGravaSituacao()
+    {
+        $sits = Yii::$app->request->post('situacao');
+        if (empty($sits)) {
+            return $this->redirect(['index']);
+        }
+
+        $id_prof = $_POST['id_prof'];
+
+        foreach ($sits as $id => $dataini) {
+            $model = new SituacaoProfessor();
+            $model->id_Professor = $id_prof;
+            $model->id_Situacao = $id;
+            $model->data_sit = $dataini;
+            $model->save();
+        }
+        return $this->redirect(['index']);
+    }
+
+
 }

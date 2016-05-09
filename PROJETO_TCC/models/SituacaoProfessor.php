@@ -3,7 +3,6 @@
 namespace app\models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "situacao_professor".
@@ -11,9 +10,12 @@ use yii\db\ActiveRecord;
  * @property integer $id_SitProf
  * @property integer $id_Professor
  * @property integer $id_Situacao
- * @property string $data
+ * @property string $data_sit
+ *
+ * @property Professor $idProfessor
+ * @property Situacao $idSituacao
  */
-class SituacaoProfessor extends ActiveRecord
+class SituacaoProfessor extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -29,9 +31,9 @@ class SituacaoProfessor extends ActiveRecord
     public function rules()
     {
         return [
-            [['id_Professor', 'id_Situacao', 'data'], 'required'],
+            [['id_Professor', 'id_Situacao', 'data_sit'], 'required'],
             [['id_Professor', 'id_Situacao'], 'integer'],
-            [['data'], 'safe']
+            [['data_sit'], 'safe']
         ];
     }
 
@@ -44,7 +46,23 @@ class SituacaoProfessor extends ActiveRecord
             'id_SitProf' => Yii::t('app', 'Id  Sit Prof'),
             'id_Professor' => Yii::t('app', 'Id  Professor'),
             'id_Situacao' => Yii::t('app', 'Id  Situacao'),
-            'data' => Yii::t('app', 'Data'),
+            'data_sit' => Yii::t('app', 'Data Sit'),
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdProfessor()
+    {
+        return $this->hasOne(Professor::className(), ['id_Professor' => 'id_Professor']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdSituacao()
+    {
+        return $this->hasOne(Situacao::className(), ['id_Situacao' => 'id_Situacao']);
     }
 }

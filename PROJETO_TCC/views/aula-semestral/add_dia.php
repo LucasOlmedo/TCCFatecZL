@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         </select>
         <br>
-        <button class="btn btn-success" type="submit" id="btn-add-disc">+ Adicionar ao canlendário semestral</button>
+        <button class="btn btn-default" type="submit" id="btn-add-disc"><span class="glyphicon glyphicon-plus"></span>  Adicionar ao canlendário semestral</button>
         <br>
         <br>
         <br>
@@ -55,6 +55,6 @@ $this->params['breadcrumbs'][] = $this->title;
             </tbody>
         </table>
         <br>
-        <button class="btn btn-success" type="submit" id="btnSalvarArray">Salvar</button>
+        <button class="btn btn-primary" type="submit" id="btnSalvarArray"><span class="glyphicon glyphicon-ok"></span> Salvar</button>
     </div>
 </div>
