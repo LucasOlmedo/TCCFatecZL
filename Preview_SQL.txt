@@ -6,7 +6,6 @@ CREATE TABLE `tcc`.`curso`(
   PRIMARY KEY (`id_Curso`)
 ) CHARSET=utf8 COLLATE=utf8_general_ci;
 
-
 -------------------------------------------
 
 CREATE TABLE `tcc`.`disciplina`(  
@@ -105,3 +104,9 @@ CREATE TABLE `tcc`.`diaSemana`(
 
 
 -------------------------------------------
+ALTER TABLE `tcc`.`situacao_professor`   
+  CHANGE `data` `data_sit` DATE NOT NULL;
+  
+ALTER TABLE `tcc`.`situacao_professor`  
+  ADD CONSTRAINT `fk_profsit` FOREIGN KEY (`id_Professor`) REFERENCES `tcc`.`professor`(`id_Professor`),
+  ADD CONSTRAINT `fk_sit` FOREIGN KEY (`id_Situacao`) REFERENCES `tcc`.`situacao`(`id_Situacao`);
