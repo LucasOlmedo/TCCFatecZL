@@ -11,7 +11,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
-        <p><a class="btn btn-lg btn-primary" href="#">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-primary">Get started with Yii</a></p>
     </div>
 
     <div class="body-content">
@@ -25,7 +25,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="#">Yii Documentation &raquo;</a></p>
+                <p><a class="btn btn-default">Yii Documentation &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Heading</h2>
@@ -35,7 +35,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="#">Yii Forum &raquo;</a></p>
+                <p><a class="btn btn-default">Yii Forum &raquo;</a></p>
             </div>
             <div class="col-lg-4">
                 <h2>Heading</h2>
@@ -45,7 +45,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                     ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur.</p>
 
-                <p><a class="btn btn-default" href="#">Yii Extensions &raquo;</a></p>
+                <p><a class="btn btn-default">Yii Extensions &raquo;</a></p>
             </div>
         </div>
 

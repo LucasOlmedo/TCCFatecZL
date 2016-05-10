@@ -35,10 +35,11 @@ AppAsset::register($this);
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
+        'encodeLabels' => false,
         'items' => [
-//            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => '<span class="glyphicon glyphicon-home"></span> Home', 'url' => ['/site/index']],
 //            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Cadastros', 'items' => [
+            ['label' => '<span class="glyphicon glyphicon-th-list"></span> Cadastros', 'items' => [
                 ['label' => 'Cursos', 'url' => 'index.php?r=curso/index'],
                     '<li class="divider"></li>',
                 ['label' => 'Disciplinas', 'url' => 'index.php?r=disciplina/index'],

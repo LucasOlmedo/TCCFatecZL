@@ -14,12 +14,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="sit-prof-form">
     <div class="form-group">
-        <h2>Situação do professor</h2>
+        <h2>Situação do professor #<?= $id_professor ?></h2>
 
-        <form method='post' id='form' action="index.php?r=professor/grava-situacao">
-
+        <form method='post' id='form' action="index.php?r=professor/altera-situacao">
+            <div id="array-exc"></div>
             <div id="array-sit"></div>
-            <input type="hidden" name="id_prof" value="<?= $id_prof; ?>" />
+            <input type="hidden" name="id_professor" value="<?= $id_professor; ?>" />
             <label for="select_sit">Situação </label>
             <select class="form-control" id="select_sit">
                 <?php
@@ -45,11 +45,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 <th>Opções</th>
                 </thead>
                 <tbody>
+                <?php
+                foreach ($situacao as $row):
+                    echo "<tr id='linha-" . $row['id_Situacao'] . "'>";
+                    echo "<td>" . $row['nome'] . "</td>";
+                    echo "<td>" . $row['data_sit'] . "</td>";
+                    echo "<td><a href='#' onclick='excluir_sit(" .$row['id_Situacao']. ")'><span class='glyphicon glyphicon-trash'></span></a></td>";
+                    echo "</tr>";
+                endforeach;
+                ?>
                 </tbody>
             </table>
             <br>
             <button class="btn btn-primary" type="submit" id="btnSalvarArray"><span
-                    class="glyphicon glyphicon-ok"></span> Salvar
+                    class="glyphicon glyphicon-ok"></span> Salvar alterações
             </button>
         </form>
     </div>
@@ -80,7 +89,7 @@ $this->params['breadcrumbs'][] = $this->title;
         html += "<td>" + situacao[count].dataRef + "</td>";
         html += "<td>";
         html += "<a href='#'>";
-        html += "<span class='glyphicon glyphicon-trash' onclick='excluir(" + idSit + ")'></span>";
+        html += "<span class='glyphicon glyphicon-trash' onclick='excluir_sit(" +idSit+")'></span>";
         html += "</a>";
         html += "</td>";
         html += "</tr>";
@@ -90,8 +99,9 @@ $this->params['breadcrumbs'][] = $this->title;
         count++;
     });
 
-    function excluir(id) {
+    function excluir_sit(id) {
         if (confirm("Deseja realmente excluir?")) {
+            $("#array-exc").append("<input type='hidden' name='excluir[" + id + "]' value='" + id + "' id='exc-" + id + "' />");
             $("#txt-" + id).fadeOut(0);
             $("#txt-" + id).remove();
             $("#linha-" + id).fadeOut(0);

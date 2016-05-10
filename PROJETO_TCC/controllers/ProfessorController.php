@@ -7,6 +7,7 @@ use app\models\SituacaoProfessor;
 use Yii;
 use app\models\Professor;
 use app\models\ProfessorSearch;
+use yii\db\Query;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -91,9 +92,9 @@ class ProfessorController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect(['edit-situacao', 'id' => $model->id_Professor]);
         } else {
-            return $this->render('update', [
+            return $this->render('update_prof', [
                 'model' => $model,
             ]);
         }
@@ -126,7 +127,7 @@ class ProfessorController extends Controller
         if (($model = Professor::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('A página solicitada não existe.');
+            throw new NotFoundHttpException('A pÃ¡gina solicitada nÃ£o existe.');
         }
     }
 
@@ -154,6 +155,58 @@ class ProfessorController extends Controller
             $model->id_Situacao = $id;
             $model->data_sit = $dataini;
             $model->save();
+        }
+        return $this->redirect(['index']);
+    }
+
+    public function actionEditSituacao($id)
+    {
+        $query = new Query;
+        $query->select(['situacao_professor.`id_Professor`,
+                        `situacao`.`id_Situacao`,
+                        `situacao`.`nome`,
+                        `situacao_professor`.`data_sit`'])
+            ->from('situacao_professor')
+            ->join('INNER JOIN',
+                'situacao',
+                'situacao.`id_Situacao` = situacao_professor.`id_Situacao`')
+            ->where(['situacao_professor.`id_Professor`' => $id]);
+        $command = $query->createCommand();
+        $situacao = $command->queryAll();
+
+        $model = $this->findModel($id);
+        $model_sit = Situacao::find()->all();
+        return $this->render('edit_situacao',
+            [
+                'model' => $model,
+                'model_sit' => $model_sit,
+                'id_professor' => $model->id_Professor,
+                'situacao' => $situacao
+            ]
+        );
+    }
+
+    public function actionAlteraSituacao()
+    {
+        $sits = Yii::$app->request->post('situacao');
+        $sitsExcluir = Yii::$app->request->post('excluir');
+        $id_prof = Yii::$app->request->post('id_professor');
+
+
+        if($sitsExcluir != "") {
+            foreach ($sitsExcluir as $id) {
+                SituacaoProfessor::deleteAll(['id_Professor' => $id_prof, 'id_Situacao' => $id]);
+            }
+        }
+
+        if($sits != ""){
+            foreach ($sits as $id => $dataini) {
+                $model = new SituacaoProfessor();
+                $model->id_Professor = $id_prof;
+                $model->id_Situacao = $id;
+                $model->data_sit = $dataini;
+                $model->save();
+            }
         }
         return $this->redirect(['index']);
     }
