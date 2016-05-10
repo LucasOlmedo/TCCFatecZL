@@ -8,6 +8,14 @@ CREATE TABLE `tcc`.`curso`(
 
 -------------------------------------------
 
+CREATE TABLE `tcc`.`horariosExternos`(  
+  `id_Hae` INT(10) AUTO_INCREMENT NOT NULL,
+  `tipo` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`id_Hae`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+-------------------------------------------
 CREATE TABLE `tcc`.`disciplina`(  
   `id_Disciplina` INT(10) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(40) NOT NULL,
@@ -30,14 +38,6 @@ CREATE TABLE `tcc`.`curso_disciplina`(
 
 -------------------------------------------
 
-CREATE TABLE `tcc`.`horariosExternos`(  
-  `id_Hae` INT(10) AUTO_INCREMENT NOT NULL,
-  `tipo` VARCHAR(10) NOT NULL,
-  PRIMARY KEY (`id_Hae`)
-) CHARSET=utf8 COLLATE=utf8_general_ci;
-
-
--------------------------------------------
 
 CREATE TABLE `tcc`.`situacao`(  
   `id_Situacao` INT(10) NOT NULL AUTO_INCREMENT,
