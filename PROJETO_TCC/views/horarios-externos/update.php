@@ -5,11 +5,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\HorariosExternos */
 
-$this->title = Yii::t('app', 'Update {modelClass}: ', [
-    'modelClass' => 'Horarios Externos',
+$this->title = Yii::t('app', 'Atualizar {modelClass}: ', [
+    'modelClass' => 'Horario Externo',
 ]) . ' ' . $model->id_Hae;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Horarios Externos'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id_Hae, 'url' => ['view', 'id_Hae' => $model->id_Hae, 'id_Disciplina' => $model->id_Disciplina]];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Horários Externos'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->id_Hae, 'url' => ['view', 'id' => $model->id_Hae]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <div class="horarios-externos-update">

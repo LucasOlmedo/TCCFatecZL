@@ -20,8 +20,8 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
     ];
-//    public $js = [
-//        'js/jquery-1.9.0.js'
+//    public $images = [
+//        'images/cursos.jpeg'
 //    ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -43,14 +43,13 @@ class HorariosExternosController extends Controller
 
     /**
      * Displays a single HorariosExternos model.
-     * @param integer $id_Hae
-     * @param integer $id_Disciplina
+     * @param integer $id
      * @return mixed
      */
-    public function actionView($id_Hae, $id_Disciplina)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id_Hae, $id_Disciplina),
+            'model' => $this->findModel($id),
         ]);
     }
 
@@ -75,13 +74,12 @@ class HorariosExternosController extends Controller
     /**
      * Updates an existing HorariosExternos model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id_Hae
-     * @param integer $id_Disciplina
+     * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id_Hae, $id_Disciplina)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($id_Hae, $id_Disciplina);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
@@ -95,13 +93,12 @@ class HorariosExternosController extends Controller
     /**
      * Deletes an existing HorariosExternos model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id_Hae
-     * @param integer $id_Disciplina
+     * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id_Hae, $id_Disciplina)
+    public function actionDelete($id)
     {
-        $this->findModel($id_Hae, $id_Disciplina)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
@@ -109,17 +106,16 @@ class HorariosExternosController extends Controller
     /**
      * Finds the HorariosExternos model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id_Hae
-     * @param integer $id_Disciplina
+     * @param integer $id
      * @return HorariosExternos the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id_Hae, $id_Disciplina)
+    protected function findModel($id)
     {
-        if (($model = HorariosExternos::findOne(['id_Hae' => $id_Hae, 'id_Disciplina' => $id_Disciplina])) !== null) {
+        if (($model = HorariosExternos::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException('A página solicitada não existe.');
         }
     }
 }

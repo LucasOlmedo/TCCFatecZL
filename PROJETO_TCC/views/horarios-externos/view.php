@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\HorariosExternos */
 
-$this->title = "Visualização de #". $model->id_Hae;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Horarios Externos'), 'url' => ['index']];
+$this->title = "Visualização de #".$model->id_Hae;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Horários Externos'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="horarios-externos-view">
@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Alterar HAE'), ['update', 'id_Hae' => $model->id_Hae, 'id_Disciplina' => $model->id_Disciplina], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir HAE'), ['delete', 'id_Hae' => $model->id_Hae, 'id_Disciplina' => $model->id_Disciplina], [
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Alterar Horario Externo'), ['update', 'id' => $model->id_Hae], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Remover Horario Externo'), ['delete', 'id' => $model->id_Hae], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
@@ -29,7 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id_Hae',
-            'id_Disciplina',
             'tipo',
         ],
     ]) ?>

@@ -17,8 +17,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_Hae') ?>
 
-    <?= $form->field($model, 'id_Disciplina') ?>
-
     <?= $form->field($model, 'tipo') ?>
 
     <div class="form-group">

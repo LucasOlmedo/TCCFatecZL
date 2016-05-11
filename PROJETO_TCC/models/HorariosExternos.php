@@ -3,18 +3,14 @@
 namespace app\models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "horariosexternos".
  *
  * @property integer $id_Hae
- * @property integer $id_Disciplina
  * @property string $tipo
- *
- * @property Disciplina $idDisciplina
  */
-class HorariosExternos extends ActiveRecord
+class HorariosExternos extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -30,8 +26,7 @@ class HorariosExternos extends ActiveRecord
     public function rules()
     {
         return [
-            [['id_Hae', 'id_Disciplina', 'tipo'], 'required'],
-            [['id_Hae', 'id_Disciplina'], 'integer'],
+            [['tipo'], 'required'],
             [['tipo'], 'string', 'max' => 10]
         ];
     }
@@ -42,17 +37,8 @@ class HorariosExternos extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Hae' => Yii::t('app', 'ID  HAE'),
-            'id_Disciplina' => Yii::t('app', 'ID  Disciplina'),
-            'tipo' => Yii::t('app', 'Tipo'),
+            'id_Hae' => Yii::t('app', 'ID Horário Externo'),
+            'tipo' => Yii::t('app', 'Tipo do horário externo'),
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIdDisciplina()
-    {
-        return $this->hasOne(Disciplina::className(), ['id_Disciplina' => 'id_Disciplina']);
     }
 }

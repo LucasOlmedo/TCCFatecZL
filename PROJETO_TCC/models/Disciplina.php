@@ -11,11 +11,12 @@ use yii\db\ActiveRecord;
  * @property integer $id_Disciplina
  * @property string $nome
  * @property string $descricao
+ * @property integer $externo
  *
  * @property CursoDisciplina[] $cursoDisciplinas
  * @property Curso[] $idCursos
  * @property CursoDisciplinaProfessor[] $cursoDisciplinaProfessors
- * @property Horariosexternos[] $horariosexternos
+ * @property Horariosexternos $externo0
  */
 class Disciplina extends ActiveRecord
 {
@@ -34,6 +35,7 @@ class Disciplina extends ActiveRecord
     {
         return [
             [['nome', 'descricao'], 'required'],
+            [['externo'], 'integer'],
             [['nome'], 'string', 'max' => 40],
             [['descricao'], 'string', 'max' => 255]
         ];
@@ -45,9 +47,10 @@ class Disciplina extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Disciplina' => Yii::t('app', 'ID'),
-            'nome' => Yii::t('app', 'Disciplina'),
+            'id_Disciplina' => Yii::t('app', 'ID  Disciplina'),
+            'nome' => Yii::t('app', 'Nome'),
             'descricao' => Yii::t('app', 'Descrição'),
+            'externo' => Yii::t('app', 'ID Horário Externo'),
         ];
     }
 
@@ -78,8 +81,8 @@ class Disciplina extends ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getHorariosexternos()
+    public function getExterno()
     {
-        return $this->hasMany(Horariosexternos::className(), ['id_Disciplina' => 'id_Disciplina']);
+        return $this->hasOne(Horariosexternos::className(), ['id_Hae' => 'externo']);
     }
 }

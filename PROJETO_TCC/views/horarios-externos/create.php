@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\HorariosExternos */
 
-$this->title = Yii::t('app', 'Inserir novo Horario Externo');
+$this->title = Yii::t('app', 'Inserir novo horário externo');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Horarios Externos'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

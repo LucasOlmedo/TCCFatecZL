@@ -18,7 +18,7 @@ class HorariosExternosSearch extends HorariosExternos
     public function rules()
     {
         return [
-            [['id_Hae', 'id_Disciplina'], 'integer'],
+            [['id_Hae'], 'integer'],
             [['tipo'], 'safe'],
         ];
     }
@@ -57,7 +57,6 @@ class HorariosExternosSearch extends HorariosExternos
 
         $query->andFilterWhere([
             'id_Hae' => $this->id_Hae,
-            'id_Disciplina' => $this->id_Disciplina,
         ]);
 
         $query->andFilterWhere(['like', 'tipo', $this->tipo]);
