@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\SituacaoProfessor;
 use Yii;
 use app\models\Situacao;
 use app\models\SituacaoSearch;
@@ -98,6 +99,9 @@ class SituacaoController extends Controller
      */
     public function actionDelete($id)
     {
+        if (!SituacaoProfessor::find()->indexBy($id) == null) {
+            SituacaoProfessor::deleteAll("id_Situacao = " . $id);
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
