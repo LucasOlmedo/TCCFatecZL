@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Disciplina;
 use Yii;
 use app\models\HorariosExternos;
 use app\models\HorariosExternosSearch;
@@ -98,6 +99,9 @@ class HorariosExternosController extends Controller
      */
     public function actionDelete($id)
     {
+        if (!Disciplina::find()->indexBy($id) == null) {
+            Disciplina::deleteAll("externo = " . $id);
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -115,7 +119,7 @@ class HorariosExternosController extends Controller
         if (($model = HorariosExternos::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('A página solicitada não existe.');
+            throw new NotFoundHttpException('A pagina solicitada nao existe.');
         }
     }
 }
