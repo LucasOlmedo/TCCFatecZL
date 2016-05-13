@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\DisciplinaSearch */
+/* @var $searchModel app\models\GradeCursoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Disciplinas');
+$this->title = Yii::t('app', 'Grade Cursos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="disciplina-index">
+<div class="grade-curso-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Disciplina'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create Grade Curso'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,10 +25,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
+            'id_Curso',
+            'id_Periodo',
             'id_Disciplina',
-            'nome',
-            'abreviacao',
-            'externo',
+            'ano_letivo',
+            'qtde_aulas',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

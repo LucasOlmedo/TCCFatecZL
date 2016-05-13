@@ -19,7 +19,7 @@ CREATE TABLE `tcc`.`horariosExternos`(
 CREATE TABLE `tcc`.`disciplina`(  
   `id_Disciplina` INT(10) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(40) NOT NULL,
-  `descricao` VARCHAR(255) NOT NULL,
+  `abreviacao` VARCHAR(10) NOT NULL,
   `externo` INT(10),
   PRIMARY KEY (`id_Disciplina`),
   FOREIGN KEY (`externo`) REFERENCES `tcc`.`horariosExternos`(`id_Hae`)
@@ -67,7 +67,7 @@ CREATE TABLE `tcc`.`situacao_professor`(
   `id_SitProf` INT(10) NOT NULL AUTO_INCREMENT,
   `id_Professor` INT(10) NOT NULL,
   `id_Situacao` INT(10) NOT NULL,
-  `data` DATE NOT NULL,
+  `data_sit` DATE NOT NULL,
   PRIMARY KEY (`id_SitProf`)
 ) CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -104,9 +104,24 @@ CREATE TABLE `tcc`.`diaSemana`(
 
 
 -------------------------------------------
-ALTER TABLE `tcc`.`situacao_professor`   
-  CHANGE `data` `data_sit` DATE NOT NULL;
   
 ALTER TABLE `tcc`.`situacao_professor`  
   ADD CONSTRAINT `fk_profsit` FOREIGN KEY (`id_Professor`) REFERENCES `tcc`.`professor`(`id_Professor`),
   ADD CONSTRAINT `fk_sit` FOREIGN KEY (`id_Situacao`) REFERENCES `tcc`.`situacao`(`id_Situacao`);
+
+-------------------------------------------
+
+CREATE TABLE `tcc`.`periodo_curso`(  
+  `id_Curso` INT(10) NOT NULL,
+  `id_periodo` INT(2) NOT NULL,
+  `nome_periodo` VARCHAR(15) NOT NULL,
+  PRIMARY KEY (`id_Curso`, `id_periodo`),
+  FOREIGN KEY (`id_Curso`) REFERENCES `tcc`.`curso`(`id_Curso`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+
+ALTER TABLE `tcc`.`curso_disciplina`   
+  ADD COLUMN `id_periodo` INT(2) NOT NULL AFTER `qtde_aulas`, 
+  DROP PRIMARY KEY,
+  ADD PRIMARY KEY (`id_Curso`, `id_Disciplina`, `id_periodo`);

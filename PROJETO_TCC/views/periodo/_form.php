@@ -4,19 +4,15 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Disciplina */
+/* @var $model app\models\Periodo */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="disciplina-form">
+<div class="periodo-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'abreviacao')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'externo')->textInput() ?>
+    <?= $form->field($model, 'nome_periodo')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -22,18 +22,17 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
     <style type="text/css">
 
         .caption {
-            margin-top: -90px;
-            opacity: 0;
-            visibility: hidden;
+            margin-top: -100px;
+            opacity: 0.0;
             background: #FFF;
-            transition: margin-top 0.2s ease-out;
+            transition: opacity 0.4s ease-out;
         }
 
         .thumbnail:hover .caption {
-            opacity: 0.8;
-            visibility: visible;
+            height: auto;
+            opacity: 0.99;
             margin-top: -100px;
-            transition: opacity 0.3s, margin-top 0.3s ease-in;
+            /*transition: height 0.2s, opacity 0.2s ease-in;*/
         }
 
     </style>
@@ -48,7 +47,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                         <h4>Cursos</h4>
 
                         <p>
-                            <a href="index.php?r=curso/index" class="btn btn-default" role="button">Ver Cursos</a>
+                            <a href="index.php?r=curso/index" class="btn btn-primary" role="button">Ver Cursos</a>
                         </p>
                     </div>
                 </div>
@@ -61,7 +60,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                         <h4>Disciplinas</h4>
 
                         <p>
-                            <a href="index.php?r=disciplina/index" class="btn btn-default" role="button">Ver
+                            <a href="index.php?r=disciplina/index" class="btn btn-primary" role="button">Ver
                                 Disciplinas</a>
                         </p>
                     </div>
@@ -75,7 +74,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                         <h4>Professores</h4>
 
                         <p>
-                            <a href="index.php?r=professor/index" class="btn btn-default" role="button">Ver
+                            <a href="index.php?r=professor/index" class="btn btn-primary" role="button">Ver
                                 Professores</a>
                         </p>
                     </div>
@@ -91,7 +90,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                         <h4>Aula semestral</h4>
 
                         <p>
-                            <a href="index.php?r=aula-semestral/index" class="btn btn-default" role="button">Ver
+                            <a href="index.php?r=aula-semestral/index" class="btn btn-primary" role="button">Ver
                                 Aulas</a>
                         </p>
                     </div>
@@ -105,7 +104,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                         <h4>Relatórios</h4>
 
                         <p>
-                            <a href="#" class="btn btn-default" role="button">Ver Relatórios</a>
+                            <a href="#" class="btn btn-primary" role="button">Ver Relatórios</a>
                         </p>
                     </div>
                 </div>
@@ -118,7 +117,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                         <h4>Grade horária</h4>
 
                         <p>
-                            <a href="#" class="btn btn-default" role="button">Ver Grade</a>
+                            <a href="#" class="btn btn-primary" role="button">Ver Grade</a>
                         </p>
                     </div>
                 </div>

@@ -44,12 +44,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
 
-    $count = CursoDisciplina::find()->where(['id_Curso' => $model->id_Curso])->count();
+    $count = \app\models\GradeCurso::find()->where(['id_Curso' => $model->id_Curso])->count();
 
     $dataProvider = new SqlDataProvider([
-        'sql' => 'SELECT nome, qtde_aulas FROM curso_disciplina
+        'sql' => 'SELECT ano_letivo, nome_periodo, nome, qtde_aulas FROM grade_curso
+                  INNER JOIN periodo
+                  ON grade_curso.id_Periodo=periodo.id_Periodo
                   INNER JOIN disciplina
-                  ON curso_disciplina.id_Disciplina=disciplina.id_Disciplina
+                  ON grade_curso.id_Disciplina=disciplina.id_Disciplina
                   WHERE id_Curso=:idc',
         'totalCount' => $count,
         'params' => [':idc' => $model->id_Curso],
@@ -57,6 +59,8 @@ $this->params['breadcrumbs'][] = $this->title;
     echo GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
+            'ano_letivo',
+            'nome_periodo',
             'nome',
             'qtde_aulas',
         ],

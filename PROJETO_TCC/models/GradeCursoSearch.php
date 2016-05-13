@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Disciplina;
+use app\models\GradeCurso;
 
 /**
- * DisciplinaSearch represents the model behind the search form about `app\models\Disciplina`.
+ * GradeCursoSearch represents the model behind the search form about `app\models\GradeCurso`.
  */
-class DisciplinaSearch extends Disciplina
+class GradeCursoSearch extends GradeCurso
 {
     /**
      * @inheritdoc
@@ -18,8 +18,7 @@ class DisciplinaSearch extends Disciplina
     public function rules()
     {
         return [
-            [['id_Disciplina', 'externo'], 'integer'],
-            [['nome', 'abreviacao'], 'safe'],
+            [['id_Curso', 'id_Periodo', 'id_Disciplina', 'ano_letivo', 'qtde_aulas'], 'integer'],
         ];
     }
 
@@ -41,7 +40,7 @@ class DisciplinaSearch extends Disciplina
      */
     public function search($params)
     {
-        $query = Disciplina::find();
+        $query = GradeCurso::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -56,12 +55,12 @@ class DisciplinaSearch extends Disciplina
         }
 
         $query->andFilterWhere([
+            'id_Curso' => $this->id_Curso,
+            'id_Periodo' => $this->id_Periodo,
             'id_Disciplina' => $this->id_Disciplina,
-            'externo' => $this->externo,
+            'ano_letivo' => $this->ano_letivo,
+            'qtde_aulas' => $this->qtde_aulas,
         ]);
-
-        $query->andFilterWhere(['like', 'nome', $this->nome])
-            ->andFilterWhere(['like', 'abreviacao', $this->abreviacao]);
 
         return $dataProvider;
     }

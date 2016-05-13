@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\DisciplinaSearch */
+/* @var $searchModel app\models\PeriodoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Disciplinas');
+$this->title = Yii::t('app', 'Periodos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="disciplina-index">
+<div class="periodo-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Disciplina'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', 'Create Periodo'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,10 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_Disciplina',
-            'nome',
-            'abreviacao',
-            'externo',
+            'id_Periodo',
+            'nome_periodo',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

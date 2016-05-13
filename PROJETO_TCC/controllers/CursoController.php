@@ -4,6 +4,8 @@ namespace app\controllers;
 
 use app\models\CursoDisciplina;
 use app\models\Disciplina;
+use app\models\GradeCurso;
+use app\models\Periodo;
 use Yii;
 use app\models\Curso;
 use app\models\CursoSearch;
@@ -107,8 +109,8 @@ class CursoController extends Controller
      */
     public function actionDelete($id)
     {
-        if (!CursoDisciplina::find()->indexBy($id) == null) {
-            CursoDisciplina::deleteAll("id_Curso = " . $id);
+        if (!GradeCurso::find()->indexBy($id) == null) {
+            GradeCurso::deleteAll("id_Curso = " . $id);
         }
         $this->findModel($id)->delete();
         return $this->redirect(['index']);
@@ -134,8 +136,9 @@ class CursoController extends Controller
     {
         $model = $this->findModel($id);
         $model_disc = Disciplina::find()->all();
+        $model_per = Periodo::find()->all();
         return $this->render('add_disc',
-            ['model' => $model, 'model_disc' => $model_disc, 'id_curso' => $model->id_Curso]
+            ['model' => $model, 'model_disc' => $model_disc, 'model_per' => $model_per, 'id_curso' => $model->id_Curso]
         );
 
     }
@@ -148,11 +151,17 @@ class CursoController extends Controller
         }
 
         $id_curso = $_POST['id_curso'];
+        $ano_letivo = $_POST['ano'];
+        $per = $_POST['periodo'];
+
+        echo $ano_letivo;
 
         foreach ($disciplinas as $id => $aula) {
-            $model = new CursoDisciplina();
+            $model = new GradeCurso();
             $model->id_Curso = $id_curso;
+            $model->id_Periodo = $per;
             $model->id_Disciplina = $id;
+            $model->ano_letivo = $ano_letivo;
             $model->qtde_aulas = $aula;
             $model->save();
         }
@@ -162,15 +171,17 @@ class CursoController extends Controller
     public function actionEditDisc($id)
     {
         $query = new Query;
-        $query->select(['curso_disciplina.`id_Curso`,
+        $query->select(['grade_curso.`id_Curso`,
+                        `grade_curso`.`id_Periodo`,
                         `disciplina`.`id_Disciplina`,
+                        `grade_curso`.`ano_letivo`,
                         `disciplina`.`nome`,
-                        `curso_disciplina`.`qtde_aulas`'])
-            ->from('curso_disciplina')
-            ->where(['curso_disciplina.id_Curso' => $id])
-            ->join('LEFT JOIN',
+                        `grade_curso`.`qtde_aulas`'])
+            ->from('grade_curso')
+            ->where(['grade_curso.id_Curso' => $id])
+            ->join('INNER JOIN',
                 'disciplina',
-                'disciplina.id_Disciplina = curso_disciplina.id_Disciplina'
+                'disciplina.id_Disciplina = grade_curso.id_Disciplina'
             );
         $command = $query->createCommand();
         $disciplinas = $command->queryAll();

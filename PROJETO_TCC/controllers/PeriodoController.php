@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Disciplina;
-use app\models\DisciplinaSearch;
+use app\models\Periodo;
+use app\models\PeriodoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * DisciplinaController implements the CRUD actions for Disciplina model.
+ * PeriodoController implements the CRUD actions for Periodo model.
  */
-class DisciplinaController extends Controller
+class PeriodoController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class DisciplinaController extends Controller
     }
 
     /**
-     * Lists all Disciplina models.
+     * Lists all Periodo models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new DisciplinaSearch();
+        $searchModel = new PeriodoSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,7 +42,7 @@ class DisciplinaController extends Controller
     }
 
     /**
-     * Displays a single Disciplina model.
+     * Displays a single Periodo model.
      * @param integer $id
      * @return mixed
      */
@@ -54,16 +54,16 @@ class DisciplinaController extends Controller
     }
 
     /**
-     * Creates a new Disciplina model.
+     * Creates a new Periodo model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Disciplina();
+        $model = new Periodo();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_Disciplina]);
+            return $this->redirect(['view', 'id' => $model->id_Periodo]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -72,7 +72,7 @@ class DisciplinaController extends Controller
     }
 
     /**
-     * Updates an existing Disciplina model.
+     * Updates an existing Periodo model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -82,7 +82,7 @@ class DisciplinaController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_Disciplina]);
+            return $this->redirect(['view', 'id' => $model->id_Periodo]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -91,7 +91,7 @@ class DisciplinaController extends Controller
     }
 
     /**
-     * Deletes an existing Disciplina model.
+     * Deletes an existing Periodo model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -104,15 +104,15 @@ class DisciplinaController extends Controller
     }
 
     /**
-     * Finds the Disciplina model based on its primary key value.
+     * Finds the Periodo model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Disciplina the loaded model
+     * @return Periodo the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Disciplina::findOne($id)) !== null) {
+        if (($model = Periodo::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

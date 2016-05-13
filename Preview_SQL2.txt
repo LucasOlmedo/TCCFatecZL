@@ -1,0 +1,96 @@
+CREATE TABLE `tcc_fateczl`.`curso`(  
+  `id_Curso` INT(10) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(40) NOT NULL,
+  `abreviacao` VARCHAR(7) NOT NULL,
+  `carga_horaria` INT(6) NOT NULL,
+  PRIMARY KEY (`id_Curso`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+
+CREATE TABLE `tcc_fateczl`.`horariosExternos`(  
+  `id_Hae` INT(10) AUTO_INCREMENT NOT NULL,
+  `tipo` VARCHAR(10) NOT NULL,
+  PRIMARY KEY (`id_Hae`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+CREATE TABLE `tcc_fateczl`.`disciplina`(  
+  `id_Disciplina` INT(10) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(40) NOT NULL,
+  `abreviacao` VARCHAR(10) NOT NULL,
+  `externo` INT(10),
+  PRIMARY KEY (`id_Disciplina`),
+  FOREIGN KEY (`externo`) REFERENCES `tcc`.`horariosExternos`(`id_Hae`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+
+CREATE TABLE `tcc_fateczl`.`periodo`(  
+  `id_Periodo` INT(2) NOT NULL AUTO_INCREMENT,
+  `nome_periodo` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id_Periodo`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+
+CREATE TABLE `tcc_fateczl`.`situacao`(  
+  `id_Situacao` INT(10) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id_Situacao`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+
+CREATE TABLE `tcc_fateczl`.`professor`(  
+  `id_Professor` INT(10) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(30) NOT NULL,
+  `rg` VARCHAR(13) NOT NULL,
+  `categoria` VARCHAR(30) NOT NULL,
+  `graduacao` VARCHAR(30) NOT NULL,
+  `contrato` VARCHAR(15) NOT NULL,
+  `sede` VARCHAR(30) NOT NULL,
+  `inicio_cps` DATE NOT NULL,
+  `inicio_fateczl` DATE NOT NULL,
+  PRIMARY KEY (`id_Professor`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+
+CREATE TABLE `tcc_fateczl`.`grade_curso`(  
+  `id_Curso` INT(10) NOT NULL,
+  `id_Periodo` INT(2) NOT NULL,
+  `id_Disciplina` INT(10) NOT NULL,
+  `ano_letivo` INT(4) NOT NULL,
+  `qtde_aulas` INT(10) NOT NULL,
+  PRIMARY KEY (`id_Curso`, `id_Periodo`, `id_Disciplina`),
+  CONSTRAINT `fk_curso` FOREIGN KEY (`id_Curso`) REFERENCES `tcc_fateczl`.`curso`(`id_Curso`),
+  CONSTRAINT `fk_per` FOREIGN KEY (`id_Periodo`) REFERENCES `tcc_fateczl`.`periodo`(`id_Periodo`),
+  CONSTRAINT `fk_disc` FOREIGN KEY (`id_Disciplina`) REFERENCES `tcc_fateczl`.`disciplina`(`id_Disciplina`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+
+CREATE TABLE `tcc_fateczl`.`situacao_professor`(  
+  `id_SitProf` INT(10) NOT NULL AUTO_INCREMENT,
+  `id_Professor` INT(10) NOT NULL,
+  `id_Situacao` INT(10) NOT NULL,
+  `data_sit` DATE NOT NULL,
+  PRIMARY KEY (`id_SitProf`),
+  CONSTRAINT `fk_prof` FOREIGN KEY (`id_Professor`) REFERENCES `tcc_fateczl`.`professor`(`id_Professor`),
+  CONSTRAINT `fk_sit` FOREIGN KEY (`id_Situacao`) REFERENCES `tcc_fateczl`.`situacao`(`id_Situacao`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-------------------------------------------
+
+
+
+-------------------------------------------
+
+
+
+-------------------------------------------
+
+
+
+-------------------------------------------
