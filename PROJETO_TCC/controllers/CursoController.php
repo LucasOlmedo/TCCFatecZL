@@ -188,9 +188,11 @@ class CursoController extends Controller
 
         $model = $this->findModel($id);
         $model_disc = Disciplina::find()->all();
+        $model_per = Periodo::find()->all();
         return $this->render('edit_disc',
             [
                 'model' => $model,
+                'model_per' => $model_per,
                 'model_disc' => $model_disc,
                 'id_curso' => $model->id_Curso,
                 'disciplinas' => $disciplinas
@@ -200,25 +202,39 @@ class CursoController extends Controller
 
     public function actionAlteraDisciplinas()
     {
+        $ano_letivo = $_POST['ano'];
+        $per = $_POST['periodo'];
+
         $disciplinas = Yii::$app->request->post('disciplinas');
         // excluir
         $disciplinasExcluir = Yii::$app->request->post('excluir');
         $id_curso = Yii::$app->request->post('id_curso');
         if($disciplinasExcluir != "") {
             foreach ($disciplinasExcluir as $id) {
-                CursoDisciplina::deleteAll(['id_Curso' => $id_curso, 'id_Disciplina' => $id]);
+                GradeCurso::deleteAll(['id_Curso' => $id_curso, 'id_Disciplina' => $id]);
             }
         }
 
+
+
         // adicionar
         if($disciplinas != ""){
-        foreach ($disciplinas as $id => $aula) {
-            $model = new CursoDisciplina();
-            $model->id_Curso = $id_curso;
-            $model->id_Disciplina = $id;
-            $model->qtde_aulas = $aula;
-            $model->save();
-        }
+//        foreach ($disciplinas as $id => $aula) {
+//            $model = new CursoDisciplina();
+//            $model->id_Curso = $id_curso;
+//            $model->id_Disciplina = $id;
+//            $model->qtde_aulas = $aula;
+//            $model->save();
+//        }
+            foreach ($disciplinas as $id => $aula) {
+                $model = new GradeCurso();
+                $model->id_Curso = $id_curso;
+                $model->id_Periodo = $per;
+                $model->id_Disciplina = $id;
+                $model->ano_letivo = $ano_letivo;
+                $model->qtde_aulas = $aula;
+                $model->save();
+            }
     }
         return $this->redirect(['index']);
     }

@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "horariosexternos".
@@ -10,7 +11,7 @@ use Yii;
  * @property integer $id_Hae
  * @property string $tipo
  */
-class HorariosExternos extends \yii\db\ActiveRecord
+class HorariosExternos extends ActiveRecord
 {
     /**
      * @inheritdoc

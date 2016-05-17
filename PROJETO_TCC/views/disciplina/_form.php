@@ -1,5 +1,7 @@
 <?php
 
+use app\models\HorariosExternos;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -16,10 +18,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'abreviacao')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'externo')->textInput() ?>
+    <?php
+    $hae=HorariosExternos::find()->all();
+    $listData=ArrayHelper::map($hae,'id_Hae','tipo');
+    echo $form->field($model, 'externo')->dropDownList($listData);
+    ?>
+
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', '<span class="glyphicon glyphicon-ok"></span> Salvar') : Yii::t('app', '<span class="glyphicon glyphicon-ok"></span> Atualizar'), ['class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -19,6 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <form method='post' id='form' action="index.php?r=curso/grava-disciplinas">
 
             <label for="input_ano">Ano letivo</label>
+
             <input type="text" class="form-control" id="input_ano" name="ano" value="<?php $ano?>">
             <br>
 
@@ -105,9 +106,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
         $("#array-disc").append("<input type='hidden' name='disciplinas[" + idDisc + "]' id='txt-" +
             idDisc + "' value='"+ quantidade + "' />");
-
-//        $("#array-per").append("<input type='hidden' name='periodo[" + idPer + "]' id='txt-" +
-//            idPer + "' value='" + periodo + "' />");
 
         var
         html = "<tr id='linha-" + idDisc + "'>";

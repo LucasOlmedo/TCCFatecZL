@@ -18,6 +18,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <form method='post' id='form' action="index.php?r=curso/altera-disciplinas">
 
+            <label for="input_ano">Ano letivo</label>
+
+            <input type="text" class="form-control" id="input_ano" name="ano" value="<?php $ano?>">
+            <br>
+
+            <label for="select_per">Período do curso</label>
+            <select class="form-control" id="select_per" name="periodo">
+                <?php
+                foreach ($model_per as $data):
+                    echo "<option value='" . $data->id_Periodo . "'>" . $data->nome_periodo . "</option>";
+                endforeach;
+                ?>
+            </select>
+            <br>
+
             <label for="select_disc">Disciplina </label>
 
             <div id="array-disc"></div>
@@ -39,12 +54,15 @@ $this->params['breadcrumbs'][] = $this->title;
             <label for="input_qtdeaulas">Quantidade de aulas</label>
             <input type="text" class="form-control" id="input_qtdeaulas">
             <br>
-            <button class="btn btn-default" type="button" id="btn-add-disc"><span class="glyphicon glyphicon-plus"></span> Adicionar disciplina</button>
+            <button class="btn btn-default" type="button" id="btn-add-disc">
+                <span class="glyphicon glyphicon-plus"></span> Adicionar disciplina</button>
             <br>
             <br>
             <br>
             <table class="table table-bordered table-hover table-striped" id="table-disc">
                 <thead>
+                <th>Ano Letivo</th>
+                <th>Período</th>
                 <th>Disciplina</th>
                 <th>Quantidade de aulas</th>
                 <th>Opções</th>
@@ -53,9 +71,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php
                 foreach ($disciplinas as $row):
                     echo "<tr id='linha-" . $row['id_Disciplina'] . "'>";
+                    echo "<td>" . $row['ano_letivo'] . "</td>";
+                    echo "<td>" . $row['id_Periodo'] . "</td>";
                     echo "<td>" . $row['nome'] . "</td>";
                     echo "<td>" . $row['qtde_aulas'] . "</td>";
-                    echo "<td><a href='#' onclick='excluir(". $row['id_Disciplina'] . ")'><span class='glyphicon glyphicon-trash'></span></a></td>";
+                    echo "<td><a href='#' onclick='excluir(". $row['id_Disciplina'] . ")'>
+                          <span class='glyphicon glyphicon-trash'></span></a></td>";
                     echo "</tr>";
                 endforeach;
                 ?>
@@ -70,15 +91,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <script src="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/js/jquery-1.9.0.js" type="text/javascript"></script>
 <script>
-    var disciplinas = new Array();
+    var disciplinas = [];
     var count = 0;
     $("#btn-add-disc").click(function () {
+        var periodo = $("#select_per").find("option:selected").text();
         var idDisc = parseInt($("#select_disc").val());
         var titulo = $("#select_disc").find("option:selected").text();
         var quantidade = $("#input_qtdeaulas").val();
+        var ano = $("#input_ano").val();
 
 
         var conteudo = {
+            ano_letivo: ano,
+            per: periodo,
             id_disc: idDisc,
             titulo: titulo,
             quantidade: quantidade
@@ -90,6 +115,8 @@ $this->params['breadcrumbs'][] = $this->title;
             idDisc + "' value='" + quantidade + "' />");
 
         var html = "<tr id='linha-" + idDisc + "'>";
+        html += "<td>" + ano + "</td>";
+        html += "<td>" + periodo + "</td>";
         html += "<td>" + disciplinas[count].titulo + "</td>";
         html += "<td>" + disciplinas[count].quantidade + "</td>";
         html += "<td>";

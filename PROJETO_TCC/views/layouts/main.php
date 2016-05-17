@@ -22,8 +22,9 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-<?php $this->beginBody() ?>
-
+<?php
+$this->beginBody()
+?>
 <div class="wrap">
     <?php
     NavBar::begin([
@@ -74,7 +75,6 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -82,14 +82,12 @@ AppAsset::register($this);
         <?= $content ?>
     </div>
 </div>
-
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; FATEC Zona Leste <?= date('Y') ?></p>
         <p class="pull-right">Desenvolvido por Lucas Olmedo & Julio Cezar <?= Yii::powered() ?></p>
     </div>
 </footer>
-
 <?php $this->endBody() ?>
 </body>
 </html>
