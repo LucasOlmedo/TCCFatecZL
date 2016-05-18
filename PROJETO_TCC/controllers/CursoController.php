@@ -145,27 +145,58 @@ class CursoController extends Controller
 
     public function actionGravaDisciplinas()
     {
-        $disciplinas = Yii::$app->request->post('disciplinas');
-        if (empty($disciplinas)) {
+
+        $id_curso = $_POST['id_curso'];
+        $grade = Yii::$app->request->post('grade_curso');
+        $grade_curso = explode(',', $grade);
+
+        // Se vazio retorna para index
+        if (empty($grade)) {
             return $this->redirect(['index']);
         }
 
-        $id_curso = $_POST['id_curso'];
-        $ano_letivo = $_POST['ano'];
-        $per = $_POST['periodo'];
-
-        echo $ano_letivo;
-
-        foreach ($disciplinas as $id => $aula) {
-            $model = new GradeCurso();
-            $model->id_Curso = $id_curso;
-            $model->id_Periodo = $per;
-            $model->id_Disciplina = $id;
-            $model->ano_letivo = $ano_letivo;
-            $model->qtde_aulas = $aula;
-            $model->save();
+        for ($x = 0; $x < count($grade_curso); $x++) {
+            if ($grade_curso[$x] != "") {
+                $curso = explode("|", $grade_curso[$x]);
+//                echo "Ano: " . $curso[0];
+//                echo " Per: " . $curso[1];
+//                echo " Dis: " . $curso[2];
+//                echo " Qtd: " . $curso[3];
+//                echo "<br>";
+                $model = new GradeCurso();
+                $model->id_Curso =      $id_curso;
+                $model->ano_letivo =    $curso[0];
+                $model->id_Periodo =    $curso[1];
+                $model->id_Disciplina = $curso[2];
+                $model->qtde_aulas =    $curso[3];
+                $model->save();
+            }
         }
+
         return $this->redirect(['index']);
+
+//        die;
+//        $disciplinas = Yii::$app->request->post('disciplinas');
+//        if (empty($disciplinas)) {
+//            return $this->redirect(['index']);
+//        }
+//
+//        $id_curso = $_POST['id_curso'];
+//        $ano_letivo = $_POST['ano'];
+//        $per = $_POST['periodo'];
+//
+//        echo $ano_letivo;
+//
+//        foreach ($disciplinas as $id => $aula) {
+//            $model = new GradeCurso();
+//            $model->id_Curso = $id_curso;
+//            $model->id_Periodo = $per;
+//            $model->id_Disciplina = $id;
+//            $model->ano_letivo = $ano_letivo;
+//            $model->qtde_aulas = $aula;
+//            $model->save();
+//        }
+//        return $this->redirect(['index']);
     }
 
     public function actionEditDisc($id)
@@ -209,16 +240,15 @@ class CursoController extends Controller
         // excluir
         $disciplinasExcluir = Yii::$app->request->post('excluir');
         $id_curso = Yii::$app->request->post('id_curso');
-        if($disciplinasExcluir != "") {
+        if ($disciplinasExcluir != "") {
             foreach ($disciplinasExcluir as $id) {
                 GradeCurso::deleteAll(['id_Curso' => $id_curso, 'id_Disciplina' => $id]);
             }
         }
 
 
-
         // adicionar
-        if($disciplinas != ""){
+        if ($disciplinas != "") {
 //        foreach ($disciplinas as $id => $aula) {
 //            $model = new CursoDisciplina();
 //            $model->id_Curso = $id_curso;
@@ -235,7 +265,7 @@ class CursoController extends Controller
                 $model->qtde_aulas = $aula;
                 $model->save();
             }
-    }
+        }
         return $this->redirect(['index']);
     }
 }

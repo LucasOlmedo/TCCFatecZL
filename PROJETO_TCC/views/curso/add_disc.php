@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <h2>Incluir disciplinas</h2>
 
         <form method='post' id='form' action="index.php?r=curso/grava-disciplinas">
-
+            <input type="hidden" name="grade_curso" id="grade_curso" />
             <label for="input_ano">Ano letivo</label>
 
             <input type="text" class="form-control" id="input_ano" name="ano" value="<?php $ano?>">
@@ -83,19 +83,18 @@ $this->params['breadcrumbs'][] = $this->title;
 <script src="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/js/jquery-1.9.0.js" type="text/javascript"></script>
 <script>
     var disciplinas = [];
+    var grade_curso = [];
     var count = 0;
     $("#btn-add-disc").click(function () {
-//        var idPer = parseInt(($("#select_per").val());
+        var idPer = parseInt($("#select_per").val());
         var periodo = $("#select_per").find("option:selected").text();
         var idDisc = parseInt($("#select_disc").val());
         var titulo = $("#select_disc").find("option:selected").text();
         var quantidade = $("#input_qtdeaulas").val();
         var ano = $("#input_ano").val();
 
-
         var conteudo = {
             ano_letivo: ano,
-//            id_per: idPer,
             per: periodo,
             id_disc: idDisc,
             titulo: titulo,
@@ -103,19 +102,17 @@ $this->params['breadcrumbs'][] = $this->title;
         };
         disciplinas.push(conteudo);
 
-
-        $("#array-disc").append("<input type='hidden' name='disciplinas[" + idDisc + "]' id='txt-" +
-            idDisc + "' value='"+ quantidade + "' />");
+        grade_curso[count] = ano + "|" + idPer + "|" + idDisc + "|" + quantidade;
 
         var
-        html = "<tr id='linha-" + idDisc + "'>";
+        html = "<tr id='linha-" + count + "'>";
         html += "<td>" + ano + "</td>";
         html += "<td>" + periodo + "</td>";
         html += "<td>" + disciplinas[count].titulo + "</td>";
         html += "<td>" + disciplinas[count].quantidade + "</td>";
         html += "<td>";
         html += "<a href='#'>";
-        html += "<span class='glyphicon glyphicon-trash' onclick='excluir(" + idDisc + ")'></span>";
+        html += "<span class='glyphicon glyphicon-trash' onclick='excluir(" + count + ")'></span>";
         html += "</a>";
         html += "</td>";
         html += "</tr>";
@@ -125,6 +122,7 @@ $this->params['breadcrumbs'][] = $this->title;
         count++;
     });
     $("#btnSalvarArray").click(function () {
+        $("#grade_curso").val(grade_curso);
         $("#form").submit();
     });
 
@@ -134,6 +132,9 @@ $this->params['breadcrumbs'][] = $this->title;
             $("#txt-" + id).remove();
             $("#linha-" + id).fadeOut(0);
             $("#linha-" + id).remove();
+
+            grade_curso[id] = null;
+            console.log(grade_curso);
         }
     }
 </script>

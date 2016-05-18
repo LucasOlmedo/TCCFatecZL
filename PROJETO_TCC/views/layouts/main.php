@@ -11,9 +11,13 @@ use app\assets\AppAsset;
 
 AppAsset::register($this);
 ?>
-<?php $this->beginPage() ?>
+<?php
+    $this->beginPage()
+?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="<?=
+        Yii::$app->language
+?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,9 +26,9 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-<?php
-$this->beginBody()
-?>
+    <?php
+        $this->beginBody()
+    ?>
 <div class="wrap">
     <?php
     NavBar::begin([
