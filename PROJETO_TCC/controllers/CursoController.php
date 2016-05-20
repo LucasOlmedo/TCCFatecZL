@@ -145,24 +145,16 @@ class CursoController extends Controller
 
     public function actionGravaDisciplinas()
     {
-
         $id_curso = $_POST['id_curso'];
         $grade = Yii::$app->request->post('grade_curso');
         $grade_curso = explode(',', $grade);
 
-        // Se vazio retorna para index
         if (empty($grade)) {
             return $this->redirect(['index']);
         }
-
         for ($x = 0; $x < count($grade_curso); $x++) {
             if ($grade_curso[$x] != "") {
                 $curso = explode("|", $grade_curso[$x]);
-//                echo "Ano: " . $curso[0];
-//                echo " Per: " . $curso[1];
-//                echo " Dis: " . $curso[2];
-//                echo " Qtd: " . $curso[3];
-//                echo "<br>";
                 $model = new GradeCurso();
                 $model->id_Curso =      $id_curso;
                 $model->ano_letivo =    $curso[0];
@@ -172,31 +164,7 @@ class CursoController extends Controller
                 $model->save();
             }
         }
-
         return $this->redirect(['index']);
-
-//        die;
-//        $disciplinas = Yii::$app->request->post('disciplinas');
-//        if (empty($disciplinas)) {
-//            return $this->redirect(['index']);
-//        }
-//
-//        $id_curso = $_POST['id_curso'];
-//        $ano_letivo = $_POST['ano'];
-//        $per = $_POST['periodo'];
-//
-//        echo $ano_letivo;
-//
-//        foreach ($disciplinas as $id => $aula) {
-//            $model = new GradeCurso();
-//            $model->id_Curso = $id_curso;
-//            $model->id_Periodo = $per;
-//            $model->id_Disciplina = $id;
-//            $model->ano_letivo = $ano_letivo;
-//            $model->qtde_aulas = $aula;
-//            $model->save();
-//        }
-//        return $this->redirect(['index']);
     }
 
     public function actionEditDisc($id)
@@ -215,7 +183,7 @@ class CursoController extends Controller
                 'disciplina.id_Disciplina = grade_curso.id_Disciplina'
             );
         $command = $query->createCommand();
-        $disciplinas = $command->queryAll();
+        $grade = $command->queryAll();
 
         $model = $this->findModel($id);
         $model_disc = Disciplina::find()->all();
@@ -226,44 +194,41 @@ class CursoController extends Controller
                 'model_per' => $model_per,
                 'model_disc' => $model_disc,
                 'id_curso' => $model->id_Curso,
-                'disciplinas' => $disciplinas
+                'grade' => $grade
             ]
         );
-    }
+        }
 
-    public function actionAlteraDisciplinas()
+        public function actionAlteraDisciplinas()
     {
-        $ano_letivo = $_POST['ano'];
-        $per = $_POST['periodo'];
+        $id_curso = $_POST['id_curso'];
+        $grade = Yii::$app->request->post('grade_curso');
+        $grade_curso = explode(',', $grade);
 
-        $disciplinas = Yii::$app->request->post('disciplinas');
-        // excluir
+        if (empty($grade)) {
+            return $this->redirect(['index']);
+        }
+
         $disciplinasExcluir = Yii::$app->request->post('excluir');
-        $id_curso = Yii::$app->request->post('id_curso');
+
         if ($disciplinasExcluir != "") {
             foreach ($disciplinasExcluir as $id) {
                 GradeCurso::deleteAll(['id_Curso' => $id_curso, 'id_Disciplina' => $id]);
             }
         }
 
-
-        // adicionar
-        if ($disciplinas != "") {
-//        foreach ($disciplinas as $id => $aula) {
-//            $model = new CursoDisciplina();
-//            $model->id_Curso = $id_curso;
-//            $model->id_Disciplina = $id;
-//            $model->qtde_aulas = $aula;
-//            $model->save();
-//        }
-            foreach ($disciplinas as $id => $aula) {
-                $model = new GradeCurso();
-                $model->id_Curso = $id_curso;
-                $model->id_Periodo = $per;
-                $model->id_Disciplina = $id;
-                $model->ano_letivo = $ano_letivo;
-                $model->qtde_aulas = $aula;
-                $model->save();
+        if ($grade != "") {
+            for ($x = 0; $x < count($grade_curso); $x++) {
+                if ($grade_curso[$x] != "") {
+                    $curso = explode("|", $grade_curso[$x]);
+                    $model = new GradeCurso();
+                    $model->id_Curso =      $id_curso;
+                    $model->ano_letivo =    $curso[0];
+                    $model->id_Periodo =    $curso[1];
+                    $model->id_Disciplina = $curso[2];
+                    $model->qtde_aulas =    $curso[3];
+                    $model->save();
+                }
             }
         }
         return $this->redirect(['index']);

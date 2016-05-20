@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <h2>Alterar disciplinas do curso #<?= $id_curso ?></h2>
 
         <form method='post' id='form' action="index.php?r=curso/altera-disciplinas">
-
+            <input type="hidden" name="grade_curso" id="grade_curso" />
             <label for="input_ano">Ano letivo</label>
 
             <input type="text" class="form-control" id="input_ano" name="ano" value="<?php $ano?>">
@@ -33,13 +33,12 @@ $this->params['breadcrumbs'][] = $this->title;
             </select>
             <br>
 
-            <label for="select_disc">Disciplina </label>
-
             <div id="array-disc"></div>
             <div id="array-exc"></div>
 
             <input type="hidden" name="id_curso" value="<?= $id_curso ?>"/>
 
+            <label for="select_disc">Disciplina </label>
             <select class="form-control" id="select_disc">
                 <?php
                 foreach ($model_disc as $data):
@@ -55,7 +54,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <input type="text" class="form-control" id="input_qtdeaulas">
             <br>
             <button class="btn btn-default" type="button" id="btn-add-disc">
-                <span class="glyphicon glyphicon-plus"></span> Adicionar disciplina</button>
+                <span class="glyphicon glyphicon-plus"></span> Adicionar disciplina
+            </button>
             <br>
             <br>
             <br>
@@ -69,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </thead>
                 <tbody>
                 <?php
-                foreach ($disciplinas as $row):
+                foreach ($grade as $row):
                     echo "<tr id='linha-" . $row['id_Disciplina'] . "'>";
                     echo "<td>" . $row['ano_letivo'] . "</td>";
                     echo "<td>" . $row['id_Periodo'] . "</td>";
@@ -83,7 +83,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 </tbody>
             </table>
             <br>
-            <button class="btn btn-primary" type="submit" id="btnSalvarArray"><span class="glyphicon glyphicon-ok"></span> Salvar alteração</button>
+            <button class="btn btn-primary" type="submit" id="btnSalvarArray">
+                <span class="glyphicon glyphicon-ok"></span> Salvar alteração
+            </button>
         </form>
     </div>
 </div>
@@ -92,14 +94,15 @@ $this->params['breadcrumbs'][] = $this->title;
 <script src="<?= Yii::$app->getUrlManager()->getBaseUrl(); ?>/js/jquery-1.9.0.js" type="text/javascript"></script>
 <script>
     var disciplinas = [];
+    var grade_curso = [];
     var count = 0;
     $("#btn-add-disc").click(function () {
+        var idPer = parseInt($("#select_per").val());
         var periodo = $("#select_per").find("option:selected").text();
         var idDisc = parseInt($("#select_disc").val());
         var titulo = $("#select_disc").find("option:selected").text();
         var quantidade = $("#input_qtdeaulas").val();
         var ano = $("#input_ano").val();
-
 
         var conteudo = {
             ano_letivo: ano,
@@ -110,18 +113,17 @@ $this->params['breadcrumbs'][] = $this->title;
         };
         disciplinas.push(conteudo);
 
+        grade_curso[count] = ano + "|" + idPer + "|" + idDisc + "|" + quantidade;
 
-        $("#array-disc").append("<input type='hidden' name='disciplinas[" + idDisc + "]' id='txt-" +
-            idDisc + "' value='" + quantidade + "' />");
-
-        var html = "<tr id='linha-" + idDisc + "'>";
+        var
+        html = "<tr id='linha-" + count + "'>";
         html += "<td>" + ano + "</td>";
         html += "<td>" + periodo + "</td>";
         html += "<td>" + disciplinas[count].titulo + "</td>";
         html += "<td>" + disciplinas[count].quantidade + "</td>";
         html += "<td>";
         html += "<a href='#'>";
-        html += "<span class='glyphicon glyphicon-trash' onclick='excluir(" + idDisc + ")'></span>";
+        html += "<span class='glyphicon glyphicon-trash' onclick='excluir(" + count + ")'></span>";
         html += "</a>";
         html += "</td>";
         html += "</tr>";
@@ -131,6 +133,7 @@ $this->params['breadcrumbs'][] = $this->title;
         count++;
     });
     $("#btnSalvarArray").click(function () {
+        $("#grade_curso").val(grade_curso);
         $("#form").submit();
     });
 
@@ -141,6 +144,8 @@ $this->params['breadcrumbs'][] = $this->title;
             $("#txt-" + id).remove();
             $("#linha-" + id).fadeOut(0);
             $("#linha-" + id).remove();
+
+            grade_curso[id] = null;
         }
     }
 </script>
