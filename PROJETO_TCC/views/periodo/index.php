@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\PeriodoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Periodos');
+$this->title = Yii::t('app', 'Períodos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="periodo-index">
@@ -16,18 +16,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create Periodo'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', ' <span class="glyphicon glyphicon-plus-sign"></span> Novo Período'), ['create'], ['class' => 'btn btn-primary']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
             'id_Periodo',
             'nome_periodo',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

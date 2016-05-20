@@ -72,7 +72,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 foreach ($grade as $row):
                     echo "<tr id='linha-" . $row['id_Disciplina'] . "'>";
                     echo "<td>" . $row['ano_letivo'] . "</td>";
-                    echo "<td>" . $row['id_Periodo'] . "</td>";
+                    echo "<td>" . $row['nome_periodo'] . "</td>";
                     echo "<td>" . $row['nome'] . "</td>";
                     echo "<td>" . $row['qtde_aulas'] . "</td>";
                     echo "<td><a href='#' onclick='excluir(". $row['id_Disciplina'] . ")'>

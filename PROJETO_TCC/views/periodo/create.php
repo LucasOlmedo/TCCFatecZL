@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Periodo */
 
-$this->title = Yii::t('app', 'Create Periodo');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Periodos'), 'url' => ['index']];
+$this->title = Yii::t('app', 'Inserir novo período');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Períodos'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="periodo-create">

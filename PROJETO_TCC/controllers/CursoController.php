@@ -171,7 +171,7 @@ class CursoController extends Controller
     {
         $query = new Query;
         $query->select(['grade_curso.`id_Curso`,
-                        `grade_curso`.`id_Periodo`,
+                        `periodo`.`nome_periodo`,
                         `disciplina`.`id_Disciplina`,
                         `grade_curso`.`ano_letivo`,
                         `disciplina`.`nome`,
@@ -180,8 +180,10 @@ class CursoController extends Controller
             ->where(['grade_curso.id_Curso' => $id])
             ->join('INNER JOIN',
                 'disciplina',
-                'disciplina.id_Disciplina = grade_curso.id_Disciplina'
-            );
+                'disciplina.id_Disciplina = grade_curso.id_Disciplina')
+            ->join('INNER JOIN',
+                'periodo',
+                'grade_curso.id_Periodo = periodo.id_Periodo');
         $command = $query->createCommand();
         $grade = $command->queryAll();
 
