@@ -83,6 +83,20 @@ CREATE TABLE `tcc_fateczl`.`situacao_professor`(
 
 -------------------------------------------
 
+CREATE TABLE `tcc_fateczl`.`aulasemestral`(  
+  `id_Curso` INT(10) NOT NULL,
+  `id_Periodo` INT(10) NOT NULL,
+  `id_Disciplina` INT(10) NOT NULL,
+  `id_Professor` INT(10) NOT NULL,
+  `turno` VARCHAR(20) NOT NULL,
+  `data_inicio` DATE NOT NULL,
+  `data_fim` DATE NOT NULL,
+  PRIMARY KEY (`id_Curso`, `id_Periodo`, `id_Disciplina`, `turno`, `data_inicio`, `data_fim`),
+  CONSTRAINT `fk_prof123` FOREIGN KEY (`id_Professor`) REFERENCES `tcc_fateczl`.`professor`(`id_Professor`),
+  CONSTRAINT `fk_curso123` FOREIGN KEY (`id_Curso`) REFERENCES `tcc_fateczl`.`curso`(`id_Curso`),
+  CONSTRAINT `fk_per123` FOREIGN KEY (`id_Periodo`) REFERENCES `tcc_fateczl`.`periodo`(`id_Periodo`),
+  CONSTRAINT `fk_disc123` FOREIGN KEY (`id_Disciplina`) REFERENCES `tcc_fateczl`.`disciplina`(`id_Disciplina`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
 
 
 -------------------------------------------
