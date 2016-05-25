@@ -1,9 +1,10 @@
 <?php
 
+use app\models\Disciplina;
 use yii\data\SqlDataProvider;
 use yii\grid\GridView;
 use yii\helpers\Html;
-use yii\widgets\DetailView;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Disciplina */
@@ -21,17 +22,17 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir disciplina'), ['delete', 'id' => $model->id_Disciplina], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'Tem certeza que deseja excluir a disciplina?'),
+                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
                 'method' => 'post',
             ],
         ]) ?>
     </p>
 
-    <?=
-    $count = \app\models\Disciplina::find()->where(['id_Disciplina' => $model->id_Disciplina])->count();
+    <?php
+    $count = Disciplina::find()->count();
 
     $dataProvider = new SqlDataProvider([
-        'sql' => 'SELECT id_Disciplina, nome, abreviacao, tipo FROM disciplina
+        'sql' => 'SELECT id_Disciplina, nome_disc, abreviacao, tipo FROM disciplina
                   INNER JOIN horariosexternos
                   ON disciplina.externo=horariosexternos.id_Hae
                   WHERE id_Disciplina=:idd',
@@ -42,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'columns' => [
             'id_Disciplina',
-            'nome',
+            'nome_disc',
             'abreviacao',
             'tipo',
         ],

@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_Curso') ?>
 
-    <?= $form->field($model, 'nome') ?>
+    <?= $form->field($model, 'nome_cursi') ?>
 
     <?= $form->field($model, 'abreviacao') ?>
 

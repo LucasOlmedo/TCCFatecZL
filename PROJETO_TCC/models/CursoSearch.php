@@ -9,6 +9,7 @@ use app\models\Curso;
 
 /**
  * CursoSearch represents the model behind the search form about `app\models\Curso`.
+ * @property mixed nome_curso
  */
 class CursoSearch extends Curso
 {
@@ -19,7 +20,7 @@ class CursoSearch extends Curso
     {
         return [
             [['id_Curso', 'carga_horaria'], 'integer'],
-            [['nome', 'abreviacao'], 'safe'],
+            [['nome_curso', 'abreviacao'], 'safe'],
         ];
     }
 
@@ -60,7 +61,7 @@ class CursoSearch extends Curso
             'carga_horaria' => $this->carga_horaria,
         ]);
 
-        $query->andFilterWhere(['like', 'nome', $this->nome])
+        $query->andFilterWhere(['like', 'nome_curso', $this->nome_curso])
             ->andFilterWhere(['like', 'abreviacao', $this->abreviacao]);
 
         return $dataProvider;

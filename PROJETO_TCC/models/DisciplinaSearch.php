@@ -19,9 +19,8 @@ class DisciplinaSearch extends Disciplina
     {
         return [
             [['id_Disciplina', 'externo'], 'integer'],
-            [['nome', 'abreviacao'], 'safe'],
+            [['nome_disc', 'abreviacao'], 'safe'],
         ];
-
     }
 
     /**
@@ -58,11 +57,10 @@ class DisciplinaSearch extends Disciplina
 
         $query->andFilterWhere([
             'id_Disciplina' => $this->id_Disciplina,
-            'externo' => $this->externo
-            ,
+            'externo' => $this->externo,
         ]);
 
-        $query->andFilterWhere(['like', 'nome', $this->nome])
+        $query->andFilterWhere(['like', 'nome_disc', $this->nome_disc])
             ->andFilterWhere(['like', 'abreviacao', $this->abreviacao]);
 
         return $dataProvider;

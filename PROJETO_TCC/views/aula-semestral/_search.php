@@ -15,13 +15,13 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id_Professor') ?>
-
     <?= $form->field($model, 'id_Curso') ?>
+
+    <?= $form->field($model, 'id_Periodo') ?>
 
     <?= $form->field($model, 'id_Disciplina') ?>
 
-    <?= $form->field($model, 'semestre') ?>
+    <?= $form->field($model, 'id_Professor') ?>
 
     <?= $form->field($model, 'turno') ?>
 

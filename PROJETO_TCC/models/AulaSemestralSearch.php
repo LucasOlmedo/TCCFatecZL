@@ -18,7 +18,7 @@ class AulaSemestralSearch extends AulaSemestral
     public function rules()
     {
         return [
-            [['id_Professor', 'id_Curso', 'id_Disciplina', 'semestre'], 'integer'],
+            [['id_Curso', 'id_Periodo', 'id_Disciplina', 'id_Professor'], 'integer'],
             [['turno', 'data_inicio', 'data_fim'], 'safe'],
         ];
     }
@@ -56,10 +56,10 @@ class AulaSemestralSearch extends AulaSemestral
         }
 
         $query->andFilterWhere([
-            'id_Professor' => $this->id_Professor,
             'id_Curso' => $this->id_Curso,
+            'id_Periodo' => $this->id_Periodo,
             'id_Disciplina' => $this->id_Disciplina,
-            'semestre' => $this->semestre,
+            'id_Professor' => $this->id_Professor,
             'data_inicio' => $this->data_inicio,
             'data_fim' => $this->data_fim,
         ]);

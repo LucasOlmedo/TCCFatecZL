@@ -57,9 +57,9 @@ AppAsset::register($this);
                     '<li class="divider"></li>',
                 ['label' => 'Horarios Externos', 'url' => 'index.php?r=horarios-externos/index'],
                     '<li class="divider"></li>',
-                ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index'],
+                ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index'],
                     '<li class="divider"></li>',
-                ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index']
+                ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index']
             ]
             ],
 //            ['label' => 'Contact', 'url' => ['/site/contact']],

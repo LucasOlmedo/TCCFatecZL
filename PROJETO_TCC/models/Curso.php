@@ -6,16 +6,12 @@ use Yii;
 use yii\db\ActiveRecord;
 
 /**
- * This is the model class for table "curso".
+ * This is the model class for table "Curso".
  *
  * @property integer $id_Curso
- * @property string $nome
+ * @property string $nome_curso
  * @property string $abreviacao
  * @property integer $carga_horaria
- *
- * @property CursoDisciplina[] $cursoDisciplinas
- * @property Disciplina[] $idDisciplinas
- * @property CursoDisciplinaProfessor[] $cursoDisciplinaProfessors
  */
 class Curso extends ActiveRecord
 {
@@ -24,7 +20,7 @@ class Curso extends ActiveRecord
      */
     public static function tableName()
     {
-        return 'curso';
+        return 'Curso';
     }
 
     /**
@@ -33,9 +29,9 @@ class Curso extends ActiveRecord
     public function rules()
     {
         return [
-            [['nome', 'abreviacao', 'carga_horaria'], 'required'],
+            [['nome_curso', 'abreviacao', 'carga_horaria'], 'required'],
             [['carga_horaria'], 'integer'],
-            [['nome'], 'string', 'max' => 40],
+            [['nome_curso'], 'string', 'max' => 40],
             [['abreviacao'], 'string', 'max' => 7]
         ];
     }
@@ -46,34 +42,10 @@ class Curso extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Curso' => Yii::t('app', 'ID'),
-            'nome' => Yii::t('app', 'Curso'),
-            'abreviacao' => Yii::t('app', 'Abreviação'),
-            'carga_horaria' => Yii::t('app', 'Carga Horária'),
+            'id_Curso' => Yii::t('app', 'Id  Curso'),
+            'nome_curso' => Yii::t('app', 'Nome Curso'),
+            'abreviacao' => Yii::t('app', 'Abreviacao'),
+            'carga_horaria' => Yii::t('app', 'Carga Horaria'),
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCursoDisciplinas()
-    {
-        return $this->hasMany(CursoDisciplina::className(), ['id_Curso' => 'id_Curso']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getDisciplinas()
-    {
-        return $this->hasMany(Disciplina::className(), ['id_Disciplina' => 'id_Disciplina'])->viaTable('curso_disciplina', ['id_Curso' => 'id_Curso']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCursoDisciplinaProfessor()
-    {
-        return $this->hasMany(CursoDisciplinaProfessor::className(), ['id_Curso' => 'id_Curso']);
     }
 }

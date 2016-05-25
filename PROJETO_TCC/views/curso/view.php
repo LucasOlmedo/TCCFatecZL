@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id_Curso',
-            'nome',
+            'nome_curso',
             'abreviacao',
             'carga_horaria',
         ],

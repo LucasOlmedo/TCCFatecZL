@@ -69,10 +69,23 @@ class GradeCurso extends ActiveRecord
         return $this->hasOne(Disciplina::className(), ['id_Disciplina' => 'id_Disciplina']);
     }
 
+    public function getDisciplina()
+    {
+        return $this->hasOne(Disciplina::className(), ['id_Disciplina' => 'id_Disciplina']);
+    }
+
+    /**
+ * @return \yii\db\ActiveQuery
+ */
+    public function getIdPeriodo()
+    {
+        return $this->hasOne(Periodo::className(), ['id_Periodo' => 'id_Periodo']);
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdPeriodo()
+    public function getPeriodo()
     {
         return $this->hasOne(Periodo::className(), ['id_Periodo' => 'id_Periodo']);
     }

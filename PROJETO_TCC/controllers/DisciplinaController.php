@@ -2,7 +2,6 @@
 
 namespace app\controllers;
 
-use app\models\HorariosExternos;
 use Yii;
 use app\models\Disciplina;
 use app\models\DisciplinaSearch;
@@ -33,13 +32,11 @@ class DisciplinaController extends Controller
      */
     public function actionIndex()
     {
-        $model = new Disciplina();
         $searchModel = new DisciplinaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
-            'model' => $model,
             'dataProvider' => $dataProvider,
         ]);
     }
@@ -64,6 +61,7 @@ class DisciplinaController extends Controller
     public function actionCreate()
     {
         $model = new Disciplina();
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
         } else {
@@ -84,7 +82,7 @@ class DisciplinaController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_Disciplina]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

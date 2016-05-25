@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\AulaSemestral */
 
-$this->title = Yii::t('app', 'Create Aula Semestral');
+$this->title = Yii::t('app', 'Inserir nova Aula Semestral');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Aula Semestral'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
