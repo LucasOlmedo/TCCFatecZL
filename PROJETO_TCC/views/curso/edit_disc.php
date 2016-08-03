@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <select class="form-control" id="select_disc">
                 <?php
                 foreach ($model_disc as $data):
-                    echo "<option value='" . $data->id_Disciplina . "'>" . $data->nome . "</option>";
+                    echo "<option value='" . $data->id_Disciplina . "'>" . $data->nome_disc . "</option>";
                 endforeach;
                 ?>
             </select>
@@ -73,7 +73,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     echo "<tr id='linha-" . $row['id_Disciplina'] . "'>";
                     echo "<td>" . $row['ano_letivo'] . "</td>";
                     echo "<td>" . $row['nome_periodo'] . "</td>";
-                    echo "<td>" . $row['nome'] . "</td>";
+                    echo "<td>" . $row['nome_disc'] . "</td>";
                     echo "<td>" . $row['qtde_aulas'] . "</td>";
                     echo "<td><a href='#' onclick='excluir(". $row['id_Disciplina'] . ")'>
                           <span class='glyphicon glyphicon-trash'></span></a></td>";

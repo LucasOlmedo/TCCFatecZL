@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <select class="form-control" id="select_disc">
                 <?php
                 foreach ($model_disc as $data):
-                    echo "<option value='" . $data->id_Disciplina . "'>" . $data->nome . "</option>";
+                    echo "<option value='" . $data->id_Disciplina . "'>" . $data->nome_disc . "</option>";
                 endforeach;
                 ?>
             </select>

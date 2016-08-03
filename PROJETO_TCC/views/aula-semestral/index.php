@@ -38,7 +38,6 @@ $this->params['breadcrumbs'][] = $this->title;
 //                  ON aulasemestral.`id_Professor` = professor.`id_Professor`',
 //        'totalCount' => $count,
 //    ]);
-//
 //    echo GridView::widget([
 //        'dataProvider' => $dataProvider,
 //        'filterModel' => $searchModel,
@@ -47,18 +46,21 @@ $this->params['breadcrumbs'][] = $this->title;
 //            'nome_periodo' => ['label' => 'Período', 'value' => 'nome_periodo'],
 //            'nome_disc' => ['label' => 'Disciplina', 'value' => 'nome_disc'],
 //            'nome' => ['label' => 'Professor', 'value' => 'nome'],
-//            'turno',
-//            'data_inicio',
-//            'data_fim',
+//            [
+//                'attribute' => 'turno',
+//                'format' => 'raw',
+//                'filter' => ["0" => "Manhã", "1" => "Tarde", "2" => "Noite"],
+//                'value' => function ($model) {
+//                    if ($model->turno == 0) return "Manhã";
+//                    if ($model->turno == 1) return "Tarde";
+//                    if ($model->turno == 2) return "Noite";
+//                }
+//            ],
 //        ],
 //    ]);
 
-
-
-
     echo GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
         'columns' => [
             'id_Curso',
             'id_Periodo',
@@ -72,12 +74,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     if ($model->turno == 0) return "Manhã";
                     if ($model->turno == 1) return "Tarde";
                     if ($model->turno == 2) return "Noite";
+                    return $model;
                 }
             ],
 //             'data_inicio',
 //             'data_fim',
             ['class' => 'yii\grid\ActionColumn'],
         ],
-    ]); ?>
+    ]);
+
+?>
 
 </div>

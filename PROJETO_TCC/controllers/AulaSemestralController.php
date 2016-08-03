@@ -76,7 +76,7 @@ class AulaSemestralController extends Controller
         $model = new AulaSemestral();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_Curso' => $model->id_Curso, 'id_Periodo' => $model->id_Periodo, 'id_Disciplina' => $model->id_Disciplina, 'turno' => $model->turno, 'data_inicio' => $model->data_inicio, 'data_fim' => $model->data_fim]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -100,7 +100,7 @@ class AulaSemestralController extends Controller
         $model = $this->findModel($id_Curso, $id_Periodo, $id_Disciplina, $turno, $data_inicio, $data_fim);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_Curso' => $model->id_Curso, 'id_Periodo' => $model->id_Periodo, 'id_Disciplina' => $model->id_Disciplina, 'turno' => $model->turno, 'data_inicio' => $model->data_inicio, 'data_fim' => $model->data_fim]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -177,7 +177,7 @@ class AulaSemestralController extends Controller
 
         if(count($rows)>0){
             foreach($rows as $row){
-                echo "<option value='$row->id_Disciplina'>".$row->disciplina->nome."</option>";
+                echo "<option value='$row->id_Disciplina'>".$row->disciplina->nome_disc."</option>";
             }
         }
 

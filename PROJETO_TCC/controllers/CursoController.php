@@ -174,7 +174,7 @@ class CursoController extends Controller
                         `periodo`.`nome_periodo`,
                         `disciplina`.`id_Disciplina`,
                         `grade_curso`.`ano_letivo`,
-                        `disciplina`.`nome`,
+                        `disciplina`.`nome_disc`,
                         `grade_curso`.`qtde_aulas`'])
             ->from('grade_curso')
             ->where(['grade_curso.id_Curso' => $id])

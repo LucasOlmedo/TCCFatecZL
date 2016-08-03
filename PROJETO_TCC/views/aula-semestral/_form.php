@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 
     <?php
     $cursos = CursoSearch::find()->asArray()->all();
-    $listData_curso = ArrayHelper::map($cursos, 'id_Curso', 'nome');
+    $listData_curso = ArrayHelper::map($cursos, 'id_Curso', 'nome_curso');
     echo $form->field($model, 'id_Curso')->dropDownList($listData_curso,
         ['prompt' => 'Selecione um curso...',
             'onchange'=>'

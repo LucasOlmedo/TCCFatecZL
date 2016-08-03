@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "aulasemestral".
@@ -20,7 +21,7 @@ use Yii;
  * @property Periodo $idPeriodo
  * @property Professor $idProfessor
  */
-class AulaSemestral extends \yii\db\ActiveRecord
+class AulaSemestral extends ActiveRecord
 {
     /**
      * @inheritdoc
