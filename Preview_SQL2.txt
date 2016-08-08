@@ -1,6 +1,6 @@
 CREATE TABLE `tcc_fateczl`.`curso`(  
   `id_Curso` INT(10) NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(40) NOT NULL,
+  `nome_curso` VARCHAR(40) NOT NULL,
   `abreviacao` VARCHAR(7) NOT NULL,
   `carga_horaria` INT(6) NOT NULL,
   PRIMARY KEY (`id_Curso`)
@@ -17,7 +17,7 @@ CREATE TABLE `tcc_fateczl`.`horariosExternos`(
 -------------------------------------------
 CREATE TABLE `tcc_fateczl`.`disciplina`(  
   `id_Disciplina` INT(10) NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(40) NOT NULL,
+  `nome_disc` VARCHAR(40) NOT NULL,
   `abreviacao` VARCHAR(10) NOT NULL,
   `externo` INT(10),
   PRIMARY KEY (`id_Disciplina`),
