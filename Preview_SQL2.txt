@@ -21,7 +21,7 @@ CREATE TABLE `tcc_fateczl`.`disciplina`(
   `abreviacao` VARCHAR(10) NOT NULL,
   `externo` INT(10),
   PRIMARY KEY (`id_Disciplina`),
-  FOREIGN KEY (`externo`) REFERENCES `tcc`.`horariosExternos`(`id_Hae`)
+  FOREIGN KEY (`externo`) REFERENCES `tcc_fateczl`.`horariosExternos`(`id_Hae`)
 ) CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -------------------------------------------
@@ -101,10 +101,36 @@ CREATE TABLE `tcc_fateczl`.`aulasemestral`(
 
 -------------------------------------------
 
+CREATE TABLE `tcc_fateczl`.`diaSemana`(  
+  `id_diaSemana` INT(10) NOT NULL,
+  `id_Professor` INT(10) NOT NULL,
+  `id_Curso` INT(10) NOT NULL,
+  `id_Disciplina` INT(10) NOT NULL,
+  `id_Periodo` INT(2) NOT NULL,
+  `horario_inicio` TIME NOT NULL,
+  `horario_fim` TIME NOT NULL);
+
+
+  PRIMARY KEY (`id_diaSemana`, `id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`,`horario_inicio`,`horario_fim`);
+  CONSTRAINT `fk_diaSemana` FOREIGN KEY (`id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`)
+) CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+-------------------------------------------
+
+ALTER TABLE `tcc_fateczl`.`diaSemana`   
+  ADD PRIMARY KEY (`id_diaSemana`, `id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`,`horario_inicio`,`horario_fim`);
+
+ALTER TABLE `tcc_fateczl`.`diaSemana`   
+  ADD CONSTRAINT  `fk_diaSemana` FOREIGN KEY (`id_Professor`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Professor`),
+  ADD CONSTRAINT  `fk_diaSemana2` FOREIGN KEY (`id_Curso`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Curso`),
+  ADD CONSTRAINT  `fk_diaSemana3` FOREIGN KEY (`id_Disciplina`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Disciplina`);
+
+ALTER TABLE `tcc_fateczl`.`diaSemana`   
+  ADD CONSTRAINT  `fk_diaSemana4` FOREIGN KEY (`id_Periodo`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Periodo`);
 
 
 -------------------------------------------
 
 
 
--------------------------------------------
