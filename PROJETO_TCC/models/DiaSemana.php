@@ -3,7 +3,6 @@
 namespace app\models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "diasemana".
@@ -12,13 +11,16 @@ use yii\db\ActiveRecord;
  * @property integer $id_Professor
  * @property integer $id_Curso
  * @property integer $id_Disciplina
- * @property integer $semestre
- * @property string $turno
- * @property string $horario
+ * @property integer $id_Periodo
+ * @property string $horario_inicio
+ * @property string $horario_fim
  *
- * @property CursoDisciplinaProfessor $idProfessor
+ * @property Aulasemestral $idProfessor
+ * @property Aulasemestral $idCurso
+ * @property Aulasemestral $idDisciplina
+ * @property Aulasemestral $idPeriodo
  */
-class DiaSemana extends ActiveRecord
+class Diasemana extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -34,10 +36,9 @@ class DiaSemana extends ActiveRecord
     public function rules()
     {
         return [
-            [['id_Professor', 'id_Curso', 'id_Disciplina', 'semestre', 'turno', 'horario'], 'required'],
-            [['id_Professor', 'id_Curso', 'id_Disciplina', 'semestre'], 'integer'],
-            [['horario'], 'safe'],
-            [['turno'], 'string', 'max' => 10]
+            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'horario_inicio', 'horario_fim'], 'required'],
+            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo'], 'integer'],
+            [['horario_inicio', 'horario_fim'], 'safe']
         ];
     }
 
@@ -47,13 +48,13 @@ class DiaSemana extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_diaSemana' => Yii::t('app', 'ID'),
-            'id_Professor' => Yii::t('app', 'ID Professor'),
-            'id_Curso' => Yii::t('app', 'ID Curso'),
-            'id_Disciplina' => Yii::t('app', 'ID Disciplina'),
-            'semestre' => Yii::t('app', 'Semestre'),
-            'turno' => Yii::t('app', 'Turno'),
-            'horario' => Yii::t('app', 'Horário'),
+            'id_diaSemana' => 'Id Dia Semana',
+            'id_Professor' => 'Id  Professor',
+            'id_Curso' => 'Id  Curso',
+            'id_Disciplina' => 'Id  Disciplina',
+            'id_Periodo' => 'Id  Periodo',
+            'horario_inicio' => 'Horario Inicio',
+            'horario_fim' => 'Horario Fim',
         ];
     }
 
@@ -62,6 +63,30 @@ class DiaSemana extends ActiveRecord
      */
     public function getIdProfessor()
     {
-        return $this->hasOne(CursoDisciplinaProfessor::className(), ['id_Professor' => 'id_Professor', 'id_Curso' => 'id_Curso', 'id_Disciplina' => 'id_Disciplina', 'semestre' => 'semestre', 'turno' => 'turno']);
+        return $this->hasOne(Aulasemestral::className(), ['id_Professor' => 'id_Professor']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdCurso()
+    {
+        return $this->hasOne(Aulasemestral::className(), ['id_Curso' => 'id_Curso']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdDisciplina()
+    {
+        return $this->hasOne(Aulasemestral::className(), ['id_Disciplina' => 'id_Disciplina']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdPeriodo()
+    {
+        return $this->hasOne(Aulasemestral::className(), ['id_Periodo' => 'id_Periodo']);
     }
 }
