@@ -2,7 +2,7 @@
 
 *Coisas que faltam:*
 
-  - Cruds (80%) - Falta o CRUD do Dia Semana 
+  - Cruds (100%) - Falta só fazer o design
   - Fazer o Relatorio Semestral (100%) - Falta testar
   - Fazer o Relatorio Mensal (Folha de ponto) - 0%
   - Linkar os CRUDS aos Relatórios - 0%
