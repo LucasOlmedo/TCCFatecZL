@@ -113,8 +113,7 @@ CREATE TABLE `tcc_fateczl`.`diaSemana`(
   `data_fim` DATE NOT NULL,
   `horario_inicio` TIME NOT NULL,
   `horario_fim` TIME NOT NULL,
-  PRIMARY KEY (`id_diaSemana`, `id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`,`horario_inicio`,`horario_fim`,`data_inicio`,`data_fim`),
-  FOREIGN KEY (`id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`,`data_inicio`,`data_fim`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`,`data_inicio`,`data_fim`)
+  PRIMARY KEY (`id_diaSemana`, `id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`,`horario_inicio`,`horario_fim`,`data_inicio`,`data_fim`)
 );
 
 

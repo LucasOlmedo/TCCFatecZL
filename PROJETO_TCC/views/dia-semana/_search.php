@@ -23,15 +23,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_Disciplina') ?>
 
-    <?= $form->field($model, 'semestre') ?>
+    <?= $form->field($model, 'id_Periodo') ?>
 
-    <?php // echo $form->field($model, 'turno') ?>
+    <?php // echo $form->field($model, 'data_inicio') ?>
 
-    <?php // echo $form->field($model, 'horario') ?>
+    <?php // echo $form->field($model, 'data_fim') ?>
+
+    <?php // echo $form->field($model, 'horario_inicio') ?>
+
+    <?php // echo $form->field($model, 'horario_fim') ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

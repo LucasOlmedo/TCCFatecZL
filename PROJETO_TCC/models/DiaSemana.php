@@ -12,6 +12,8 @@ use Yii;
  * @property integer $id_Curso
  * @property integer $id_Disciplina
  * @property integer $id_Periodo
+ * @property string $data_inicio
+ * @property string $data_fim
  * @property string $horario_inicio
  * @property string $horario_fim
  *
@@ -19,8 +21,10 @@ use Yii;
  * @property Aulasemestral $idCurso
  * @property Aulasemestral $idDisciplina
  * @property Aulasemestral $idPeriodo
+ * @property Aulasemestral $dataInicio
+ * @property Aulasemestral $dataFim
  */
-class Diasemana extends \yii\db\ActiveRecord
+class DiaSemana extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -36,9 +40,9 @@ class Diasemana extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'horario_inicio', 'horario_fim'], 'required'],
+            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'data_inicio', 'data_fim', 'horario_inicio', 'horario_fim'], 'required'],
             [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo'], 'integer'],
-            [['horario_inicio', 'horario_fim'], 'safe']
+            [['data_inicio', 'data_fim', 'horario_inicio', 'horario_fim'], 'safe']
         ];
     }
 
@@ -53,6 +57,8 @@ class Diasemana extends \yii\db\ActiveRecord
             'id_Curso' => 'Id  Curso',
             'id_Disciplina' => 'Id  Disciplina',
             'id_Periodo' => 'Id  Periodo',
+            'data_inicio' => 'Data Inicio',
+            'data_fim' => 'Data Fim',
             'horario_inicio' => 'Horario Inicio',
             'horario_fim' => 'Horario Fim',
         ];
@@ -88,5 +94,21 @@ class Diasemana extends \yii\db\ActiveRecord
     public function getIdPeriodo()
     {
         return $this->hasOne(Aulasemestral::className(), ['id_Periodo' => 'id_Periodo']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDataInicio()
+    {
+        return $this->hasOne(Aulasemestral::className(), ['data_inicio' => 'data_inicio']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDataFim()
+    {
+        return $this->hasOne(Aulasemestral::className(), ['data_fim' => 'data_fim']);
     }
 }

@@ -12,26 +12,26 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id_Professor')->dropDownList(\app\models\ProfessorSearch::find()->select(
-        ['nome', 'id_Professor'])->indexBy('id')->column(),['prompt'=>'Selecione o professor...']
-    ) ?>
+    <?= $form->field($model, 'id_diaSemana')->textInput() ?>
 
-    <?= $form->field($model, 'id_Curso')->dropDownList(\app\models\CursoSearch::find()->select(
-        ['nome', 'id_Curso'])->indexBy('id')->column(),['prompt'=>'Selecione o curso...']
-    ) ?>
+    <?= $form->field($model, 'id_Professor')->textInput() ?>
 
-    <?= $form->field($model, 'id_Disciplina')->dropDownList(\app\models\DisciplinaSearch::find()->select(
-        ['nome', 'id_Disciplina'])->indexBy('id')->column(),['prompt'=>'Selecione a disciplina...']
-    ) ?>
+    <?= $form->field($model, 'id_Curso')->textInput() ?>
 
-    <?= $form->field($model, 'semestre')->textInput() ?>
+    <?= $form->field($model, 'id_Disciplina')->textInput() ?>
 
-    <?= $form->field($model, 'turno')->dropDownList(['Manhã', 'Tarde', 'Noite'], ['prompt'=>'Selecione o turno...']) ?>
+    <?= $form->field($model, 'id_Periodo')->textInput() ?>
 
-    <?= $form->field($model, 'horario')->textInput() ?>
+    <?= $form->field($model, 'data_inicio')->textInput() ?>
+
+    <?= $form->field($model, 'data_fim')->textInput() ?>
+
+    <?= $form->field($model, 'horario_inicio')->textInput() ?>
+
+    <?= $form->field($model, 'horario_fim')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', '<span class="glyphicon glyphicon-ok"></span> Salvar') : Yii::t('app', '<span class="glyphicon glyphicon-ok"></span> Atualizar'), ['class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
