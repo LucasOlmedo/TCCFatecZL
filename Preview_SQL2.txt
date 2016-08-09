@@ -123,9 +123,9 @@ ALTER TABLE `tcc_fateczl`.`diaSemana`
   ADD PRIMARY KEY (`id_diaSemana`, `id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`,`horario_inicio`,`horario_fim`,`data_inicio`,`data_fim`);
 
 ALTER TABLE `tcc_fateczl`.`diaSemana`   
-  ADD CONSTRAINT  `fk_diaSemana` FOREIGN KEY (`id_Professor`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Professor`);
+  ADD CONSTRAINT  `fk_diaSemana` FOREIGN KEY (`id_Professor`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Professor`),
   ADD CONSTRAINT  `fk_diaSemana2` FOREIGN KEY (`id_Curso`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Curso`),
-  ADD CONSTRAINT  `fk_diaSemana3` FOREIGN KEY (`id_Disciplina`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Disciplina`),
+  ADD CONSTRAINT  `fk_diaSemana3` FOREIGN KEY (`id_Disciplina`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Disciplina`);
 
 ALTER TABLE `tcc_fateczl`.`diaSemana`    
   ADD CONSTRAINT  `fk_diaSemana5` FOREIGN KEY (`data_inicio`) REFERENCES `tcc_fateczl`.`aulasemestral`(`data_inicio`),
