@@ -25,9 +25,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_Periodo') ?>
 
-    <?php // echo $form->field($model, 'data_inicio') ?>
+    <?php // echo $form->field($model, 'turno') ?>
 
-    <?php // echo $form->field($model, 'data_fim') ?>
+    <?php // echo $form->field($model, 'ano') ?>
+
+    <?php // echo $form->field($model, 'semestre') ?>
 
     <?php // echo $form->field($model, 'horario_inicio') ?>
 

@@ -22,9 +22,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_Periodo')->textInput() ?>
 
-    <?= $form->field($model, 'data_inicio')->textInput() ?>
+    <?= $form->field($model, 'turno')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'data_fim')->textInput() ?>
+    <?= $form->field($model, 'ano')->textInput() ?>
+
+    <?= $form->field($model, 'semestre')->textInput() ?>
 
     <?= $form->field($model, 'horario_inicio')->textInput() ?>
 

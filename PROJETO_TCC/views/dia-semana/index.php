@@ -30,8 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_Curso',
             'id_Disciplina',
             'id_Periodo',
-            // 'data_inicio',
-            // 'data_fim',
+            // 'turno',
+            // 'ano',
+            // 'semestre',
             // 'horario_inicio',
             // 'horario_fim',
 

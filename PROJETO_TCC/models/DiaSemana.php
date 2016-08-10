@@ -12,8 +12,9 @@ use Yii;
  * @property integer $id_Curso
  * @property integer $id_Disciplina
  * @property integer $id_Periodo
- * @property string $data_inicio
- * @property string $data_fim
+ * @property string $turno
+ * @property string $ano
+ * @property integer $semestre
  * @property string $horario_inicio
  * @property string $horario_fim
  *
@@ -21,8 +22,7 @@ use Yii;
  * @property Aulasemestral $idCurso
  * @property Aulasemestral $idDisciplina
  * @property Aulasemestral $idPeriodo
- * @property Aulasemestral $dataInicio
- * @property Aulasemestral $dataFim
+ * @property Aulasemestral $turno0
  */
 class DiaSemana extends \yii\db\ActiveRecord
 {
@@ -40,9 +40,10 @@ class DiaSemana extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'data_inicio', 'data_fim', 'horario_inicio', 'horario_fim'], 'required'],
-            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo'], 'integer'],
-            [['data_inicio', 'data_fim', 'horario_inicio', 'horario_fim'], 'safe']
+            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'turno', 'ano', 'semestre', 'horario_inicio', 'horario_fim'], 'required'],
+            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'semestre'], 'integer'],
+            [['ano', 'horario_inicio', 'horario_fim'], 'safe'],
+            [['turno'], 'string', 'max' => 20]
         ];
     }
 
@@ -57,8 +58,9 @@ class DiaSemana extends \yii\db\ActiveRecord
             'id_Curso' => 'Id  Curso',
             'id_Disciplina' => 'Id  Disciplina',
             'id_Periodo' => 'Id  Periodo',
-            'data_inicio' => 'Data Inicio',
-            'data_fim' => 'Data Fim',
+            'turno' => 'Turno',
+            'ano' => 'Ano',
+            'semestre' => 'Semestre',
             'horario_inicio' => 'Horario Inicio',
             'horario_fim' => 'Horario Fim',
         ];
@@ -99,16 +101,8 @@ class DiaSemana extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDataInicio()
+    public function getTurno0()
     {
-        return $this->hasOne(Aulasemestral::className(), ['data_inicio' => 'data_inicio']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getDataFim()
-    {
-        return $this->hasOne(Aulasemestral::className(), ['data_fim' => 'data_fim']);
+        return $this->hasOne(Aulasemestral::className(), ['turno' => 'turno']);
     }
 }
