@@ -18,8 +18,8 @@ class DiaSemanaSearch extends DiaSemana
     public function rules()
     {
         return [
-            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'semestre'], 'integer'],
-            [['turno', 'ano', 'horario_inicio', 'horario_fim'], 'safe'],
+            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo'], 'integer'],
+            [['turno', 'horario_inicio', 'horario_fim'], 'safe'],
         ];
     }
 
@@ -61,8 +61,6 @@ class DiaSemanaSearch extends DiaSemana
             'id_Curso' => $this->id_Curso,
             'id_Disciplina' => $this->id_Disciplina,
             'id_Periodo' => $this->id_Periodo,
-            'ano' => $this->ano,
-            'semestre' => $this->semestre,
             'horario_inicio' => $this->horario_inicio,
             'horario_fim' => $this->horario_fim,
         ]);

@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'id_Periodo' => $model->id_Periodo, 'turno' => $model->turno, 'ano' => $model->ano, 'semestre' => $model->semestre, 'horario_inicio' => $model->horario_inicio, 'horario_fim' => $model->horario_fim], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'id_Periodo' => $model->id_Periodo, 'turno' => $model->turno, 'ano' => $model->ano, 'semestre' => $model->semestre, 'horario_inicio' => $model->horario_inicio, 'horario_fim' => $model->horario_fim], [
+        <?= Html::a('Update', ['update', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'id_Periodo' => $model->id_Periodo, 'turno' => $model->turno, 'horario_inicio' => $model->horario_inicio, 'horario_fim' => $model->horario_fim], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Delete', ['delete', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'id_Periodo' => $model->id_Periodo, 'turno' => $model->turno, 'horario_inicio' => $model->horario_inicio, 'horario_fim' => $model->horario_fim], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
@@ -34,8 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_Disciplina',
             'id_Periodo',
             'turno',
-            'ano',
-            'semestre',
             'horario_inicio',
             'horario_fim',
         ],

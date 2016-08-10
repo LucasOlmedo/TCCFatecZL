@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = 'Update Dia Semana: ' . ' ' . $model->id_diaSemana;
 $this->params['breadcrumbs'][] = ['label' => 'Dia Semanas', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id_diaSemana, 'url' => ['view', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'id_Periodo' => $model->id_Periodo, 'turno' => $model->turno, 'ano' => $model->ano, 'semestre' => $model->semestre, 'horario_inicio' => $model->horario_inicio, 'horario_fim' => $model->horario_fim]];
+$this->params['breadcrumbs'][] = ['label' => $model->id_diaSemana, 'url' => ['view', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'id_Periodo' => $model->id_Periodo, 'turno' => $model->turno, 'horario_inicio' => $model->horario_inicio, 'horario_fim' => $model->horario_fim]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="dia-semana-update">

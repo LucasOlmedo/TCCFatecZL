@@ -13,8 +13,6 @@ use Yii;
  * @property integer $id_Disciplina
  * @property integer $id_Periodo
  * @property string $turno
- * @property string $ano
- * @property integer $semestre
  * @property string $horario_inicio
  * @property string $horario_fim
  *
@@ -40,9 +38,9 @@ class DiaSemana extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'turno', 'ano', 'semestre', 'horario_inicio', 'horario_fim'], 'required'],
-            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'semestre'], 'integer'],
-            [['ano', 'horario_inicio', 'horario_fim'], 'safe'],
+            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo', 'turno', 'horario_inicio', 'horario_fim'], 'required'],
+            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo'], 'integer'],
+            [['horario_inicio', 'horario_fim'], 'safe'],
             [['turno'], 'string', 'max' => 20]
         ];
     }
@@ -59,8 +57,6 @@ class DiaSemana extends \yii\db\ActiveRecord
             'id_Disciplina' => 'Id  Disciplina',
             'id_Periodo' => 'Id  Periodo',
             'turno' => 'Turno',
-            'ano' => 'Ano',
-            'semestre' => 'Semestre',
             'horario_inicio' => 'Horario Inicio',
             'horario_fim' => 'Horario Fim',
         ];

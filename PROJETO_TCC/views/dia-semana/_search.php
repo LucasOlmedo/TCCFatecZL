@@ -27,10 +27,6 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'turno') ?>
 
-    <?php // echo $form->field($model, 'ano') ?>
-
-    <?php // echo $form->field($model, 'semestre') ?>
-
     <?php // echo $form->field($model, 'horario_inicio') ?>
 
     <?php // echo $form->field($model, 'horario_fim') ?>
