@@ -3,7 +3,6 @@
 namespace app\models;
 
 use Yii;
-use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "periodo".
@@ -11,9 +10,10 @@ use yii\db\ActiveRecord;
  * @property integer $id_Periodo
  * @property string $nome_periodo
  *
+ * @property Aulasemestral[] $aulasemestrals
  * @property GradeCurso[] $gradeCursos
  */
-class Periodo extends ActiveRecord
+class Periodo extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -29,7 +29,8 @@ class Periodo extends ActiveRecord
     public function rules()
     {
         return [
-            [['nome_periodo'], 'required'],
+            [['id_Periodo', 'nome_periodo'], 'required'],
+            [['id_Periodo'], 'integer'],
             [['nome_periodo'], 'string', 'max' => 20]
         ];
     }
@@ -40,9 +41,17 @@ class Periodo extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Periodo' => Yii::t('app', 'Id  Periodo'),
-            'nome_periodo' => Yii::t('app', 'Nome Periodo'),
+            'id_Periodo' => 'Id  Periodo',
+            'nome_periodo' => 'Nome Periodo',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getAulasemestrals()
+    {
+        return $this->hasMany(Aulasemestral::className(), ['id_Periodo' => 'id_Periodo']);
     }
 
     /**

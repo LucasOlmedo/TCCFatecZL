@@ -9,7 +9,7 @@ CREATE TABLE `tcc_fateczl`.`curso`(
 -------------------------------------------
 
 CREATE TABLE `tcc_fateczl`.`horariosExternos`(  
-  `id_Hae` INT(10) AUTO_INCREMENT NOT NULL,
+  `id_Hae` INT(10) NOT NULL,
   `tipo` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`id_Hae`)
 ) CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -27,7 +27,7 @@ CREATE TABLE `tcc_fateczl`.`disciplina`(
 -------------------------------------------
 
 CREATE TABLE `tcc_fateczl`.`periodo`(  
-  `id_Periodo` INT(2) NOT NULL AUTO_INCREMENT,
+  `id_Periodo` INT(2) NOT NULL,
   `nome_periodo` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_Periodo`)
 ) CHARSET=utf8 COLLATE=utf8_general_ci;
