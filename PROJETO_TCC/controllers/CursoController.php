@@ -157,10 +157,9 @@ class CursoController extends Controller
                 $curso = explode("|", $grade_curso[$x]);
                 $model = new GradeCurso();
                 $model->id_Curso =      $id_curso;
-                $model->ano_letivo =    $curso[0];
-                $model->id_Periodo =    $curso[1];
-                $model->id_Disciplina = $curso[2];
-                $model->qtde_aulas =    $curso[3];
+                $model->id_Periodo =    $curso[0];
+                $model->id_Disciplina = $curso[1];
+                $model->qtde_aulas =    $curso[2];
                 $model->save();
             }
         }
@@ -173,7 +172,6 @@ class CursoController extends Controller
         $query->select(['grade_curso.`id_Curso`,
                         `periodo`.`nome_periodo`,
                         `disciplina`.`id_Disciplina`,
-                        `grade_curso`.`ano_letivo`,
                         `disciplina`.`nome_disc`,
                         `grade_curso`.`qtde_aulas`'])
             ->from('grade_curso')
@@ -225,10 +223,9 @@ class CursoController extends Controller
                     $curso = explode("|", $grade_curso[$x]);
                     $model = new GradeCurso();
                     $model->id_Curso =      $id_curso;
-                    $model->ano_letivo =    $curso[0];
-                    $model->id_Periodo =    $curso[1];
-                    $model->id_Disciplina = $curso[2];
-                    $model->qtde_aulas =    $curso[3];
+                    $model->id_Periodo =    $curso[0];
+                    $model->id_Disciplina = $curso[1];
+                    $model->qtde_aulas =    $curso[2];
                     $model->save();
                 }
             }

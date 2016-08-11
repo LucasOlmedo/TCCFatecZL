@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\GradeCurso */
 
-$this->title = Yii::t('app', 'Create Grade Curso');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Grade Cursos'), 'url' => ['index']];
+$this->title = 'Create Grade Curso';
+$this->params['breadcrumbs'][] = ['label' => 'Grade Cursos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="grade-curso-create">

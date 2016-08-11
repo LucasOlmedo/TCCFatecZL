@@ -18,11 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <form method='post' id='form' action="index.php?r=curso/altera-disciplinas">
             <input type="hidden" name="grade_curso" id="grade_curso" />
-            <label for="input_ano">Ano letivo</label>
-
-            <input type="text" class="form-control" id="input_ano" name="ano" value="<?php $ano?>">
-            <br>
-
+            
             <label for="select_per">Período do curso</label>
             <select class="form-control" id="select_per" name="periodo">
                 <?php
@@ -61,7 +57,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <br>
             <table class="table table-bordered table-hover table-striped" id="table-disc">
                 <thead>
-                <th>Ano Letivo</th>
                 <th>Período</th>
                 <th>Disciplina</th>
                 <th>Quantidade de aulas</th>
@@ -71,7 +66,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php
                 foreach ($grade as $row):
                     echo "<tr id='linha-" . $row['id_Disciplina'] . "'>";
-                    echo "<td>" . $row['ano_letivo'] . "</td>";
                     echo "<td>" . $row['nome_periodo'] . "</td>";
                     echo "<td>" . $row['nome_disc'] . "</td>";
                     echo "<td>" . $row['qtde_aulas'] . "</td>";
@@ -102,10 +96,8 @@ $this->params['breadcrumbs'][] = $this->title;
         var idDisc = parseInt($("#select_disc").val());
         var titulo = $("#select_disc").find("option:selected").text();
         var quantidade = $("#input_qtdeaulas").val();
-        var ano = $("#input_ano").val();
 
         var conteudo = {
-            ano_letivo: ano,
             per: periodo,
             id_disc: idDisc,
             titulo: titulo,
@@ -113,11 +105,10 @@ $this->params['breadcrumbs'][] = $this->title;
         };
         disciplinas.push(conteudo);
 
-        grade_curso[count] = ano + "|" + idPer + "|" + idDisc + "|" + quantidade;
+        grade_curso[count] = idPer + "|" + idDisc + "|" + quantidade;
 
         var
         html = "<tr id='linha-" + count + "'>";
-        html += "<td>" + ano + "</td>";
         html += "<td>" + periodo + "</td>";
         html += "<td>" + disciplinas[count].titulo + "</td>";
         html += "<td>" + disciplinas[count].quantidade + "</td>";

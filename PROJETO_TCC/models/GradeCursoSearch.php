@@ -18,7 +18,7 @@ class GradeCursoSearch extends GradeCurso
     public function rules()
     {
         return [
-            [['id_Curso', 'id_Periodo', 'id_Disciplina', 'ano_letivo', 'qtde_aulas'], 'integer'],
+            [['id_Curso', 'id_Periodo', 'id_Disciplina', 'qtde_aulas'], 'integer'],
         ];
     }
 
@@ -58,7 +58,6 @@ class GradeCursoSearch extends GradeCurso
             'id_Curso' => $this->id_Curso,
             'id_Periodo' => $this->id_Periodo,
             'id_Disciplina' => $this->id_Disciplina,
-            'ano_letivo' => $this->ano_letivo,
             'qtde_aulas' => $this->qtde_aulas,
         ]);
 

@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
     $count = \app\models\GradeCurso::find()->where(['id_Curso' => $model->id_Curso])->count();
 
     $dataProvider = new SqlDataProvider([
-        'sql' => 'SELECT ano_letivo, nome_periodo, nome_disc, qtde_aulas FROM grade_curso
+        'sql' => 'SELECT nome_periodo, nome_disc, qtde_aulas FROM grade_curso
                   INNER JOIN periodo
                   ON grade_curso.id_Periodo=periodo.id_Periodo
                   INNER JOIN disciplina
@@ -59,7 +59,6 @@ $this->params['breadcrumbs'][] = $this->title;
     echo GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            'ano_letivo',
             'nome_periodo',
             'nome_disc',
             'qtde_aulas',

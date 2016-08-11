@@ -21,13 +21,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_Disciplina') ?>
 
-    <?= $form->field($model, 'ano_letivo') ?>
-
     <?= $form->field($model, 'qtde_aulas') ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -61,7 +61,6 @@ CREATE TABLE `tcc_fateczl`.`grade_curso`(
   `id_Curso` INT(10) NOT NULL,
   `id_Periodo` INT(2) NOT NULL,
   `id_Disciplina` INT(10) NOT NULL,
-  `ano_letivo` INT(4) NOT NULL,
   `qtde_aulas` INT(10) NOT NULL,
   PRIMARY KEY (`id_Curso`, `id_Periodo`, `id_Disciplina`),
   CONSTRAINT `fk_curso` FOREIGN KEY (`id_Curso`) REFERENCES `tcc_fateczl`.`curso`(`id_Curso`),
