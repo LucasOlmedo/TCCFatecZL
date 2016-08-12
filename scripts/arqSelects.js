@@ -35,7 +35,8 @@ function openAjaxProfessor(idProfessor){
 
 	req.onreadystatechange = function(){
 		if(req.readyState == 4){
-			return exibe(req.responseText);
+			var text = "["+req.responseText+"]";
+			return exibe(text.replace(',]',']'));
 		}
 	}
 	req.open('GET','getdiasemana.php?professor='+idProfessor,true);
@@ -59,7 +60,8 @@ function openAjaxTurma(idTurma){
 
 	req.onreadystatechange = function(){
 		if(req.readyState == 4){
-			return exibe(req.responseText);
+			var text = "["+req.responseText+"]";
+			return exibe(text.replace(',]',']'));
 		}
 	}
 	req.open('GET','getdiasemana.php?periodo='+periodo+'&curso='+curso+'&turno='+turno,true);
@@ -67,5 +69,7 @@ function openAjaxTurma(idTurma){
 }
 
 function exibe(text){
-	console.log(text);
+	console.log(JSON.parse(text));
+
+
 }

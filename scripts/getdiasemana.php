@@ -18,7 +18,7 @@
 		$psmt->bindParam(1 , $_GET['professor']);
 		if($psmt->execute()){
 			while($rs = $psmt->fetch()){
-				echo json_encode($rs);
+				echo json_encode($rs) . ',';
 			}
 		}
 		$psmt = null;
@@ -33,7 +33,7 @@
 
 		if($psmt->execute()){
 			while($rs = $psmt->fetch()){
-				echo json_encode($rs);
+				echo json_encode($rs) . ',';
 			}
 		}
 
