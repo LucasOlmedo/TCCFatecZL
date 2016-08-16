@@ -69,7 +69,29 @@ function openAjaxTurma(idTurma){
 }
 
 function exibe(text){
-	console.log(JSON.parse(text));
+	var aulas = JSON.parse(text);
+	if(aulas.length > 0){
+		for (var aula in aulas){
+			montarAula(aulas[aula]);
+		}
+	}
 
+}
 
+function montarAula(aula){
+	var horIni = aula.horario_inicio;
+	var dtHorIni = new Date();
+	var horFim = aula.horario_fim;
+	var dtHorFim = new Date();
+
+	var arrIni = horIni.split(':');
+	var arrFim = horFim.split(':');
+
+	dtHorIni.setHours(arrIni[0]);
+	dtHorIni.setMinutes(arrIni[1]);
+
+	dtHorFim.setHours(arrFim[0]);
+	dtHorFim.setMinutes(arrFim[1]);
+
+	//data.setTime(horIni);
 }

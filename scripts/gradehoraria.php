@@ -46,7 +46,7 @@
 				<h3 id=text-grade></h3>
 			</thead>
 			<tbody>
-				<tr>
+				<tr class="horarios">
 					<td></td>
 					<td>7:30 - 8:20</td>
 					<td>8:20 - 9:10</td>
@@ -60,7 +60,7 @@
 					<td>19:20 - 21:00</td>
 					<td>21:10 - 22:50</td>
 				</tr>	
-				<tr>
+				<tr class="seg">
 					<td>Seg</td>
 					<td></td>
 					<td></td>
@@ -74,7 +74,7 @@
 					<td></td>
 					<td></td>
 				</tr>
-				<tr>
+				<tr class="ter">
 					<td>Ter</td>
 					<td></td>
 					<td></td>
@@ -88,7 +88,7 @@
 					<td></td>
 					<td></td>
 				</tr>
-				<tr>
+				<tr class="qua">
 					<td>Qua</td>
 					<td></td>
 					<td></td>
@@ -102,7 +102,7 @@
 					<td></td>
 					<td></td>
 				</tr>
-				<tr>
+				<tr class="qui">
 					<td>Qui</td>
 					<td></td>
 					<td></td>
@@ -116,7 +116,7 @@
 					<td></td>
 					<td></td>
 				</tr>
-				<tr>
+				<tr class="sex">
 					<td>Sex</td>
 					<td></td>
 					<td></td>
@@ -130,7 +130,7 @@
 					<td></td>
 					<td></td>
 				</tr>
-				<tr>
+				<tr class="sab">
 					<td>Sab</td>
 					<td></td>
 					<td></td>
