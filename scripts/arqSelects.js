@@ -79,19 +79,86 @@ function exibe(text){
 }
 
 function montarAula(aula){
-	var horIni = aula.horario_inicio;
 	var dtHorIni = new Date();
-	var horFim = aula.horario_fim;
 	var dtHorFim = new Date();
 
-	var arrIni = horIni.split(':');
-	var arrFim = horFim.split(':');
+	var arrIni = aula.horario_inicio.split(':');
+	var arrFim = aula.horario_fim.split(':');
 
 	dtHorIni.setHours(arrIni[0]);
 	dtHorIni.setMinutes(arrIni[1]);
+	dtHorIni.setSeconds('59');
 
 	dtHorFim.setHours(arrFim[0]);
 	dtHorFim.setMinutes(arrFim[1]);
+	dtHorFim.setSeconds('00');
 
-	//data.setTime(horIni);
+	montarArr(dtHorIni,dtHorFim);
+}
+
+
+function montarArr(dtHorIni,dtHorFim){
+	
+	var arrHoraIni = [];
+	console.log(preencherArrInicio());
+
+}
+
+function preencherArrInicio(){
+	var d1 = new Date();
+	d1.setHours('07');
+	d1.setMinutes('30');
+	d1.setSeconds('00');
+
+	var d2 = new Date();
+	d2.setHours('08');
+	d2.setMinutes('20');
+	d2.setSeconds('00');
+
+	var d3 = new Date();
+	d3.setHours('09');
+	d3.setMinutes('20');
+	d3.setSeconds('00');
+
+	var d4 = new Date();
+	d4.setHours('10');
+	d4.setMinutes('10');
+	d4.setSeconds('00');
+
+	var d5 = new Date();
+	d5.setHours('11');
+	d5.setMinutes('10');
+	d5.setSeconds('00');
+
+	var d6 = new Date();
+	d6.setHours('12');
+	d6.setMinutes('00');
+	d6.setSeconds('00');
+
+	var d7 = new Date();
+	d7.setHours('13');
+	d7.setMinutes('00');
+	d7.setSeconds('00');
+
+	var d8 = new Date();
+	d8.setHours('14');
+	d8.setMinutes('50');
+	d8.setSeconds('00');
+
+	var d9 = new Date();
+	d9.setHours('16');
+	d9.setMinutes('40');
+	d9.setSeconds('00');
+
+	var d10 = new Date();
+	d10.setHours('19');
+	d10.setMinutes('20');
+	d10.setSeconds('00');
+
+	var d11 = new Date();
+	d11.setHours('21');
+	d11.setMinutes('10');
+	d11.setSeconds('00');
+
+	return [d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11];
 }
