@@ -93,18 +93,39 @@ function montarAula(aula){
 	dtHorFim.setMinutes(arrFim[1]);
 	dtHorFim.setSeconds('00');
 
-	console.log(montarArr(dtHorIni,dtHorFim,aula.id_DiaSemana));
+	console.log(montarArr(dtHorIni,dtHorFim));
 }
 
 
-function montarArr(dtHorIni,dtHorFim,dia){
+function montarArr(dtHorIni,dtHorFim){
 	
 	var arrHoraIni = preencherArrInicio();
 	var arrHoraFim = preencherArrFim(arrHoraIni);
 
-	for(var i in arrHoraIni){
-			
+	var arrCompleto = [];
+
+	for(var i = 0; i < arrHoraIni.length ; i++){
+
+		if(arrHoraIni[i] > dtHorIni){
+
+			arrCompleto.push(i-1);
+
+			for(var j = i ;j < arrHoraFim.length ; j++){
+
+				if(arrHoraFim[j] <= dtHorFim){
+					arrCompleto.push(j);
+				}
+				else{
+					arrCompleto.push(j);
+					break;
+				}
+
+			}
+			return arrCompleto;
+		}			
 	}
+
+
 }
 
 function preencherArrInicio(){
