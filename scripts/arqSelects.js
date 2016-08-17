@@ -93,15 +93,18 @@ function montarAula(aula){
 	dtHorFim.setMinutes(arrFim[1]);
 	dtHorFim.setSeconds('00');
 
-	montarArr(dtHorIni,dtHorFim);
+	console.log(montarArr(dtHorIni,dtHorFim,aula.id_DiaSemana));
 }
 
 
-function montarArr(dtHorIni,dtHorFim){
+function montarArr(dtHorIni,dtHorFim,dia){
 	
-	var arrHoraIni = [];
-	console.log(preencherArrInicio());
+	var arrHoraIni = preencherArrInicio();
+	var arrHoraFim = preencherArrFim(arrHoraIni);
 
+	for(var i in arrHoraIni){
+			
+	}
 }
 
 function preencherArrInicio(){
@@ -161,4 +164,19 @@ function preencherArrInicio(){
 	d11.setSeconds('00');
 
 	return [d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11];
+}
+
+function preencherArrFim(arrInicio){
+	var arr = [];
+	for(var dt in arrInicio){
+		var newDt = new Date(arrInicio[dt]);
+		if(arrInicio[dt].getHours() > 12){
+			newDt.setTime(arrInicio[dt].getTime() + 6000000);
+		}
+		else{
+			newDt.setTime(arrInicio[dt].getTime() + 3000000);
+		}
+		arr.push(newDt);
+	}
+	return arr;
 }
