@@ -93,7 +93,8 @@ function montarAula(aula){
 	dtHorFim.setMinutes(arrFim[1]);
 	dtHorFim.setSeconds('00');
 
-	console.log(montarArr(dtHorIni,dtHorFim));
+	aula.arrHorarios = montarArr(dtHorIni,dtHorFim);
+	console.log(aula);
 }
 
 
