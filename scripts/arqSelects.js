@@ -110,13 +110,17 @@ function montarArr(dtHorIni,dtHorFim){
 
 			arrCompleto.push(i-1);
 
-			for(var j = i ;j < arrHoraFim.length ; j++){
-
-				if(arrHoraFim[j] <= dtHorFim){
-					arrCompleto.push(j);
+			for(var j = i - 1;j < arrHoraFim.length ; j++){
+				if((arrHoraFim[j].getHours() == dtHorFim.getHours()) && arrHoraFim[j].getMinutes() == dtHorFim.getMinutes()){
+					break;
 				}
-				else{
-					arrCompleto.push(j);
+				else if(arrHoraFim[j] < dtHorFim){
+					if(j>=i){
+						arrCompleto.push(j);
+					}
+				}
+				else {
+					arrCompleto.push(j);	
 					break;
 				}
 
