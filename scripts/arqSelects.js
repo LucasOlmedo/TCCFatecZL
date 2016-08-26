@@ -70,9 +70,14 @@ function openAjaxTurma(idTurma){
 
 function exibe(text){
 	var aulas = JSON.parse(text);
+	var dias = document.getElementsByTagName('tr');
+
+
 	if(aulas.length > 0){
 		for (var aula in aulas){
-			montarAula(aulas[aula]);
+			var aulaRec = montarAula(aulas[aula]);
+
+			
 		}
 	}
 
@@ -94,7 +99,7 @@ function montarAula(aula){
 	dtHorFim.setSeconds('00');
 
 	aula.arrHorarios = montarArr(dtHorIni,dtHorFim);
-	console.log(aula);
+	return aula;
 }
 
 
