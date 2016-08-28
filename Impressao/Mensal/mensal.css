@@ -1,0 +1,11 @@
+.content{
+	margin: 2px;
+	height: 100vh;
+}
+
+.img.img-header{
+	height: 50px; 
+	width: 500px; 
+	margin: auto 15%;
+}
+
