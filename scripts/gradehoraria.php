@@ -7,6 +7,7 @@
 <head>
 	<title>Grade Horária - FATEC Zona Leste</title>
 	<script src="arqSelects.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header>

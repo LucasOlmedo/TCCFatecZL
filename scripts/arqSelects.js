@@ -1,3 +1,6 @@
+arrHoraIni = preencherArrInicio();
+arrHoraFim = preencherArrFim(arrHoraIni);
+
 document.addEventListener("DOMContentLoaded", function(){
 	var selectCurso = document.getElementById('select-curso');
  	var selectProfessor = document.getElementById('select-professor');
@@ -36,7 +39,7 @@ function openAjaxProfessor(idProfessor){
 	req.onreadystatechange = function(){
 		if(req.readyState == 4){
 			var text = "["+req.responseText+"]";
-			return exibe(text.replace(',]',']'));
+			exibe(text.replace(',]',']'));
 		}
 	}
 	req.open('GET','getdiasemana.php?professor='+idProfessor,true);
@@ -61,7 +64,7 @@ function openAjaxTurma(idTurma){
 	req.onreadystatechange = function(){
 		if(req.readyState == 4){
 			var text = "["+req.responseText+"]";
-			return exibe(text.replace(',]',']'));
+			exibe(text.replace(',]',']'));
 		}
 	}
 	req.open('GET','getdiasemana.php?periodo='+periodo+'&curso='+curso+'&turno='+turno,true);
@@ -72,13 +75,17 @@ function exibe(text){
 	var aulas = JSON.parse(text);
 	var dias = document.getElementsByTagName('tr');
 
-
 	if(aulas.length > 0){
+		var cor = 0;
 		for (var aula in aulas){
-			var aulaRec = montarAula(aulas[aula]);
+			var aulaRec = montarAula(aulas[aula]);			
 
-			
+			for(var horario in aulaRec.arrHorarios){
+				// acessando o dia junto com o horário
+				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','cor-'+ (++cor));
+			}
 		}
+		
 	}
 
 }
@@ -104,10 +111,6 @@ function montarAula(aula){
 
 
 function montarArr(dtHorIni,dtHorFim){
-	
-	var arrHoraIni = preencherArrInicio();
-	var arrHoraFim = preencherArrFim(arrHoraIni);
-
 	var arrCompleto = [];
 
 	for(var i = 0; i < arrHoraIni.length ; i++){
