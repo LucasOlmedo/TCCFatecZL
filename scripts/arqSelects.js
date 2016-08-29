@@ -75,6 +75,8 @@ function exibe(text){
 	var aulas = JSON.parse(text);
 	var dias = document.getElementsByTagName('tr');
 
+	limparTable();
+
 	if(aulas.length > 0){
 		var cor = 0;
 		for (var aula in aulas){
@@ -85,9 +87,16 @@ function exibe(text){
 				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','cor-'+ (++cor));
 			}
 		}
-		
+
 	}
 
+}
+
+function limparTable(){
+	var tds = document.getElementsByTagName('td');
+	for(var td in tds){
+		tds[td].setAttribute('class','');
+	}
 }
 
 function montarAula(aula){
