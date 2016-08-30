@@ -94,8 +94,10 @@ function exibe(text){
 
 function limparTable(){
 	var tds = document.getElementsByTagName('td');
-	for(var td in tds){
-		tds[td].setAttribute('class','');
+	for(var i = 0; i < (tds.length - 2) ; i++ ){
+		if(tds[i].getAttribute('class')){
+			tds[i].setAttribute('class',null);
+		}
 	}
 }
 
