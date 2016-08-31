@@ -81,12 +81,13 @@ function exibe(text){
 		var cor = 0;
 		for (var aula in aulas){
 			var aulaRec = montarAula(aulas[aula]);			
-			console.log(aulaRec);
 
 			for(var horario in aulaRec.arrHorarios){
 				// acessando o dia junto com o horário
 				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','cor-'+ (++cor));
-				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].appendChild(getTexto(aulaRec));
+				if(!dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].innerHTML){
+					dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].appendChild(getTexto(aulaRec));
+				}
 			}
 		}
 
@@ -96,6 +97,7 @@ function exibe(text){
 
 function getTexto(aulaRec){
 	if(document.getElementById('text-grade').innerHTML.includes('Professor(a)')){
+
 		return document.createTextNode(aulaRec.nome_curso + aulaRec.id_periodo + aulaRec.abreviacao);
 	}
 	return document.createTextNode(aulaRec.nome + aulaRec.abreviacao);
