@@ -1,3 +1,6 @@
+arrHoraIni = preencherArrInicio();
+arrHoraFim = preencherArrFim(arrHoraIni);
+
 document.addEventListener("DOMContentLoaded", function(){
 	var selectCurso = document.getElementById('select-curso');
  	var selectProfessor = document.getElementById('select-professor');
@@ -36,7 +39,7 @@ function openAjaxProfessor(idProfessor){
 	req.onreadystatechange = function(){
 		if(req.readyState == 4){
 			var text = "["+req.responseText+"]";
-			return exibe(text.replace(',]',']'));
+			exibe(text.replace(',]',']'));
 		}
 	}
 	req.open('GET','getdiasemana.php?professor='+idProfessor,true);
@@ -61,7 +64,7 @@ function openAjaxTurma(idTurma){
 	req.onreadystatechange = function(){
 		if(req.readyState == 4){
 			var text = "["+req.responseText+"]";
-			return exibe(text.replace(',]',']'));
+			exibe(text.replace(',]',']'));
 		}
 	}
 	req.open('GET','getdiasemana.php?periodo='+periodo+'&curso='+curso+'&turno='+turno,true);
@@ -72,15 +75,43 @@ function exibe(text){
 	var aulas = JSON.parse(text);
 	var dias = document.getElementsByTagName('tr');
 
+	limparTable();
 
 	if(aulas.length > 0){
+		var cor = 0;
 		for (var aula in aulas){
-			var aulaRec = montarAula(aulas[aula]);
+			var aulaRec = montarAula(aulas[aula]);			
 
-			
+			for(var horario in aulaRec.arrHorarios){
+				// acessando o dia junto com o horário
+				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','cor-'+ (++cor));
+				if(!dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].innerHTML){
+					dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].appendChild(getTexto(aulaRec));
+				}
+			}
 		}
+
 	}
 
+}
+
+function getTexto(aulaRec){
+	if(document.getElementById('text-grade').innerHTML.includes('Professor(a)')){
+
+		return document.createTextNode(aulaRec.nome_curso + aulaRec.id_periodo + aulaRec.abreviacao);
+	}
+	return document.createTextNode(aulaRec.nome + aulaRec.abreviacao);
+}
+
+// Limpar a table
+function limparTable(){
+	var tds = document.getElementsByTagName('td');
+	for(var i = 0; i < tds.length ; i++ ){
+		if(tds[i].getAttribute('class') && typeof tds[i] != 'function'){
+			tds[i].setAttribute('class',null);
+			tds[i].innerHTML = '';
+		}
+	}
 }
 
 function montarAula(aula){
@@ -104,10 +135,6 @@ function montarAula(aula){
 
 
 function montarArr(dtHorIni,dtHorFim){
-	
-	var arrHoraIni = preencherArrInicio();
-	var arrHoraFim = preencherArrFim(arrHoraIni);
-
 	var arrCompleto = [];
 
 	for(var i = 0; i < arrHoraIni.length ; i++){

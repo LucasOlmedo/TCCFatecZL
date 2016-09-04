@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 table, td{
   border: 1px solid black;
   border-collapse: collapse;
@@ -44,7 +48,7 @@ table{
 }
 
 .parte-titulo{
-  padding: 0% 1%;
+  padding: 0% 0%;
   font-weight: bold;
 }
 
