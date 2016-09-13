@@ -3,18 +3,72 @@
 	padding: 0;
 }
 
-.text-branco{
-	color: white !important;
+@media print {
+	.no-print{
+		display: none;
+	}
 }
 
-.content{
-	margin: 2px;
-	height: 100vh;
+.text-branco{
+	color: white;
+	background-color: white;
 }
 
 .img.img-header{
 	height: 50px; 
-	width: 500px; 
-	margin: auto 15%;
+	width: 550px; 
+	margin: auto 22% 1.5%;
 }
 
+.table, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.font-less{
+	font-size: 0.7em;
+}
+
+.font-title{
+	font-size: 0.4cm;
+}
+
+.table-dados td, .table-reposicoes td{
+	padding-left: 1%;
+}
+
+.font-arial{
+	font-family: 'Arial';
+}
+
+.font-calibri{
+	font-family: 'Calibri';
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-negrito{
+	font-weight: bold;
+}
+
+.text-sublinhado{
+	text-decoration: underline;
+}
+
+.table-grade td, .table-frequencia td, .table-reposicoes td{
+	vertical-align: top;
+}
+
+.font-medium{
+	font-size: 0.5cm;
+}
+
+.font-less-medium{
+	font-size: 0.35cm;
+}
+
+.text-left{
+	text-align: left;
+}
