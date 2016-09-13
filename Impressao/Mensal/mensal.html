@@ -4,6 +4,7 @@
 	<title>Impressão Folha de Ponto</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="mensal.css">
+	<script src="mensal.js"></script>
 </head>
 <body>
 	<div class="content">
@@ -149,6 +150,8 @@
 		</section>
 
 		<section class="folha-frequencia">
+			<input id="mesAno" placeholder="ANO-MES" type="month">
+			<input id="btnOk" type="button" value="Ok">
 			<h2>FOLHA DE FREQUÊNCIA – XX/XXXX</h2>
 			<table class="table table-frequencia" border="1">
 				<tr>
@@ -180,6 +183,10 @@
 					<td>4°</td>
 				</tr>
 				<!-- Preencher com Javascript as datas e os dias que sao domingo -->
+				<tbody id="table-frequencia">
+					
+
+				</tbody>
 			</table>
 		</section>
 
