@@ -11,6 +11,14 @@ function pegarValues(){
 
 	var data = new Date(ano,mes,0);
 
+	var mesTxt = mes;
+
+	if(mes < 10 && !mesTxt.includes('0')){
+		mesTxt = "0"+mesTxt;
+	}
+
+	document.getElementById('text-data').innerHTML = mesTxt+"/"+ano;
+
 	preencherTable(data);	
 }
 
