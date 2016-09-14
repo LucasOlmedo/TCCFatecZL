@@ -42,14 +42,14 @@
 			<h2 class="text-center font-calibri font-title">GRADE HORÁRIA</h2>
 			<table class="table table-grade text-center font-calibri" width="900px">
 				<tr>
-					<td class="text-branco">A</td>
+					<td class="text-branco sem-top-left sem-bottom">A</td>
 					<td colspan="6" class="text-negrito font-less">MANHÃ</td>
 					<td colspan="6" class="text-negrito font-less">TARDE</td>
 					<td colspan="6" class="text-negrito font-less">NOITE</td>
 				</tr>
 
 				<tr>
-					<td class="text-branco">A</td>
+					<td class="text-branco sem-top-left">A</td>
 					<td colspan="6" class="font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
 					<td colspan="6" class="font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
 					<td colspan="6" class="font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
@@ -153,7 +153,7 @@
 			<input id="mesAno" placeholder="ANO-MES" type="month" class="no-print">
 			<input id="btnOk" type="button" value="Ok" class="no-print">
 			<h2 class="text-center font-calibri font-medium">FOLHA DE FREQUÊNCIA – <span id="text-data">XX/XXXX</span></h2>
-			<table class="table table-frequencia font-calibri text-center text-negrito font-less-medium" width="900px">
+			<table class="table table-frequencia font-calibri text-center text-negrito font-less-medium border-grosso" width="900px">
 				<tr>
 					<td></td>
 					<td colspan="7" class="font-title">MANHÃ</td>
@@ -213,9 +213,9 @@
 		<br>
 
 		<section class="ampliacoes">
-			<table class="table table-ampliacoes font-arial font-less" width="900px">
+			<table class="table table-ampliacoes font-arial font-less-min text-center" width="900px">
 				<tr>
-					<td colspan="3"></td>
+					<td colspan="3" class="sem-top-left"></td>
 					<td>CÓDIGO</td>
 					<td>CHS</td>
 					<td>CÓDIGO</td>
@@ -241,7 +241,7 @@
 
 			<br>
 
-			<table class="table table-legenda">
+			<table class="table table-legenda font-arial font-less-min" width="900px">
 
 				<tr>
 					<td rowspan="4" colspan="2">LEGENDA</td>
@@ -275,9 +275,9 @@
 				</tr>
 			</table>
 
-			<table class="table table-resumo">
+			<table class="table table-resumo font-arial font-less-min not-top-table" width="900px">
 				<tr>
-					<td colspan="2">Resumo Mensal</td>
+					<td colspan="2" class="text-center">Resumo Mensal</td>
 					<td>EVENTO</td>
 					<td>MÊS</td>
 					<td>ACUMULADO ANO</td>
@@ -325,10 +325,10 @@
 			</table>
 		</section>
 
-		<section class="assinaturas">
+		<section class="assinaturas font-arial font-less">
 			<p>  De acordo,</p>
-			<p> _________________________________                                                                               _________________________________</p>
-			<p> Assinatura do (a) Professor                                                                                     Carimbo e Assinatura do Coordenador</p>
+			<p class="first-assin"> _________________________________ <br> <span class="txt-assinaturas-1">Assinatura do (a) Professor</span></p>
+			<p class="second-assin"> _________________________________ <br> <span class="txt-assinaturas-2">Carimbo e Assinatura do Coordenador<span></p>
 		</section>
 
 		<section class="alteracoes">

@@ -10,8 +10,7 @@
 }
 
 .text-branco{
-	color: white;
-	background-color: white;
+	color: transparent;
 }
 
 .img.img-header{
@@ -33,7 +32,7 @@
 	font-size: 0.4cm;
 }
 
-.table-dados td, .table-reposicoes td{
+.table-dados td, .table-reposicoes td, .table-legenda td, .table-resumo td:not(.text-center){
 	padding-left: 1%;
 }
 
@@ -57,7 +56,7 @@
 	text-decoration: underline;
 }
 
-.table-grade td, .table-frequencia td, .table-reposicoes td{
+.table-grade td, .table-frequencia td, .table-reposicoes td, .table-legenda td, .table-resumo td{
 	vertical-align: top;
 }
 
@@ -71,4 +70,56 @@
 
 .text-left{
 	text-align: left;
+}
+
+.font-less-min{
+	font-size: 0.25cm;
+}
+
+.not-top-table{
+	margin-top: -1px; 
+	border-top: 1px solid transparent;
+}
+
+.table-ampliacoes{
+	margin-top: -20px; 
+}
+
+.border-grosso{
+	border: 2px solid black;
+}
+
+.sem-top-left{
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+}
+
+.sem-bottom{
+	border-bottom: 1px solid transparent;
+}
+
+.assinaturas{
+	margin: 10% 2%;
+}
+
+.table-legenda{
+	margin-top: -15px;
+}
+
+.first-assin{
+	margin-left: 85px;
+}
+
+.second-assin{
+	float: right;
+	margin-right: 85px;
+	margin-top: -25px;
+}
+
+.txt-assinaturas-1{
+	margin: 0 30px;
+}
+
+.txt-assinaturas-2{
+	margin: 0 5px;
 }
