@@ -144,3 +144,19 @@
 .font-more-less{
 	font-size: 0.5cm;
 }
+
+.border-left{
+	border-left: 2px solid black;
+}
+
+.border-right{
+	border-right: 2px solid black;
+}
+
+.border-top{
+	border-top: 2px solid black;
+}
+
+.border-bottom{
+	border-bottom: 2px solid black;
+}

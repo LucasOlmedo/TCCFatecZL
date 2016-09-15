@@ -84,7 +84,9 @@ function exibe(text){
 
 			for(var horario in aulaRec.arrHorarios){
 				// acessando o dia junto com o horário
-				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','cor-'+ (++cor));
+				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','cor-'+ (++cor)); 
+
+				// para nao duplicar o texto
 				if(!dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].innerHTML){
 					dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].appendChild(getTexto(aulaRec));
 				}
