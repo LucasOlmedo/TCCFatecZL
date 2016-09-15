@@ -150,7 +150,7 @@
 		</section>
 
 		<section class="folha-frequencia">
-			<input id="mesAno" placeholder="ANO-MES" type="month" class="no-print">
+			<input id="mesAno" placeholder="ANO-MES" type="month" class="no-print" value="<?php echo date('Y') . '-' . date('m'); ?>">
 			<input id="btnOk" type="button" value="Ok" class="no-print">
 			<h2 class="text-center font-calibri font-medium">FOLHA DE FREQUÊNCIA – <span id="text-data">XX/XXXX</span></h2>
 			<table class="table table-frequencia font-calibri text-center text-negrito font-less-medium border-grosso" width="900px">
@@ -333,159 +333,45 @@
 
 		<section class="alteracoes">
 			<p class="font-arial text-center font-more" id="txt-alteracoes">Alterações de Carga Horária</p>
-			<table class="table table-alteracoes">
+			<table class="table table-alteracoes font-calibri text-center text-negrito" width="900px">
 				<tr>
-					<td></td>
-					<td colspan="6">A partir de: __/__/____</td>
-					<td colspan="6">A partir de: __/__/____</td>
-					<td colspan="6">A partir de: __/__/____</td>
+					<td class="text-branco sem-top-left sem-bottom">A</td>
+					<td colspan="6" class="font-less">A partir de: __/__/____</td>
+					<td colspan="6" class="font-less">A partir de: __/__/____</td>
+					<td colspan="6" class="font-less">A partir de: __/__/____</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td colspan="6">MANHÃ</td>
-					<td colspan="6">TARDE</td>
-					<td colspan="6">NOITE</td>
-				</tr>
-
-				<tr>
-					<td></td>
-					<td colspan="6">Tempo de aula 50 min.</td>
-					<td colspan="6">Tempo de aula 50 min.</td>
-					<td colspan="6">Tempo de aula 50 min.</td>
+					<td class="text-branco  sem-top-left sem-bottom">A</td>
+					<td colspan="6" class="font-less">MANHÃ</td>
+					<td colspan="6" class="font-less">TARDE</td>
+					<td colspan="6" class="font-less">NOITE</td>
 				</tr>
 
 				<tr>
-					<td></td>
-					<td>1°</td>
-					<td>2°</td>
-					<td>3°</td>
-					<td>4°</td>
-					<td>5°</td>
-					<td>6°</td>
-					<td>1°</td>
-					<td>2°</td>
-					<td>3°</td>
-					<td>4°</td>
-					<td>5°</td>
-					<td>6°</td>
-					<td>1°</td>
-					<td>2°</td>
-					<td>3°</td>
-					<td>4°</td>
+					<td class="text-branco  sem-top-left">A</td>
+					<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+					<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+					<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
 				</tr>
 
 				<tr>
-					<td>S</td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-				</tr>
-
-				<tr>
-					<td>T</td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-				</tr>
-
-				<tr>
-					<td>Q</td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-				</tr>
-
-				<tr>
-					<td>Q</td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-				</tr>
-
-				<tr>
-					<td>S</td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-				</tr>
-
-				<tr>
-					<td>S</td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-					<td colspan="2"></td>
-				</tr>
-			</table>
-
-			<table class="table table-alteracoes">
-				<tr>
-					<td></td>
-					<td colspan="6">A partir de: __/__/____</td>
-					<td colspan="6">A partir de: __/__/____</td>
-					<td colspan="6">A partir de: __/__/____</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td colspan="6">MANHÃ</td>
-					<td colspan="6">TARDE</td>
-					<td colspan="6">NOITE</td>
-				</tr>
-
-				<tr>
-					<td></td>
-					<td colspan="6">Tempo de aula 50 min.</td>
-					<td colspan="6">Tempo de aula 50 min.</td>
-					<td colspan="6">Tempo de aula 50 min.</td>
-				</tr>
-
-				<tr>
-					<td></td>
-					<td>1°</td>
-					<td>2°</td>
-					<td>3°</td>
-					<td>4°</td>
-					<td>5°</td>
-					<td>6°</td>
-					<td>1°</td>
-					<td>2°</td>
-					<td>3°</td>
-					<td>4°</td>
-					<td>5°</td>
-					<td>6°</td>
-					<td>1°</td>
-					<td>2°</td>
-					<td>3°</td>
-					<td>4°</td>
+					<td class="text-branco">A</td>
+					<td class="font-less">1°</td>
+					<td class="font-less">2°</td>
+					<td class="font-less">3°</td>
+					<td class="font-less">4°</td>
+					<td class="font-less">5°</td>
+					<td class="font-less">6°</td>
+					<td class="font-less">1°</td>
+					<td class="font-less">2°</td>
+					<td class="font-less">3°</td>
+					<td class="font-less">4°</td>
+					<td class="font-less">5°</td>
+					<td class="font-less">6°</td>
+					<td class="font-less">1°</td>
+					<td class="font-less">2°</td>
+					<td class="font-less">3°</td>
+					<td class="font-less">4°</td>
 				</tr>
 
 				<tr>
@@ -561,9 +447,123 @@
 				</tr>
 			</table>
 
-			<table class="table table-alteracoes-down">
+			<table class="table table-alteracoes font-calibri text-center text-negrito margem-top" width="900px">
 				<tr>
-					<td colspan="4">ALTERAÇÃO DE CARGA NO DECORRER DO MÊS A PARTIR DE __/__/____</td>
+					<td class="text-branco sem-top-left sem-bottom">A</td>
+					<td colspan="6" class="font-less">A partir de: __/__/____</td>
+					<td colspan="6" class="font-less">A partir de: __/__/____</td>
+					<td colspan="6" class="font-less">A partir de: __/__/____</td>
+				</tr>
+				<tr>
+					<td class="text-branco  sem-top-left sem-bottom">A</td>
+					<td colspan="6" class="font-less">MANHÃ</td>
+					<td colspan="6" class="font-less">TARDE</td>
+					<td colspan="6" class="font-less">NOITE</td>
+				</tr>
+
+				<tr>
+					<td class="text-branco  sem-top-left">A</td>
+					<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+					<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+					<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				</tr>
+
+				<tr>
+					<td class="text-branco">A</td>
+					<td class="font-less">1°</td>
+					<td class="font-less">2°</td>
+					<td class="font-less">3°</td>
+					<td class="font-less">4°</td>
+					<td class="font-less">5°</td>
+					<td class="font-less">6°</td>
+					<td class="font-less">1°</td>
+					<td class="font-less">2°</td>
+					<td class="font-less">3°</td>
+					<td class="font-less">4°</td>
+					<td class="font-less">5°</td>
+					<td class="font-less">6°</td>
+					<td class="font-less">1°</td>
+					<td class="font-less">2°</td>
+					<td class="font-less">3°</td>
+					<td class="font-less">4°</td>
+				</tr>
+
+				<tr>
+					<td>S</td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+				</tr>
+
+				<tr>
+					<td>T</td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+				</tr>
+
+				<tr>
+					<td>Q</td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+				</tr>
+
+				<tr>
+					<td>Q</td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+				</tr>
+
+				<tr>
+					<td>S</td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+				</tr>
+
+				<tr>
+					<td>S</td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+					<td colspan="2"></td>
+				</tr>
+			</table>
+
+			<table class="table table-alteracoes-down font-arial margem-top" width="900px">
+				<tr>
+					<td colspan="4" class="text-negrito">ALTERAÇÃO DE CARGA NO DECORRER DO MÊS A PARTIR DE __/__/____</td>
 				</tr>
 				<tr>
 					<td>Carga Horária Semanal:</td>
@@ -575,84 +575,102 @@
 		</section>
 
 		<section class="observacoes">
-			<table class="table table-observacoes">
+			<table class="table table-observacoes margem-top font-arial text-center text-negrito font-more-less" width="900px">
 				<tr>
 					<td>Observações</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td class="text-branco">A</td>
+				</tr>
+				<tr>
+					<td class="text-branco">A</td>
+				</tr>
+				<tr>
+					<td class="text-branco">A</td>
+				</tr>
+				<tr>
+					<td class="text-branco">A</td>
+				</tr>
+				<tr>
+					<td class="text-branco">A</td>
+				</tr>
+				<tr>
+					<td class="text-branco">A</td>
+				</tr>
+				<tr>
+					<td class="text-branco">A</td>
 				</tr>
 			</table>
 		</section>

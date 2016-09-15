@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded',function(){
 	document.getElementById('btnOk').addEventListener('click',pegarValues);
 	document.getElementById('mesAno').addEventListener('change',pegarValues);
 
+	pegarValues();
 });
 
 function pegarValues(){
