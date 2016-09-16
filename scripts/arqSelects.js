@@ -82,15 +82,18 @@ function exibe(text){
 		for (var aula in aulas){
 			var aulaRec = montarAula(aulas[aula]);			
 
+			cor++;
+			// horario das aula desse for, por isso o incremento na cor para cada repeticao do for
 			for(var horario in aulaRec.arrHorarios){
 				// acessando o dia junto com o horário
-				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','cor-'+ (++cor)); 
+				dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','cor-'+ cor); 
 
 				// para nao duplicar o texto
 				if(!dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].innerHTML){
 					dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].appendChild(getTexto(aulaRec));
 				}
 			}
+
 		}
 
 	}
