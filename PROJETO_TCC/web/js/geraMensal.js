@@ -4,13 +4,16 @@ document.addEventListener("DOMContentLoaded", function(){
 	for(var j = 2; j < table.rows.length ; j++){
 
 		var link = document.createElement('a');
-		var i = document.createElement('i');
+		var helper = document.createElement('i');
+		var id_professor = table.rows[j].cells[0].innerHTML;
 
-		i.setAttribute('class','glyphicon glyphicon-calendar');
-		i.style.margin = 'auto 7px';
-		link.setAttribute('title','Mensal');
+		helper.setAttribute('class','glyphicon glyphicon-calendar');
+		helper.style.margin = 'auto 7px';
+		link.setAttribute('title','Relatório Mensal');
 		link.setAttribute('aria-label','Mensal');
-		link.appendChild(i);
+		link.appendChild(helper);
+		link.setAttribute('href','mensal/mensal.php?id='+id_professor);
+		link.setAttribute('target','_blank');
 
 		table.rows[j].cells.item(table.rows[j].cells.length -1).appendChild(link);
 
