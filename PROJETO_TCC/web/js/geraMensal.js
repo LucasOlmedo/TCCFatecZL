@@ -1,19 +1,18 @@
 document.addEventListener("DOMContentLoaded", function(){
 	var table = document.getElementsByTagName('table')[0];
 
-	for(var i = 2; i < table.rows.length ; i++){
+	for(var j = 2; j < table.rows.length ; j++){
 
 		var link = document.createElement('a');
-		var span = document.createElement('span');
-		span.setAttribute('class','glyphicons glyphicons-calendar');
+		var i = document.createElement('i');
 
+		i.setAttribute('class','glyphicon glyphicon-calendar');
+		i.style.margin = 'auto 7px';
 		link.setAttribute('title','Mensal');
 		link.setAttribute('aria-label','Mensal');
+		link.appendChild(i);
 
-		link.appendChild(span);
-
-		console.log(link);
-		console.log(table.rows[i].cells.item(table.rows[i].cells.length -1)); //.appendChild(link);
+		table.rows[j].cells.item(table.rows[j].cells.length -1).appendChild(link);
 
 	}
 
