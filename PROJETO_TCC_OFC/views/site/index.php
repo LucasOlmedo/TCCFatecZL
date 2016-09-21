@@ -14,7 +14,6 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
         </div>
     <div class="page-header">
         <h1>
-            teste de acesso...
             <small>Principais funcionalidades:</small>
         </h1>
     </div>
