@@ -8,7 +8,6 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                 <a href="index.php">
                     <img src="images/fatec_zona_leste.png" height="100" width="240"/>
                 </a>
-                teste de acesso...
                 <br>
                 <small>Sistema gerenciador de atividades relacionadas à coordenação.</small>
             </h1>
