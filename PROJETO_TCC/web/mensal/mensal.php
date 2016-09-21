@@ -673,12 +673,6 @@
 			<tr>
 				<td class="text-branco">A</td>
 			</tr>
-			<tr>
-				<td class="text-branco">A</td>
-			</tr>
-			<tr>
-				<td class="text-branco">A</td>
-			</tr>
 		</table>
 	</section>
 </div>
