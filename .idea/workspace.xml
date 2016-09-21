@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e123451f-22cf-44f0-8301-a6d27372808d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php" afterPath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" afterPath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php" afterPath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/getAulas.php" afterPath="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/getAulas.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.js" afterPath="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.php" afterPath="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.php" />
     </list>
     <ignored path="TCCFatecZL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,53 +27,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="mensal.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php">
+        <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="154" column="44" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+            <state relative-caret-position="1020">
+              <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <marker date="1474386996021" expanded="true" signature="209:286" ph="SELECT PROFE... DIASEMANA" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getAulas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-              <folding>
-                <marker date="1474459631660" expanded="true" signature="777:1595" ph="SELECT DISTI... DIASEMANA" />
-                <marker date="1474459631660" expanded="true" signature="777:2005" ph="SELECT DISTI... DIASEMANA" />
-                <marker date="1474459631660" expanded="true" signature="777:2048" ph="SELECT DISTI... DIASEMANA" />
-                <marker date="1474459631660" expanded="true" signature="1597:1648" ph="SELECT EXTRA... " />
-                <marker date="1474459631660" expanded="true" signature="1667:1694" ph="SELECT EXTRA... " />
-                <marker date="1474459631660" expanded="true" signature="1700:1748" ph="SELECT EXTRA... " />
-                <marker date="1474459631660" expanded="true" signature="1767:1794" ph="SELECT EXTRA... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mensal.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js">
+        <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!block;n#preencherTable#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="250">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,8 +49,8 @@
       <file leaf-file-name="arqSelects.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/arqSelects.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+            <state relative-caret-position="374">
+              <caret line="86" column="34" selection-start-line="86" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,11 +68,14 @@
         <option value="$PROJECT_DIR$/PROJETO_TCC/web/js/geraMensal.js" />
         <option value="$PROJECT_DIR$/Impressao/Mensal/mensal.php" />
         <option value="$PROJECT_DIR$/scripts/getdiasemana.php" />
-        <option value="$PROJECT_DIR$/scripts/arqSelects.js" />
         <option value="$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php" />
         <option value="$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php" />
         <option value="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php" />
         <option value="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" />
+        <option value="$PROJECT_DIR$/scripts/arqSelects.js" />
+        <option value="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/getAulas.php" />
+        <option value="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.php" />
+        <option value="$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.js" />
       </list>
     </option>
   </component>
@@ -173,7 +145,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
+              <option name="myItemId" value="PROJETO_TCC_OFC" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -187,21 +159,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROJETO_TCC" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCCFatecZL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TCCFatecZL" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PROJETO_TCC" />
+              <option name="myItemId" value="PROJETO_TCC_OFC" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -219,7 +177,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROJETO_TCC" />
+              <option name="myItemId" value="PROJETO_TCC_OFC" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -233,8 +191,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,11 +260,12 @@
       <updated>1474371070082</updated>
       <workItem from="1474371076063" duration="14345000" />
       <workItem from="1474454433006" duration="4935000" />
+      <workItem from="1474460922616" duration="8533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19280000" />
+    <option name="totallyTimeSpent" value="27813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -351,6 +310,46 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="154" column="44" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/arqSelects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1360">
+          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
           <folding />
@@ -361,9 +360,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1474386996021" expanded="true" signature="209:286" ph="SELECT PROFE... DIASEMANA" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -371,28 +368,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1474459631660" expanded="true" signature="777:1595" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="777:2005" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="777:2048" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="1597:1648" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1667:1694" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1700:1748" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1767:1794" ph="SELECT EXTRA... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
-          <folding>
-            <element signature="n#!!block;n#preencherTable#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" />
     <entry file="file://$PROJECT_DIR$/scripts/arqSelects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -443,55 +423,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1474386996021" expanded="true" signature="209:286" ph="SELECT PROFE... DIASEMANA" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-          <folding>
-            <marker date="1474459631660" expanded="true" signature="777:1595" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="777:2005" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="777:2048" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="1597:1648" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1667:1694" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1700:1748" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1767:1794" ph="SELECT EXTRA... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
+        <state relative-caret-position="2618">
           <caret line="154" column="44" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/getAulas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+          <folding>
+            <marker date="1474464543556" expanded="true" signature="777:2008" ph="SELECT DISTI... DIASEMANA" />
+            <marker date="1474464543556" expanded="true" signature="1597:1648" ph="SELECT EXTRA... " />
+            <marker date="1474464543556" expanded="true" signature="1668:1695" ph="SELECT EXTRA... " />
+            <marker date="1474464543556" expanded="true" signature="1702:1750" ph="SELECT EXTRA... " />
+            <marker date="1474464543556" expanded="true" signature="1770:1797" ph="SELECT EXTRA... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Preview_SQL2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/arqSelects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+        <state relative-caret-position="374">
+          <caret line="86" column="34" selection-start-line="86" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js">
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!block;n#preencherTable#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1020">
+          <caret line="135" column="38" selection-start-line="135" selection-start-column="38" selection-end-line="135" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/web/mensal/mensal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
