@@ -1,10 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e123451f-22cf-44f0-8301-a6d27372808d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php" afterPath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" afterPath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php" afterPath="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php" />
+    <list default="true" id="e123451f-22cf-44f0-8301-a6d27372808d" name="Default" comment="teste commit 3">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/.bowerrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/assets/AppAsset.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/commands/HelloController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/composer.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/composer.lock" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/config/console.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/config/db.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/config/params.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/config/web.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/AulaSemestralController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/CursoController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/CursoDisciplinaController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/CursoDisciplinaProfessorController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/DiaSemanaController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/DisciplinaController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/GradeCursoController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/HorariosExternosController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/PeriodoController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/ProfessorController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/SiteController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/SituacaoController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/controllers/SituacaoProfessorController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/mail/layouts/html.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/AulaSemestral.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/AulaSemestralSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/ContactForm.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/Curso.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/CursoDisciplina.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/CursoDisciplinaProfessor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/CursoDisciplinaSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/CursoSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/DiaSemana.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/DiaSemanaSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/Disciplina.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/DisciplinaSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/GradeCurso.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/GradeCursoSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/HorariosExternos.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/HorariosExternosSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/LoginForm.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/Periodo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/PeriodoSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/Professor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/ProfessorSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/Situacao.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/SituacaoProfessor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/SituacaoSearch.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/models/User.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/requirements.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/runtime/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/_bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/_output/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/_pages/AboutPage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/_pages/ContactPage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/_pages/LoginPage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/acceptance.suite.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/acceptance/AboutCept.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/acceptance/ContactCept.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/acceptance/HomeCept.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/acceptance/LoginCept.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/acceptance/_bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/bin/_bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/bin/yii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/bin/yii.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/config/acceptance.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/config/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/config/functional.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/config/unit.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/fixtures/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/functional.suite.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/functional/AboutCept.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/functional/ContactCept.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/functional/HomeCept.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/functional/LoginCept.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/functional/_bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/templates/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/unit.suite.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/unit/_bootstrap.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/unit/fixtures/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/unit/fixtures/data/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/unit/models/ContactFormTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/unit/models/LoginFormTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/unit/models/UserTest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/tests/codeception/unit/templates/fixtures/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/vendor.rar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/aula-semestral/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/aula-semestral/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/aula-semestral/add_dia.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/aula-semestral/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/aula-semestral/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/aula-semestral/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/aula-semestral/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso-disciplina-professor/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso-disciplina/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso-disciplina/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso-disciplina/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso-disciplina/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso-disciplina/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso-disciplina/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/add_disc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/edit_disc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/update_curso.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/curso/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/dia-semana/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/dia-semana/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/dia-semana/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/dia-semana/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/dia-semana/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/dia-semana/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/disciplina/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/disciplina/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/disciplina/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/disciplina/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/disciplina/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/disciplina/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/grade-curso/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/grade-curso/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/grade-curso/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/grade-curso/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/grade-curso/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/grade-curso/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/horarios-externos/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/horarios-externos/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/horarios-externos/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/horarios-externos/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/horarios-externos/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/horarios-externos/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/layouts/main.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/periodo/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/periodo/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/periodo/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/periodo/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/periodo/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/periodo/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/add_situacao.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/edit_situacao.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/update_prof.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/professor/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/site/about.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/site/contact.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/site/error.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/site/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/site/login.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/situacao-professor/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/situacao/_form.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/situacao/_search.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/situacao/create.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/situacao/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/situacao/update.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/views/situacao/view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/assets/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/css/site.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/Carta início Lucas Olmedo.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/Requerimento Lucas Olmedo.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/aula-semestral.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/cps.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/cursos.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/disciplinas.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/fatec_zona_leste.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/grade-horaria.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/gvsp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/professores.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/images/relatorios.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/index-test.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/js/jquery-1.9.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/web/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/yii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cópia de PROJETO_TCC/yii.bat" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC_OFC/config/db.php" afterPath="$PROJECT_DIR$/PROJETO_TCC_OFC/config/db.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC_OFC/controllers/AulaSemestralController.php" afterPath="$PROJECT_DIR$/PROJETO_TCC_OFC/controllers/AulaSemestralController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PROJETO_TCC_OFC/models/GradeCurso.php" afterPath="$PROJECT_DIR$/PROJETO_TCC_OFC/models/GradeCurso.php" />
     </list>
     <ignored path="TCCFatecZL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,63 +212,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mensal.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php">
+      <file leaf-file-name="AulaSemestralController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/controllers/AulaSemestralController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
-              <caret line="154" column="44" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
+            <state relative-caret-position="526">
+              <caret line="173" column="66" selection-start-line="173" selection-start-column="66" selection-end-line="173" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/views/aula-semestral/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <marker date="1474386996021" expanded="true" signature="209:286" ph="SELECT PROFE... DIASEMANA" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getAulas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php">
+      <file leaf-file-name="_form.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/views/aula-semestral/_form.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-              <folding>
-                <marker date="1474459631660" expanded="true" signature="777:1595" ph="SELECT DISTI... DIASEMANA" />
-                <marker date="1474459631660" expanded="true" signature="777:2005" ph="SELECT DISTI... DIASEMANA" />
-                <marker date="1474459631660" expanded="true" signature="777:2048" ph="SELECT DISTI... DIASEMANA" />
-                <marker date="1474459631660" expanded="true" signature="1597:1648" ph="SELECT EXTRA... " />
-                <marker date="1474459631660" expanded="true" signature="1667:1694" ph="SELECT EXTRA... " />
-                <marker date="1474459631660" expanded="true" signature="1700:1748" ph="SELECT EXTRA... " />
-                <marker date="1474459631660" expanded="true" signature="1767:1794" ph="SELECT EXTRA... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mensal.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!block;n#preencherTable#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="arqSelects.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/arqSelects.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+            <state relative-caret-position="451">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -104,6 +259,11 @@
         <option value="$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php" />
         <option value="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php" />
         <option value="$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" />
+        <option value="$PROJECT_DIR$/PROJETO_TCC_OFC/views/site/index.php" />
+        <option value="$PROJECT_DIR$/PROJETO_TCC_OFC/config/db.php" />
+        <option value="$PROJECT_DIR$/PROJETO_TCC_OFC/models/GradeCurso.php" />
+        <option value="$PROJECT_DIR$/PROJETO_TCC_OFC/controllers/AulaSemestralController.php" />
+        <option value="$PROJECT_DIR$/PROJETO_TCC_OFC/views/aula-semestral/_form.php" />
       </list>
     </option>
   </component>
@@ -115,10 +275,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="965" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -187,7 +346,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROJETO_TCC" />
+              <option name="myItemId" value="PROJETO_TCC_OFC" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -201,11 +360,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROJETO_TCC" />
+              <option name="myItemId" value="PROJETO_TCC_OFC" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -219,15 +378,51 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROJETO_TCC" />
+              <option name="myItemId" value="PROJETO_TCC_OFC" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mensal" />
+              <option name="myItemId" value="aula-semestral" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCCFatecZL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCCFatecZL" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PROJETO_TCC_OFC" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCCFatecZL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TCCFatecZL" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PROJETO_TCC_OFC" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -238,7 +433,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Cópia de PROJETO_TCC" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
@@ -302,23 +497,32 @@
       <updated>1474371070082</updated>
       <workItem from="1474371076063" duration="14345000" />
       <workItem from="1474454433006" duration="4935000" />
+      <workItem from="1474467647711" duration="4527000" />
     </task>
+    <task id="LOCAL-00001" summary="teste commit 3">
+      <created>1474468436532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1474468436532</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19280000" />
+    <option name="totallyTimeSpent" value="23807000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1920" height="965" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14055637" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1544196" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -342,6 +546,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="teste commit 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste commit 3" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -349,50 +557,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php">
+    <entry file="file://$PROJECT_DIR$/scripts/arqSelects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1474386996021" expanded="true" signature="209:286" ph="SELECT PROFE... DIASEMANA" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1474459631660" expanded="true" signature="777:1595" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="777:2005" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="777:2048" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="1597:1648" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1667:1694" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1700:1748" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1767:1794" ph="SELECT EXTRA... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="52" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
-          <folding>
-            <element signature="n#!!block;n#preencherTable#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" />
     <entry file="file://$PROJECT_DIR$/scripts/arqSelects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -401,27 +577,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/js/geraMensal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/views/professor/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/css/site.css" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/js/geraMensal.js" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/views/professor/index.php" />
     <entry file="file://$PROJECT_DIR$/Impressao/Mensal/mensal.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
@@ -443,40 +601,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1474386996021" expanded="true" signature="209:286" ph="SELECT PROFE... DIASEMANA" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="63" selection-start-line="22" selection-start-column="63" selection-end-line="22" selection-end-column="63" />
-          <folding>
-            <marker date="1474459631660" expanded="true" signature="777:1595" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="777:2005" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="777:2048" ph="SELECT DISTI... DIASEMANA" />
-            <marker date="1474459631660" expanded="true" signature="1597:1648" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1667:1694" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1700:1748" ph="SELECT EXTRA... " />
-            <marker date="1474459631660" expanded="true" signature="1767:1794" ph="SELECT EXTRA... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="154" column="44" selection-start-line="154" selection-start-column="44" selection-end-line="154" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/helper.php" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/getAulas.php" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.php" />
     <entry file="file://$PROJECT_DIR$/scripts/arqSelects.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -485,13 +612,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js">
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC/web/mensal/mensal.js" />
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/web/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/config/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/views/aula-semestral/add_dia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/controllers/CursoDisciplinaProfessorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/models/AulaSemestral.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-690">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/views/aula-semestral/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/models/GradeCurso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="49" column="41" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
           <folding>
-            <element signature="n#!!block;n#preencherTable#0" expanded="false" />
+            <element signature="e#30#38#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/controllers/AulaSemestralController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="173" column="66" selection-start-line="173" selection-start-column="66" selection-end-line="173" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PROJETO_TCC_OFC/views/aula-semestral/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

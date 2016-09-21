@@ -149,6 +149,7 @@ class AulaSemestralController extends Controller
 
     public function actionListcurso($id)
     {
+
         $rows = GradeCurso::find()
             ->joinWith('periodo')
             ->where(['id_Curso' => $id])
