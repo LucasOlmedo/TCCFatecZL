@@ -1,0 +1,162 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+@media print {
+	.no-print{
+		display: none;
+	}
+}
+
+.text-branco{
+	color: transparent;
+}
+
+.img.img-header{
+	height: 50px; 
+	width: 550px; 
+	margin: auto 22% 1.5%;
+}
+
+.table, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+.font-less{
+	font-size: 0.7em;
+}
+
+.font-title{
+	font-size: 0.4cm;
+}
+
+.table-dados td, .table-reposicoes td, .table-legenda td, .table-resumo td:not(.text-center), .table-alteracoes-down td{
+	padding-left: 1%;
+}
+
+.font-arial{
+	font-family: 'Arial';
+}
+
+.font-calibri{
+	font-family: 'Calibri';
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-negrito{
+	font-weight: bold;
+}
+
+.text-sublinhado{
+	text-decoration: underline;
+}
+
+.table-grade td, .table-frequencia td, .table-reposicoes td, .table-legenda td, .table-resumo td,
+.table-alteracoes td{
+	vertical-align: top;
+}
+
+.font-medium{
+	font-size: 0.5cm;
+}
+
+.font-less-medium{
+	font-size: 0.35cm;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.font-less-min{
+	font-size: 0.25cm;
+}
+
+.not-top-table{
+	margin-top: -1px; 
+	border-top: 1px solid transparent;
+}
+
+.table-ampliacoes{
+	margin-top: -20px; 
+}
+
+.border-grosso{
+	border: 2px solid black;
+}
+
+.sem-top-left{
+	border-top: 1px solid transparent;
+	border-left: 1px solid transparent;
+}
+
+.sem-bottom{
+	border-bottom: 1px solid transparent;
+}
+
+.assinaturas{
+	margin: 40px 2%;
+}
+
+.table-legenda{
+	margin-top: -15px;
+}
+
+.first-assin{
+	margin-left: 85px;
+}
+
+.second-assin{
+	float: right;
+	margin-right: 85px;
+	margin-top: -25px;
+}
+
+.txt-assinaturas-1{
+	margin: 0 30px;
+}
+
+.txt-assinaturas-2{
+	margin: 0 5px;
+}
+
+.font-more{
+	font-size: 0.6cm;
+}
+
+#txt-alteracoes{
+	margin-bottom: 15px;
+}
+
+.text-no-negrito{
+	font-weight: normal;
+}
+
+.margem-top{
+	margin-top: 20px;
+}
+
+.font-more-less{
+	font-size: 0.5cm;
+}
+
+.border-left{
+	border-left: 2px solid black;
+}
+
+.border-right{
+	border-right: 2px solid black;
+}
+
+.border-top{
+	border-top: 2px solid black;
+}
+
+.border-bottom{
+	border-bottom: 2px solid black;
+}
