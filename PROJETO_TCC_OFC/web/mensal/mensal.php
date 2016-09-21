@@ -1,7 +1,6 @@
 <?php
     include 'helper.php';
 
-    echo "<input type='hidden' value='". $_GET['id'] . "' id='idProf'> ";
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +19,7 @@
 		<img src="foto-header.jpg" class="img img-header">
 	</header>
 
+	<?php echo "<input type='hidden' value='". $_GET['id'] . "' id='idProf'> "; ?>
 	<section class="dados-prof">
 		<table class="table table-dados font-arial" width="900px">
 			<tr>
@@ -85,74 +85,74 @@
 
 			<tr>
 				<td class="text-negrito">S</td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
 			</tr>
 
 			<tr>
 				<td class="text-negrito">T</td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
 			</tr>
 
 			<tr>
 				<td class="text-negrito">Q</td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
 			</tr>
 
 			<tr>
 				<td class="text-negrito">Q</td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
 			</tr>
 
 			<tr>
 				<td class="text-negrito">S</td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
 			</tr>
 
 			<tr>
 				<td class="text-negrito">S</td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
+				<td colspan="2" class="aula"></td>
 			</tr>
 		</table>
 	</section>

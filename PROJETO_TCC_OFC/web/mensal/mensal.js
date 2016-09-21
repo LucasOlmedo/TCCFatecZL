@@ -68,18 +68,23 @@ function openAjaxReq(){
 		req = new new ActiveXObject("Microsoft.XMLHTTP");
 	}
 
-	req.onreadystatechange = function(){
-		if(req.readyState == 4){
-			var text = "["+req.responseText+"]";
-			exibe(text.replace(',]',']'));
-		}
-	}
-	req.open('GET','getAulas.php?id='+idProf+'sem='+mesAno.value,true);
+	req.onreadystatechange = function() {
+        if (req.readyState == 4) {
+            var text = "[" + req.responseText + "]";
+            exibe(text.replace(',]', ']'));
+        }
+    }
+	req.open('GET','getAulas.php?id='+idProf+'&sem='+mesAno.value,true);
 	req.send();
 }
 
 function exibe(text){
-	console.log(JSON.parse(text));
+	var aulas = JSON.parse(text);
+    var dias = document.getElementsByClassName('aula');
+
+    // Limpar a table
+
+    console.log(aulas);
 }
 
 
