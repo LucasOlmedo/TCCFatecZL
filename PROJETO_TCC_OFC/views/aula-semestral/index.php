@@ -23,41 +23,46 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?php
 
-//    $count = AulaSemestral::find()->count();
-//
-//    $dataProvider = new SqlDataProvider([
-//        'sql' => 'SELECT nome_curso, nome_periodo, nome_disc,
-//                  professor.`nome`, turno, data_inicio, data_fim FROM aulasemestral
-//                  INNER JOIN curso
-//                  ON aulasemestral.`id_Curso`=curso.`id_Curso`
-//                  INNER JOIN periodo
-//                  ON aulasemestral.`id_Periodo` = periodo.`id_Periodo`
-//                  INNER JOIN disciplina
-//                  ON aulasemestral.`id_Disciplina` = disciplina.`id_Disciplina`
-//                  INNER JOIN professor
-//                  ON aulasemestral.`id_Professor` = professor.`id_Professor`',
-//        'totalCount' => $count,
-//    ]);
-//    echo GridView::widget([
-//        'dataProvider' => $dataProvider,
-//        'filterModel' => $searchModel,
-//        'columns' => [
-//            'nome_curso' => ['label' => 'Curso', 'value' => 'nome_curso'],
-//            'nome_periodo' => ['label' => 'Período', 'value' => 'nome_periodo'],
-//            'nome_disc' => ['label' => 'Disciplina', 'value' => 'nome_disc'],
-//            'nome' => ['label' => 'Professor', 'value' => 'nome'],
-//            [
-//                'attribute' => 'turno',
-//                'format' => 'raw',
-//                'filter' => ["0" => "Manhã", "1" => "Tarde", "2" => "Noite"],
-//                'value' => function ($model) {
-//                    if ($model->turno == 0) return "Manhã";
-//                    if ($model->turno == 1) return "Tarde";
-//                    if ($model->turno == 2) return "Noite";
-//                }
-//            ],
-//        ],
-//    ]);
+/*    $count = AulaSemestral::find()->count();
+
+    $dataProvider = new SqlDataProvider([
+        'sql' => 'SELECT nome_curso, nome_periodo, nome_disc,
+                  professor.`nome`, turno, data_inicio, data_fim, aulasemestral.`id_Curso`,
+                  aulasemestral.`id_Periodo`, aulasemestral.`id_Disciplina`, aulasemestral.`id_Professor`
+                  FROM aulasemestral
+                  INNER JOIN curso
+                  ON aulasemestral.`id_Curso`=curso.`id_Curso`
+                  INNER JOIN periodo
+                  ON aulasemestral.`id_Periodo` = periodo.`id_Periodo`
+                  INNER JOIN disciplina
+                  ON aulasemestral.`id_Disciplina` = disciplina.`id_Disciplina`
+                  INNER JOIN professor
+                  ON aulasemestral.`id_Professor` = professor.`id_Professor`',
+        'totalCount' => $count,
+    ]);*/
+
+    /*echo GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            'nome_curso' => ['label' => 'Curso', 'value' => 'nome_curso'],
+            'nome_periodo' => ['label' => 'Período', 'value' => 'nome_periodo'],
+            'nome_disc' => ['label' => 'Disciplina', 'value' => 'nome_disc'],
+            'nome' => ['label' => 'Professor', 'value' => 'nome'],
+            [
+                'attribute' => 'turno',
+                'format' => 'raw',
+                'filter' => ["0" => "Manhã", "1" => "Tarde", "2" => "Noite"],
+                'value' => function ($model) {
+                    if ($model['turno'] == 0) return "Manhã";
+                    if ($model['turno'] == 1) return "Tarde";
+                    if ($model['turno'] == 2) return "Noite";
+
+                    return "";
+                }
+            ],
+        ],
+    ]);*/
 
     echo GridView::widget([
         'dataProvider' => $dataProvider,
@@ -66,19 +71,21 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_Periodo',
             'id_Disciplina',
             'id_Professor',
+            /*'nome_curso' => ['label' => 'Curso', 'value' => 'nome_curso'],
+            'nome_periodo' => ['label' => 'Período', 'value' => 'nome_periodo'],
+            'nome_disc' => ['label' => 'Disciplina', 'value' => 'nome_disc'],
+            'nome' => ['label' => 'Professor', 'value' => 'nome'],*/
             [
                 'attribute' => 'turno',
-                'format' => 'raw',
-                'filter' => ["0" => "Manhã", "1" => "Tarde", "2" => "Noite"],
                 'value' => function ($model) {
-                    if ($model->turno == 0) return "Manhã";
-                    if ($model->turno == 1) return "Tarde";
-                    if ($model->turno == 2) return "Noite";
+                    if ($model['turno'] == 0) return "Manhã";
+                    if ($model['turno'] == 1) return "Tarde";
+                    if ($model['turno'] == 2) return "Noite";
                     return $model;
                 }
             ],
-//             'data_inicio',
-//             'data_fim',
+/*             'data_inicio',
+             'data_fim',*/
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]);

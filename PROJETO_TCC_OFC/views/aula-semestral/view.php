@@ -78,7 +78,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'nome_periodo' => ['label' => 'Período', 'value' => 'nome_periodo'],
             'nome_disc' => ['label' => 'Disciplina', 'value' => 'nome_disc'],
             'nome' => ['label' => 'Professor', 'value' => 'nome'],
-            'turno',
+            [
+                'attribute' => 'turno',
+                'value' => function ($model) {
+                    if ($model['turno'] == 0) return "Manhã";
+                    if ($model['turno'] == 1) return "Tarde";
+                    if ($model['turno'] == 2) return "Noite";
+                    return $model;
+                }
+            ],
             'data_inicio',
             'data_fim',
         ],
