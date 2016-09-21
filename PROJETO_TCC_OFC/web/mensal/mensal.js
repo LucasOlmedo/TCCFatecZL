@@ -84,7 +84,32 @@ function exibe(text){
 
     // Limpar a table
 
-    console.log(aulas);
+	if(aulas.length > 0){
+		for(var aula in aulas){
+			var aulaRec = montarAula(aulas[aula]);
+
+            for(var horario in aulaRec.arrHorarios) {
+                console.log(dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1]);
+                dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].innerHTML = getTexto(aulaRec);
+            }
+		}
+	}
+
+}
+
+function getTexto(aula){
+    var text = "";
+
+    text += aula.abreviacao+ " " + aula.id_periodo+"º"+aula.nome_curso.charAt(0)+converterTurno(aula.turno);
+    return text;
+}
+
+function converterTurno(turno){
+    switch(turno){
+        case '0': return "M"; break;
+        case '1': return "T"; break;
+        case '2': return "N"; break;
+    }
 }
 
 
@@ -146,30 +171,15 @@ function preencherArrInicio(){
 	d1.setMinutes('30');
 	d1.setSeconds('00');
 
-	var d2 = new Date();
-	d2.setHours('08');
-	d2.setMinutes('20');
-	d2.setSeconds('00');
-
 	var d3 = new Date();
 	d3.setHours('09');
 	d3.setMinutes('20');
 	d3.setSeconds('00');
 
-	var d4 = new Date();
-	d4.setHours('10');
-	d4.setMinutes('10');
-	d4.setSeconds('00');
-
 	var d5 = new Date();
 	d5.setHours('11');
 	d5.setMinutes('10');
 	d5.setSeconds('00');
-
-	var d6 = new Date();
-	d6.setHours('12');
-	d6.setMinutes('00');
-	d6.setSeconds('00');
 
 	var d7 = new Date();
 	d7.setHours('13');
@@ -196,7 +206,7 @@ function preencherArrInicio(){
 	d11.setMinutes('10');
 	d11.setSeconds('00');
 
-	return [d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11];
+	return [d1,d3,d5,d7,d8,d9,d10,d11];
 }
 
 function preencherArrFim(arrInicio){

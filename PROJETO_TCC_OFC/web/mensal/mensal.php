@@ -83,76 +83,76 @@
 				<td class="text-negrito font-less">4°</td>
 			</tr>
 
-			<tr>
-				<td class="text-negrito">S</td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
+			<tr class="aula">
+				<td class="text-negrito" >S</td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
 			</tr>
 
-			<tr>
+			<tr class="aula">
 				<td class="text-negrito">T</td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
 			</tr>
 
-			<tr>
+			<tr class="aula">
 				<td class="text-negrito">Q</td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
 			</tr>
 
-			<tr>
+			<tr class="aula">
 				<td class="text-negrito">Q</td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
 			</tr>
 
-			<tr>
+			<tr class="aula">
 				<td class="text-negrito">S</td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
 			</tr>
 
-			<tr>
+			<tr class="aula">
 				<td class="text-negrito">S</td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
-				<td colspan="2" class="aula"></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
+				<td colspan="2" ></td>
 			</tr>
 		</table>
 	</section>
