@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "grade_curso".
@@ -16,7 +17,7 @@ use Yii;
  * @property Disciplina $idDisciplina
  * @property Periodo $idPeriodo
  */
-class GradeCurso extends \yii\db\ActiveRecord
+class GradeCurso extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -66,11 +67,21 @@ class GradeCurso extends \yii\db\ActiveRecord
         return $this->hasOne(Disciplina::className(), ['id_Disciplina' => 'id_Disciplina']);
     }
 
+    public function getDisciplina()
+    {
+        return $this->hasOne(Disciplina::className(), ['id_Disciplina' => 'id_Disciplina']);
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
     public function getIdPeriodo()
     {
         return $this->hasOne(Periodo::className(), ['id_Periodo' => 'id_Periodo']);
+    }
+
+    public function getPeriodo()
+    {
+    return $this->hasOne(Periodo::className(), ['id_Periodo' => 'id_Periodo']);
     }
 }
