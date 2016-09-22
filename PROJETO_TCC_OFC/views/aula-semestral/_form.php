@@ -83,7 +83,11 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'data_fim')->textInput(['type' => 'date']) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Salvar <span class="glyphicon glyphicon-ok"></span> ') : Yii::t('app', 'Atualizar <span class="glyphicon glyphicon-ok"></span>'), ['class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Incluir horários semanais <span class="glyphicon glyphicon-chevron-right"></span>') : Yii::t('app',
+            'Atualizar horários <span class="glyphicon glyphicon-ok"></span>'),
+            [
+                'class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary'
+            ]) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

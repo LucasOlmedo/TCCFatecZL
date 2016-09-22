@@ -14,7 +14,6 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
         </div>
     <div class="page-header">
         <h1>
-            ...TESTE COMMIT...
             <small>Principais funcionalidades:</small>
         </h1>
     </div>

@@ -14,40 +14,50 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="aula-dia-form">
     <div class="form-group">
-        <h2>Incluir dia da semana</h2>
-        <label for="select_prof">Professor</label>
-        <select class="form-control" id="select_prof">
+        <h2>Incluir dia da semana e horários</h2>
 
 
 
+        <form method='post' id='form' action="index.php?r=curso/grava-disciplinas">
 
-        </select>
-        <br>
-        <label for="select_curso">Curso</label>
-        <select class="form-control" id="select_curso">
+            <input type="hidden" name="id_curso" id="id_curso" />
+            <input type="hidden" name="id_per" id="id_per" />
+            <input type="hidden" name="id_disc" id="id_disc" />
+            <input type="hidden" name="id_prof" id="id_prof" />
+            <input type="hidden" name="id_turno" id="id_turno" />
 
+            <label for="select_dia">Dia da semana</label>
+            <select class="form-control" id="select_dia" name="diasemana">
+                <option value="0">Selecionar um dia da semana...</option>
+                <option value="1">Domingo</option>
+                <option value="2">Segunda-Feira</option>
+                <option value="3">Terça-Feira</option>
+                <option value="4">Quarta-Feira</option>
+                <option value="5">Quinta-Feira</option>
+                <option value="6">Sexta-Feira</option>
+                <option value="7">Sábado</option>
+            </select>
+            <br>
 
+            <label for="input_hora_inicio">Hora de início</label>
+            <input type="text" class="form-control" id="input_hora_inicio">
+            <br>
 
+            <label for="input_hora_fim">Hora de término</label>
+            <input type="text" class="form-control" id="input_hora_fim">
+            <br>
 
-        </select>
-        <br>
-        <label for="select_dia">Dia da semana</label>
-        <select class="form-control" id="select_dia">
+        </form>
 
-
-
-
-        </select>
-        <br>
-        <button class="btn btn-default" type="submit" id="btn-add-disc"><span class="glyphicon glyphicon-plus"></span>  Adicionar ao canlendário semestral</button>
+        <button class="btn btn-default" type="submit" id="btn-add-disc"><span class="glyphicon glyphicon-plus"></span>  Adicionar ao calendário semestral</button>
         <br>
         <br>
         <br>
         <table class="table table-bordered table-hover table-striped" id="table-disc">
             <thead>
-            <th>Professor</th>
-            <th>Curso</th>
             <th>Dia Semana</th>
+            <th>Horário Inicial</th>
+            <th>Horário Término</th>
             <th>Opções</th>
             </thead>
             <tbody>

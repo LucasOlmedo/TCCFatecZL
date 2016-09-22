@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\DiaSemana;
 use app\models\GradeCurso;
 use app\models\Periodo;
 use app\models\PeriodoSearch;
@@ -76,7 +77,7 @@ class AulaSemestralController extends Controller
         $model = new AulaSemestral();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect(['add-dia']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -181,6 +182,16 @@ class AulaSemestralController extends Controller
                 echo "<option value='$row->id_Disciplina'>".$row->disciplina->nome_disc."</option>";
             }
         }
+
+    }
+
+    public function actionAddDia(){
+
+        $model = new DiaSemana();
+
+        return $this->render('add_dia', [
+            'model' => $model,
+        ]);
 
     }
 }
