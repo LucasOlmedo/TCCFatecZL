@@ -82,19 +82,27 @@ function exibe(text){
 	var aulas = JSON.parse(text);
     var dias = document.getElementsByClassName('aula');
 
-    // Limpar a table
+    limpaTable();
 
 	if(aulas.length > 0){
 		for(var aula in aulas){
 			var aulaRec = montarAula(aulas[aula]);
 
             for(var horario in aulaRec.arrHorarios) {
-                console.log(dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1]);
                 dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].innerHTML = getTexto(aulaRec);
+                dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','table-element aula-semetre font-less');
             }
 		}
 	}
+}
 
+function limpaTable(){
+        var tds = document.getElementsByClassName('table-element');
+        for(var i = 0; i < tds.length ; i++ ){
+            if (tds[i].getAttribute('class') && typeof tds[i] != 'function') {
+                tds[i].setAttribute('class', 'text-branco table-element font-less');
+            }
+        }
 }
 
 function getTexto(aula){

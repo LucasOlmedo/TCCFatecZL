@@ -14,8 +14,8 @@
 }
 
 .img.img-header{
-	height: 50px; 
-	width: 550px; 
+	height: 50px;
+	width: 550px;
 	margin: auto 22% 1.5%;
 }
 
@@ -159,4 +159,18 @@
 
 .border-bottom{
 	border-bottom: 2px solid black;
+}
+
+.aula{
+	font-family: "Calibri";
+}
+
+.aula .aula-semetre{
+	text-decoration: underline;
+	color: blue;
+	vertical-align: middle;
+}
+
+.text-branco.table-element.font-less,.table-element.aula-semetre.font-less{
+	font-size: 0.8em;
 }

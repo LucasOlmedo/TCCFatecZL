@@ -85,74 +85,74 @@
 
 			<tr class="aula">
 				<td class="text-negrito" >S</td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
 				<td class="text-negrito">T</td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
 				<td class="text-negrito">Q</td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
 				<td class="text-negrito">Q</td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
 				<td class="text-negrito">S</td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
 				<td class="text-negrito">S</td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
-				<td colspan="2" ></td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
 			</tr>
 		</table>
 	</section>
