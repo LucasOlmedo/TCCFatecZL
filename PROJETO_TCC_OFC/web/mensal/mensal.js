@@ -88,12 +88,50 @@ function exibe(text){
 		for(var aula in aulas){
 			var aulaRec = montarAula(aulas[aula]);
 
+            textoExternos(aulaRec);
             for(var horario in aulaRec.arrHorarios) {
                 dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].innerHTML = getTexto(aulaRec);
                 dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','table-element aula-semetre font-less');
             }
 		}
 	}
+}
+
+function textoExternos(aula){
+	var campoAtiv = document.getElementById('hae-ativ');
+	var campoProf = document.getElementById('hae-prof');
+	var campoCoord = document.getElementById('hae-coord');
+
+	console.log(aula);
+	switch(aula.EXTERNO){
+		case '4':
+		case '5': campoCoord.innerText += montaTextoExterno(aula); break;
+		case '3':
+		case '6':
+		case '7':
+		case '8':
+		case '9': campoProf.innerHTML += montaTextoExterno(aula); break;
+		case '10': campoAtiv.innerHTML += montaTextoExterno(aula); break;
+	}
+}
+
+function montaTextoExterno(aula){
+	var txt= " "+ (new Number(aula.id_DiaSemana) + 1) +'º ';
+
+	if(aula.horario_inicio.substring(3,5) == '00'){
+		txt += aula.horario_inicio.substring(0,2) + "h às ";
+	}
+	else{
+		txt+= aula.horario_inicio.substring(0,2) + "h" + aula.horario_inicio.substring(3,5) + " às ";
+	}
+
+	if(aula.horario_fim.substring(3,5) == '00'){
+		txt += aula.horario_fim.substring(0,2) + "h;";
+	}
+	else{
+		txt+= aula.horario_fim.substring(0,2) + "h" + aula.horario_inicio.substring(3,5) + ";";
+	}
+	return txt;
 }
 
 function limpaTable(){

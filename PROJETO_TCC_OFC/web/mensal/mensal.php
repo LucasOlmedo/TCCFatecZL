@@ -38,9 +38,9 @@
 				<td class="font-less">Hora-Aula semanal: </td>
 			</tr>
 			<tr>
-				<td class="font-less">HORA ATIVIDADE: </td>
-				<td colspan="3" class="font-less">HAE (Projeto/orientação): <span class="hae-prof">xxxx</span></td>
-				<td class="font-less">HAE (Coordenação): </td>
+				<td class="font-less">HORA ATIVIDADE: <span id="hae-ativ"></span> </td>
+				<td colspan="3" class="font-less">HAE (Projeto/orientação): <span id="hae-prof"></span></td>
+				<td class="font-less">HAE (Coordenação): <span id="hae-coord"></span> </td>
 			</tr>
 		</table>
 
