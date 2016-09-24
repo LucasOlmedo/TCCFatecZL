@@ -83,6 +83,7 @@ function exibe(text){
     var dias = document.getElementsByClassName('aula');
 
     limpaTable();
+    limpaTextosExternos();
 
 	if(aulas.length > 0){
 		for(var aula in aulas){
@@ -102,7 +103,6 @@ function textoExternos(aula){
 	var campoProf = document.getElementById('hae-prof');
 	var campoCoord = document.getElementById('hae-coord');
 
-	console.log(aula);
 	switch(aula.EXTERNO){
 		case '4':
 		case '5': campoCoord.innerText += montaTextoExterno(aula); break;
@@ -134,6 +134,12 @@ function montaTextoExterno(aula){
 	return txt;
 }
 
+function limpaTextosExternos(){
+	document.getElementById('hae-ativ').innerHTML = '';
+	document.getElementById('hae-prof').innerHTML = '';
+	document.getElementById('hae-coord').innerHTML = '';
+}
+
 function limpaTable(){
         var tds = document.getElementsByClassName('table-element');
         for(var i = 0; i < tds.length ; i++ ){
@@ -157,8 +163,6 @@ function converterTurno(turno){
         case '2': return "N"; break;
     }
 }
-
-
 
 function montarAula(aula){
 	var dtHorIni = new Date();
@@ -190,7 +194,7 @@ function montarArr(dtHorIni,dtHorFim){
 			arrCompleto.push(i-1);
 
 			for(var j = i - 1;j < arrHoraFim.length ; j++){
-				if((arrHoraFim[j].getHours() == dtHorFim.getHours()) && arrHoraFim[j].getMinutes() == dtHorFim.getMinutes()){
+					if((arrHoraFim[j].getHours() == dtHorFim.getHours()) && arrHoraFim[j].getMinutes() == dtHorFim.getMinutes()){
 					break;
 				}
 				else if(arrHoraFim[j] < dtHorFim){
