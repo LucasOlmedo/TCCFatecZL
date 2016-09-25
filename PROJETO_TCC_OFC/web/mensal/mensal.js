@@ -51,6 +51,10 @@ function preencherTable(day){
 				x.innerHTML = i;
 			}
 
+			if(k==7 || k==14){
+				x.setAttribute('class','border-right');
+			}
+
 			if(day.getDay() == 0 && (k == 1 || k == 8 || k == 15)){
 				x.innerHTML = "Domingo";
 			}

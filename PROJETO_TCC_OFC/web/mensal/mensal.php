@@ -51,108 +51,108 @@
 		<table class="table table-grade text-center font-calibri" width="900px">
 			<tr>
 				<td class="text-branco sem-top-left sem-bottom">A</td>
-				<td colspan="6" class="text-negrito font-less">MANHÃ</td>
-				<td colspan="6" class="text-negrito font-less">TARDE</td>
-				<td colspan="6" class="text-negrito font-less">NOITE</td>
+				<td colspan="6" class="text-negrito font-less" style="border-right: 2px solid black;border-left: 2px solid black;border-top: 2px solid black">MANHÃ</td>
+				<td colspan="6" class="text-negrito font-less" style="border-right: 2px solid black;border-left: 2px solid black;border-top: 2px solid black">TARDE</td>
+				<td colspan="6" class="text-negrito font-less" style="border-right: 2px solid black;border-left: 2px solid black;border-top: 2px solid black">NOITE</td>
 			</tr>
 
 			<tr>
 				<td class="text-branco sem-top-left">A</td>
-				<td colspan="6" class="font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
-				<td colspan="6" class="font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
-				<td colspan="6" class="font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="font-less" style="border-left: 2px solid black;border-right: 2px solid black;">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="font-less" style="border-left: 2px solid black;border-right: 2px solid black;">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="font-less" style="border-left: 2px solid black;border-right: 2px solid black;">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
 			</tr>
 
 			<tr>
-				<td class="text-branco">A</td>
+				<td class="text-branco" style="border-right: 2px solid black;border-left: 2px solid black;border-top: 2px solid black">A</td>
 				<td class="text-negrito font-less">1°</td>
 				<td class="text-negrito font-less">2°</td>
 				<td class="text-negrito font-less">3°</td>
 				<td class="text-negrito font-less">4°</td>
 				<td class="text-negrito font-less">5°</td>
-				<td class="text-negrito font-less">6°</td>
+				<td class="text-negrito font-less" style="border-right: 2px solid black";>6°</td>
 				<td class="text-negrito font-less">1°</td>
 				<td class="text-negrito font-less">2°</td>
 				<td class="text-negrito font-less">3°</td>
 				<td class="text-negrito font-less">4°</td>
 				<td class="text-negrito font-less">5°</td>
-				<td class="text-negrito font-less">6°</td>
+				<td class="text-negrito font-less" style="border-right: 2px solid black;">6°</td>
 				<td class="text-negrito font-less">1°</td>
 				<td class="text-negrito font-less">2°</td>
 				<td class="text-negrito font-less">3°</td>
-				<td class="text-negrito font-less">4°</td>
+				<td class="text-negrito font-less" style="border-right: 2px solid black;">4°</td>
 			</tr>
 
 			<tr class="aula">
-				<td class="text-negrito" >S</td>
+				<td class="text-negrito" style="border-right: 2px solid black; border-left: 2px solid black">S</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
-				<td class="text-negrito">T</td>
+				<td class="text-negrito" style="border-right: 2px solid black; border-left: 2px solid black">T</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
-				<td class="text-negrito">Q</td>
+				<td class="text-negrito" style="border-right: 2px solid black; border-left: 2px solid black">Q</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
-				<td class="text-negrito">Q</td>
+				<td class="text-negrito" style="border-right: 2px solid black; border-left: 2px solid black">Q</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
-				<td class="text-negrito">S</td>
+				<td class="text-negrito" style="border-right: 2px solid black; border-left: 2px solid black">S</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
 				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black;">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black;">0123456789123</td>
 			</tr>
 
 			<tr class="aula">
-				<td class="text-negrito">S</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
-				<td colspan="2" class="text-branco table-element font-less">0123456789123</td>
+				<td class="text-negrito" style="border-right: 2px solid black; border-left: 2px solid black; border-bottom: 2px solid black">S</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black; border-bottom: 2px solid black">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-bottom: 2px solid black">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black; border-bottom: 2px solid black">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black; border-bottom: 2px solid black">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-bottom: 2px solid black">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black; border-bottom: 2px solid black">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-left: 2px solid black; border-bottom: 2px solid black">0123456789123</td>
+				<td colspan="2" class="text-branco table-element font-less" style="border-right: 2px solid black; border-bottom: 2px solid black">0123456789123</td>
 			</tr>
 		</table>
 	</section>
@@ -162,10 +162,10 @@
 		<h2 class="text-center font-calibri font-medium">FOLHA DE FREQUÊNCIA – <span id="text-data">XX/XXXX</span></h2>
 		<table class="table table-frequencia font-calibri text-center text-negrito font-less-medium border-grosso" width="900px">
 			<tr>
-				<td></td>
-				<td colspan="7" class="font-title">MANHÃ</td>
-				<td colspan="7" class="font-title">TARDE</td>
-				<td colspan="5" class="font-title">NOITE</td>
+				<td class="border-bottom"></td>
+				<td colspan="7" class="font-title border-bottom border-right border-left">MANHÃ</td>
+				<td colspan="7" class="font-title border-bottom border-right border-left">TARDE</td>
+				<td colspan="5" class="font-title border-bottom border-right border-left">NOITE</td>
 			</tr>
 			<tr>
 				<td>Dia</td>
@@ -175,14 +175,14 @@
 				<td>3°</td>
 				<td>4°</td>
 				<td>5°</td>
-				<td>6°</td>
+				<td class="border-right">6°</td>
 				<td>Assinatura</td>
 				<td>1°</td>
 				<td>2°</td>
 				<td>3°</td>
 				<td>4°</td>
 				<td>5°</td>
-				<td>6°</td>
+				<td class="border-right">6°</td>
 				<td>Assinatura</td>
 				<td>1°</td>
 				<td>2°</td>
@@ -343,228 +343,228 @@
 		<table class="table table-alteracoes font-calibri text-center text-negrito" width="900px">
 			<tr>
 				<td class="text-branco sem-top-left sem-bottom">A</td>
-				<td colspan="6" class="font-less">A partir de: __/__/____</td>
-				<td colspan="6" class="font-less">A partir de: __/__/____</td>
-				<td colspan="6" class="font-less">A partir de: __/__/____</td>
+				<td colspan="6" class="font-less border-top border-right border-left border-bottom">A partir de: __/__/____</td>
+				<td colspan="6" class="font-less border-top border-right border-left border-bottom">A partir de: __/__/____</td>
+				<td colspan="6" class="font-less border-top border-right border-left border-bottom">A partir de: __/__/____</td>
 			</tr>
 			<tr>
 				<td class="text-branco  sem-top-left sem-bottom">A</td>
-				<td colspan="6" class="font-less">MANHÃ</td>
-				<td colspan="6" class="font-less">TARDE</td>
-				<td colspan="6" class="font-less">NOITE</td>
+				<td colspan="6" class="font-less border-right border-left">MANHÃ</td>
+				<td colspan="6" class="font-less border-right border-left">TARDE</td>
+				<td colspan="6" class="font-less border-right border-left">NOITE</td>
 			</tr>
 
 			<tr>
 				<td class="text-branco  sem-top-left">A</td>
-				<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
-				<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
-				<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="text-no-negrito font-less border-right border-left">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="text-no-negrito font-less border-right border-left">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="text-no-negrito font-less border-right border-left">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
 			</tr>
 
 			<tr>
-				<td class="text-branco">A</td>
+				<td class="text-branco border-right border-left border-top" >A</td>
 				<td class="font-less">1°</td>
 				<td class="font-less">2°</td>
 				<td class="font-less">3°</td>
 				<td class="font-less">4°</td>
 				<td class="font-less">5°</td>
-				<td class="font-less">6°</td>
+				<td class="font-less border-right">6°</td>
 				<td class="font-less">1°</td>
 				<td class="font-less">2°</td>
 				<td class="font-less">3°</td>
 				<td class="font-less">4°</td>
 				<td class="font-less">5°</td>
-				<td class="font-less">6°</td>
+				<td class="font-less border-right">6°</td>
 				<td class="font-less">1°</td>
 				<td class="font-less">2°</td>
 				<td class="font-less">3°</td>
-				<td class="font-less">4°</td>
+				<td class="font-less border-right">4°</td>
 			</tr>
 
 			<tr>
-				<td>S</td>
+				<td class="border-right border-left">S</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>T</td>
+				<td class="border-right border-left">T</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>Q</td>
+				<td class="border-right border-left">Q</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>Q</td>
+				<td class="border-right border-left">Q</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>S</td>
+				<td class="border-right border-left">S</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>S</td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td class="border-right border-left border-bottom">S</td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-right border-bottom"></td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-right border-bottom"></td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-right border-bottom"></td>
 			</tr>
 		</table>
 
 		<table class="table table-alteracoes font-calibri text-center text-negrito margem-top" width="900px">
 			<tr>
 				<td class="text-branco sem-top-left sem-bottom">A</td>
-				<td colspan="6" class="font-less">A partir de: __/__/____</td>
-				<td colspan="6" class="font-less">A partir de: __/__/____</td>
-				<td colspan="6" class="font-less">A partir de: __/__/____</td>
+				<td colspan="6" class="font-less border-top border-right border-left border-bottom">A partir de: __/__/____</td>
+				<td colspan="6" class="font-less border-top border-right border-left border-bottom">A partir de: __/__/____</td>
+				<td colspan="6" class="font-less border-top border-right border-left border-bottom">A partir de: __/__/____</td>
 			</tr>
 			<tr>
 				<td class="text-branco  sem-top-left sem-bottom">A</td>
-				<td colspan="6" class="font-less">MANHÃ</td>
-				<td colspan="6" class="font-less">TARDE</td>
-				<td colspan="6" class="font-less">NOITE</td>
+				<td colspan="6" class="font-less border-right border-left">MANHÃ</td>
+				<td colspan="6" class="font-less border-right border-left">TARDE</td>
+				<td colspan="6" class="font-less border-right border-left">NOITE</td>
 			</tr>
 
 			<tr>
 				<td class="text-branco  sem-top-left">A</td>
-				<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
-				<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
-				<td colspan="6" class="text-no-negrito font-less">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="text-no-negrito font-less border-right border-left">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="text-no-negrito font-less border-right border-left">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
+				<td colspan="6" class="text-no-negrito font-less border-right border-left">Tempo de aula <span class="text-sublinhado">50</span> min.</td>
 			</tr>
 
 			<tr>
-				<td class="text-branco">A</td>
+				<td class="text-branco border-right border-left border-top" >A</td>
 				<td class="font-less">1°</td>
 				<td class="font-less">2°</td>
 				<td class="font-less">3°</td>
 				<td class="font-less">4°</td>
 				<td class="font-less">5°</td>
-				<td class="font-less">6°</td>
+				<td class="font-less border-right">6°</td>
 				<td class="font-less">1°</td>
 				<td class="font-less">2°</td>
 				<td class="font-less">3°</td>
 				<td class="font-less">4°</td>
 				<td class="font-less">5°</td>
-				<td class="font-less">6°</td>
+				<td class="font-less border-right">6°</td>
 				<td class="font-less">1°</td>
 				<td class="font-less">2°</td>
 				<td class="font-less">3°</td>
-				<td class="font-less">4°</td>
+				<td class="font-less border-right">4°</td>
 			</tr>
 
 			<tr>
-				<td>S</td>
+				<td class="border-right border-left">S</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>T</td>
+				<td class="border-right border-left">T</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>Q</td>
+				<td class="border-right border-left">Q</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>Q</td>
+				<td class="border-right border-left">Q</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>S</td>
+				<td class="border-right border-left">S</td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
 				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td colspan="2" class="border-right"></td>
 			</tr>
 
 			<tr>
-				<td>S</td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
-				<td colspan="2"></td>
+				<td class="border-right border-left border-bottom">S</td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-right border-bottom"></td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-right border-bottom"></td>
+				<td colspan="2" class="border-bottom"></td>
+				<td colspan="2" class="border-right border-bottom"></td>
 			</tr>
 		</table>
 
