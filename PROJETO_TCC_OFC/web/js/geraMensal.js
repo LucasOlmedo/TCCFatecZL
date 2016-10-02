@@ -19,6 +19,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
 			table.rows[j].cells.item(table.rows[j].cells.length - 1).appendChild(link);
 
+			var linkSemestral = document.createElement('a');
+			var helperSemestral = document.createElement('i');
+
+			helperSemestral.setAttribute('class', 'glyphicon glyphicon-tag');
+			helperSemestral.style.margin = 'auto 2px';
+			linkSemestral.setAttribute('title', 'Relatório Semestral');
+			linkSemestral.setAttribute('aria-label', 'Semestral');
+			linkSemestral.appendChild(helperSemestral);
+			linkSemestral.setAttribute('href', 'semestral/semestral.php?id=' + id_professor);
+			linkSemestral.setAttribute('target', '_blank');
+
+			table.rows[j].cells.item(table.rows[j].cells.length - 1).appendChild(linkSemestral);
+
 		}
 	}
 
