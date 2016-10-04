@@ -10,7 +10,9 @@
     <script src="semestral.js"></script>
   </head>
   <body>
-    <input id="mesAno" placeholder="ANO-MES" type="month" class="no-print" value="<?php echo date('Y') . '-' . date('m'); ?>">
+  <?php echo "<input type='hidden' value='". $_GET['id'] . "' id='idProf'> "; ?>
+
+  <input id="mesAno" placeholder="ANO-MES" type="month" class="no-print" value="<?php echo date('Y') . '-' . date('m'); ?>">
     <input id="btnOk" type="button" value="Ok" class="no-print">
 
     <img src="image.jpg" alt="Imagem CPS" class="img-header" />
@@ -27,9 +29,9 @@
       <tr>
         <td class="parte-titulo">A</td>
         <td class="font-arial parte-medium-font parte-nome">NOME</td>
-        <td class="parte-strong parte-italic parte-txt-left parte-nome-value parte-medium-font"><?php echo getNomeProf(); ?></td>
+        <td class="parte-strong parte-italic parte-txt-left parte-nome-value parte-medium-font"><?php echo getNomeProf($con); ?></td>
         <td class="parte-less-font">CATEGORIA</td>
-        <td class="parte-strong parte-italic parte-medium-font"><?php echo getCatProf(); ?></td>
+        <td class="parte-strong parte-italic parte-medium-font"><?php echo getCatProf($con); ?></td>
       </tr>
 
       <tr>
@@ -59,31 +61,29 @@
       </tr>
 
       <tr>
-        <td class="parte-bottom-none parte-medium-font">     </td>
-        <td class="parte-less-font">XXX</td>
+        <td class="parte-bottom-none parte-less-font text-branco">XXX</td>
+        <td class="parte-less-font disc-f">    </td>
 
-        <td class="parte-less-font">XXX</td>
+        <td class="parte-less-font curso-f">    </td>
 
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font disc-f">    </td>
+        <td class="parte-less-font curso-f">    </td>
+        <td class="parte-less-font disc-f">    </td>
+        <td class="parte-less-font curso-f">    </td>
+        <td class="parte-less-font disc-f">    </td>
+        <td class="parte-less-font curso-f">    </td>
       </tr>
 
       <tr>
-        <td>     </td>
-
-        <td class="parte-less-font">XXX</td>
-
-        <td class="parte-less-font">XXX</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font text-branco">XXX</td>
+        <td class="parte-less-font disc-f">    </td>
+        <td class="parte-less-font curso-f">    </td>
+        <td class="parte-less-font disc-f">    </td>
+        <td class="parte-less-font curso-f">    </td>
+        <td class="parte-less-font disc-f">    </td>
+        <td class="parte-less-font curso-f">    </td>
+        <td class="parte-less-font disc-f">    </td>
+        <td class="parte-less-font curso-f">    </td>
       </tr>
     </table>
 

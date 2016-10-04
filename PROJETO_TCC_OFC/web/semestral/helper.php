@@ -1,9 +1,8 @@
 <?php
 
+$con = new PDO('mysql:host=localhost;dbname=tcc_fateczl','root','123456');
 
-function getNomeProf(){
-    $con = new PDO('mysql:host=localhost;dbname=tcc_fateczl','root','123456');
-
+function getNomeProf($con){
     $id_professor = $_GET['id'];
 
     if(isset($id_professor) && $id_professor){
@@ -17,14 +16,10 @@ function getNomeProf(){
     else{
         return "Professor não selecionado!";
     }
-
-    $con = null;
 }
 
 
-function getCatProf(){
-    $con = new PDO('mysql:host=localhost;dbname=tcc_fateczl','root','123456');
-
+function getCatProf($con){
     $id_professor = $_GET['id'];
 
     if(isset($id_professor) && $id_professor){
@@ -38,8 +33,6 @@ function getCatProf(){
     else{
         return "Professor não selecionado!";
     }
-
-    $con = null;
 }
 
 ?>
