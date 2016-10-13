@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\HorariosExternos */
 
-$this->title = 'Create Horarios Externos';
-$this->params['breadcrumbs'][] = ['label' => 'Horarios Externos', 'url' => ['index']];
+$this->title = 'Novo Horário';
+$this->params['breadcrumbs'][] = ['label' => 'Horários', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="horarios-externos-create">

@@ -41,8 +41,8 @@ class Periodo extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Periodo' => 'Id  Periodo',
-            'nome_periodo' => 'Nome Periodo',
+            'id_Periodo' => 'ID',
+            'nome_periodo' => 'Nome',
         ];
     }
 

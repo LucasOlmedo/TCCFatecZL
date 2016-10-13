@@ -51,14 +51,14 @@ class DiaSemana extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_diaSemana' => 'Id Dia Semana',
-            'id_Professor' => 'Id  Professor',
-            'id_Curso' => 'Id  Curso',
-            'id_Disciplina' => 'Id  Disciplina',
-            'id_Periodo' => 'Id  Periodo',
+            'id_diaSemana' => 'Dia da Semana',
+            'id_Professor' => 'ID do Professor',
+            'id_Curso' => 'ID do Curso',
+            'id_Disciplina' => 'ID da Disciplina',
+            'id_Periodo' => 'Período',
             'turno' => 'Turno',
-            'horario_inicio' => 'Horario Inicio',
-            'horario_fim' => 'Horario Fim',
+            'horario_inicio' => 'Horário Inicio',
+            'horario_fim' => 'Horário Fim',
         ];
     }
 

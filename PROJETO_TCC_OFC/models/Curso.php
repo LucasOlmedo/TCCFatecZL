@@ -42,10 +42,10 @@ class Curso extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Curso' => Yii::t('app', 'Id  Curso'),
-            'nome_curso' => Yii::t('app', 'Nome Curso'),
-            'abreviacao' => Yii::t('app', 'Abreviacao'),
-            'carga_horaria' => Yii::t('app', 'Carga Horaria'),
+            'id_Curso' => Yii::t('app', 'ID'),
+            'nome_curso' => Yii::t('app', 'Nome'),
+            'abreviacao' => Yii::t('app', 'Abreviação'),
+            'carga_horaria' => Yii::t('app', 'Carga Horária'),
         ];
     }
 }

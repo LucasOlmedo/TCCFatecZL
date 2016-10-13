@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\HorariosExternos */
 
 $this->title = $model->id_Hae;
-$this->params['breadcrumbs'][] = ['label' => 'Horarios Externos', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Horários', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="horarios-externos-view">

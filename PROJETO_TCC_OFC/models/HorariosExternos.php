@@ -40,7 +40,7 @@ class HorariosExternos extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Hae' => 'Id  Hae',
+            'id_Hae' => 'ID',
             'tipo' => 'Tipo',
         ];
     }

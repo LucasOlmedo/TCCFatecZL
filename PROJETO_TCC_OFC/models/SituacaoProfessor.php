@@ -43,9 +43,9 @@ class SituacaoProfessor extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_SitProf' => Yii::t('app', 'Id  Sit Prof'),
-            'id_Professor' => Yii::t('app', 'Id  Professor'),
-            'id_Situacao' => Yii::t('app', 'Id  Situacao'),
+            'id_SitProf' => Yii::t('app', 'ID'),
+            'id_Professor' => Yii::t('app', 'ID do Professor'),
+            'id_Situacao' => Yii::t('app', 'ID da Situação'),
             'data_sit' => Yii::t('app', 'Data Sit'),
         ];
     }

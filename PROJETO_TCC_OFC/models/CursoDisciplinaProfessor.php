@@ -50,12 +50,12 @@ class CursoDisciplinaProfessor extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Professor' => Yii::t('app', 'Id  Professor'),
-            'id_Curso' => Yii::t('app', 'Id  Curso'),
-            'id_Disciplina' => Yii::t('app', 'Id  Disciplina'),
+            'id_Professor' => Yii::t('app', 'ID do Professor'),
+            'id_Curso' => Yii::t('app', 'ID do Curso'),
+            'id_Disciplina' => Yii::t('app', 'ID da Disciplina'),
             'semestre' => Yii::t('app', 'Semestre'),
             'turno' => Yii::t('app', 'Turno'),
-            'data_inicio' => Yii::t('app', 'Data Inicio'),
+            'data_inicio' => Yii::t('app', 'Data Início'),
             'data_fim' => Yii::t('app', 'Data Fim'),
         ];
     }
