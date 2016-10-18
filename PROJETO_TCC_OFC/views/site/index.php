@@ -99,7 +99,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                     <div class="caption">
                         <h4>Grade horária</h4>
                         <p>
-                            <a href="#" class="btn btn-primary" role="button">Ver Grade</a>
+                            <a href="gradehoraria.php" target="_blank" class="btn btn-primary" role="button">Ver Grade</a>
                         </p>
                     </div>
                 </div>
