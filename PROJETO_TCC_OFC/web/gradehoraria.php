@@ -8,8 +8,10 @@
 	<title>Grade Horária - FATEC Zona Leste</title>
 	<script src="scripts/arqSelects.js"></script>
 	<link rel="stylesheet" href="scripts/style.css">
+	<link rel="stylesheet" href="scripts/bootstrap.min.css">
 </head>
 <body>
+<div class="container">
 	<header>
 		<h1>Grade Horária Fatec Zona Leste</h1>
 	</header>
@@ -148,6 +150,6 @@
 			</tbody>
 		</table>
 	</section>
-
+</div>
 </body>
 </html>
