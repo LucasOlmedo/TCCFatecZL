@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir disciplina'), ['delete', 'id' => $model->id_Disciplina], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'confirm' => Yii::t('app', 'Quer realmente excluir este item?'),
                 'method' => 'post',
             ],
         ]) ?>

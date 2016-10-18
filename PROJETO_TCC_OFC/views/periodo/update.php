@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Periodo */
 
-$this->title = 'Update Periodo: ' . ' ' . $model->id_Periodo;
-$this->params['breadcrumbs'][] = ['label' => 'Periodos', 'url' => ['index']];
+$this->title = 'Atualizar Período: ' . ' ' . $model->id_Periodo;
+$this->params['breadcrumbs'][] = ['label' => 'Períodos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id_Periodo, 'url' => ['view', 'id' => $model->id_Periodo]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\SituacaoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Situacão');
+$this->title = Yii::t('app', 'Situação');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="situacao-index">

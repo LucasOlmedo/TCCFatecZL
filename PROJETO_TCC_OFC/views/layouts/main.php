@@ -55,7 +55,7 @@ AppAsset::register($this);
                     '<li class="divider"></li>',
                 ['label' => 'Situação', 'url' => 'index.php?r=situacao/index'],
                     '<li class="divider"></li>',
-                ['label' => 'Horarios Externos', 'url' => 'index.php?r=horarios-externos/index'],
+                ['label' => 'Horarios', 'url' => 'index.php?r=horarios-externos/index'],
                     '<li class="divider"></li>',
                 ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index'],
                     '<li class="divider"></li>',
@@ -89,7 +89,6 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <p class="pull-left">&copy; FATEC Zona Leste <?= date('Y') ?></p>
-        <p class="pull-right">Desenvolvido por Lucas Olmedo & Julio Cezar <?= Yii::powered() ?></p>
     </div>
 </footer>
 <?php $this->endBody() ?>

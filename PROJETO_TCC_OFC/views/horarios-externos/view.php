@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id_Hae], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id_Hae], [
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Atualizar Horário'), ['update', 'id' => $model->id_Hae], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir Horário'), ['delete', 'id' => $model->id_Hae], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Quer realmente excluir este item?',
                 'method' => 'post',
             ],
         ]) ?>

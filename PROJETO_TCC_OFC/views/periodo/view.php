@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Periodo */
 
 $this->title = $model->id_Periodo;
-$this->params['breadcrumbs'][] = ['label' => 'Periodos', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Períodos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="periodo-view">
@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id_Periodo], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id_Periodo], [
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Alterar Período'), ['update', 'id' => $model->id_Periodo], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir Período'), ['delete', 'id' => $model->id_Periodo], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Quer realmente excluir este item?',
                 'method' => 'post',
             ],
         ]) ?>
