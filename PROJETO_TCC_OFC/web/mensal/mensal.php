@@ -338,6 +338,9 @@
 		<p class="second-assin"> _________________________________ <br> <span class="txt-assinaturas-2">Carimbo e Assinatura do Coordenador<span></p>
 	</section>
 
+  <!-- Para quebrar a página -->
+  <div style="page-break-after: always"></div>
+
 	<section class="alteracoes">
 		<p class="font-arial text-center font-more" id="txt-alteracoes">Alterações de Carga Horária</p>
 		<table class="table table-alteracoes font-calibri text-center text-negrito" width="900px">
