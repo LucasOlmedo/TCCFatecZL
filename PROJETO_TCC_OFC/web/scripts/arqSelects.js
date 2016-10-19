@@ -101,18 +101,42 @@ function exibe(text){
 }
 
 function getTexto(aulaRec){
+	var node = document.createElement('div');
 	if(document.getElementById('text-grade').innerHTML.includes('Professor(a)')){
+		var nome = document.createElement('span');
+		nome.innerHTML = aulaRec.nome_curso;
+		var periodo = document.createElement('span');
+		periodo.innerHTML = aulaRec.id_periodo +'º';
+		var abreviacao = document.createElement('span');
+		abreviacao.innerHTML = aulaRec.abreviacao;
 
-		return document.createTextNode(aulaRec.nome_curso + aulaRec.id_periodo + aulaRec.abreviacao);
+		nome.setAttribute('class','nome-curso');
+		periodo.setAttribute('class','periodo-curso');
+		abreviacao.setAttribute('class','abrev-curso');
+
+		node.appendChild(nome);
+		node.appendChild(abreviacao);
+		node.appendChild(periodo);
+		return node;
 	}
-	return document.createTextNode(aulaRec.nome + aulaRec.abreviacao);
+	var nome = document.createElement('span');
+	nome.innerHTML = aulaRec.nome;
+	var abreviacao = document.createElement('span');
+	abreviacao.innerHTML = aulaRec.abreviacao;
+
+	nome.setAttribute('class','nome-curso');
+	abreviacao.setAttribute('class','abrev-disc');
+
+	node.appendChild(nome);
+	node.appendChild(abreviacao);
+	return node;
 }
 
 // Limpar a table
 function limparTable(){
 	var tds = document.getElementsByTagName('td');
 	for(var i = 0; i < tds.length ; i++ ){
-		if(tds[i].getAttribute('class') && typeof tds[i] != 'function'){
+		if(tds[i].getAttribute('class') && typeof tds[i] != 'function' && tds[i].getAttribute('class') != 'dia'){
 			tds[i].setAttribute('class',null);
 			tds[i].innerHTML = '';
 		}

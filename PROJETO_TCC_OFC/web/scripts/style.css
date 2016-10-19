@@ -48,9 +48,30 @@
 }
 .horarios td, .dia{
 	font-weight: bold;
-	background-color: #FFF8DC !important;
+	background-color: #7FFFD4 !important;
 }
 
 table td{
 	border-color: black !important;
+}
+
+.nome-curso{
+	font-size: 0.7em;
+	float: left;
+}
+
+.periodo-curso{
+	float: right;
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.abrev-curso{
+	float: right;
+	font-weight: bold;
+}
+
+.abrev-disc{
+	font-weight: bold;
+	margin-left: 5px;
 }
