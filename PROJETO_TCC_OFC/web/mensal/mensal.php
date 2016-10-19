@@ -15,6 +15,7 @@
 <div class="content">
 	<input id="mesAno" placeholder="ANO-MES" type="month" class="no-print" value="<?php echo date('Y') . '-' . date('m'); ?>">
 	<input id="btnOk" type="button" value="Ok" class="no-print">
+  <input id="btnImprimir" type="button" value="Imprimir" class="no-print">
 	<header>
 		<img src="foto-header.jpg" class="img img-header">
 	</header>

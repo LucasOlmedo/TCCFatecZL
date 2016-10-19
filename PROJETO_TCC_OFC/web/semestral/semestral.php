@@ -1,4 +1,4 @@
-<?php 
+<?php
   include 'helper.php';
 ?>
 <!DOCTYPE html>
@@ -10,10 +10,14 @@
     <script src="semestral.js"></script>
   </head>
   <body>
+
+    <input id="mesAno" placeholder="ANO-MES" type="month" class="no-print" value="<?php echo date('Y') . '-' . date('m'); ?>">
+      <input id="btnOk" type="button" value="Ok" class="no-print">
+      <input id="btnImprimir" type="button" value="Imprimir" class="no-print">
+      
   <?php echo "<input type='hidden' value='". $_GET['id'] . "' id='idProf'> "; ?>
 
-  <input id="mesAno" placeholder="ANO-MES" type="month" class="no-print" value="<?php echo date('Y') . '-' . date('m'); ?>">
-    <input id="btnOk" type="button" value="Ok" class="no-print">
+
 
     <img src="image.jpg" alt="Imagem CPS" class="img-header" />
 
@@ -250,7 +254,7 @@
       </tr>
 
       <tr class="linha-vazia">
-        <td colspan="9"> 
+        <td colspan="9">
 
         </td>
       </tr>
@@ -403,7 +407,7 @@
         <td>D</td>
         <td>D</td>
       </tr>
- 
+
       <tr>
         <td>Hora Atividade</td>
         <td>D</td>
@@ -440,7 +444,7 @@
 
     <table  class="div-bordered pula-linha parte-externo" >
       <tr>
-        <td> 
+        <td>
              <p class="no-margin-tit font-arial parte-medium-tit-font">INSTRUÇÕES PARA PREENCHIMENTO DA GRADE HORÁRIA</p>
               <p class="no-margin parte-small-font">a) HORA-AULA: preencher com a sigal da disciplina e do curso, obedecendo aos horários de início e término de aulas indicados na coluna própria.</p>
               <p class="no-margin parte-small-font">b) Atividades desenvolvidas em HAE, em RJI e em Jornada: preencher com o número constante da relação de atividades do campo C, obedecidos aos horários de início e término indicados na coluna correspondente.</p>
@@ -458,7 +462,7 @@
         </td>
 
       </tr>
-      
+
     </table>
 
     <table class="font-arial parte-medium-tit-font"id="observacoes"></table>
