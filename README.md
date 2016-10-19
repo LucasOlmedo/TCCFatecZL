@@ -8,9 +8,8 @@
   - Linkar os CRUDS aos Relatórios - 50% - Relatorio semestral finalizado - Faltando pequenos dados.
   - Refazer a documentação para ser incremental - 50% - iniciado
   - Colocar o processo atual deles - 0%.
-  - Fazer o calendario Web - 90% - Faltando design 
+  - Fazer o calendario Web - 100%
   
 *Mini coisas:*
   - Aula semestral e Dia semana com nomes ao inves de ID's.
-  - Criação dos campos de categoria do Professor (fazer via JS)
   
