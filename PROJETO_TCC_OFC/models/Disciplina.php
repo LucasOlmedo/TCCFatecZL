@@ -49,7 +49,7 @@ class Disciplina extends ActiveRecord
             'id_Disciplina' => Yii::t('app', 'ID'),
             'nome_disc' => Yii::t('app', 'Nome'),
             'abreviacao' => Yii::t('app', 'Abreviação'),
-            'externo' => Yii::t('app', 'Externo'),
+            'externo' => Yii::t('app', 'Tipo de horário'),
         ];
     }
 

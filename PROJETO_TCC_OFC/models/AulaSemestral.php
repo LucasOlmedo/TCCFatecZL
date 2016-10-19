@@ -50,10 +50,10 @@ class AulaSemestral extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Curso' => Yii::t('app', 'ID do Curso'),
+            'id_Curso' => Yii::t('app', 'Curso'),
             'id_Periodo' => Yii::t('app', 'Período'),
-            'id_Disciplina' => Yii::t('app', 'ID da Disciplina'),
-            'id_Professor' => Yii::t('app', 'ID do Professor'),
+            'id_Disciplina' => Yii::t('app', 'Disciplina'),
+            'id_Professor' => Yii::t('app', 'Professor'),
             'turno' => Yii::t('app', 'Turno'),
             'data_inicio' => Yii::t('app', 'Data Início'),
             'data_fim' => Yii::t('app', 'Data Fim'),

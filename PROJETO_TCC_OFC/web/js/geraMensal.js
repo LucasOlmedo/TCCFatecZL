@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(){
 			link.setAttribute('aria-label', 'Mensal');
 			link.appendChild(helper);
 			link.setAttribute('href', 'mensal/mensal.php?id=' + id_professor);
-			link.setAttribute('target', '_blank');
 
 			table.rows[j].cells.item(table.rows[j].cells.length - 1).appendChild(link);
 
@@ -28,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function(){
 			linkSemestral.setAttribute('aria-label', 'Semestral');
 			linkSemestral.appendChild(helperSemestral);
 			linkSemestral.setAttribute('href', 'semestral/semestral.php?id=' + id_professor);
-			linkSemestral.setAttribute('target', '_blank');
 
 			table.rows[j].cells.item(table.rows[j].cells.length - 1).appendChild(linkSemestral);
 
