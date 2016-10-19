@@ -7,13 +7,13 @@
 <head>
 	<title>Grade Horária - FATEC Zona Leste</title>
 	<script src="scripts/arqSelects.js"></script>
-	<link rel="stylesheet" href="scripts/style.css">
 	<link rel="stylesheet" href="scripts/bootstrap.min.css">
+	<link rel="stylesheet" href="scripts/style.css">
 </head>
 <body>
 <div class="container">
 	<header>
-		<h1>Grade Horária Fatec Zona Leste</h1>
+		<h1>Grade Horária - Fatec Zona Leste</h1>
 	</header>
 	<nav>
 		<select id="select-curso">
@@ -30,6 +30,8 @@
 				}
 			 ?>
 		</select>
+
+		-
 		<select id="select-professor">
 			<option value="0">Escolha um professor</option>
 			<?php
@@ -44,12 +46,13 @@
 
 	<p id='p'></p>
 	<section>
-		<table border="1">
+		<div class="table-responsive">
+		<table class="table table-bordered table-hover">
 			<thead>
 				<h3 id=text-grade></h3>
 			</thead>
 			<tbody>
-				<tr class="horarios">
+				<tr class="horarios info">
 					<td></td>
 					<td>7:30 - 8:20</td>
 					<td>8:20 - 9:10</td>
@@ -64,7 +67,7 @@
 					<td>21:10 - 22:50</td>
 				</tr>
 				<tr class="seg">
-					<td>Seg</td>
+					<td class="dia">Seg</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -78,7 +81,7 @@
 					<td></td>
 				</tr>
 				<tr class="ter">
-					<td>Ter</td>
+					<td class="dia">Ter</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -92,7 +95,7 @@
 					<td></td>
 				</tr>
 				<tr class="qua">
-					<td>Qua</td>
+					<td class="dia">Qua</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -106,7 +109,7 @@
 					<td></td>
 				</tr>
 				<tr class="qui">
-					<td>Qui</td>
+					<td class="dia">Qui</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -120,7 +123,7 @@
 					<td></td>
 				</tr>
 				<tr class="sex">
-					<td>Sex</td>
+					<td class="dia">Sex</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -134,7 +137,7 @@
 					<td></td>
 				</tr>
 				<tr class="sab">
-					<td>Sab</td>
+					<td class="dia">Sab</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -149,6 +152,7 @@
 				</tr>
 			</tbody>
 		</table>
+	</div>
 	</section>
 </div>
 </body>

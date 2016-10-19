@@ -2,7 +2,7 @@
 	background-color: #9ba6ff;
 }
 .cor-2{
-	background-color: #1e1;	
+	background-color: #1e1;
 }
 .cor-3{
 	background-color: #008080;
@@ -42,4 +42,15 @@
 }
 .cor-15{
 	background-color: #F0FFFF;
+}
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+.horarios td, .dia{
+	font-weight: bold;
+	background-color: #FFF8DC !important;
+}
+
+table td{
+	border-color: black !important;
 }
