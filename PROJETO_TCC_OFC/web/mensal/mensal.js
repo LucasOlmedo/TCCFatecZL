@@ -2,12 +2,12 @@ arrHoraIni = preencherArrInicio();
 arrHoraFim = preencherArrFim(arrHoraIni);
 
 document.addEventListener('DOMContentLoaded',function(){
+	imprimir();
 
 	document.getElementById('btnOk').addEventListener('click',pegarValues);
 	document.getElementById('mesAno').addEventListener('change',pegarValues);
 	document.getElementById('btnImprimir').addEventListener('click',imprimir);
 	pegarValues();
-	imprimir();
 });
 
 function imprimir(){
