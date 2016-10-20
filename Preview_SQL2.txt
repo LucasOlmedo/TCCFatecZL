@@ -111,7 +111,7 @@ CREATE TABLE `tcc_fateczl`.`diaSemana`(
   `horario_inicio` TIME NOT NULL,
   `horario_fim` TIME NOT NULL,
   PRIMARY KEY (`id_diaSemana`, `id_Professor`, `id_Curso`, `id_Disciplina`, `turno`,`id_Periodo`,`horario_inicio`,`horario_fim`)
-);
+) CHARSET=utf8 COLLATE=utf8_general_ci;
 
 
 -------------------------------------------
