@@ -9,6 +9,7 @@
   - Refazer a documentação para ser incremental - 50% - iniciado
   - Colocar o processo atual deles - 0%.
   - Fazer o calendario Web - 100%
+  - Fazer o Login - 0%
   
 *Mini coisas:*
   - Aula semestral e Dia semana com nomes ao inves de ID's.
