@@ -22,15 +22,15 @@ function getHorarios(){
 
     $semestreFull6 = $arrSemestre[0] . '-' . $arrSemestre[1] . '-01';
 
-    if(isset($id_professor) && $id_professor){
+    if(isset($id_professor)){
 
 
-        $sql = "SELECT DISTINCT disciplina.abreviacao as 
+        $sql = "SELECT DISTINCT disciplina.abreviacao as
             abreviacao, curso.abreviacao as curso_abreviacao, DIASEMANA.horario_inicio, DIASEMANA.horario_fim, DIASEMANA.id_DiaSemana, CURSO.nome_curso,
              DIASEMANA.id_periodo, DIASEMANA.turno, DISCIPLINA.EXTERNO FROM DIASEMANA INNER JOIN AULASEMESTRAL ON (AULASEMESTRAL.ID_PROFESSOR = DIASEMANA.ID_PROFESSOR AND
-              AULASEMESTRAL.ID_CURSO = DIASEMANA.ID_CURSO AND 
+              AULASEMESTRAL.ID_CURSO = DIASEMANA.ID_CURSO AND
               AULASEMESTRAL.id_Disciplina = DIASEMANA.id_Disciplina AND AULASEMESTRAL.id_periodo = DIASEMANA.id_periodo AND
-              AULASEMESTRAL.TURNO = DIASEMANA.TURNO) INNER JOIN Professor ON DIASEMANA.id_professor = 
+              AULASEMESTRAL.TURNO = DIASEMANA.TURNO) INNER JOIN Professor ON DIASEMANA.id_professor =
              Professor.id_Professor INNER JOIN Disciplina ON DIASEMANA.id_Disciplina = Disciplina.id_Disciplina INNER JOIN HORARIOSEXTERNOS
              ON Disciplina.externo = HORARIOSEXTERNOS.ID_HAE INNER JOIN CURSO ON DIASEMANA.id_curso = CURSO.id_curso  WHERE DIASEMANA.id_professor
               = ? AND ((SELECT EXTRACT(YEAR FROM AULASEMESTRAL.DATA_INICIO))
