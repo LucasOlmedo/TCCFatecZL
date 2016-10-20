@@ -9,6 +9,7 @@
 	<script src="scripts/arqSelects.js"></script>
 	<link rel="stylesheet" href="scripts/bootstrap.min.css">
 	<link rel="stylesheet" href="scripts/style.css">
+	<meta charset="utf-8">
 </head>
 <body>
 <div class="container">

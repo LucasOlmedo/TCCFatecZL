@@ -1,4 +1,4 @@
-CREATE TABLE `tcc_fateczl`.`curso`(  
+CREATE TABLE `tcc_fateczl`.`curso`(
   `id_Curso` INT(10) NOT NULL AUTO_INCREMENT,
   `nome_curso` VARCHAR(40) NOT NULL,
   `abreviacao` VARCHAR(7) NOT NULL,
@@ -8,14 +8,14 @@ CREATE TABLE `tcc_fateczl`.`curso`(
 
 -------------------------------------------
 
-CREATE TABLE `tcc_fateczl`.`horariosExternos`(  
+CREATE TABLE `tcc_fateczl`.`horariosExternos`(
   `id_Hae` INT(10) NOT NULL,
   `tipo` VARCHAR(10) NOT NULL,
   PRIMARY KEY (`id_Hae`)
 ) CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -------------------------------------------
-CREATE TABLE `tcc_fateczl`.`disciplina`(  
+CREATE TABLE `tcc_fateczl`.`disciplina`(
   `id_Disciplina` INT(10) NOT NULL AUTO_INCREMENT,
   `nome_disc` VARCHAR(40) NOT NULL,
   `abreviacao` VARCHAR(10) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE `tcc_fateczl`.`disciplina`(
 
 -------------------------------------------
 
-CREATE TABLE `tcc_fateczl`.`periodo`(  
+CREATE TABLE `tcc_fateczl`.`periodo`(
   `id_Periodo` INT(2) NOT NULL,
   `nome_periodo` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_Periodo`)
@@ -34,7 +34,7 @@ CREATE TABLE `tcc_fateczl`.`periodo`(
 
 -------------------------------------------
 
-CREATE TABLE `tcc_fateczl`.`situacao`(  
+CREATE TABLE `tcc_fateczl`.`situacao`(
   `id_Situacao` INT(10) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_Situacao`)
@@ -42,7 +42,7 @@ CREATE TABLE `tcc_fateczl`.`situacao`(
 
 -------------------------------------------
 
-CREATE TABLE `tcc_fateczl`.`professor`(  
+CREATE TABLE `tcc_fateczl`.`professor`(
   `id_Professor` INT(10) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(30) NOT NULL,
   `rg` VARCHAR(13) NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE `tcc_fateczl`.`professor`(
 
 -------------------------------------------
 
-CREATE TABLE `tcc_fateczl`.`grade_curso`(  
+CREATE TABLE `tcc_fateczl`.`grade_curso`(
   `id_Curso` INT(10) NOT NULL,
   `id_Periodo` INT(2) NOT NULL,
   `id_Disciplina` INT(10) NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE `tcc_fateczl`.`grade_curso`(
 
 -------------------------------------------
 
-CREATE TABLE `tcc_fateczl`.`situacao_professor`(  
+CREATE TABLE `tcc_fateczl`.`situacao_professor`(
   `id_SitProf` INT(10) NOT NULL AUTO_INCREMENT,
   `id_Professor` INT(10) NOT NULL,
   `id_Situacao` INT(10) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE `tcc_fateczl`.`situacao_professor`(
 
 -------------------------------------------
 
-CREATE TABLE `tcc_fateczl`.`aulasemestral`(  
+CREATE TABLE `tcc_fateczl`.`aulasemestral`(
   `id_Curso` INT(10) NOT NULL,
   `id_Periodo` INT(10) NOT NULL,
   `id_Disciplina` INT(10) NOT NULL,
@@ -96,12 +96,12 @@ CREATE TABLE `tcc_fateczl`.`aulasemestral`(
   CONSTRAINT `fk_curso123` FOREIGN KEY (`id_Curso`) REFERENCES `tcc_fateczl`.`curso`(`id_Curso`),
   CONSTRAINT `fk_per123` FOREIGN KEY (`id_Periodo`) REFERENCES `tcc_fateczl`.`periodo`(`id_Periodo`),
   CONSTRAINT `fk_disc123` FOREIGN KEY (`id_Disciplina`) REFERENCES `tcc_fateczl`.`disciplina`(`id_Disciplina`)
-) CHARSET=utf8 COLLATE=utf8_general_ci;
+);
 
 
 -------------------------------------------
 
-CREATE TABLE `tcc_fateczl`.`diaSemana`(  
+CREATE TABLE `tcc_fateczl`.`diaSemana`(
   `id_diaSemana` INT(10) NOT NULL,
   `id_Professor` INT(10) NOT NULL,
   `id_Curso` INT(10) NOT NULL,
@@ -111,24 +111,24 @@ CREATE TABLE `tcc_fateczl`.`diaSemana`(
   `horario_inicio` TIME NOT NULL,
   `horario_fim` TIME NOT NULL,
   PRIMARY KEY (`id_diaSemana`, `id_Professor`, `id_Curso`, `id_Disciplina`, `turno`,`id_Periodo`,`horario_inicio`,`horario_fim`)
-) CHARSET=utf8 COLLATE=utf8_general_ci;
+);
 
 
 -------------------------------------------
 
-ALTER TABLE `tcc_fateczl`.`diaSemana`   
+ALTER TABLE `tcc_fateczl`.`diaSemana`
   ADD PRIMARY KEY (`id_diaSemana`, `id_Professor`, `id_Curso`, `id_Disciplina`, `id_Periodo`,`horario_inicio`,`horario_fim`,turno);
 
-ALTER TABLE `tcc_fateczl`.`diaSemana`   
+ALTER TABLE `tcc_fateczl`.`diaSemana`
   ADD CONSTRAINT  `fk_diaSemana` FOREIGN KEY (`id_Professor`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Professor`),
   ADD CONSTRAINT  `fk_diaSemana2` FOREIGN KEY (`id_Curso`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Curso`),
   ADD CONSTRAINT  `fk_diaSemana3` FOREIGN KEY (`id_Disciplina`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Disciplina`);
 
 
-ALTER TABLE `tcc_fateczl`.`diaSemana`   
+ALTER TABLE `tcc_fateczl`.`diaSemana`
   ADD CONSTRAINT  `fk_diaSemana4` FOREIGN KEY (`id_Periodo`) REFERENCES `tcc_fateczl`.`aulasemestral`(`id_Periodo`);
 
-ALTER TABLE `tcc_fateczl`.`diaSemana`   
+ALTER TABLE `tcc_fateczl`.`diaSemana`
   ADD CONSTRAINT  `fk_diaSemana5` FOREIGN KEY (`turno`) REFERENCES `tcc_fateczl`.`aulasemestral`(`turno`);
 
 
@@ -136,9 +136,8 @@ ALTER TABLE `tcc_fateczl`.`diaSemana`
 
 ---- INSERTS AulaSemestral:
 
-INSERT INTO `tcc_fateczl`.`aulasemestral` VALUES 
+INSERT INTO `tcc_fateczl`.`aulasemestral` VALUES
 (1,1,1,1,2,'2016-03-20','2016-03-30'),
 (1,1,1,1,1,'2016-03-15','2016-03-30'),
 (1,1,1,1,1,'2016-03-16','2016-03-30'),
 (1,1,1,1,1,'2016-03-17','2016-03-30');
-
