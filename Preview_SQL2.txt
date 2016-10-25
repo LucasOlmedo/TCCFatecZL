@@ -134,6 +134,15 @@ ALTER TABLE `tcc_fateczl`.`diaSemana`
 
 -------------------------------------------
 
+CREATE TABLE USERS(
+   ID_USER INT AUTO_INCREMENT,
+   USUARIO VARCHAR(255) UNIQUE NOT NULL,
+   SENHA VARCHAR(255) NOT NULL,
+   ID_CURSO INT,
+   PRIMARY KEY (ID_USER),
+   FOREIGN KEY (ID_CURSO) REFERENCES CURSO(ID_CURSO)
+);
+
 ---- INSERTS AulaSemestral:
 
 INSERT INTO `tcc_fateczl`.`aulasemestral` VALUES
