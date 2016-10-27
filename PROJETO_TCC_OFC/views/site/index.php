@@ -86,9 +86,9 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                 <div class="thumbnail">
                     <img src="images/relatorios.jpg" alt="" class="img-responsive"/>
                     <div class="caption">
-                        <h4>Horários</h4>
+                        <h4>Usuários</h4>
                         <p>
-                            <a href="index.php?r=horarios-externos/index" class="btn btn-primary" role="button">Ver Horários</a>
+                            <a href="/usuarios.php" class="btn btn-primary" role="button">Ver Usuários</a>
                         </p>
                     </div>
                 </div>

@@ -61,7 +61,9 @@ AppAsset::register($this);
                     '<li class="divider"></li>',
                 ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index'],
                     '<li class="divider"></li>',
-                ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index']
+                ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index'],
+                    '<li class="divider"></li>',
+                ['label' => 'Usuários', 'url' => '/usuarios.php']
             ]
             ],
 //            ['label' => 'Contact', 'url' => ['/site/contact']],
