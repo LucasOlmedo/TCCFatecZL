@@ -1,5 +1,6 @@
 <?php
   include 'helper.php';
+  include '../validacaoUsuario.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
     <input id="mesAno" placeholder="ANO-MES" type="month" class="no-print" value="<?php echo date('Y') . '-' . date('m'); ?>">
       <input id="btnOk" type="button" value="Ok" class="no-print">
       <input id="btnImprimir" type="button" value="Imprimir" class="no-print">
-      
+
   <?php echo "<input type='hidden' value='". $_GET['id'] . "' id='idProf'> "; ?>
 
 

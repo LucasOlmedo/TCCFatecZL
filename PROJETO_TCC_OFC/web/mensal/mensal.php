@@ -1,6 +1,6 @@
 <?php
     include 'helper.php';
-
+    include '../validacaoUsuario.php';
 ?>
 
 <!DOCTYPE html>
