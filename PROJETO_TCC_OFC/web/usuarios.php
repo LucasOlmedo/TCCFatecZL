@@ -71,6 +71,8 @@
         <p class="pull-left">&copy; FATEC Zona Leste 2016</p>
     </div>
   </footer>
-
+	<script src="js/newJQuery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="toolbar.js"></script>
   </body>
 </html>

@@ -13,7 +13,7 @@ function usuarioEstaLogado(){
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Meu sist</title>
+    <title>FATEC Zona Leste - Sistema Gerenciador</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/site.css" rel="stylesheet">
   </head>

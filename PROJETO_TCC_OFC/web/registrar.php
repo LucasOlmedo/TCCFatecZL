@@ -57,11 +57,27 @@ function verErros(){
   </head>
   <body>
 		<div class="wrap">
-    <nav id="w0" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w0-collapse"><span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span></button><a class="navbar-brand" href="/index.php">FATEC Zona Leste - Sistema Gerenciador</a></div><div id="w0-collapse" class="collapse navbar-collapse"><ul id="w1" class="navbar-nav navbar-right nav">
-</ul></li></ul></div></div></nav>
+			<nav id="w1" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w1-collapse"><span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span></button><a class="navbar-brand" href="/index.php">FATEC Zona Leste - Sistema Gerenciador</a></div><div id="w1-collapse" class="collapse navbar-collapse"><ul id="w2" class="navbar-nav navbar-right nav"><li><a href="/index.php?r=site%2Findex"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Cadastros <b class="caret"></b></a><ul id="w3" class="dropdown-menu"><li><a href="index.php?r=curso/index" tabindex="-1">Cursos</a></li>
+	<li class="divider"></li>
+	<li><a href="index.php?r=periodo/index" tabindex="-1">Períodos</a></li>
+	<li class="divider"></li>
+	<li><a href="index.php?r=disciplina/index" tabindex="-1">Disciplinas</a></li>
+	<li class="divider"></li>
+	<li><a href="index.php?r=professor/index" tabindex="-1">Professores</a></li>
+	<li class="divider"></li>
+	<li><a href="index.php?r=situacao/index" tabindex="-1">Situação</a></li>
+	<li class="divider"></li>
+	<li><a href="index.php?r=horarios-externos/index" tabindex="-1">Horarios</a></li>
+	<li class="divider"></li>
+	<li><a href="index.php?r=aula-semestral/index" tabindex="-1">Aula Semestral</a></li>
+	<li class="divider"></li>
+	<li><a href="index.php?r=dia-semana/index" tabindex="-1">Dia da semana</a></li>
+	<li class="divider"></li>
+	<li><a href="/usuarios.php" tabindex="-1">Usuários</a></li></ul></li></ul></div></div></nav>
     <div class="container">
 			<ul class="breadcrumb"><li><a href="/index.php">Home</a></li>
 				<li><a href="/usuarios.php">Usuários</a></li>
@@ -118,5 +134,8 @@ function verErros(){
 					<p class="pull-left">&copy; FATEC Zona Leste 2016</p>
 			</div>
 		</footer>
+		<script src="js/newJQuery.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script src="toolbar.js"></script>
   </body>
 </html>
