@@ -1,7 +1,11 @@
 <?php
 	$con = new PDO('mysql:host=localhost;dbname=tcc_fateczl','root','123456');
 ?>
-<?php include 'validacaoUsuario.php' ?>
+<?php include 'validacaoUsuario.php';
+
+include 'validacaoUsuarioCurso.php';
+
+?>
 <!DOCTYPE html>
 <html>
   <head>

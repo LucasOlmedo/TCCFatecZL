@@ -2,11 +2,8 @@
 	$con = new PDO('mysql:host=localhost;dbname=tcc_fateczl','root','123456');
 ?>
 <?php include 'validacaoUsuario.php';
+include 'validacaoUsuarioCurso.php';
 
-if(isset($_SESSION['usuario']['ID_CURSO'])){
-  header("Location: index.php");
-  exit;
-}
 
 if(isset($_POST)){
 	$erros = verErros();
