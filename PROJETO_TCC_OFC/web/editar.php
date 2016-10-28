@@ -94,7 +94,7 @@ function verErros(){
 			<nav id="w1" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w1-collapse"><span class="sr-only">Toggle navigation</span>
 	<span class="icon-bar"></span>
 	<span class="icon-bar"></span>
-	<span class="icon-bar"></span></button><a class="navbar-brand" href="/index.php">FATEC Zona Leste - Sistema Gerenciador</a></div><div id="w1-collapse" class="collapse navbar-collapse"><ul id="w2" class="navbar-nav navbar-right nav"><li><a href="/index.php?r=site%2Findex"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+	<span class="icon-bar"></span></button><a class="navbar-brand" href="/index.php">FATEC Zona Leste - Sistema Gerenciador</a></div><div id="w1-collapse" class="collapse navbar-collapse"><ul id="w1" class="navbar-nav navbar-right nav"><li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li></ul><ul id="w2" class="navbar-nav navbar-right nav"><li><a href="/index.php?r=site%2Findex"><span class="glyphicon glyphicon-home"></span> Home</a></li>
 	<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Cadastros <b class="caret"></b></a><ul id="w3" class="dropdown-menu"><li><a href="index.php?r=curso/index" tabindex="-1">Cursos</a></li>
 	<li class="divider"></li>
 	<li><a href="index.php?r=periodo/index" tabindex="-1">Períodos</a></li>
