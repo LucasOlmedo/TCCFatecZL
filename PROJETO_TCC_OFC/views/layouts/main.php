@@ -40,6 +40,14 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'encodeLabels' => false,
+        'items' => [
+            ['label' => '<span class="glyphicon glyphicon-log-out"></span> Logout', 'url' => 'logout.php']
+            ]
+          ]
+      );
     if(!isset($_SESSION['usuario']['ID_CURSO'])){
       echo Nav::widget([
           'options' => ['class' => 'navbar-nav navbar-right'],
@@ -124,7 +132,6 @@ AppAsset::register($this);
           ],
       ]);
     }
-
     NavBar::end();
     ?>
     <div class="container">
