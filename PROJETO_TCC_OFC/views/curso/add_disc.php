@@ -5,7 +5,8 @@
  * Date: 20/04/2016
  * Time: 10:53
  */
-
+ include 'getCurso.php';
+ garantirAltCurso();
 $this->title = Yii::t('app', 'Incluir disciplina');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Cursos'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -18,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <form method='post' id='form' action="index.php?r=curso/grava-disciplinas">
             <input type="hidden" name="grade_curso" id="grade_curso" />
-            
+
             <label for="select_per">Período do curso</label>
             <select class="form-control" id="select_per" name="periodo">
                 <?php

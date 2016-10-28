@@ -5,6 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Curso */
 
+include 'getCurso.php';
+garantirAltCurso();
 $this->title = Yii::t('app', 'Atualizar {modelClass}: ', [
     'modelClass' => 'Curso',
 ]) . ' ' . $model->nome_curso;

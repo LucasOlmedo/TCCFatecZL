@@ -1,6 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
+
 ?>
 <div class="site-index">
         <div class="page-header" align="center">
@@ -33,29 +34,6 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
     </style>
     <div class="body-content">
         <div class="row">
-            <div class="col-sm-6 col-md-4" id="teste">
-                <div class="thumbnail">
-                    <img src="images/cursos.jpg" alt="" class="img-responsive"/>
-                    <div class="caption">
-                        <h4>Cursos</h4>
-                        <p>
-                            <a href="index.php?r=curso/index" class="btn btn-primary" role="button">Ver Cursos</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img src="images/disciplinas.jpg" alt="" class="img-responsive"/>
-                    <div class="caption">
-                        <h4>Disciplinas</h4>
-                        <p>
-                            <a href="index.php?r=disciplina/index" class="btn btn-primary" role="button">Ver
-                                Disciplinas</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="images/professores.jpg" alt="" class="img-responsive"/>
@@ -68,8 +46,6 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
                     <img src="images/aula-semestral.jpg" alt="" class="img-responsive"/>

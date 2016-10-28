@@ -10,6 +10,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Curso */
 
+include 'getCurso.php';
+garantirAltCurso();
 $this->title ="Visualização de #".$model->id_Curso;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Cursos'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;

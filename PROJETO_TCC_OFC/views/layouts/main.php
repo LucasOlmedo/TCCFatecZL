@@ -91,7 +91,7 @@ AppAsset::register($this);
               ['label' => '<span class="glyphicon glyphicon-home"></span> Home', 'url' => ['/site/index']],
   //            ['label' => 'About', 'url' => ['/site/about']],
               ['label' => '<span class="glyphicon glyphicon-th-list"></span> Cadastros', 'items' => [
-                  ['label' => 'Cursos', 'url' => 'index.php?r=curso/index'],
+                  ['label' => 'Cursos', 'url' => 'index.php?r=curso%2Fview&id='.$_SESSION['usuario']['ID_CURSO']],
                       '<li class="divider"></li>',
                   ['label' => 'Períodos', 'url' => 'index.php?r=periodo/index'],
                       '<li class="divider"></li>',

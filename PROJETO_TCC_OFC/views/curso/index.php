@@ -6,7 +6,8 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CursoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
+include 'getCurso.php';
+garantirIDCurso();
 $this->title = Yii::t('app', 'Cursos');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -37,5 +38,6 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ],
     ]); ?>
+
 
 </div>
