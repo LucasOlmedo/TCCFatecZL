@@ -40,47 +40,91 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'encodeLabels' => false,
-        'items' => [
-            ['label' => '<span class="glyphicon glyphicon-home"></span> Home', 'url' => ['/site/index']],
-//            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => '<span class="glyphicon glyphicon-th-list"></span> Cadastros', 'items' => [
-                ['label' => 'Cursos', 'url' => 'index.php?r=curso/index'],
-                    '<li class="divider"></li>',
-                ['label' => 'Períodos', 'url' => 'index.php?r=periodo/index'],
-                    '<li class="divider"></li>',
-                ['label' => 'Disciplinas', 'url' => 'index.php?r=disciplina/index'],
-                    '<li class="divider"></li>',
-                ['label' => 'Professores', 'url' => 'index.php?r=professor/index'],
-                    '<li class="divider"></li>',
-                ['label' => 'Situação', 'url' => 'index.php?r=situacao/index'],
-                    '<li class="divider"></li>',
-                ['label' => 'Horarios', 'url' => 'index.php?r=horarios-externos/index'],
-                    '<li class="divider"></li>',
-                ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index'],
-                    '<li class="divider"></li>',
-                ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index'],
-                    '<li class="divider"></li>',
-                ['label' => 'Usuários', 'url' => '/usuarios.php']
-            ]
-            ],
-//            ['label' => 'Contact', 'url' => ['/site/contact']],
-//            Yii::$app->user->isGuest ? (
-//            ['label' => 'Login', 'url' => ['/site/login']]
-//            ) : (
-//                '<li>'
-//                . Html::beginForm(['/site/logout'], 'post')
-//                . Html::submitButton(
-//                    'Logout (' . Yii::$app->user->identity->username . ')',
-//                    ['class' => 'btn btn-link']
-//                )
-//                . Html::endForm()
-//                . '</li>'
-//            )
-        ],
-    ]);
+    if(!isset($_SESSION['usuario']['ID_CURSO'])){
+      echo Nav::widget([
+          'options' => ['class' => 'navbar-nav navbar-right'],
+          'encodeLabels' => false,
+          'items' => [
+              ['label' => '<span class="glyphicon glyphicon-home"></span> Home', 'url' => ['/site/index']],
+  //            ['label' => 'About', 'url' => ['/site/about']],
+              ['label' => '<span class="glyphicon glyphicon-th-list"></span> Cadastros', 'items' => [
+                  ['label' => 'Cursos', 'url' => 'index.php?r=curso/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Períodos', 'url' => 'index.php?r=periodo/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Disciplinas', 'url' => 'index.php?r=disciplina/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Professores', 'url' => 'index.php?r=professor/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Situação', 'url' => 'index.php?r=situacao/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Horarios', 'url' => 'index.php?r=horarios-externos/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Usuários', 'url' => '/usuarios.php']
+              ]
+              ],
+  //            ['label' => 'Contact', 'url' => ['/site/contact']],
+  //            Yii::$app->user->isGuest ? (
+  //            ['label' => 'Login', 'url' => ['/site/login']]
+  //            ) : (
+  //                '<li>'
+  //                . Html::beginForm(['/site/logout'], 'post')
+  //                . Html::submitButton(
+  //                    'Logout (' . Yii::$app->user->identity->username . ')',
+  //                    ['class' => 'btn btn-link']
+  //                )
+  //                . Html::endForm()
+  //                . '</li>'
+  //            )
+          ],
+      ]);
+    }
+    else{
+      echo Nav::widget([
+          'options' => ['class' => 'navbar-nav navbar-right'],
+          'encodeLabels' => false,
+          'items' => [
+              ['label' => '<span class="glyphicon glyphicon-home"></span> Home', 'url' => ['/site/index']],
+  //            ['label' => 'About', 'url' => ['/site/about']],
+              ['label' => '<span class="glyphicon glyphicon-th-list"></span> Cadastros', 'items' => [
+                  ['label' => 'Cursos', 'url' => 'index.php?r=curso/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Períodos', 'url' => 'index.php?r=periodo/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Disciplinas', 'url' => 'index.php?r=disciplina/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Professores', 'url' => 'index.php?r=professor/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Situação', 'url' => 'index.php?r=situacao/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Horarios', 'url' => 'index.php?r=horarios-externos/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index'],
+                      '<li class="divider"></li>',
+                  ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index']
+              ]
+              ],
+  //            ['label' => 'Contact', 'url' => ['/site/contact']],
+  //            Yii::$app->user->isGuest ? (
+  //            ['label' => 'Login', 'url' => ['/site/login']]
+  //            ) : (
+  //                '<li>'
+  //                . Html::beginForm(['/site/logout'], 'post')
+  //                . Html::submitButton(
+  //                    'Logout (' . Yii::$app->user->identity->username . ')',
+  //                    ['class' => 'btn btn-link']
+  //                )
+  //                . Html::endForm()
+  //                . '</li>'
+  //            )
+          ],
+      ]);
+    }
+
     NavBar::end();
     ?>
     <div class="container">

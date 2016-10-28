@@ -58,7 +58,7 @@ include 'validacaoUsuarioCurso.php';
 							echo "<tr><td>".$row['ID_USER']."</td>";
 			        echo "<td>".$row['USUARIO']."</td><td>";
 							if ($row['NOME_CURSO'] == ""){
-								echo "Sem Curso</td>";
+								echo "Administrador</td>";
 							}else {
 								echo $row['NOME_CURSO']."</td>";
 							}
@@ -72,7 +72,7 @@ include 'validacaoUsuarioCurso.php';
 			</div>
 	<footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; FATEC Zona Leste 2016</p>
+        <p class="pull-left">&copy; FATEC Zona Leste <?php echo date('Y');?></p>
     </div>
   </footer>
 	<script src="js/newJQuery.js"></script>

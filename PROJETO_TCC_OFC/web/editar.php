@@ -167,7 +167,7 @@ function verErros(){
 	</div>
 	<footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; FATEC Zona Leste 2016</p>
+        <p class="pull-left">&copy; FATEC Zona Leste <?php echo date('Y');?></p>
     </div>
 	</footer>
 	<script src="js/newJQuery.js"></script>

@@ -84,17 +84,6 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <img src="images/relatorios1.jpg" alt="" class="img-responsive"/>
-                    <div class="caption">
-                        <h4>Usuários</h4>
-                        <p>
-                            <a href="/usuarios.php" class="btn btn-primary" role="button">Ver Usuários</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
                     <img src="images/grade-horaria.jpg" alt="" class="img-responsive"/>
                     <div class="caption">
                         <h4>Grade horária</h4>
