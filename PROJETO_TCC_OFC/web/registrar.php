@@ -13,7 +13,12 @@ if(isset($_POST)){
 	    $stmt = $con->prepare($sql);
 	    $stmt->bindParam(1,$_POST['usuario']);
 	    $stmt->bindParam(2,$_POST['senha']);
-	    if(!$stmt->execute()){$erros[5] = "O usuário já existe!";}
+	    if(!$stmt->execute()){
+				$erros[5] = "O usuário já existe!";
+			}
+			else{
+	    	header("Location: usuarios.php"); $con = null; exit;
+			}
 	  }
 	  else if (isset($_POST['usuario']) && isset($_POST['senha']) && $_POST['curso'] != ""){
 	    $sql = "INSERT INTO USERS(usuario,senha,id_curso) VALUES (?,?,?)";
@@ -21,7 +26,12 @@ if(isset($_POST)){
 	    $stmt->bindParam(1,$_POST['usuario']);
 	    $stmt->bindParam(2,$_POST['senha']);
 	    $stmt->bindParam(3,$_POST['curso']);
-	    if(!$stmt->execute()){$erros[5] = "O usuário já existe!";}
+	    if(!$stmt->execute()){
+				$erros[5] = "O usuário já existe!";
+			}
+			else{
+	    	header("Location: usuarios.php"); $con = null; exit;
+			}
 	  }
 	}
 }
