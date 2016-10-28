@@ -29,7 +29,7 @@ function usuarioEstaLogado(){
         <div class="page-header">
           <h1>Login</h1>
           <form action="validacao.php" method="post">
-            <div <?php if(isset($_GET['err'])){
+            <div <?php if(isset($_GET['err']) || isset($_GET['no'])){
               echo "class='form-group has-error'";
             } else{
                 echo 'class="form-group"';
@@ -37,10 +37,14 @@ function usuarioEstaLogado(){
 
             >
               <label class="control-label">Usuário</label>
-              <input type="text" name="usuario" maxlength="25" class="form-control" />
+              <input type="text" name="usuario" maxlength="25" class="form-control" <?php if(isset($_GET['user'])){echo "value='".$_GET['user']."'";} ?>/>
               <?php if(isset($_GET['err'])){
-                echo "<p class='control-label'>Digite seu usuário</p>";
-              }?>
+                echo "<p class='control-label'>Usuário ou senha inválidos</p>";
+              } else if(isset($_GET['no'])){
+                echo "<p class='control-label'>Usuário inexistente</p>";
+              }
+
+              ?>
             </div>
             <div <?php if(isset($_GET['err'])){
               echo "class='form-group has-error'";
@@ -53,7 +57,7 @@ function usuarioEstaLogado(){
 
               <input type="password" name="senha" maxlength="25" class="form-control"/>
               <?php if(isset($_GET['err'])){
-                echo "<p class='control-label'>Digite sua senha</p>";
+                    echo "<p class='control-label'>Digite sua senha</p>";
               }?>
             </div>
               <input type="submit" class="btn btn-primary" value="Entrar" />

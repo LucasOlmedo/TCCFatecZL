@@ -5,7 +5,12 @@ function login(){
   session_start();
 
     if (empty($_POST) OR (empty($_POST['usuario']) OR empty($_POST['senha']))) {
-      header("Location: login.php?err=emp");
+      if(isset($_POST['usuario'])){
+        header("Location: login.php?err=emp&user=".$_POST['usuario']);
+      }
+      else{
+        header("Location: login.php?err=emp");
+      }
       session_destroy();
       exit;
     } else {
@@ -18,7 +23,7 @@ function login(){
 
       if(!$userDB){
         session_destroy();
-        header("Location: login.php?err=emp"); $con = null; exit;
+        header("Location: login.php?no=emp&user=".$usuario); $con = null; exit;
       }
 
       $_SESSION['usuario'] = $userDB;
