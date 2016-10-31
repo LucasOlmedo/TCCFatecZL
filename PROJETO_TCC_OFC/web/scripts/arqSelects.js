@@ -9,16 +9,20 @@ document.addEventListener("DOMContentLoaded", function(){
  		if(selectProfessor.selectedIndex != 0){
  			selectProfessor.selectedIndex = 0;
  		}
- 		replaceTextGrade(selectCurso.options[selectCurso.selectedIndex].text);
-		openAjaxTurma(selectCurso.value);
+		if(selectCurso.value != '0'){
+ 			replaceTextGrade(selectCurso.options[selectCurso.selectedIndex].text);
+			openAjaxTurma(selectCurso.value);
+		}
  	});
 
  	selectProfessor.addEventListener('change',function(){
  		if(selectCurso.selectedIndex != 0){
  			selectCurso.selectedIndex = 0;
 		}
-		replaceTextGrade('Professor(a) ' + selectProfessor.options[selectProfessor.selectedIndex].text);
-		openAjaxProfessor(selectProfessor.value);
+		if(selectProfessor.value != '0'){
+			replaceTextGrade('Professor(a) ' + selectProfessor.options[selectProfessor.selectedIndex].text);
+			openAjaxProfessor(selectProfessor.value);
+		}
 	});
 
 });

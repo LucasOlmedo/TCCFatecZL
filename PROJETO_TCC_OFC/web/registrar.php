@@ -45,10 +45,10 @@ function verErros(){
 		$erros[2] = "Digite uma senha";
 	}
 	if(isset($_POST['usuario']) && strlen($_POST['usuario']) > 1 && strlen($_POST['usuario']) < 5){
-		$erros[3] = "O usuário deve possuir pelo menos 6 caracteres";
+		$erros[3] = "O usuário deve possuir pelo menos 5 caracteres";
 	}
 	if(isset($_POST['senha']) && strlen($_POST['senha']) > 1 && strlen($_POST['senha']) < 5){
-		$erros[4] = "A senha deve possuir pelo menos 6 caracteres";
+		$erros[4] = "A senha deve possuir pelo menos 5 caracteres";
 	}
 	return $erros;
 }

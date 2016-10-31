@@ -41,7 +41,7 @@ function usuarioEstaLogado(){
               <?php if(isset($_GET['err'])){
                 echo "<p class='control-label'>Usuário ou senha inválidos</p>";
               } else if(isset($_GET['no'])){
-                echo "<p class='control-label'>Usuário inexistente</p>";
+                echo "<p class='control-label'>Usuário ou senha inválidos</p>";
               }
 
               ?>
