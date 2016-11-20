@@ -5,7 +5,7 @@
 
 .text-branco{
   color: transparent;
-  pointer: none;
+  pointer-events: none;
 }
 
 @media print {
