@@ -11,6 +11,7 @@
 
 .text-branco{
 	color: transparent;
+	pointer: none;
 }
 
 .img.img-header{
