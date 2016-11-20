@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\GradeCurso;
 use Yii;
 use app\models\Disciplina;
 use app\models\DisciplinaSearch;
@@ -98,8 +99,14 @@ class DisciplinaController extends Controller
      */
     public function actionDelete($id)
     {
+        $rows = GradeCurso::find()
+            ->where(['id_Disciplina' => $id])
+            ->all();
+        if ($rows != null) {
+            header("Location: index.php?r=disciplina/index&erro=1");
+            exit;
+        }
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 

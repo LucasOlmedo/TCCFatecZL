@@ -50,10 +50,10 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                 <div class="thumbnail">
                     <img src="images/aula-semestral.jpg" alt="" class="img-responsive"/>
                     <div class="caption">
-                        <h4>Aula semestral</h4>
+                        <h4>Grade Semestral</h4>
                         <p>
-                            <a href="index.php?r=aula-semestral/index" class="btn btn-primary" role="button">Ver
-                                Aulas</a>
+                            <a href="index.php?r=aulasemestral/index" class="btn btn-primary" role="button">Ver
+                                Grade Semestral</a>
                         </p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ $this->title = 'FATEC Zona Leste - Sistema Gerenciador';
                     <div class="caption">
                         <h4>Grade horária</h4>
                         <p>
-                            <a href="/gradehoraria.php" target="_blank" class="btn btn-primary" role="button">Ver Grade</a>
+                            <a href="/gradehoraria.php" target="_blank" class="btn btn-primary" role="button">Ver Grade Horária</a>
                         </p>
                     </div>
                 </div>

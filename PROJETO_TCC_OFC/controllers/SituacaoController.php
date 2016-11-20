@@ -99,8 +99,12 @@ class SituacaoController extends Controller
      */
     public function actionDelete($id)
     {
-        if (!SituacaoProfessor::find()->indexBy($id) == null) {
-            SituacaoProfessor::deleteAll("id_Situacao = " . $id);
+        $rows = SituacaoProfessor::find()
+            ->where(['id_Situacao' => $id])
+            ->all();
+        if ($rows != null) {
+            header("Location: index.php?r=situacao/index&erro=1");
+            exit;
         }
         $this->findModel($id)->delete();
 

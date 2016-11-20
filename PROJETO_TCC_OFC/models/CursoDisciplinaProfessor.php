@@ -55,8 +55,8 @@ class CursoDisciplinaProfessor extends ActiveRecord
             'id_Disciplina' => Yii::t('app', 'ID da Disciplina'),
             'semestre' => Yii::t('app', 'Semestre'),
             'turno' => Yii::t('app', 'Turno'),
-            'data_inicio' => Yii::t('app', 'Data Início'),
-            'data_fim' => Yii::t('app', 'Data Fim'),
+            'data_inicio' => Yii::t('app', 'Data de Início'),
+            'data_fim' => Yii::t('app', 'Data Final'),
         ];
     }
 

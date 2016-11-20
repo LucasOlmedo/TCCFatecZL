@@ -2,15 +2,15 @@
 
 namespace app\models;
 
-use Yii;
+
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\AulaSemestral;
+
 
 /**
- * AulaSemestralSearch represents the model behind the search form about `app\models\AulaSemestral`.
+ * AulasemestralSearch represents the model behind the search form about `app\models\Aulasemestral`.
  */
-class AulaSemestralSearch extends AulaSemestral
+class AulasemestralSearch extends Aulasemestral
 {
     /**
      * @inheritdoc
@@ -18,7 +18,7 @@ class AulaSemestralSearch extends AulaSemestral
     public function rules()
     {
         return [
-            [['id_Curso', 'id_Periodo', 'id_Disciplina', 'id_Professor'], 'integer'],
+            [['id', 'id_Curso', 'id_Periodo', 'id_Disciplina', 'id_Professor'], 'integer'],
             [['turno', 'data_inicio', 'data_fim'], 'safe'],
         ];
     }
@@ -41,7 +41,7 @@ class AulaSemestralSearch extends AulaSemestral
      */
     public function search($params)
     {
-        $query = AulaSemestral::find();
+        $query = Aulasemestral::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -56,6 +56,7 @@ class AulaSemestralSearch extends AulaSemestral
         }
 
         $query->andFilterWhere([
+            'id' => $this->id,
             'id_Curso' => $this->id_Curso,
             'id_Periodo' => $this->id_Periodo,
             'id_Disciplina' => $this->id_Disciplina,

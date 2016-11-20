@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\DiaSemana;
-use app\models\DiaSemanaSearch;
+use app\models\Diasemana;
+use app\models\DiasemanaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * DiaSemanaController implements the CRUD actions for DiaSemana model.
+ * DiasemanaController implements the CRUD actions for Diasemana model.
  */
-class DiaSemanaController extends Controller
+class DiasemanaController extends Controller
 {
     public function behaviors()
     {
@@ -27,12 +27,12 @@ class DiaSemanaController extends Controller
     }
 
     /**
-     * Lists all DiaSemana models.
+     * Lists all Diasemana models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new DiaSemanaSearch();
+        $searchModel = new DiasemanaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -42,35 +42,28 @@ class DiaSemanaController extends Controller
     }
 
     /**
-     * Displays a single DiaSemana model.
-     * @param integer $id_diaSemana
-     * @param integer $id_Professor
-     * @param integer $id_Curso
-     * @param integer $id_Disciplina
-     * @param integer $id_Periodo
-     * @param string $turno
-     * @param string $horario_inicio
-     * @param string $horario_fim
+     * Displays a single Diasemana model.
+     * @param integer $id
      * @return mixed
      */
-    public function actionView($id_diaSemana, $id_Professor, $id_Curso, $id_Disciplina, $id_Periodo, $turno, $horario_inicio, $horario_fim)
+    public function actionView($id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id_diaSemana, $id_Professor, $id_Curso, $id_Disciplina, $id_Periodo, $turno, $horario_inicio, $horario_fim),
+            'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new DiaSemana model.
+     * Creates a new Diasemana model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new DiaSemana();
+        $model = new Diasemana();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'id_Periodo' => $model->id_Periodo, 'turno' => $model->turno, 'horario_inicio' => $model->horario_inicio, 'horario_fim' => $model->horario_fim]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -79,24 +72,17 @@ class DiaSemanaController extends Controller
     }
 
     /**
-     * Updates an existing DiaSemana model.
+     * Updates an existing Diasemana model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id_diaSemana
-     * @param integer $id_Professor
-     * @param integer $id_Curso
-     * @param integer $id_Disciplina
-     * @param integer $id_Periodo
-     * @param string $turno
-     * @param string $horario_inicio
-     * @param string $horario_fim
+     * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id_diaSemana, $id_Professor, $id_Curso, $id_Disciplina, $id_Periodo, $turno, $horario_inicio, $horario_fim)
+    public function actionUpdate($id)
     {
-        $model = $this->findModel($id_diaSemana, $id_Professor, $id_Curso, $id_Disciplina, $id_Periodo, $turno, $horario_inicio, $horario_fim);
+        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id_diaSemana' => $model->id_diaSemana, 'id_Professor' => $model->id_Professor, 'id_Curso' => $model->id_Curso, 'id_Disciplina' => $model->id_Disciplina, 'id_Periodo' => $model->id_Periodo, 'turno' => $model->turno, 'horario_inicio' => $model->horario_inicio, 'horario_fim' => $model->horario_fim]);
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -105,27 +91,20 @@ class DiaSemanaController extends Controller
     }
 
     /**
-     * Deletes an existing DiaSemana model.
+     * Deletes an existing Diasemana model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id_diaSemana
-     * @param integer $id_Professor
-     * @param integer $id_Curso
-     * @param integer $id_Disciplina
-     * @param integer $id_Periodo
-     * @param string $turno
-     * @param string $horario_inicio
-     * @param string $horario_fim
+     * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id_diaSemana, $id_Professor, $id_Curso, $id_Disciplina, $id_Periodo, $turno, $horario_inicio, $horario_fim)
+    public function actionDelete($id)
     {
-        $this->findModel($id_diaSemana, $id_Professor, $id_Curso, $id_Disciplina, $id_Periodo, $turno, $horario_inicio, $horario_fim)->delete();
+        $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the DiaSemana model based on its primary key value.
+     * Finds the Diasemana model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id_diaSemana
      * @param integer $id_Professor

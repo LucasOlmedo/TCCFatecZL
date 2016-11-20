@@ -29,5 +29,15 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+    <?php
+    if (isset($_GET['erro'])) {
+        echo "
+            <script> 
+                alert('O elemento está em relacionamento com outros dados.\\n\\nNão foi possível deletar.');
+                window.location.href = \"index.php?r=disciplina/index\"; 
+            </script>
+        ";
+    }
+    ?>
 
 </div>

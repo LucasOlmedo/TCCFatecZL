@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Disciplina;
 use Yii;
 use app\models\HorariosExternos;
 use app\models\HorariosExternosSearch;
@@ -63,7 +64,7 @@ class HorariosExternosController extends Controller
         $model = new HorariosExternos();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_Hae]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -82,7 +83,7 @@ class HorariosExternosController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_Hae]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -98,6 +99,13 @@ class HorariosExternosController extends Controller
      */
     public function actionDelete($id)
     {
+        $rows = Disciplina::find()
+            ->where(['externo' => $id])
+            ->all();
+        if ($rows != null) {
+            header("Location: index.php?r=horarios-externos/index&erro=1");
+            exit;
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

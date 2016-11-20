@@ -9,13 +9,13 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Disciplina */
 
-$this->title = "Visualização de #".$model->id_Disciplina;
+$this->title = "Disciplina #".$model->id_Disciplina;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Disciplinas'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = '#'.$model->id_Disciplina;
 ?>
 <div class="disciplina-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode('Visualização de #'.$model->id_Disciplina.': '.$model->nome_disc) ?></h1>
 
     <p>
         <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Atualizar disciplina'), ['update', 'id' => $model->id_Disciplina], ['class' => 'btn btn-primary']) ?>

@@ -8,6 +8,7 @@ use yii\db\ActiveRecord;
 /**
  * This is the model class for table "aulasemestral".
  *
+ * @property integer $id
  * @property integer $id_Curso
  * @property integer $id_Periodo
  * @property integer $id_Disciplina
@@ -20,8 +21,9 @@ use yii\db\ActiveRecord;
  * @property Disciplina $idDisciplina
  * @property Periodo $idPeriodo
  * @property Professor $idProfessor
+ * @property Diasemana[] $diasemanas
  */
-class AulaSemestral extends ActiveRecord
+class Aulasemestral extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -40,7 +42,8 @@ class AulaSemestral extends ActiveRecord
             [['id_Curso', 'id_Periodo', 'id_Disciplina', 'id_Professor', 'turno', 'data_inicio', 'data_fim'], 'required'],
             [['id_Curso', 'id_Periodo', 'id_Disciplina', 'id_Professor'], 'integer'],
             [['data_inicio', 'data_fim'], 'safe'],
-            [['turno'], 'string', 'max' => 20]
+            [['turno'], 'string', 'max' => 20],
+            [['id_Curso', 'id_Periodo', 'id_Disciplina', 'turno'], 'unique', 'targetAttribute' => ['id_Curso', 'id_Periodo', 'id_Disciplina', 'turno'], 'message' => 'The combination of Id  Curso, Id  Periodo, Id  Disciplina and Turno has already been taken.']
         ];
     }
 
@@ -50,6 +53,7 @@ class AulaSemestral extends ActiveRecord
     public function attributeLabels()
     {
         return [
+            'id' => Yii::t('app', 'ID'),
             'id_Curso' => Yii::t('app', 'Curso'),
             'id_Periodo' => Yii::t('app', 'Período'),
             'id_Disciplina' => Yii::t('app', 'Disciplina'),
@@ -90,5 +94,13 @@ class AulaSemestral extends ActiveRecord
     public function getIdProfessor()
     {
         return $this->hasOne(Professor::className(), ['id_Professor' => 'id_Professor']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDiasemanas()
+    {
+        return $this->hasMany(Diasemana::className(), ['id_Aulasemestral' => 'id']);
     }
 }

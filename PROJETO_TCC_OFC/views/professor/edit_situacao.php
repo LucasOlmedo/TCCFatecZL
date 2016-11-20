@@ -11,7 +11,7 @@ $this->title = Yii::t('app', 'Situaçao do professor');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Professor'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<script src="/js/funcConvertData.js"></script>
 <div class="sit-prof-form">
     <div class="form-group">
         <h2>Situação do professor #<?= $id_professor ?></h2>
@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </select>
             <br>
             <label for="input_data-ini">Data início da situação</label>
-            <input type="date" class="form-control" id="input_data-ini">
+            <input value="<?php echo date('Y').'-'. date('m') .'-'. date('d'); ?>" type="date" class="form-control" id="input_data-ini">
             <br>
             <button class="btn btn-default" type="button" id="btn-add-sit"><span
                     class="glyphicon glyphicon-plus"></span> Atrelar Situação
@@ -46,11 +46,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 </thead>
                 <tbody>
                 <?php
+                $i = 0;
                 foreach ($situacao as $row):
+                    $i++;
+                    $dataFormt = explode('-', $row['data_sit']);
+                    $dataFinal = $dataFormt[2].'/'.$dataFormt[1].'/'.$dataFormt[0];
                     echo "<tr id='linha-" . $row['id_Situacao'] . "'>";
                     echo "<td>" . $row['nome'] . "</td>";
-                    echo "<td>" . $row['data_sit'] . "</td>";
-                    echo "<td><a href='#' onclick='excluir_sit(" .$row['id_Situacao']. ")'><span class='glyphicon glyphicon-trash'></span></a></td>";
+                    echo "<td>" . $dataFinal . "</td>";
+                    echo "<td><a href='#' onclick='excluir_sit(" .$row['id_Situacao']. ",".$i.")'><span class='glyphicon glyphicon-trash'></span></a></td>";
                     echo "</tr>";
                 endforeach;
                 ?>
@@ -86,26 +90,23 @@ $this->params['breadcrumbs'][] = $this->title;
 
         var html = "<tr id='linha-" + idSit + "'>";
         html += "<td>" + situacao[count].nome + "</td>";
-        html += "<td>" + situacao[count].dataRef + "</td>";
+        html += "<td>" + converterData(situacao[count].dataRef) + "</td>";
         html += "<td>";
         html += "<a href='#'>";
-        html += "<span class='glyphicon glyphicon-trash' onclick='excluir_sit(" +idSit+")'></span>";
+        html += "<span class='glyphicon glyphicon-trash' onclick='excluir_sit(" +idSit+","+document.getElementsByTagName('tr').length+")'></span>";
         html += "</a>";
         html += "</td>";
         html += "</tr>";
         html += "";
         $("#table-sit").append(html);
-        $("#input_data-ini").val("");
+        $("#input_data-ini").val("<?php echo date('Y').'-'. date('m') .'-'. date('d'); ?>");
         count++;
     });
 
-    function excluir_sit(id) {
+    function excluir_sit(id,linha) {
         if (confirm("Deseja realmente excluir?")) {
             $("#array-exc").append("<input type='hidden' name='excluir[" + id + "]' value='" + id + "' id='exc-" + id + "' />");
-            $("#txt-" + id).fadeOut(0);
-            $("#txt-" + id).remove();
-            $("#linha-" + id).fadeOut(0);
-            $("#linha-" + id).remove();
+            $("tr")[linha].remove();
         }
     }
 

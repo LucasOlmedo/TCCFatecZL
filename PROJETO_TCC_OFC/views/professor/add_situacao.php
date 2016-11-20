@@ -12,6 +12,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Professor'), 'url' =
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
+<script src="/js/funcConvertData.js"></script>
 <div class="sit-prof-form">
     <div class="form-group">
         <h2>Situação do professor</h2>
@@ -30,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </select>
             <br>
             <label for="input_data-ini">Data início da situação</label>
-            <input type="date" class="form-control" id="input_data-ini">
+            <input value="<?php echo date('Y').'-'. date('m') .'-'. date('d'); ?>" type="date" class="form-control" id="input_data-ini">
             <br>
             <button class="btn btn-default" type="button" id="btn-add-sit"><span
                     class="glyphicon glyphicon-plus"></span> Atrelar Situação
@@ -77,25 +78,22 @@ $this->params['breadcrumbs'][] = $this->title;
 
         var html = "<tr id='linha-" + idSit + "'>";
         html += "<td>" + situacao[count].nome + "</td>";
-        html += "<td>" + situacao[count].dataRef + "</td>";
+        html += "<td>" + converterData(situacao[count].dataRef) + "</td>";
         html += "<td>";
         html += "<a href='#'>";
-        html += "<span class='glyphicon glyphicon-trash' onclick='excluir(" + idSit + ")'></span>";
+        html += "<span class='glyphicon glyphicon-trash' onclick='excluir("+idSit+"," + document.getElementsByTagName('tr').length + ")'></span>";
         html += "</a>";
         html += "</td>";
         html += "</tr>";
         html += "";
         $("#table-sit").append(html);
-        $("#input_data-ini").val("");
+        $("#input_data-ini").val("<?php echo date('Y').'-'. date('m') .'-'. date('d'); ?>");
         count++;
     });
 
-    function excluir(id) {
+    function excluir(id,linha) {
         if (confirm("Deseja realmente excluir?")) {
-            $("#txt-" + id).fadeOut(0);
-            $("#txt-" + id).remove();
-            $("#linha-" + id).fadeOut(0);
-            $("#linha-" + id).remove();
+            $("tr")[linha].remove();
         }
     }
 

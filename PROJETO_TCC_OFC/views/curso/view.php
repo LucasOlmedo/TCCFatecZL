@@ -12,17 +12,19 @@ use yii\widgets\DetailView;
 
 include 'getCurso.php';
 garantirAltCurso();
-$this->title ="Visualização de #".$model->id_Curso;
+$this->title ="Curso #".$model->id_Curso;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Cursos'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = '#'.$model->id_Curso;
 ?>
 <div class="curso-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+    <h1><?= Html::encode('Visualização do curso #'.$model->id_Curso.': '.$model->nome_curso) ?></h1>
+    <br>
     <p>
         <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Alterar Curso'), ['update', 'id' => $model->id_Curso], ['class' => 'btn btn-primary']) ?>
+
         <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-edit"></span> Alterar Disciplinas'), ['edit-disc', 'id' => $model->id_Curso], ['class' => 'btn btn-warning']) ?>
+
         <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir Curso'), ['delete', 'id' => $model->id_Curso], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -31,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-
+    <br>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -41,8 +43,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'carga_horaria',
         ],
     ]) ?>
-
-    <h1>Disciplinas desse curso</h1>
+    <br>
+    <h1>Disciplinas contidas nesse curso</h1>
 
     <?php
 
@@ -54,7 +56,8 @@ $this->params['breadcrumbs'][] = $this->title;
                   ON grade_curso.id_Periodo=periodo.id_Periodo
                   INNER JOIN disciplina
                   ON grade_curso.id_Disciplina=disciplina.id_Disciplina
-                  WHERE id_Curso=:idc',
+                  WHERE id_Curso=:idc
+                  ORDER BY periodo.id_Periodo',
         'totalCount' => $count,
         'params' => [':idc' => $model->id_Curso],
     ]);

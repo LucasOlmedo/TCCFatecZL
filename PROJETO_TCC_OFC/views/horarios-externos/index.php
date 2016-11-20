@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\HorariosExternosSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Horários';
+$this->title = 'Horários Externos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="horarios-externos-index">
@@ -23,13 +23,19 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
             'id_Hae',
             'tipo',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+    <?php
+    if (isset($_GET['erro'])) {
+        echo "
+            <script> 
+                alert('O elemento está em relacionamento com outros dados.\\n\\nNão foi possível deletar.');
+                window.location.href = \"index.php?r=horarios-externos/index\"; 
+            </script>
+        ";
+    }
+    ?>
 </div>

@@ -9,6 +9,7 @@ include 'getCurso.php';
 garantirAltCurso();
 $this->title = Yii::t('app', 'Alterar disciplina');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Cursos'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => '#'.$model->id_Curso, 'url' => ['view', 'id' => $model->id_Curso]];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
@@ -18,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <h2>Alterar disciplinas do curso #<?= $id_curso ?></h2>
 
         <form method='post' id='form' action="index.php?r=curso/altera-disciplinas">
-            <input type="hidden" name="grade_curso" id="grade_curso" />
+            <input type="hidden" name="grade_curso" id="grade_curso"/>
 
             <label for="select_per">Período do curso</label>
             <select class="form-control" id="select_per" name="periodo">
@@ -70,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     echo "<td>" . $row['nome_periodo'] . "</td>";
                     echo "<td>" . $row['nome_disc'] . "</td>";
                     echo "<td>" . $row['qtde_aulas'] . "</td>";
-                    echo "<td><a href='#' onclick='excluir(". $row['id_Disciplina'] . ")'>
+                    echo "<td><a href='#' onclick='excluir(" . $row['id_Disciplina'] . ")'>
                           <span class='glyphicon glyphicon-trash'></span></a></td>";
                     echo "</tr>";
                 endforeach;
@@ -109,7 +110,7 @@ $this->params['breadcrumbs'][] = $this->title;
         grade_curso[count] = idPer + "|" + idDisc + "|" + quantidade;
 
         var
-        html = "<tr id='linha-" + count + "'>";
+            html = "<tr id='linha-" + count + "'>";
         html += "<td>" + periodo + "</td>";
         html += "<td>" + disciplinas[count].titulo + "</td>";
         html += "<td>" + disciplinas[count].quantidade + "</td>";

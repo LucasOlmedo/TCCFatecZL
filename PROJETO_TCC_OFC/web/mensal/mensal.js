@@ -98,9 +98,11 @@ function exibe(text){
 			var aulaRec = montarAula(aulas[aula]);
 
             textoExternos(aulaRec);
+
+            console.log(aulaRec);
             for(var horario in aulaRec.arrHorarios) {
-                dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].innerHTML = getTexto(aulaRec);
-                dias[aulas[aula].id_DiaSemana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','table-element aula-semetre font-less');
+                dias[aulas[aula].Dia_Semana].children[aulaRec.arrHorarios[horario] + 1].innerHTML = getTexto(aulaRec);
+                dias[aulas[aula].Dia_Semana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','table-element aula-semetre font-less');
             }
 		}
 	}
@@ -124,7 +126,7 @@ function textoExternos(aula){
 }
 
 function montaTextoExterno(aula){
-	var txt= " "+ (new Number(aula.id_DiaSemana) + 1) +'º ';
+	var txt= " "+ (new Number(aula.Dia_Semana) + 1) +'º ';
 
 	if(aula.horario_inicio.substring(3,5) == '00'){
 		txt += aula.horario_inicio.substring(0,2) + "h às ";

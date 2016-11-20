@@ -8,14 +8,15 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Professor */
 
-$this->title = "Visualização de #". $model->id_Professor;
+$this->title = "Professor #" . $model->id_Professor;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Professores'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = '#'.$model->id_Professor;
 ?>
+<script src="/js/funcConvertData.js"></script>
 <div class="professor-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
+    <h1><?= Html::encode('Visualização de #'.$model->id_Professor.': '.$model->nome) ?></h1>
+    <br>
     <p>
         <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-pencil"></span> Alterar Professor'), ['update', 'id' => $model->id_Professor], ['class' => 'btn btn-primary']) ?>
         <?= Html::a(Yii::t('app', '<span class="glyphicon glyphicon-remove"></span> Excluir Professor'), ['delete', 'id' => $model->id_Professor], [
@@ -26,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-
+    <br>
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
@@ -43,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]) ?>
 
     <h1>Situações desse professor</h1>
-
+    <br>
     <?php
 
     $count = \app\models\SituacaoProfessor::find()->where(['id_Professor' => $model->id_Professor])->count();
@@ -66,3 +67,14 @@ $this->params['breadcrumbs'][] = $this->title;
     ?>
 
 </div>
+<script>
+    for(var i = 7; i < 9;i++){
+        document.getElementsByTagName('td')[i].innerHTML = converterData(document.getElementsByTagName('td')[i].innerHTML);
+    }
+    for(var i = 9; i < document.getElementsByTagName('td').length;i++){
+        if(!(i % 2)){
+            document.getElementsByTagName('td')[i].innerHTML = converterData(document.getElementsByTagName('td')[i].innerHTML);
+        }
+    }
+
+</script>

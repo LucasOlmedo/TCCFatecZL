@@ -32,7 +32,7 @@ AppAsset::register($this);
 <div class="wrap">
 
     <?php
-    //include '../web/validacaoUsuario.php';
+    include '../web/validacaoUsuario.php';
     NavBar::begin([
         'brandLabel' => 'FATEC Zona Leste - Sistema Gerenciador',
         'brandUrl' => Yii::$app->homeUrl,
@@ -58,19 +58,17 @@ AppAsset::register($this);
               ['label' => '<span class="glyphicon glyphicon-th-list"></span> Cadastros', 'items' => [
                   ['label' => 'Cursos', 'url' => 'index.php?r=curso/index'],
                       '<li class="divider"></li>',
-                  ['label' => 'Períodos', 'url' => 'index.php?r=periodo/index'],
+                  ['label' => 'Períodos do curso', 'url' => 'index.php?r=periodo/index'],
                       '<li class="divider"></li>',
                   ['label' => 'Disciplinas', 'url' => 'index.php?r=disciplina/index'],
                       '<li class="divider"></li>',
                   ['label' => 'Professores', 'url' => 'index.php?r=professor/index'],
                       '<li class="divider"></li>',
-                  ['label' => 'Situação', 'url' => 'index.php?r=situacao/index'],
+                  ['label' => 'Situação do professor', 'url' => 'index.php?r=situacao/index'],
                       '<li class="divider"></li>',
-                  ['label' => 'Horarios', 'url' => 'index.php?r=horarios-externos/index'],
+                  ['label' => 'Horários Externos', 'url' => 'index.php?r=horarios-externos/index'],
                       '<li class="divider"></li>',
-                  ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index'],
-                      '<li class="divider"></li>',
-                  ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index'],
+                  ['label' => 'Grade Semestral', 'url' => 'index.php?r=aulasemestral/index'],
                       '<li class="divider"></li>',
                   ['label' => 'Usuários', 'url' => '/usuarios.php']
               ]
@@ -111,7 +109,7 @@ AppAsset::register($this);
                       '<li class="divider"></li>',
                   ['label' => 'Horarios', 'url' => 'index.php?r=horarios-externos/index'],
                       '<li class="divider"></li>',
-                  ['label' => 'Aula Semestral', 'url' => 'index.php?r=aula-semestral/index'],
+                  ['label' => 'Aula Semestral', 'url' => 'index.php?r=aulasemestral/index'],
                       '<li class="divider"></li>',
                   ['label' => 'Dia da semana', 'url' => 'index.php?r=dia-semana/index']
               ]

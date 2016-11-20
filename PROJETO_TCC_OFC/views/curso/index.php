@@ -29,15 +29,24 @@ $this->params['breadcrumbs'][] = $this->title;
             'abreviacao',
             'carga_horaria',
             ['class' => 'yii\grid\ActionColumn',
-              'template'=> '{view} {update} {delete} {edit-disc}',
+                'template' => '{view} {update} {delete} {edit-disc}',
                 'buttons' => [
                     'edit-disc' => function ($url) {
-                        return Html::a('<span class="glyphicon glyphicon-edit"></span>',$url);
+                        return Html::a('<span class="glyphicon glyphicon-edit"></span>', $url);
                     },
                 ],
             ],
         ],
     ]); ?>
-
+    <?php
+    if (isset($_GET['erro'])) {
+        echo "
+            <script> 
+                alert('O elemento está em relacionamento com outros dados.\\n\\nNão foi possível deletar.');
+                window.location.href = \"index.php?r=curso/index\"; 
+            </script>
+        ";
+    }
+    ?>
 
 </div>

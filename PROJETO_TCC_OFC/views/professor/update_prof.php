@@ -7,11 +7,12 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Professor */
 /* @var $form yii\widgets\ActiveForm */
 
-$this->title = Yii::t('app', 'Alterar professor #'.$model->id_Professor);
+$this->title = Yii::t('app', 'Atualizar professor #'.$model->id_Professor);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Professor'), 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->params['breadcrumbs'][] = ['label' => '#'.$model->id_Professor,  'url' => ['view', 'id' => $model->id_Professor]];
+$this->params['breadcrumbs'][] = 'Atualizar';
 ?>
-
+<h1><?= Html::encode('Atualizar professor #'.$model->id_Professor.': '.$model->nome) ?></h1>
 
 <div class="professor-form">
 

@@ -43,7 +43,7 @@ class Curso extends ActiveRecord
     {
         return [
             'id_Curso' => Yii::t('app', 'ID'),
-            'nome_curso' => Yii::t('app', 'Nome'),
+            'nome_curso' => Yii::t('app', 'Nome do Curso'),
             'abreviacao' => Yii::t('app', 'Abreviação'),
             'carga_horaria' => Yii::t('app', 'Carga Horária'),
         ];

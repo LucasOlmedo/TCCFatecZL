@@ -51,14 +51,14 @@ class Professor extends \yii\db\ActiveRecord
     {
         return [
             'id_Professor' => Yii::t('app', 'ID'),
-            'nome' => Yii::t('app', 'Nome'),
+            'nome' => Yii::t('app', 'Nome do professor'),
             'rg' => Yii::t('app', 'RG'),
             'categoria' => Yii::t('app', 'Categoria'),
             'graduacao' => Yii::t('app', 'Graduação'),
             'contrato' => Yii::t('app', 'Contrato'),
-            'sede' => Yii::t('app', 'Sede'),
-            'inicio_cps' => Yii::t('app', 'Início Cps'),
-            'inicio_fateczl' => Yii::t('app', 'Início FatecZL'),
+            'sede' => Yii::t('app', 'Faculdade Sede'),
+            'inicio_cps' => Yii::t('app', 'Início no Centro Paula Souza'),
+            'inicio_fateczl' => Yii::t('app', 'Início na Fatec ZL'),
         ];
     }
 

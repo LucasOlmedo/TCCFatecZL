@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Aulasemestral;
+use app\models\GradeCurso;
 use Yii;
 use app\models\Periodo;
 use app\models\PeriodoSearch;
@@ -63,7 +65,7 @@ class PeriodoController extends Controller
         $model = new Periodo();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_Periodo]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -82,8 +84,9 @@ class PeriodoController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_Periodo]);
+            return $this->redirect(['index']);
         } else {
+
             return $this->render('update', [
                 'model' => $model,
             ]);
@@ -98,8 +101,16 @@ class PeriodoController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $rows = GradeCurso::find()
+            ->where(['id_Periodo' => $id])
+            ->all();
 
+        if ($rows != null) {
+            header("Location: index.php?r=periodo/index&erro=1");
+            exit;
+        }
+
+        $this->findModel($id)->delete();
         return $this->redirect(['index']);
     }
 

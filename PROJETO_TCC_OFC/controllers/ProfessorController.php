@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Aulasemestral;
 use app\models\Situacao;
 use app\models\SituacaoProfessor;
 use Yii;
@@ -108,6 +109,13 @@ class ProfessorController extends Controller
      */
     public function actionDelete($id)
     {
+        $rows = Aulasemestral::find()
+            ->where(['id_Professor' => $id])
+            ->all();
+        if ($rows != null) {
+            header("Location: index.php?r=professor/index&erro=1");
+            exit;
+        }else
         if (!SituacaoProfessor::find()->indexBy($id) == null) {
             SituacaoProfessor::deleteAll("id_Professor = " . $id);
         }

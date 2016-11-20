@@ -41,7 +41,7 @@ class HorariosExternos extends \yii\db\ActiveRecord
     {
         return [
             'id_Hae' => 'ID',
-            'tipo' => 'Tipo',
+            'tipo' => 'Tipo do Horário Externo',
         ];
     }
 

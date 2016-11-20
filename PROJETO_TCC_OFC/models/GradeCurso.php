@@ -44,10 +44,10 @@ class GradeCurso extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_Curso' => 'ID do Curso',
-            'id_Periodo' => 'Peíiodo',
-            'id_Disciplina' => 'ID da Disciplina',
-            'qtde_aulas' => 'Quantidade de Aulas',
+            'id_Curso' => 'Id  Curso',
+            'id_Periodo' => 'Id  Periodo',
+            'id_Disciplina' => 'Id  Disciplina',
+            'qtde_aulas' => 'Qtde Aulas',
         ];
     }
 

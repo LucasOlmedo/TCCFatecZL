@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HorariosExternos */
+/* @var $model app\models\Aulasemestral */
 
-$this->title = 'Novo Horário';
-$this->params['breadcrumbs'][] = ['label' => 'Horários Externos', 'url' => ['index']];
+$this->title = Yii::t('app', 'Inserir nova Aula Semestral');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Grade Semestral'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="horarios-externos-create">
+<div class="aulasemestral-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

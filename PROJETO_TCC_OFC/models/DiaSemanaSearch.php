@@ -2,15 +2,15 @@
 
 namespace app\models;
 
-use Yii;
+
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\DiaSemana;
+
 
 /**
- * DiaSemanaSearch represents the model behind the search form about `app\models\DiaSemana`.
+ * DiasemanaSearch represents the model behind the search form about `app\models\Diasemana`.
  */
-class DiaSemanaSearch extends DiaSemana
+class DiasemanaSearch extends Diasemana
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class DiaSemanaSearch extends DiaSemana
     public function rules()
     {
         return [
-            [['id_diaSemana', 'id_Professor', 'id_Curso', 'id_Disciplina', 'id_Periodo'], 'integer'],
-            [['turno', 'horario_inicio', 'horario_fim'], 'safe'],
+            [['id', 'id_Aulasemestral', 'dia_semana'], 'integer'],
+            [['horario_inicio', 'horario_fim'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class DiaSemanaSearch extends DiaSemana
      */
     public function search($params)
     {
-        $query = DiaSemana::find();
+        $query = Diasemana::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -56,16 +56,12 @@ class DiaSemanaSearch extends DiaSemana
         }
 
         $query->andFilterWhere([
-            'id_diaSemana' => $this->id_diaSemana,
-            'id_Professor' => $this->id_Professor,
-            'id_Curso' => $this->id_Curso,
-            'id_Disciplina' => $this->id_Disciplina,
-            'id_Periodo' => $this->id_Periodo,
+            'id' => $this->id,
+            'id_Aulasemestral' => $this->id_Aulasemestral,
+            'dia_semana' => $this->dia_semana,
             'horario_inicio' => $this->horario_inicio,
             'horario_fim' => $this->horario_fim,
         ]);
-
-        $query->andFilterWhere(['like', 'turno', $this->turno]);
 
         return $dataProvider;
     }

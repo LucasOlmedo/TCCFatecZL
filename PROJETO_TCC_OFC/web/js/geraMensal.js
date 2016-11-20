@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 	var table = document.getElementsByTagName('table')[0];
 
-	console.log(table.rows[2].cells.length);
 	if(!(table.rows[2].cells.length == 1)) {
 		for (var j = 2; j < table.rows.length; j++) {
 

@@ -109,8 +109,12 @@ class CursoController extends Controller
      */
     public function actionDelete($id)
     {
-        if (!GradeCurso::find()->indexBy($id) == null) {
-            GradeCurso::deleteAll("id_Curso = " . $id);
+        $rows = GradeCurso::find()
+            ->where(['id_Curso' => $id])
+            ->all();
+        if ($rows != null) {
+            header("Location: index.php?r=curso/index&erro=1");
+            exit;
         }
         $this->findModel($id)->delete();
         return $this->redirect(['index']);
@@ -197,9 +201,9 @@ class CursoController extends Controller
                 'grade' => $grade
             ]
         );
-        }
+    }
 
-        public function actionAlteraDisciplinas()
+    public function actionAlteraDisciplinas()
     {
         $id_curso = $_POST['id_curso'];
         $grade = Yii::$app->request->post('grade_curso');

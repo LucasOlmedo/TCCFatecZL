@@ -46,7 +46,7 @@ class SituacaoProfessor extends \yii\db\ActiveRecord
             'id_SitProf' => Yii::t('app', 'ID'),
             'id_Professor' => Yii::t('app', 'ID do Professor'),
             'id_Situacao' => Yii::t('app', 'ID da Situação'),
-            'data_sit' => Yii::t('app', 'Data Sit'),
+            'data_sit' => Yii::t('app', 'Data da situação'),
         ];
     }
 

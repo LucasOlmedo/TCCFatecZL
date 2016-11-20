@@ -37,7 +37,7 @@ function usuarioEstaLogado(){
 
             >
               <label class="control-label">Usuário</label>
-              <input type="text" name="usuario" maxlength="25" class="form-control" <?php if(isset($_GET['user'])){echo "value='".$_GET['user']."'";} ?>/>
+              <input autofocus="true" type="text" name="usuario" maxlength="25" class="form-control" <?php if(isset($_GET['user'])){echo "value='".$_GET['user']."'";} ?>/>
               <?php if(isset($_GET['err'])){
                 echo "<p class='control-label'>Usuário ou senha inválidos</p>";
               } else if(isset($_GET['no'])){

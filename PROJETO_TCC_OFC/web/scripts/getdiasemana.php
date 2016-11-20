@@ -14,7 +14,7 @@
 
 	if(isset($_GET['professor'])){
 
-		$psmt = $con->prepare('SELECT professor.nome, disciplina.abreviacao, DIASEMANA.horario_inicio, DIASEMANA.horario_fim, DIASEMANA.id_DiaSemana, CURSO.nome_curso, DIASEMANA.id_periodo  FROM DIASEMANA INNER JOIN Professor ON DIASEMANA.id_professor = Professor.id_Professor INNER JOIN Disciplina ON DIASEMANA.id_Disciplina = Disciplina.id_Disciplina INNER JOIN CURSO ON DIASEMANA.id_curso = CURSO.id_curso WHERE DIASEMANA.id_professor = ?  AND Disciplina.EXTERNO = 0');
+		$psmt = $con->prepare('SELECT professor.nome, disciplina.abreviacao, DIASEMANA.horario_inicio, DIASEMANA.horario_fim, DIASEMANA.dia_semana, CURSO.nome_curso, AULASEMESTRAL.id_periodo  FROM DIASEMANA INNER JOIN AULASEMESTRAL ON DIASEMANA.id_aulasemestral = AULASEMESTRAL.id  INNER JOIN Professor ON AULASEMESTRAL.id_professor = Professor.id_Professor INNER JOIN Disciplina ON AULASEMESTRAL.id_Disciplina = Disciplina.id_Disciplina INNER JOIN CURSO ON AULASEMESTRAL.id_curso = CURSO.id_curso WHERE Professor.id_professor = ?  AND Disciplina.EXTERNO = 0');
 		$psmt->bindParam(1 , $_GET['professor']);
 		if($psmt->execute()){
 			while($rs = $psmt->fetch()){
@@ -25,7 +25,7 @@
 	}
 	else{
 
-		$psmt = $con->prepare('SELECT professor.nome, disciplina.abreviacao, DIASEMANA.horario_inicio, DIASEMANA.horario_fim, DIASEMANA.id_DiaSemana FROM DIASEMANA INNER JOIN Professor ON DIASEMANA.id_professor = Professor.id_Professor INNER JOIN Disciplina ON DIASEMANA.id_Disciplina = Disciplina.id_Disciplina WHERE DIASEMANA.id_periodo = ? AND DIASEMANA.id_curso = ? AND DIASEMANA.turno = ? AND Disciplina.EXTERNO = 0');
+		$psmt = $con->prepare('SELECT professor.nome, disciplina.abreviacao, DIASEMANA.horario_inicio, DIASEMANA.horario_fim, DIASEMANA.dia_semana FROM DIASEMANA INNER JOIN AULASEMESTRAL ON DIASEMANA.id_aulasemestral = AULASEMESTRAL.id INNER JOIN Professor ON AULASEMESTRAL.id_professor = Professor.id_Professor INNER JOIN Disciplina ON AULASEMESTRAL.id_Disciplina = Disciplina.id_Disciplina WHERE AULASEMESTRAL.id_periodo = ? AND AULASEMESTRAL.id_curso = ? AND AULASEMESTRAL.turno = ? AND Disciplina.EXTERNO = 0');
 		$psmt->bindParam(1, $_GET['periodo']);
 		$psmt->bindParam(2, $_GET['curso']);
 
