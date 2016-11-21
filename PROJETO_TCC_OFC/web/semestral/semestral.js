@@ -26,7 +26,27 @@ function pegarValues(){
 
 	document.getElementById('ano-header').innerHTML = ano;
 
-	openAjaxReq();
+	openAjaxReqDisciplina();
+	//openAjaxReq();
+}
+
+function openAjaxReqDisciplina(){
+	var idProf = document.getElementById('idProf').value;
+
+	if(window.XMLHttpRequest){
+		req = new XMLHttpRequest();
+	} else{
+		req = new new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	req.onreadystatechange = function() {
+		if (req.readyState == 4) {
+			var text = "[" + req.responseText + "]";
+			exibe(text.replace(',]', ']'));
+		}
+	}
+	req.open('GET','getDisciplinas.php?id='+idProf+'&sem='+mesAno.value,false);
+	req.send();
 }
 
 function openAjaxReq(){
@@ -56,12 +76,12 @@ function exibe(text){
 
 	if(aulas.length > 0){
 		for(var aula in aulas){
-			var aulaRec = montarAula(aulas[aula]);
+//			var aulaRec = montarAula(aulas[aula]);
 
-			preencheDisciplinas(aulaRec,aula);
-			for(var horario in aulaRec.arrHorarios) {
+			preencheDisciplinas(aulas[aula],aula);
+//			for(var horario in aulaRec.arrHorarios) {
 
-			}
+	//		}
 		}
 	}
 }
