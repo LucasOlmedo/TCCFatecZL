@@ -66,7 +66,7 @@ AppAsset::register($this);
                       '<li class="divider"></li>',
                   ['label' => 'Situação do professor', 'url' => 'index.php?r=situacao/index'],
                       '<li class="divider"></li>',
-                  ['label' => 'Horários Externos', 'url' => 'index.php?r=horarios-externos/index'],
+                  ['label' => 'Horários', 'url' => 'index.php?r=horarios-externos/index'],
                       '<li class="divider"></li>',
                   ['label' => 'Grade Semestral', 'url' => 'index.php?r=aulasemestral/index'],
                       '<li class="divider"></li>',

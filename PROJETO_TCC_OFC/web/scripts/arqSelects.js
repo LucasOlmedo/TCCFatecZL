@@ -119,8 +119,8 @@ function getTexto(aulaRec){
 		abreviacao.setAttribute('class','abrev-curso');
 
 		node.appendChild(nome);
-		node.appendChild(abreviacao);
 		node.appendChild(periodo);
+		node.appendChild(abreviacao);
 		return node;
 	}
 	var nome = document.createElement('span');
@@ -172,12 +172,17 @@ function montarArr(dtHorIni,dtHorFim){
 
 	for(var i = 0; i < arrHoraIni.length ; i++){
 
+		if(dtHorIni.getHours() == "21" && arrHoraIni[i].getHours() == "21"){
+			arrCompleto.push(i);
+			return arrCompleto;
+		}
 		if(arrHoraIni[i] > dtHorIni){
 
 			arrCompleto.push(i-1);
 
 			for(var j = i - 1;j < arrHoraFim.length ; j++){
 				if((arrHoraFim[j].getHours() == dtHorFim.getHours()) && arrHoraFim[j].getMinutes() == dtHorFim.getMinutes()){
+					arrCompleto.push(j);
 					break;
 				}
 				else if(arrHoraFim[j] < dtHorFim){

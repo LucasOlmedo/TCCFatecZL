@@ -51,27 +51,33 @@
 	background-color: #7FFFD4 !important;
 }
 
+.horarios td{
+	font-size: 0.9em;
+}
 table td{
 	border-color: black !important;
 }
 
 .nome-curso{
-	font-size: 0.7em;
 	float: left;
+	margin-bottom: -5px;
+	font-size: 0.55em;
 }
 
 .periodo-curso{
-	float: right;
 	font-weight: bold;
-	margin-right: 5px;
+	margin-top: 0;
+	font-size: 0.6em;
 }
 
 .abrev-curso{
-	float: right;
 	font-weight: bold;
+	font-size: 0.7em;
 }
 
 .abrev-disc{
 	font-weight: bold;
 	margin-left: 5px;
+	font-size: 0.7em;
+	margin-right: 0 !important;
 }
