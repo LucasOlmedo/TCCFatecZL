@@ -198,14 +198,18 @@ function montarArr(dtHorIni,dtHorFim){
 	var arrCompleto = [];
 
 	for(var i = 0; i < arrHoraIni.length ; i++){
-
+		if(dtHorIni.getHours() == "21" && arrHoraIni[i].getHours() == "21"){
+			arrCompleto.push(i);
+			return arrCompleto;
+		}
 		if(arrHoraIni[i] > dtHorIni){
 
 			arrCompleto.push(i-1);
 
 			for(var j = i - 1;j < arrHoraFim.length ; j++){
 					if((arrHoraFim[j].getHours() == dtHorFim.getHours()) && arrHoraFim[j].getMinutes() == dtHorFim.getMinutes()){
-					break;
+						arrCompleto.push(j);
+						break;
 				}
 				else if(arrHoraFim[j] < dtHorFim){
 					if(j>=i){
