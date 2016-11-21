@@ -14,7 +14,7 @@
 
 	if(isset($_GET['professor'])){
 
-		$psmt = $con->prepare('SELECT professor.nome, disciplina.abreviacao, DIASEMANA.horario_inicio, DIASEMANA.horario_fim, DIASEMANA.dia_semana, CURSO.nome_curso, AULASEMESTRAL.id_periodo  FROM DIASEMANA INNER JOIN AULASEMESTRAL ON DIASEMANA.id_aulasemestral = AULASEMESTRAL.id  INNER JOIN Professor ON AULASEMESTRAL.id_professor = Professor.id_Professor INNER JOIN Disciplina ON AULASEMESTRAL.id_Disciplina = Disciplina.id_Disciplina INNER JOIN CURSO ON AULASEMESTRAL.id_curso = CURSO.id_curso WHERE Professor.id_professor = ?  AND Disciplina.EXTERNO = 0');
+		$psmt = $con->prepare('SELECT professor.nome, disciplina.abreviacao, DIASEMANA.horario_inicio, DIASEMANA.horario_fim, DIASEMANA.dia_semana, CURSO.abreviacao as nome_curso, AULASEMESTRAL.id_periodo  FROM DIASEMANA INNER JOIN AULASEMESTRAL ON DIASEMANA.id_aulasemestral = AULASEMESTRAL.id  INNER JOIN Professor ON AULASEMESTRAL.id_professor = Professor.id_Professor INNER JOIN Disciplina ON AULASEMESTRAL.id_Disciplina = Disciplina.id_Disciplina INNER JOIN CURSO ON AULASEMESTRAL.id_curso = CURSO.id_curso WHERE Professor.id_professor = ?  AND Disciplina.EXTERNO = 0');
 		$psmt->bindParam(1 , $_GET['professor']);
 		if($psmt->execute()){
 			while($rs = $psmt->fetch()){
