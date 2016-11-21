@@ -99,7 +99,6 @@ function exibe(text){
 
             textoExternos(aulaRec);
 
-            console.log(aulaRec);
             for(var horario in aulaRec.arrHorarios) {
                 dias[aulas[aula].Dia_Semana].children[aulaRec.arrHorarios[horario] + 1].innerHTML = getTexto(aulaRec);
                 dias[aulas[aula].Dia_Semana].children[aulaRec.arrHorarios[horario] + 1].setAttribute('class','table-element aula-semetre font-less');

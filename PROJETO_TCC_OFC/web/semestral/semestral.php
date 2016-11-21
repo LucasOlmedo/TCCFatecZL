@@ -1,6 +1,6 @@
 <?php
   include 'helper.php';
-  include '../validacaoUsuario.php';
+  //include '../validacaoUsuario.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,6 +8,7 @@
     <meta charset="utf-8">
     <title>Impressão Folha Semestral</title>
     <link rel="stylesheet" href="impressao.css">
+    <script src="../js/jquery-1.9.0.js"></script>
     <script src="semestral.js"></script>
   </head>
   <body>
@@ -109,72 +110,72 @@
         <td class="parte-bottom-none parte-medium-font font-arial">M</td>
         <td class="parte-less-font">08h-09h</td>
         <td class="parte-less-font">07h30min - 08h20min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">A</td>
         <td class="parte-less-font">09h-10h</td>
         <td class="parte-less-font">08h20min  - 09h10min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">N</td>
         <td class="parte-less-font">10h-11h</td>
         <td class="parte-less-font">09h20min  - 10h10min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">H</td>
         <td class="parte-less-font">11h-12h</td>
         <td class="parte-less-font">10h10min  - 11h00min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">Ã</td>
         <td class="parte-less-font">12h-13h</td>
         <td class="parte-less-font">11h10min - 12h00min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-less-font">   </td>
         <td class="parte-less-font">13h-14h</td>
         <td class="parte-less-font">12h00min - 12h50min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr class="linha-vazia">
@@ -186,72 +187,72 @@
         <td class="parte-bottom-none parte-medium-font font-arial">T</td>
         <td class="parte-less-font">13h-14h</td>
         <td class="parte-less-font">13h00min - 13h50min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">A</td>
         <td class="parte-less-font">14h-15h</td>
         <td class="parte-less-font">13h50min - 14h40min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">R</td>
         <td class="parte-less-font">15h-16h</td>
         <td class="parte-less-font">14h50min - 15h40min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font" class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">D</td>
         <td class="parte-less-font">16h-17h</td>
         <td class="parte-less-font">15h40min - 16h30min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">E</td>
         <td class="parte-less-font">17h-18h</td>
         <td class="parte-less-font">16h40min - 17h30min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td>   </td>
         <td class="parte-less-font">18h-19h</td>
         <td class="parte-less-font">17h30min - 18h20min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr class="linha-vazia">
@@ -264,60 +265,60 @@
         <td class="parte-bottom-none parte-medium-font font-arial">N</td>
         <td class="parte-less-font">18h-19h</td>
         <td class="parte-less-font">19h20min - 20h10min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">O</td>
         <td class="parte-less-font">19h-20h</td>
         <td class="parte-less-font">20h10min - 21h00min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">I</td>
         <td class="parte-less-font">20h-21h</td>
         <td class="parte-less-font">21h10min - 22h00min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="parte-bottom-none parte-medium-font font-arial">T</td>
         <td class="parte-less-font">21h-22h</td>
         <td class="parte-less-font">22h00min - 22h50min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
 
       <tr>
         <td class="font-arial parte-medium-font">E</td>
         <td class="parte-less-font">21h-23h</td>
         <td class="parte-less-font">22h50min - 23h40min</td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
-        <td class="parte-less-font">    </td>
+        <td class="parte-less-font seg">    </td>
+        <td class="parte-less-font ter">    </td>
+        <td class="parte-less-font qua">    </td>
+        <td class="parte-less-font qui">    </td>
+        <td class="parte-less-font sex">    </td>
+        <td class="parte-less-font sab">    </td>
       </tr>
     </table>
 

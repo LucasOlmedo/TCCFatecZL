@@ -27,7 +27,8 @@ function pegarValues(){
 	document.getElementById('ano-header').innerHTML = ano;
 
 	openAjaxReqDisciplina();
-	//openAjaxReq();
+	openAjaxReq();
+	limpaExt();
 }
 
 function openAjaxReqDisciplina(){
@@ -61,11 +62,15 @@ function openAjaxReq(){
 	req.onreadystatechange = function() {
 		if (req.readyState == 4) {
 			var text = "[" + req.responseText + "]";
-			exibe(text.replace(',]', ']'));
+			exibeAulas(text.replace(',]', ']'));
 		}
 	}
 	req.open('GET','getAulas.php?id='+idProf+'&sem='+mesAno.value,false);
 	req.send();
+}
+
+function limpaExt(){
+	$('.is-ext').removeClass('is-ext');
 }
 
 function exibe(text){
@@ -76,12 +81,43 @@ function exibe(text){
 
 	if(aulas.length > 0){
 		for(var aula in aulas){
-//			var aulaRec = montarAula(aulas[aula]);
-
 			preencheDisciplinas(aulas[aula],aula);
-//			for(var horario in aulaRec.arrHorarios) {
+		}
+	}
+}
 
-	//		}
+function exibeAulas(text){
+	var aulas = JSON.parse(text);
+	var dias = document.getElementsByClassName('aula');
+
+	if(aulas.length > 0){
+		for(var aula in aulas){
+			var aulaRec = montarAula(aulas[aula]);
+
+			var dia = null;
+			if(aulas[aula].dia_semana == 0){
+				dia = $('.seg');
+			}else if(aulas[aula].dia_semana == 1){
+				dia = $('.ter');
+			} else if(aulas[aula].dia_semana == 2){
+				dia = $('.qua');
+			} else if(aulas[aula].dia_semana == 3){
+				dia = $('.qui');
+			} else if(aulas[aula].dia_semana == 4){
+				dia = $('.sex');
+			} else{
+				dia = $('.sab');
+			}
+
+			for(var horario in aulaRec.arrHorarios) {
+				if(aulas[aula].EXTERNO == 0){
+					dia[aulaRec.arrHorarios[horario]].innerHTML = aulas[aula].abreviacao;
+				}
+				else{
+					dia[aulaRec.arrHorarios[horario]].innerHTML = aulas[aula].EXTERNO;
+					dia[aulaRec.arrHorarios[horario]].setAttribute('class',dia[aulaRec.arrHorarios[horario]].getAttribute('class') + ' is-ext');
+				}
+			}
 		}
 	}
 }
@@ -128,12 +164,18 @@ function montarArr(dtHorIni,dtHorFim){
 
 	for(var i = 0; i < arrHoraIni.length ; i++){
 
+		if(dtHorIni.getHours() == "21" && arrHoraIni[i].getHours() == "21"){
+			arrCompleto.push(i);
+			arrCompleto.push(i+1);
+			return arrCompleto;
+		}
 		if(arrHoraIni[i] > dtHorIni){
 
 			arrCompleto.push(i-1);
 
 			for(var j = i - 1;j < arrHoraFim.length ; j++){
 				if((arrHoraFim[j].getHours() == dtHorFim.getHours()) && arrHoraFim[j].getMinutes() == dtHorFim.getMinutes()){
+					arrCompleto.push(j);
 					break;
 				}
 				else if(arrHoraFim[j] < dtHorFim){
@@ -189,38 +231,63 @@ function preencherArrInicio(){
 	d7.setSeconds('00');
 
 	var d8 = new Date();
-	d8.setHours('14');
+	d8.setHours('13');
 	d8.setMinutes('50');
 	d8.setSeconds('00');
 
 	var d9 = new Date();
-	d9.setHours('16');
-	d9.setMinutes('40');
+	d9.setHours('14');
+	d9.setMinutes('50');
 	d9.setSeconds('00');
 
 	var d10 = new Date();
-	d10.setHours('19');
-	d10.setMinutes('20');
-	d10.setSeconds('00');
+	d10.setHours('15');
+	d10.setMinutes('40');
+	d10.setSeconds('00');	
 
 	var d11 = new Date();
-	d11.setHours('21');
-	d11.setMinutes('10');
+	d11.setHours('16');
+	d11.setMinutes('40');
 	d11.setSeconds('00');
 
-	return [d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11];
+	var d12 = new Date();
+	d12.setHours('17');
+	d12.setMinutes('30');
+	d12.setSeconds('00');
+
+	var d13 = new Date();
+	d13.setHours('19');
+	d13.setMinutes('20');
+	d13.setSeconds('00');
+
+	var d14 = new Date();
+	d14.setHours('20');
+	d14.setMinutes('10');
+	d14.setSeconds('00');
+
+	var d15 = new Date();
+	d15.setHours('21');
+	d15.setMinutes('10');
+	d15.setSeconds('00');
+
+	var d16 = new Date();
+	d16.setHours('22');
+	d16.setMinutes('00');
+	d16.setSeconds('00');
+
+	var d17 = new Date();
+	d17.setHours('22');
+	d17.setMinutes('50');
+	d17.setSeconds('00');
+
+	return [d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17];
 }
 
 function preencherArrFim(arrInicio){
 	var arr = [];
 	for(var dt in arrInicio){
 		var newDt = new Date(arrInicio[dt]);
-		if(arrInicio[dt].getHours() > 12){
-			newDt.setTime(arrInicio[dt].getTime() + 6000000);
-		}
-		else{
-			newDt.setTime(arrInicio[dt].getTime() + 3000000);
-		}
+		newDt.setTime(arrInicio[dt].getTime() + 3000000);
 		arr.push(newDt);
 	}
 	return arr;
