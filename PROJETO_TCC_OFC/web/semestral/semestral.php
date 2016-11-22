@@ -35,9 +35,9 @@
       <tr>
         <td class="parte-titulo">A</td>
         <td class="font-arial parte-medium-font parte-nome">NOME</td>
-        <td class="parte-strong parte-italic parte-txt-left parte-nome-value parte-medium-font"><?php echo getNomeProf($con); ?></td>
+        <td class="parte-strong parte-italic parte-txt-left parte-nome-value parte-medium-font"><?php echo strtoupper(getNomeProf($con)); ?></td>
         <td class="parte-less-font">CATEGORIA</td>
-        <td class="parte-strong parte-italic parte-medium-font"><?php echo getCatProf($con); ?></td>
+        <td class="parte-strong parte-italic parte-medium-font"><?php echo strtoupper(getCatProf($con)); ?></td>
       </tr>
 
       <tr>
@@ -406,38 +406,38 @@
 
       <tr>
         <td>Hora Aula</td>
-        <td>D</td>
-        <td>D</td>
+        <td id="ha"></td>
+        <td id="ha-mensal"></td>
       </tr>
 
       <tr>
         <td>Hora Atividade</td>
-        <td>D</td>
-        <td>D</td>
+        <td id="hativi"></td>
+        <td id="hativi-mensal"></td>
       </tr>
 
       <tr>
         <td>H.A.E</td>
-        <td>D</td>
-        <td>D</td>
+        <td id="hae"></td>
+        <td id="hae-mensal"></td>
       </tr>
 
       <tr>
         <td>R.J.I.</td>
-        <td>D</td>
-        <td>D</td>
+        <td id="rji"></td>
+        <td id="rji-mensal"></td>
       </tr>
 
       <tr>
         <td>Jornada</td>
-        <td>D</td>
-        <td>D</td>
+        <td id="jornada"></td>
+        <td id="jornada-mes"></td>
       </tr>
 
       <tr>
         <td>Total Geral</td>
-        <td>D</td>
-        <td>D</td>
+        <td id="total-g-semanal"></td>
+        <td id="total-g-mensal"></td>
       </tr>
 
     </table>

@@ -75,6 +75,92 @@ function limpaExt(){
 	}
 }
 
+function attResumo(){
+	if($('.aula-ext-10').text() != '-'){
+		$('#hativi').text($('.aula-ext-10').text());
+	}
+
+	if($('.aula-ext-4').text() != '-'){
+		$('#jornada').text($('.aula-ext-4').text());
+	}
+
+	if($('.aula-ext-5').text() != '-'){
+		if($('#jornada').text() != ''){
+			$('#jornada').text((Number($('#jornada').text())+Number($('.aula-ext-5').text())));
+		}
+		else{
+			$('#jornada').text($('.aula-ext-5').text());
+		}
+	}
+
+	if($('.aula-ext-1').text() != '-'){
+		$('#rji').text($('.aula-ext-1').text());
+	}
+
+	if($('.aula-ext-2').text() != '-'){
+		if($('#rji').text() != ''){
+			$('#rji').text((Number($('#rji').text())+Number($('.aula-ext-2').text())));
+		}
+		else{
+			$('#rji').text($('.aula-ext-2').text());
+		}
+	}
+
+	setTextHAE($('.aula-ext-3').text());
+	setTextHAE($('.aula-ext-6').text());
+	setTextHAE($('.aula-ext-7').text());
+	setTextHAE($('.aula-ext-8').text());
+	setTextHAE($('.aula-ext-9').text());
+
+	contaSemanal();
+	contaMensal();
+}
+
+function contaSemanal(){
+	setTextSemanal($('#ha').text());
+	setTextSemanal($('#hativi').text());
+	setTextSemanal($('#hae').text());
+	setTextSemanal($('#rji').text());
+	setTextSemanal($('#jornada').text());
+}
+
+function contaMensal(){
+	setTextMensal($('#ha').text(),$('#ha-mensal'));
+	setTextMensal($('#hativi').text(),$('#hativi-mensal'));
+	setTextMensal($('#hae').text(),$('#hae-mensal'));
+	setTextMensal($('#rji').text(),$('#rji-mensal'));
+	setTextMensal($('#jornada').text(),$('#jornada-mensal'));
+	setTextMensal($('#total-g-semanal').text(),$('#total-g-mensal'));
+}
+
+function setTextMensal(text,element){
+	if(text != ''){
+		$(element).text(Math.ceil(Number(text) * Number(4.5)));
+	}
+}
+
+function setTextSemanal(text){
+	if(text != ''){
+		if($('#total-g-semanal').text() != ''){
+			$('#total-g-semanal').text((Number($('#total-g-semanal').text())+Number(text)));
+		}
+		else{
+			$('#total-g-semanal').text(text);
+		}
+	}
+}
+
+function setTextHAE(text){
+	if(text != '-'){
+		if($('#hae').text() != ''){
+			$('#hae').text((Number($('#hae').text())+Number(text)));
+		}
+		else{
+			$('#hae').text(text);
+		}
+	}
+}
+
 function attExt(){
 	var arrExternos = $('.is-ext');
 
@@ -93,7 +179,7 @@ function attExt(){
 
 	for(aula in arr){
 		if(arr[aula].length > 0){
-			$('.aula-ext-'+Number(aula+1)).text(arr[aula].length);
+			$('.aula-ext-'+(Number(aula)+1)).text(arr[aula].length);
 		}
 	}
 }
@@ -115,11 +201,16 @@ function limpaAulas(){
 	$('.seg, .ter, .qua, .qui, .sex, .sab').text('');
 }
 
+function limpaResumo(){
+	$('#ha, #hativi, #hae, #rji, #jornada, #total-g-semanal, #ha-mensal, #hativi-mensal, #hae-mensal, #rji-mensal, #jornada-mensal, #total-g-mensal').text('');
+}
+
 function exibeAulas(text){
 	var aulas = JSON.parse(text);
 	var dias = document.getElementsByClassName('aula');
 	limpaExt();
 	limpaAulas();
+	limpaResumo();
 
 	if(aulas.length > 0){
 		for(var aula in aulas){
@@ -151,6 +242,7 @@ function exibeAulas(text){
 			}
 		}
 		attExt();
+		attResumo();
 	}
 }
 
