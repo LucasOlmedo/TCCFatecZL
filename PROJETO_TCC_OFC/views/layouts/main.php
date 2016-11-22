@@ -32,7 +32,7 @@ AppAsset::register($this);
 <div class="wrap">
 
     <?php
-   // include '../web/validacaoUsuario.php';
+    include '../web/validacaoUsuario.php';
     NavBar::begin([
         'brandLabel' => 'FATEC Zona Leste - Sistema Gerenciador',
         'brandUrl' => Yii::$app->homeUrl,

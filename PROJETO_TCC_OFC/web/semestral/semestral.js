@@ -28,7 +28,6 @@ function pegarValues(){
 
 	openAjaxReqDisciplina();
 	openAjaxReq();
-	limpaExt();
 }
 
 function openAjaxReqDisciplina(){
@@ -70,7 +69,33 @@ function openAjaxReq(){
 }
 
 function limpaExt(){
-	$('.is-ext').removeClass('is-ext');
+	$('parte-less-font').removeClass('is-ext');
+	for(var i = 1; i <= 10 ; i ++){
+		$('.aula-ext-'+i).text('-');
+	}
+}
+
+function attExt(){
+	var arrExternos = $('.is-ext');
+
+	var v1 = arrExternos.filter('.ext-1');
+	var v2 = arrExternos.filter('.ext-2');
+	var v3 = arrExternos.filter('.ext-3');
+	var v4 = arrExternos.filter('.ext-4');
+	var v5 = arrExternos.filter('.ext-5');
+	var v6 = arrExternos.filter('.ext-6');
+	var v7 = arrExternos.filter('.ext-7');
+	var v8 = arrExternos.filter('.ext-8');
+	var v9 = arrExternos.filter('.ext-9');
+	var v10 = arrExternos.filter('.ext-10');
+
+	var arr = [v1,v2,v3,v4,v5,v6,v7,v8,v9,v10];
+
+	for(aula in arr){
+		if(arr[aula].length > 0){
+			$('.aula-ext-'+Number(aula+1)).text(arr[aula].length);
+		}
+	}
 }
 
 function exibe(text){
@@ -86,9 +111,15 @@ function exibe(text){
 	}
 }
 
+function limpaAulas(){
+	$('.seg, .ter, .qua, .qui, .sex, .sab').text('');
+}
+
 function exibeAulas(text){
 	var aulas = JSON.parse(text);
 	var dias = document.getElementsByClassName('aula');
+	limpaExt();
+	limpaAulas();
 
 	if(aulas.length > 0){
 		for(var aula in aulas){
@@ -115,10 +146,11 @@ function exibeAulas(text){
 				}
 				else{
 					dia[aulaRec.arrHorarios[horario]].innerHTML = aulas[aula].EXTERNO;
-					dia[aulaRec.arrHorarios[horario]].setAttribute('class',dia[aulaRec.arrHorarios[horario]].getAttribute('class') + ' is-ext');
+					dia[aulaRec.arrHorarios[horario]].setAttribute('class',dia[aulaRec.arrHorarios[horario]].getAttribute('class') + ' is-ext' + ' ext-'+aulas[aula].EXTERNO);
 				}
 			}
 		}
+		attExt();
 	}
 }
 
@@ -243,7 +275,7 @@ function preencherArrInicio(){
 	var d10 = new Date();
 	d10.setHours('15');
 	d10.setMinutes('40');
-	d10.setSeconds('00');	
+	d10.setSeconds('00');
 
 	var d11 = new Date();
 	d11.setHours('16');

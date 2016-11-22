@@ -332,61 +332,61 @@
       <tr class="parte-small-font">
         <td>1.</td>
         <td class="parte-externo">Diretor e Vice-Diretor da Faculdade</td>
-        <td>   -    </td>
+        <td class="aula-ext-1">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>2.</td>
         <td class="parte-externo">Assessoria  ao CEETEPS</td>
-        <td>   -    </td>
+        <td class="aula-ext-2">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>3.</td>
         <td class="parte-externo">HAE de Apoio a Direção da FATEC</td>
-        <td>   -    </td>
+        <td class="aula-ext-3">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>4.</td>
         <td class="parte-externo">Chefia  de DEPARTAMENTO</td>
-        <td>   -    </td>
+        <td class="aula-ext-4">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>5.</td>
         <td class="parte-externo">Responsab. por  Curso em Implantaçio</td>
-        <td>   -    </td>
+        <td class="aula-ext-5">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>6.</td>
         <td class="parte-externo">Responsab. por  disciplina (2º a 6º feira)</td>
-        <td>   -    </td>
+        <td class="aula-ext-6">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>7.</td>
         <td class="parte-externo">Coord. de oficinas e laboratórios</td>
-        <td>   -    </td>
+        <td class="aula-ext-7">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>8.</td>
         <td class="parte-externo">HAE de Coordenação de Estágio</td>
-        <td>   -    </td>
+        <td class="aula-ext-8">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>9.</td>
         <td class="parte-externo">HAE de Orientaçao de TCC</td>
-        <td>   -    </td>
+        <td class="aula-ext-9">   -    </td>
       </tr>
 
       <tr class="parte-small-font">
         <td>10.</td>
         <td class="parte-externo">Outros (2º a 6º feira)</td>
-        <td>   -    </td>
+        <td class="aula-ext-10">   -    </td>
       </tr>
     </table>
 
