@@ -137,6 +137,9 @@ function setTextMensal(text,element){
 	if(text != ''){
 		$(element).text(Math.ceil(Number(text) * Number(4.5)));
 	}
+	else{
+		$(element).text('0');
+	}
 }
 
 function setTextSemanal(text){

@@ -35,4 +35,22 @@ function getCatProf($con){
     }
 }
 
+function getCurProf($con){
+    $id_professor = $_GET['id'];
+
+    if(isset($id_professor)){
+        $sql = 'SELECT CURSO.abreviacao AS abreviacao FROM CURSO INNER JOIN AULASEMESTRAL ON CURSO.ID_CURSO = AULASEMESTRAL.ID_CURSO
+         WHERE AULASEMESTRAL.id_professor = ? LIMIT 1';
+        $stmt = $con->prepare($sql);
+        $stmt->bindParam(1,$id_professor);
+        $stmt->execute();
+        $rs = $stmt->fetch();
+        return $rs['abreviacao'];
+    }
+    else{
+        return "S/ DEPTO.";
+    }
+}
+
+
 ?>

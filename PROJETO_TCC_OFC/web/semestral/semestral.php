@@ -1,6 +1,6 @@
 <?php
   include 'helper.php';
-  //include '../validacaoUsuario.php';
+  include '../validacaoUsuario.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,7 +45,7 @@
         <td class="font-arial parte-medium-font">REGIME</td>
         <td class="parte-less-font parte-externo"><span class="parte-externo__hora">[X]HORA-AULA</span>   [ ]RJI   <span class="parte-externo__jornada">[ ]JORNADA</span></td>
         <td class="parte-less-font">DEPTO/C. IMPL.</td>
-        <td class="parte-less-font">XXXXX</td>
+        <td class="parte-less-font"><?php echo getCurProf($con); ?></td>
       </tr>
 
     </table>
@@ -431,7 +431,7 @@
       <tr>
         <td>Jornada</td>
         <td id="jornada"></td>
-        <td id="jornada-mes"></td>
+        <td id="jornada-mensal"></td>
       </tr>
 
       <tr>
