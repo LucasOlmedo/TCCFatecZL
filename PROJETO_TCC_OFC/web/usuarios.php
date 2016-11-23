@@ -22,19 +22,17 @@ include 'validacaoUsuarioCurso.php';
 	<span class="icon-bar"></span></button><a class="navbar-brand" href="/index.php">FATEC Zona Leste - Sistema Gerenciador</a></div><div id="w1-collapse" class="collapse navbar-collapse">	<ul id="w1" class="navbar-nav navbar-right nav"><li><a href="/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li></ul><ul id="w2" class="navbar-nav navbar-right nav"><li><a href="/index.php?r=site%2Findex"><span class="glyphicon glyphicon-home"></span> Home</a></li>
 	<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-th-list"></span> Cadastros <b class="caret"></b></a><ul id="w3" class="dropdown-menu"><li><a href="index.php?r=curso/index" tabindex="-1">Cursos</a></li>
 	<li class="divider"></li>
-	<li><a href="index.php?r=periodo/index" tabindex="-1">Períodos</a></li>
+	<li><a href="index.php?r=periodo/index" tabindex="-1">Períodos do curso</a></li>
 	<li class="divider"></li>
 	<li><a href="index.php?r=disciplina/index" tabindex="-1">Disciplinas</a></li>
 	<li class="divider"></li>
 	<li><a href="index.php?r=professor/index" tabindex="-1">Professores</a></li>
 	<li class="divider"></li>
-	<li><a href="index.php?r=situacao/index" tabindex="-1">Situação</a></li>
+	<li><a href="index.php?r=situacao/index" tabindex="-1">Situação do professor</a></li>
 	<li class="divider"></li>
 	<li><a href="index.php?r=horarios-externos/index" tabindex="-1">Horarios</a></li>
 	<li class="divider"></li>
-	<li><a href="index.php?r=aula-semestral/index" tabindex="-1">Aula Semestral</a></li>
-	<li class="divider"></li>
-	<li><a href="index.php?r=dia-semana/index" tabindex="-1">Dia da semana</a></li>
+	<li><a href="index.php?r=aulasemestral/index" tabindex="-1">Grade Semestral</a></li>
 	<li class="divider"></li>
 	<li><a href="/usuarios.php" tabindex="-1">Usuários</a></li></ul></li></ul></div></div></nav>
     <div class="container">
