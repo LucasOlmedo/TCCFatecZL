@@ -38,7 +38,6 @@ class AulasemestralController extends Controller
         $model = new Aulasemestral();
         $searchModel = new AulasemestralSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
