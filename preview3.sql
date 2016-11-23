@@ -114,11 +114,11 @@ CREATE TABLE `horariosexternos` (
 
 DROP TABLE IF EXISTS `periodo`;
 
-CREATE TABLE `periodo` (
-  `id_Periodo` int(2) NOT NULL,
-  `nome_periodo` varchar(20) NOT NULL,
-  PRIMARY KEY (`id_Periodo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CREATE TABLE `periodo` (
+    `id_Periodo` int(2) NOT NULL,
+    `nome_periodo` varchar(20) NOT NULL,
+    PRIMARY KEY (`id_Periodo`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Table structure for table `professor` */
 
@@ -126,12 +126,12 @@ DROP TABLE IF EXISTS `professor`;
 
 CREATE TABLE `professor` (
   `id_Professor` int(10) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(30) NOT NULL,
+  `nome` varchar(250) NOT NULL,
   `rg` varchar(13) NOT NULL,
-  `categoria` varchar(30) NOT NULL,
-  `graduacao` varchar(30) NOT NULL,
-  `contrato` varchar(15) NOT NULL,
-  `sede` varchar(30) NOT NULL,
+  `categoria` varchar(250) NOT NULL,
+  `graduacao` varchar(250) NOT NULL,
+  `contrato` varchar(250) NOT NULL,
+  `sede` varchar(250) NOT NULL,
   `inicio_cps` date NOT NULL,
   `inicio_fateczl` date NOT NULL,
   PRIMARY KEY (`id_Professor`)

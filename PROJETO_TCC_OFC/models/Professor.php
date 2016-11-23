@@ -38,9 +38,9 @@ class Professor extends \yii\db\ActiveRecord
         return [
             [['nome', 'rg', 'categoria', 'graduacao', 'contrato', 'sede', 'inicio_cps', 'inicio_fateczl'], 'required'],
             [['inicio_cps', 'inicio_fateczl'], 'safe'],
-            [['nome', 'categoria', 'graduacao', 'sede'], 'string', 'max' => 30],
+            [['nome', 'categoria', 'graduacao', 'sede'], 'string', 'max' => 250],
             [['rg'], 'string', 'max' => 13],
-            [['contrato'], 'string', 'max' => 15]
+            [['contrato'], 'string', 'max' => 250]
         ];
     }
 
