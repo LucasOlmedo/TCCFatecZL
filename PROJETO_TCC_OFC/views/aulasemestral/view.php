@@ -12,6 +12,7 @@ $this->title = "Grade Semestral #".$model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Grade Semestral', 'url' => ['index']];
 $this->params['breadcrumbs'][] = '#'.$model->id;
 ?>
+<script src="/js/funcConvertData.js"></script>
 <div class="aulasemestral-view">
 
     <h1><?= Html::encode('Visualização da Grade Semestral #'.$model->id) ?></h1>
@@ -139,3 +140,9 @@ $this->params['breadcrumbs'][] = '#'.$model->id;
 
     ?>
 </div>
+<script>
+     for(var i = 5; i < 7;i++){
+        document.getElementsByTagName('td')[i].innerHTML = converterData(document.getElementsByTagName('td')[i].innerHTML);
+  }
+
+</script>
