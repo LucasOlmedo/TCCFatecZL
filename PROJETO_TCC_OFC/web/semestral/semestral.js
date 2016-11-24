@@ -255,7 +255,7 @@ function exibeAulas(text){
 
 				}
 			}
-			
+
 		}
 		attExt();
 		attResumo();
@@ -269,34 +269,34 @@ function insertObservacao(aulas){
 
 	for(aula in aulas){
 		if(aulas[aula].EXTERNO == 1){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-1').text() + arrMsgs[1]);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-1').text() + arrMsgs[1]);
 		}
 		else if(aulas[aula].EXTERNO == 2){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-2').text() + arrMsgs[2]);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-2').text() + arrMsgs[2]);
 		}
 		else if(aulas[aula].EXTERNO == 3){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-3').text() + arrMsgs[3]);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-3').text() + arrMsgs[3]);
 		}
 		else if(aulas[aula].EXTERNO == 4){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-4').text() + arrMsgs[4] + aulas[aula].nome_curso);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-4').text() + arrMsgs[4] + aulas[aula].nome_curso);
 		}
 		else if(aulas[aula].EXTERNO == 5){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-5').text() + arrMsgs[5] + aulas[aula].nome_curso);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-5').text() + arrMsgs[5] + aulas[aula].nome_curso);
 		}
 		else if(aulas[aula].EXTERNO == 6){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-6').text() + arrMsgs[6] + aulas[aula].nome_disc);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-6').text() + arrMsgs[6] + aulas[aula].nome_disc);
 		}
 		else if(aulas[aula].EXTERNO == 7){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-7').text() + arrMsgs[7] + aulas[aula].nome_disc);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-7').text() + arrMsgs[7] + aulas[aula].nome_disc);
 		}
 		else if(aulas[aula].EXTERNO == 8){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-8').text() + arrMsgs[8] + aulas[aula].nome_curso);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-8').text() + arrMsgs[8] + aulas[aula].nome_curso);
 		}
 		else if(aulas[aula].EXTERNO == 9){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-9').text() + arrMsgs[9] + aulas[aula].nome_disc);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-9').text() + arrMsgs[9] + aulas[aula].nome_disc);
 		}
 		else if(aulas[aula].EXTERNO == 10){
-			observacoes = seeObservacao(observacoes,$('.aula-ext-10').text() + arrMsgs[10] + aulas[aula].nome_disc);		
+			observacoes = seeObservacao(observacoes,$('.aula-ext-10').text() + arrMsgs[10] + aulas[aula].nome_disc);
 		}
 	}
 
@@ -308,7 +308,10 @@ function insertObservacao(aulas){
 		for(var i = 0 ; i < observacoes.length; i++){
 			textoFinal += observacoes[i];
 		}
-		col.appendChild(document.createTextNode(textoFinal));
+		var txtNode = document.createElement('p');
+		txtNode.innerHTML = textoFinal;
+		txtNode.setAttribute('style','margin: 1%');
+		col.appendChild(txtNode);
 		linha.appendChild(col);
 		document.getElementById('observacoes').appendChild(linha);
 	}
@@ -500,7 +503,7 @@ function preencherMsgs(){
 	arr[1] = ' Jornadas como diretor(a) ou vice-diretor da Faculdade';
 	arr[2] = ' Jornadas como assessor(a) ao CEETEPS';
 	arr[3] = " HAE'S como apoio à Direção da FATEC";
-	arr[4] = " HAE'S como coorden "+" "+"  ador(a) do Curso Superior de Tecnologia em ";
+	arr[4] = " HAE'S como coordenador(a) do Curso Superior de Tecnologia em ";
 	arr[5] = ' Jornadas como responsável pela implantação do Curso Superior de Tecnologia em ';
 	arr[6] = " HAE'S como responsável pela disciplina ";
 	arr[7] = " HAE'S como coordenador(a) da oficina ou laboratório ";
