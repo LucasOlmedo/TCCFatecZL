@@ -1,5 +1,6 @@
 arrHoraIni = preencherArrInicio();
 arrHoraFim = preencherArrFim(arrHoraIni);
+arrMsgs = preencherMsgs();
 
 document.addEventListener('DOMContentLoaded',function(){
 	document.getElementById('btnOk').addEventListener('click',pegarValues);
@@ -76,6 +77,10 @@ function limpaExt(){
 }
 
 function attResumo(){
+	if($('.is-aula').length != 0){
+		$('#ha').text($('.is-aula').length);
+	}
+
 	if($('.aula-ext-10').text() != '-'){
 		$('#hativi').text($('.aula-ext-10').text());
 	}
@@ -104,6 +109,10 @@ function attResumo(){
 		else{
 			$('#rji').text($('.aula-ext-2').text());
 		}
+	}
+
+	if($('#ha').text() != ''){
+		$('#hativi').text(Math.ceil(Number($('#ha').text())/2));
 	}
 
 	setTextHAE($('.aula-ext-3').text());
@@ -201,7 +210,7 @@ function exibe(text){
 }
 
 function limpaAulas(){
-	$('.seg, .ter, .qua, .qui, .sex, .sab').text('');
+	$('.seg, .ter, .qua, .qui, .sex, .sab').text('').removeClass('.is-aula');
 }
 
 function limpaResumo(){
@@ -214,6 +223,7 @@ function exibeAulas(text){
 	limpaExt();
 	limpaAulas();
 	limpaResumo();
+	updateObservacao();
 
 	if(aulas.length > 0){
 		for(var aula in aulas){
@@ -237,16 +247,86 @@ function exibeAulas(text){
 			for(var horario in aulaRec.arrHorarios) {
 				if(aulas[aula].EXTERNO == 0){
 					dia[aulaRec.arrHorarios[horario]].innerHTML = aulas[aula].abreviacao;
+					dia[aulaRec.arrHorarios[horario]].setAttribute('class',dia[aulaRec.arrHorarios[horario]].getAttribute('class') + ' is-aula');
 				}
 				else{
 					dia[aulaRec.arrHorarios[horario]].innerHTML = aulas[aula].EXTERNO;
 					dia[aulaRec.arrHorarios[horario]].setAttribute('class',dia[aulaRec.arrHorarios[horario]].getAttribute('class') + ' is-ext' + ' ext-'+aulas[aula].EXTERNO);
+
 				}
 			}
+			
 		}
 		attExt();
 		attResumo();
+		insertObservacao(aulas);
 	}
+}
+
+function insertObservacao(aulas){
+	var observacoes = [];
+	observacoes.push('OBSERVAÇÕES: ');
+
+	for(aula in aulas){
+		if(aulas[aula].EXTERNO == 1){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-1').text() + arrMsgs[1]);		
+		}
+		else if(aulas[aula].EXTERNO == 2){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-2').text() + arrMsgs[2]);		
+		}
+		else if(aulas[aula].EXTERNO == 3){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-3').text() + arrMsgs[3]);		
+		}
+		else if(aulas[aula].EXTERNO == 4){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-4').text() + arrMsgs[4] + aulas[aula].nome_curso);		
+		}
+		else if(aulas[aula].EXTERNO == 5){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-5').text() + arrMsgs[5] + aulas[aula].nome_curso);		
+		}
+		else if(aulas[aula].EXTERNO == 6){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-6').text() + arrMsgs[6] + aulas[aula].nome_disc);		
+		}
+		else if(aulas[aula].EXTERNO == 7){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-7').text() + arrMsgs[7] + aulas[aula].nome_disc);		
+		}
+		else if(aulas[aula].EXTERNO == 8){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-8').text() + arrMsgs[8] + aulas[aula].nome_curso);		
+		}
+		else if(aulas[aula].EXTERNO == 9){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-9').text() + arrMsgs[9] + aulas[aula].nome_disc);		
+		}
+		else if(aulas[aula].EXTERNO == 10){
+			observacoes = seeObservacao(observacoes,$('.aula-ext-10').text() + arrMsgs[10] + aulas[aula].nome_disc);		
+		}
+	}
+
+	if(observacoes.length > 1){
+		var linha = document.createElement('tr');
+		var col = document.createElement('td');
+		col.setAttribute('class','font-arial parte-medium-tit-font');
+		var textoFinal = '';
+		for(var i = 0 ; i < observacoes.length; i++){
+			textoFinal += observacoes[i];
+		}
+		col.appendChild(document.createTextNode(textoFinal));
+		linha.appendChild(col);
+		document.getElementById('observacoes').appendChild(linha);
+	}
+
+}
+
+function seeObservacao(observacoes,texto){
+	for(obs in observacoes){
+		if(observacoes[obs].includes(texto)){
+			return observacoes;
+		}
+	}
+	observacoes.push(texto +'.');
+	return observacoes;
+}
+
+function updateObservacao(){
+	$('#observacoes').empty();
 }
 
 function preencheDisciplinas(aula,id) {
@@ -258,13 +338,8 @@ function preencheDisciplinas(aula,id) {
 }
 
 function limpaDisciplinas(){
-	var disciplinas = document.getElementsByClassName('disc-f');
-	var cursos = document.getElementsByClassName('curso-f');
-
-	for(disciplina in disciplinas){
-		disciplinas[disciplina].innerHTML = '';
-		cursos[disciplina].innerHTML = '';
-	}
+	$('.disc-f').text('');
+	$('.curso-f').text('');
 }
 
 function montarAula(aula){
@@ -417,5 +492,21 @@ function preencherArrFim(arrInicio){
 		newDt.setTime(arrInicio[dt].getTime() + 3000000);
 		arr.push(newDt);
 	}
+	return arr;
+}
+
+function preencherMsgs(){
+	var arr = [];
+	arr[1] = ' Jornadas como diretor(a) ou vice-diretor da Faculdade';
+	arr[2] = ' Jornadas como assessor(a) ao CEETEPS';
+	arr[3] = " HAE'S como apoio à Direção da FATEC";
+	arr[4] = " HAE'S como coorden "+" "+"  ador(a) do Curso Superior de Tecnologia em ";
+	arr[5] = ' Jornadas como responsável pela implantação do Curso Superior de Tecnologia em ';
+	arr[6] = " HAE'S como responsável pela disciplina ";
+	arr[7] = " HAE'S como coordenador(a) da oficina ou laboratório ";
+	arr[8] = " HAE'S como coordenador(a) de estágio do Curso Superior de Tecnologia em ";
+	arr[9] = " HAE'S como orientador(a) de TCC do projeto ";
+	arr[10] = ' Horas Atividades como ';
+
 	return arr;
 }

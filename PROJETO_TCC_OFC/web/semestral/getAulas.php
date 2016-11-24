@@ -25,7 +25,7 @@ function getHorarios(){
     if(isset($id_professor)){
 
 
-        $sql = "SELECT DISTINCT disciplina.abreviacao as
+        $sql = "SELECT DISTINCT disciplina.nome_disc, disciplina.abreviacao as
             abreviacao, curso.abreviacao as curso_abreviacao, DIASEMANA.horario_inicio, DIASEMANA.horario_fim, DIASEMANA.dia_semana, CURSO.nome_curso,
              AULASEMESTRAL.id_periodo, AULASEMESTRAL.turno, DISCIPLINA.EXTERNO FROM DIASEMANA INNER JOIN AULASEMESTRAL ON 
              DIASEMANA.id_aulasemestral = AULASEMESTRAL.id INNER JOIN Professor ON AULASEMESTRAL.id_professor =

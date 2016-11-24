@@ -447,7 +447,7 @@
     <table  class="div-bordered pula-linha parte-externo" >
       <tr>
         <td>
-             <p class="no-margin-tit font-arial parte-medium-tit-font">INSTRUÇÕES PARA PREENCHIMENTO DA GRADE HORÁRIA</p>
+             <p class="no-margin-tit font-arial parte-medium-tit-font">INSTRUÇÕES P  ARA PREENCHIMENT<span class="text-branco">A</span>O DA GRADE HORÁRIA</p>
               <p class="no-margin parte-small-font">a) HORA-AULA: preencher com a sigal da disciplina e do curso, obedecendo aos horários de início e término de aulas indicados na coluna própria.</p>
               <p class="no-margin parte-small-font">b) Atividades desenvolvidas em HAE, em RJI e em Jornada: preencher com o número constante da relação de atividades do campo C, obedecidos aos horários de início e término indicados na coluna correspondente.</p>
               <p class="no-margin parte-small-font">c) No caso das atividades 8, 9 e 10 especificar, no campo OBSERVAÇÕES, abaixo, nome do grupo (para 8) ou do proeto (para 9) ou, ainda, a natureza da atividade (para 10).</p>
