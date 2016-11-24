@@ -14,21 +14,39 @@ function imprimir(){
 	window.print();
 }
 
-function pegarValues(){
-	var ano = mesAno.value.split('-')[0];
-	var mes = mesAno.value.split('-')[1];
+function validarEntrada(texto){
+	if(texto.split('-').length != 2){
+		return false;
+	}
+	if(isNaN(Number(texto.split('-')[0])) || isNaN(Number(texto.split('-')[1]))){
+		return false;
+	}
+	else if(Number(texto.split('-')[1])> 12){
+		return false;
+	}
+	return true;
+}
 
-	if(mes >= 7){
-		document.getElementById('semestre-header').innerHTML = '2º';
+function pegarValues(){
+	if(validarEntrada(mesAno.value)){
+		var ano = mesAno.value.split('-')[0];
+		var mes = mesAno.value.split('-')[1];
+
+		if(mes >= 7){
+			document.getElementById('semestre-header').innerHTML = '2º';
+		}
+		else{
+			document.getElementById('semestre-header').innerHTML = '1º';
+		}
+
+		document.getElementById('ano-header').innerHTML = ano;
+
+		openAjaxReqDisciplina();
+		openAjaxReq();
 	}
 	else{
-		document.getElementById('semestre-header').innerHTML = '1º';
+		alert('Data inválida');
 	}
-
-	document.getElementById('ano-header').innerHTML = ano;
-
-	openAjaxReqDisciplina();
-	openAjaxReq();
 }
 
 function openAjaxReqDisciplina(){

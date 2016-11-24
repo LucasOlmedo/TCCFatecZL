@@ -9,6 +9,7 @@
 	<script src="scripts/arqSelects.js"></script>
 	<link rel="stylesheet" href="scripts/bootstrap.min.css">
 	<link rel="stylesheet" href="scripts/style.css">
+	<link rel="shortcut icon" href="/images/favicon3.png" type="image/x-icon" />
 	<meta charset="utf-8">
 </head>
 <body>

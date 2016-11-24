@@ -16,6 +16,7 @@ function usuarioEstaLogado(){
     <title>FATEC Zona Leste - Sistema Gerenciador</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/site.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon3.png" type="image/x-icon" />
   </head>
   <body>
     <div class="wrap">

@@ -13,22 +13,40 @@ function imprimir(){
 	window.print();
 }
 
-function pegarValues(){
-	var ano = mesAno.value.split('-')[0];
-	var mes = mesAno.value.split('-')[1];
-
-	var data = new Date(ano,mes,0);
-
-	var mesTxt = mes;
-
-	if(mes < 10 && !mesTxt.includes('0')){
-		mesTxt = "0"+mesTxt;
+function validarEntrada(texto){
+	if(texto.split('-').length != 2){
+		return false;
 	}
+	if(isNaN(Number(texto.split('-')[0])) || isNaN(Number(texto.split('-')[1]))){
+		return false;
+	}
+	else if(Number(texto.split('-')[1])> 12){
+		return false;
+	}
+	return true;
+}
 
-	document.getElementById('text-data').innerHTML = mesTxt+"/"+ano;
+function pegarValues(){
+	if(validarEntrada(mesAno.value)){
+		var ano = mesAno.value.split('-')[0];
+		var mes = mesAno.value.split('-')[1];
 
-	preencherTable(data);
-	openAjaxReq();
+		var data = new Date(ano,mes,0);
+
+		var mesTxt = mes;
+
+		if(mes < 10 && !mesTxt.includes('0')){
+			mesTxt = "0"+mesTxt;
+		}
+
+		document.getElementById('text-data').innerHTML = mesTxt+"/"+ano;
+
+		preencherTable(data);
+		openAjaxReq();
+	}
+	else{
+		alert('Data inválida');
+	}
 
 }
 
